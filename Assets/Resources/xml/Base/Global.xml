@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<General>
+		<linea var="EstadoPartida">False</linea>
+	</General>
+  	<Personaje>
+  	</Personaje>
+  	<Escenas>
+      	<Escena10>
+	        <Nombre>Exterior Casa</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="izquierda" abierto="True" nombre="Jardin">Escena11</Opcion>
+	          <Opcion id="arriba" abierto="True" nombre="Recibidor">Escena12</Opcion>
+	        </Salidas>
+      	</Escena10>
+      	<Escena11>
+	        <Nombre>Jardin</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="derecha" abierto="True" nombre="Jardin">Escena10</Opcion>
+	        </Salidas>
+      	</Escena11>
+  	  	<Escena12>
+	  		<Nombre>Recibidor</Nombre>
+	  		<Objetos></Objetos>
+	  		<Salidas>
+	  		  <Opcion id="izquierda" abierto="True" nombre="Salon">Escena13</Opcion>
+	  		  <Opcion id="arriba" abierto="True" nombre="Pasillo">Escena14</Opcion>
+	          <Opcion id="abajo" abierto="True" nombre="Exterior Casa">Escena10</Opcion>
+	  		</Salidas>
+  	  	</Escena12>
+  		<Escena13>
+  			<Nombre>Salon</Nombre>
+  			<Objetos>
+  				<obj id="1" animacion="False" eninventario="False" cogido="False" observada="False" conversacion="False">Figura</obj>
+  				<obj id="2" animacion="False" eninventario="False" cogido="True" observada="True" conversacion="True">periodico</obj>
+  			</Objetos>
+  			<Salidas>
+  				<Opcion id="derecha" abierto="True" nombre="Recibidor">Escena12</Opcion>
+  			</Salidas>
+  		</Escena13>
+      	<Escena14>
+	        <Nombre>Pasillo 1</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="arriba" abierto="True" nombre="Pasillo 2">Escena17</Opcion>
+	          <Opcion id="abajo" abierto="True" nombre="Recibidor">Escena12</Opcion>
+	          <Opcion id="izquierda" abierto="True" nombre="Habitacion Padres">Escena16</Opcion>
+	        </Salidas>
+      	</Escena14>
+      	<Escena15>
+	        <Nombre>Habitacion Charles</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="izquierda" abierto="True" nombre="Pasillo 2">Escena17</Opcion>
+	        </Salidas>
+      	</Escena15>
+      	<Escena16>
+	        <Nombre>Habitacion Padres</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="derecha" abierto="True" nombre="Pasillo 1">Escena14</Opcion>
+	        </Salidas>
+      	</Escena16>
+      	<Escena17>
+	        <Nombre>Pasillo2</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="derecha" abierto="True" nombre="Habitacion Charles">Escena15</Opcion>
+	          <Opcion id="izquierda" abierto="True" nombre="Puerta Desvan">Escena18</Opcion>
+	          <Opcion id="abajo" abierto="True" nombre="Pasillo 1">Escena14</Opcion>
+	        </Salidas>
+      	</Escena17>
+      	<Escena18>
+	        <Nombre>Puerta Desvan</Nombre>
+	        <Objetos></Objetos>
+	        <Salidas>
+	          <Opcion id="arriba" abierto="True" nombre="Desvan">Escena19</Opcion>
+	          <Opcion id="abajo" abierto="True" nombre="Pasillo 2">Escena17</Opcion>
+	        </Salidas>
+      	</Escena18>
+      	<Escena19>
+	        <Nombre>Desvan</Nombre>
+	        <Objetos>
+  				<obj id="1" animacion="False" eninventario="False" cogido="True" observada="True" conversacion="True">Posters</obj>
+  				<obj id="2" animacion="False" eninventario="False" cogido="True" observada="True" conversacion="True">MesaHoroscopo</obj>
+  				<obj id="3" animacion="False" eninventario="False" cogido="True" observada="True" conversacion="True">ObjetosAlquimia</obj>
+  			</Objetos>
+	        <Salidas>
+	          <Opcion id="derecha" abierto="True" nombre="Puerta Desvan">Escena18</Opcion>
+	        </Salidas>
+      	</Escena19>
+  	</Escenas>
+</Config>

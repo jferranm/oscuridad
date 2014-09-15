@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 7c8d6ad0ae9f7f7478e1c5206ee3b61e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box04
+    100002: ChamferBo0
+    100004: ChamferBo1
+    100006: ChamferBo2
+    100008: ChamferBo3
+    100010: ChamferBo4
+    100012: ChamferBo5
+    100014: ChamferBo6
+    100016: ChamferBo7
+    100018: ChamferBo8
+    100020: ChamferBox
+    100022: Loft01
+    100024: //RootNode
+    400000: Box04
+    400002: ChamferBo0
+    400004: ChamferBo1
+    400006: ChamferBo2
+    400008: ChamferBo3
+    400010: ChamferBo4
+    400012: ChamferBo5
+    400014: ChamferBo6
+    400016: ChamferBo7
+    400018: ChamferBo8
+    400020: ChamferBox
+    400022: Loft01
+    400024: //RootNode
+    2300000: Box04
+    2300002: ChamferBo0
+    2300004: ChamferBo1
+    2300006: ChamferBo2
+    2300008: ChamferBo3
+    2300010: ChamferBo4
+    2300012: ChamferBo5
+    2300014: ChamferBo6
+    2300016: ChamferBo7
+    2300018: ChamferBo8
+    2300020: ChamferBox
+    2300022: Loft01
+    3300000: Box04
+    3300002: ChamferBo0
+    3300004: ChamferBo1
+    3300006: ChamferBo2
+    3300008: ChamferBo3
+    3300010: ChamferBo4
+    3300012: ChamferBo5
+    3300014: ChamferBo6
+    3300016: ChamferBo7
+    3300018: ChamferBo8
+    3300020: ChamferBox
+    3300022: Loft01
+    4300000: Loft01
+    4300002: Box04
+    4300004: ChamferBox
+    4300006: ChamferBo0
+    4300008: ChamferBo1
+    4300010: ChamferBo2
+    4300012: ChamferBo3
+    4300014: ChamferBo4
+    4300016: ChamferBo5
+    4300018: ChamferBo6
+    4300020: ChamferBo7
+    4300022: ChamferBo8
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

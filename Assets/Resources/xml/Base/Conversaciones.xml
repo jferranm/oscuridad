@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Conversaciones>
+    <Figura>
+      <Pregunta id="0" texto=""></Pregunta>
+      <Pregunta id="1" texto="Hola, ¿En Que Puedo Ayudarle?">
+        <Respuesta num="2">(Charlataneria) Estoy Buscando a mi Amigo</Respuesta>
+        <Respuesta num="3">Necesito una habitacion</Respuesta>
+        <Respuesta num="0">Nada, solo pasaba por aqui</Respuesta>
+      </Pregunta>
+      <Pregunta id="2" texto="*" tirada="1D100" habilidad="03" referencia="1">
+        <Respuesta resultado="True">4</Respuesta>
+        <Respuesta resultado="False">5</Respuesta>
+      </Pregunta>
+      <Pregunta id="3" texto="Lo siento, estamos completos, pruebe en otro momento.">
+        <Respuesta num="0">Ok, adios</Respuesta>
+      </Pregunta>
+      <Pregunta id="4" texto="¿Busca usted al señor Ward?">
+        <Respuesta num="6">Exactamente, ¿Que puede decirme de el?</Respuesta>
+        <Respuesta num="7">¿Donde Esta? Necesito verlo ya</Respuesta>
+        <Respuesta num="8">(Descubrir) Si, ¿esta es su habitacion?</Respuesta>
+      </Pregunta>
+      <Pregunta id="5" texto="Este hotel siempre esta lleno de amigos de.... ¿a cual de ellos busca?">
+        <Respuesta num="12">Zorra sarcastica</Respuesta>
+        <Respuesta num="0">Lo capto, adios</Respuesta>
+      </Pregunta>
+      <Pregunta id="6" texto="El señor Ward era una persona muy introvertida, no salia nunca de su habitacion, hace una semana que no sabemos de el">
+        <Respuesta num="9">¿No dijo donde iba?</Respuesta>
+        <Respuesta num="10">¿Que sitios solia frecuentar?</Respuesta>
+        <Respuesta num="0">Ok, Gracias, la informacion me a servido de mucho, adios.</Respuesta>
+      </Pregunta>
+      <Pregunta id="7" texto="Esta siendo usted un poco grosero, no quiero seguir con esta conversacion">
+        <Respuesta num="12">Respondeme Maldita Zorra</Respuesta>
+        <Respuesta num="7">Lo siento, estoy un poco nervioso</Respuesta>
+        <Respuesta num="0">Usted tampoco me interesa usted, adios</Respuesta>
+      </Pregunta>
+      <Pregunta id="8" texto="*" tirada="1D100" habilidad="06" referencia="4">
+        <Respuesta resultado="True">13</Respuesta>
+        <Respuesta resultado="False">14</Respuesta>
+      </Pregunta>
+      <Pregunta id="9" texto="Lo siento señor, ya le he comentado que era muy introvertido">
+        <Respuesta num="6">Ok, Gracias.</Respuesta>
+        <Respuesta num="11">Si le ve aparecer digale que le estoy buscando.</Respuesta>
+      </Pregunta>
+      <Pregunta id="10" texto="Solia ir mucho a la biblioteca, pasaba mucho tiempo alli, aunque de vez en cuando pasaba por la taberna de El Pozo Negro">
+        <Respuesta num="0">Ok, gracias por la informacion, adios.</Respuesta>
+      </Pregunta>
+      <Pregunta id="11" texto="Ok, yo lo dejo anotado, adios.">
+        <Respuesta num="0">Adios</Respuesta>
+      </Pregunta>
+      <Pregunta id="12" texto="Adios">
+        <Respuesta num="0">Adios</Respuesta>
+      </Pregunta>
+      <Pregunta id="13" texto="Si, puede revirsarla si quiere, necesitamos cualquier pista del señor Ward">
+        <Respuesta num="12">No se preocupes, yo buscare alguna pista sobre su paradero.</Respuesta>
+        <Respuesta num="10">¿Que sitios solia frecuentar?</Respuesta>
+        <Respuesta num="0">Ok, ya la aviso yo si eso, adios.</Respuesta>
+      </Pregunta>
+      <Pregunta id="14" texto="Si, pero tiene que irse, todas estas cosas son privadas">
+        <Respuesta num="12">Joder, apartate de mi camino, necesito revisar sus cosas</Respuesta>
+        <Respuesta num="0">Ok, adios</Respuesta>
+      </Pregunta>
+    </Figura>
+  </Conversaciones>
+</Config>

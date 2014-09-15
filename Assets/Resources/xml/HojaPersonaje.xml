@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <HojaPersonaje>
+    <Datos>
+      <Dato id="01" texto="Nombre">Artie Gumshoe</Dato>
+      <Dato id="02" texto="Trabajo">Detective Privado</Dato>
+      <Dato id="03" texto="Foto">...</Dato>
+    </Datos>
+    <Caracteristicas>
+      <Caracteristica id="01" texto="FUE">10</Caracteristica>
+      <Caracteristica id="02" texto="CON">12</Caracteristica>
+      <Caracteristica id="03" texto="TAM">14</Caracteristica>
+      <Caracteristica id="04" texto="DES">5</Caracteristica>
+      <Caracteristica id="05" texto="APA">12</Caracteristica>
+      <Caracteristica id="06" texto="COR">85</Caracteristica>
+      <Caracteristica id="07" texto="INT">10</Caracteristica>
+      <Caracteristica id="08" texto="POD">12</Caracteristica>
+      <Caracteristica id="09" texto="EDU">14</Caracteristica>
+      <Caracteristica id="10" texto="Idea">85</Caracteristica>
+      <Caracteristica id="11" texto="Suerte">75</Caracteristica>
+      <Caracteristica id="12" texto="Conoc">90</Caracteristica>
+    </Caracteristicas>
+    <Habilidades>
+      <Habilidad id="01" texto="Buscar Libros">25</Habilidad>
+      <Habilidad id="02" texto="Cerrajeria">40</Habilidad>
+      <Habilidad id="03" texto="Charlataneria">55</Habilidad>
+      <Habilidad id="04" texto="Credito">15</Habilidad>
+      <Habilidad id="05" texto="Derecho">55</Habilidad>
+      <Habilidad id="06" texto="Descubrir">25</Habilidad>
+      <Habilidad id="07" texto="Discrecion">40</Habilidad>
+      <Habilidad id="08" texto="Escuchar">25</Habilidad>
+      <Habilidad id="09" texto="Esquivar">25</Habilidad>
+      <Habilidad id="10" texto="Fotografia">45</Habilidad>
+      <Habilidad id="11" texto="Historia">20</Habilidad>
+      <Habilidad id="12" texto="Mitos de Cthulhu">0</Habilidad>
+      <Habilidad id="13" texto="Idioma">55</Habilidad>
+      <Habilidad id="14" texto="Mecanica">20</Habilidad>
+      <Habilidad id="15" texto="Ocultar">25</Habilidad>
+      <Habilidad id="16" texto="Ocultarse">40</Habilidad>
+      <Habilidad id="17" texto="Persuasion">35</Habilidad>
+      <Habilidad id="18" texto="Primeros Auxilios">30</Habilidad>
+      <Habilidad id="19" texto="Psicologia">45</Habilidad>
+      <Habilidad id="20" texto="Regatear">75</Habilidad>
+      <Habilidad id="21" texto="Saltar">25</Habilidad>
+      <Habilidad id="22" texto="Ciencias Ocultas">50</Habilidad>
+    </Habilidades>
+    <Armas>
+      <Arma id="01" texto="Arma Corta">65</Arma>
+      <Arma id="02" texto="Fusil">25</Arma>
+      <Arma id="03" texto="Escopeta">30</Arma>
+      <Arma id="04" texto="Arma Cuerpo a Cuerpo">40</Arma>
+    </Armas>
+  </HojaPersonaje>
+</Config>
