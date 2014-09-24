@@ -2,6 +2,7 @@
 using System.Collections;
 using Oscuridad.Personajes;
 using Oscuridad.Clases;
+using Oscuridad.Enumeraciones;
 
 public class BotonMenu : MonoBehaviour 
 {

@@ -25,7 +25,7 @@ namespace Oscuridad.Estados
 		public void InicializarDatos()
 		{
 			//GUI a Mostrar
-			GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado (estadoJugador.enMenus);
+			GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado (EstadosJugador.enMenus);
 		}
 		
 		public void EstadoUpdate()

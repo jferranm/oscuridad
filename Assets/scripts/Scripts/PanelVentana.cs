@@ -70,11 +70,11 @@ public class PanelVentana : MonoBehaviour
 	{
 		switch (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado ()) 
 		{
-			case estadoJugador.enEspera:	
+			case EstadosJugador.enEspera:	
 				JugadorEnEspera ();
 				break;
 				
-			case estadoJugador.enZoomEspera:
+			case EstadosJugador.enZoomEspera:
 				JugadorEnZoomEspera ();
 				break;
 		}

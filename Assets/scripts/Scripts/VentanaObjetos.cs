@@ -29,7 +29,7 @@ public class VentanaObjetos: MonoBehaviour
 	{
 		if(GameCenter.InstanceRef != null)
 		{
-			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != estadoJugador.enMenus)
+			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
 				GameCenter.InstanceRef.controladoraTextos.listaObjetos.Clear();
 				//cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraTextos.textoCabecera;

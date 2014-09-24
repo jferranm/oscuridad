@@ -2,13 +2,13 @@
 {
 	//Enumeracion de EstadosPersonaje
 	[System.Serializable]
-	public enum estadoJugador
+	public enum EstadosJugador
 	{
 		enMenus,
 		enEspera,
-		enZoomEspera,
 		enZoomIn,
 		enZoomOut,
-		enPelea
+		enZoomEspera,
+		enInventario
 	};
 }

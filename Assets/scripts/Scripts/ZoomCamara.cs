@@ -29,7 +29,7 @@ public class ZoomCamara : MonoBehaviour
 
 	void Update()
 	{
-		if (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == estadoJugador.enEspera)
+		if (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
@@ -49,7 +49,7 @@ public class ZoomCamara : MonoBehaviour
 							{
 								//TODO: arreglar el tema de sonidos
 								GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
-								GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(estadoJugador.enZoomIn);
+								GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomIn);
 							}
 							
 							if (objetoInteractuableRef.conAnimacion)

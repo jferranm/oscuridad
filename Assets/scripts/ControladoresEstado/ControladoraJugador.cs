@@ -20,7 +20,7 @@ public class ControladoraJugador
 	[HideInInspector]
 	public GameObject objetoPulsado;
 	
-	private estadoJugador estadosJugador;
+	private EstadosJugador estadosJugador;
 	private string nombreJugador;
 
 	public ControladoraJugador()
@@ -44,37 +44,37 @@ public class ControladoraJugador
 		{
 			switch (estadosJugador) 
 			{
-			case estadoJugador.enEspera:	
+			case EstadosJugador.enEspera:	
 				JugadorEnEspera();
 				break;
 				
-			case estadoJugador.enZoomIn:
+			case EstadosJugador.enZoomIn:
 				GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomIn());
 				break;
 				
-			case estadoJugador.enZoomOut:
+			case EstadosJugador.enZoomOut:
 				GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomOut());
 				break;
 				
-			case estadoJugador.enZoomEspera:
+			case EstadosJugador.enZoomEspera:
 				JugadorEnZoomEspera();
 				break;
 				
-			case estadoJugador.enMenus:
+			case EstadosJugador.enMenus:
 				JugadorEnMenus();
 				break;
 			}
 		}
 	}
 
-	public void Cambiar_Estado(estadoJugador nuevoEstado)
+	public void Cambiar_Estado(EstadosJugador nuevoEstado)
 	{
 		estadosJugador = nuevoEstado;
 		estadoCambiado = true;
 		GameCenter.InstanceRef.controladoraGUI.estadoCambiado = true;
 	}
 	
-	public estadoJugador Devolver_Estado()
+	public EstadosJugador Devolver_Estado()
 	{
 		return estadosJugador;
 	}
@@ -102,7 +102,7 @@ public class ControladoraJugador
 		
 		if(Camera.main.transform.position.ToString() == objetoInteractuableRef.posicionNueva.ToString())
 		{
-			Cambiar_Estado(estadoJugador.enZoomEspera);
+			Cambiar_Estado(EstadosJugador.enZoomEspera);
 			estadoCambiado = true;
 			yield break;
 		}
@@ -116,7 +116,7 @@ public class ControladoraJugador
 		
 		if(Camera.main.transform.position.ToString() == zoomCamaraRef.posicionInicial.ToString())
 		{
-			Cambiar_Estado(estadoJugador.enEspera);
+			Cambiar_Estado(EstadosJugador.enEspera);
 			estadoCambiado = true;
 			objetoInteractuableRef = null;
 			yield break;

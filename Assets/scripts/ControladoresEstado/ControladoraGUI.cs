@@ -134,23 +134,23 @@ public class ControladoraGUI
 		{
 			switch (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado()) 
 			{
-			case estadoJugador.enEspera:	
+			case EstadosJugador.enEspera:	
 				JugadorEnEspera ();
 				break;
 				
-			case estadoJugador.enZoomIn:
+			case EstadosJugador.enZoomIn:
 				JugadorEnZoomIn ();
 				break;
 				
-			case estadoJugador.enZoomOut:
+			case EstadosJugador.enZoomOut:
 				JugadorEnZoomOut ();
 				break;
 				
-			case estadoJugador.enZoomEspera:
+			case EstadosJugador.enZoomEspera:
 				JugadorEnZoomEspera ();
 				break;
 				
-			case estadoJugador.enMenus:
+			case EstadosJugador.enMenus:
 				JugadorEnMenu ();
 				break;
 			}

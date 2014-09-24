@@ -30,11 +30,11 @@ public class VentanaDescripciones: MonoBehaviour
 	{
 		if(GameCenter.InstanceRef != null)
 		{
-			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != estadoJugador.enMenus)
+			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
 				GameCenter.InstanceRef.controladoraTextos.listaTiradas.Clear();
 
-				if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == estadoJugador.enEspera)
+				if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 				{
 					GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(Application.loadedLevelName);
 					listaTiradas = GameCenter.InstanceRef.controladoraTextos.listaTiradas;

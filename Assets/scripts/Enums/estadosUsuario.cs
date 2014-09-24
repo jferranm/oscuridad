@@ -1,6 +1,6 @@
 ﻿namespace Oscuridad.Enumeraciones
 {
-	//Enumeracion de EstadosPersonaje
+	//Enumeracion de Estados del Usuario
 	public enum estadoUsuario
 	{
 		enHojaDePersonaje,

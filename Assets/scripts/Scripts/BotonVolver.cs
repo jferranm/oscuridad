@@ -12,7 +12,7 @@ public class BotonVolver : MonoBehaviour
 			if (this.guiTexture.HitTest(touch.position))
 			{
 				//Volvemos al estado del jugador EnEspera
-				GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(estadoJugador.enZoomOut);
+				GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomOut);
 				break;
 			}
 		}
@@ -21,6 +21,6 @@ public class BotonVolver : MonoBehaviour
 	void OnMouseDown() 
 	{
 		//Volvemos al estado del jugador EnEspera
-		GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(estadoJugador.enZoomOut);
+		GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomOut);
 	}
 }
