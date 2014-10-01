@@ -1,13 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\ZoomCamara.cs">
     <Files>
+      <File FileName="oscuridad.sln" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="32" Column="1" />
       <File FileName="Assets\scripts\Scripts\BotonMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Scripts\BotonVolver.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Scripts\VentanaObjetos.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="32" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
