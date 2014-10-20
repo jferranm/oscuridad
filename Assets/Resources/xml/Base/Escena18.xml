@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Nombre>Escena18</Nombre>
+  <Descripcion>Esta puerta esta cerrada.</Descripcion>
+  <ObjetosEscena>
+    <ObjetoBase>
+      <Nombre>CuadrosPrimeraPlanta1</Nombre>
+      <ObjetoOpciones />
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>PeriodicosHabitacionCharles</Nombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Son un monton de periodicos de hace varias semanas, de varios dias de la semana.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos.</TextoDescriptivo>
+          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>LibrosHabitacionCharles</Nombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>Mesita</Nombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Sobre una mesita hay unas cuantas fotos enmarcadas. Son fotos de los padres de Charles, otra de Charles de joven y la ultima es una foto de bodas, donde aparece Charles y su esposa, con el velo puesto.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>En la foto de boda se ve a Charles algo desmejorado, la figura de su esposa, aunque cubierta por el velo, te transmite una sensacion de temor, como si sus ojos te devolvieran la mirada desde debajo del velo.</TextoDescriptivo>
+          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>CuadrosPrimeraPlanta2</Nombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Mas pinturas de la familia, reunidos en el exterior de la casa, en lo que parece el jardin.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
+          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <Comprobacion>true</Comprobacion>
+          <EscenaComprobacion>escena11</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>Puerta</Nombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>La puerta esta cerrada con llave</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+  </ObjetosEscena>
+  <PersonajesEscena />
+</EscenaBase>

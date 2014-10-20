@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Nombre>Escena14</Nombre>
+  <Descripcion>El pasillo de la primera planta empieza aqui, a la izquierda se puede entrar al dormitorio de los Ward y el pasillo continua hasta la ventana que da al jardin.</Descripcion>
+  <ObjetosEscena>
+    <ObjetoBase>
+      <Nombre>CuadrosPrimeraPlanta1</Nombre>
+      <ObjetoOpciones />
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+    </ObjetoBase>
+  </ObjetosEscena>
+  <PersonajesEscena />
+</EscenaBase>

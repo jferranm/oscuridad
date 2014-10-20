@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Nombre>Escena12</Nombre>
+  <Descripcion>La entrada de la casa, aqui esta la Ama de Llaves (una mujer mayor, ella y su esposo cuidan de la casa mientras los Ward estan de viaje). Unas escaleras suben al primer piso y a la izquierda se puede entrar al salon.</Descripcion>
+  <ObjetosEscena />
+  <PersonajesEscena>
+    <PersonajeBase>
+      <Nombre>AmaDeLlaves</Nombre>
+      <PersonajeOpciones>
+        <opcionObjeto>Hablar</opcionObjeto>
+      </PersonajeOpciones>
+      <ConversacionPersonaje>
+        <RespuestaBase>
+          <TextoRespuesta>Buenos días, soy la señora Hopkins, los señores Ward me avisaron de su llegada y me pidieron que le ayudara en todo lo que necesitara, por lo que quedo a su servicio mientras este en esta casa.</TextoRespuesta>
+          <IdRespuesta>1</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Donde estan los señores Ward?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>1</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Qué puede contarme del joven señor Charles?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>2</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Me marcho, buenos dias.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>3</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Que le ha pasado al cuadro del salon?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>15</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>CuadroSalon</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>No he podido evitar fijarme en la figura que hay sobre una de las estanterias del salon. ¿De donde ha salido?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>24</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Figura</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>La habitacion del desvan esta cerrada con llave, ¿Puede usted abrirme, por favor?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>29</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>AbrirPuertaDesvanFallo</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Los señores Ward estan en Londres, visitando a unos familiares y atendiendo los negocios del señor Ward. Llevan en Londres dos meses, aunque su intencion es volver cuanto antes dada la desaparicion de su hijo.</TextoRespuesta>
+          <IdRespuesta>2</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>El señor Charles siempre ha sido una persona muy introvertida, pero muy amable y respetuaso con todos. Siempre lo he visto imbuido en sus lecturas y desde muy pequeño le ha gustado mucho rodearse de libros. Su timidez y su afan por la lectura no le han permitido socializar mucho. Hasta que conocio a su actual esposa la señora Waitte… y entonces cambio, trasnochaba, llegaba malhumorado a casa, era impertitente con todos nosotros, incluso con sus padres. Al fin nos alegramos que tras la boda dejara la casa. Pero a los pocos meses volvio a esta casa, seguia estando muy raro y se encerraba durante dias en la habitacion del desvan.</TextoRespuesta>
+          <IdRespuesta>3</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Habia alguien mas con quien pasara su tiempo, a parte de con la señora Waitte?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>5</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Se rumoreaba que es lo que hacia por las noches o que lugares frecuentaba?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>6</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Que quiere decir con que estaba muy raro?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>7</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Que hacia tanto tiempo en la habitacion del desvan?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>8</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Volvio solo a esta casa, sin su mujer?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>9</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Donde se marcharon a vivir tras la boda?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>10</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Me gustaria preguntarle sobre otra cosa</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>11</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Siempre salia con la señora Waitte o solo la mayor parte del tiempo, la ultima temporada antes de desaparecer recibia la visita de un hombre, con barba poblada y gafas oscuras. Muy amable y atento, por cierto.</TextoRespuesta>
+          <IdRespuesta>4</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>No, nadie sabia a que dedicaba sus salidas o si visitaba a alguien durante ese tiempo. Sus padres le preguntaron en varias ocasiones, pero solo comentaba que estaba trabajando en algo que le haria famoso.</TextoRespuesta>
+          <IdRespuesta>5</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Se comportaba de manera extraña con nosotros, y con las pocas visitas que llegaban a la casa, siempre arisco y con esa mirada fria en sus ojos. Como si no nos conociera, algo horrible le debio de pasar.</TextoRespuesta>
+          <IdRespuesta>6</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>No sabria decirle, me daba mucho miedo acercarme a esa habitacion, el señor Charles nos prohibia entrar. Muchas noches se escuchaban ruidos horribles en el interior, como si alguien gritara y de repente riera… a veces me parecia oir conversaciones entre varias personas, y el olor, ese horrible olor que lo impregnaba todo. ¡Era realmente horrible!</TextoRespuesta>
+          <IdRespuesta>7</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Si, nos sorprendio mucho verle llegar. Hablo poco con nosotros, los señores ya no estaban en la casa, nos dijo que se instalaria unos dias, pero que no le molestaramos, y que acompañaramos a los visitantes que preguntaran por el a la habitacion del desvan.</TextoRespuesta>
+          <IdRespuesta>8</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Que clase de visitas recibio?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>12</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Reconocia a algunas de esas visitas?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>13</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>14</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Se trasladaron a la granja Pawtutxet, es una antigua propiedad de la familia a las afueras de la ciudad que los señores restauraron para el señor Charles y su esposa. </TextoRespuesta>
+          <IdRespuesta>9</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>true</Comprobacion>
+          <LocalizacionSeleccionada>MansionPawtuxet</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Pues al principio dos hombres,  rudos y con muy mal aspecto, el señor Charles salia con ellos y volvia muy tarde ya solo. Luego empezo a llegar un hombre con barba poblada y gafas oscuras. Le acompañaba junto a la puerta de la habitacion del devan, y no entraba hasta que me veia bajar de nuevo las escaleras.</TextoRespuesta>
+          <IdRespuesta>10</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>A ninguna de ellas, jamas habia visto a ninguna de esas personas, no eran la clase de gente con la que los señores se suelen relacionar.</TextoRespuesta>
+          <IdRespuesta>11</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>El señor Charles llego un dia a casa a altas horas de la noche, muy alterado, y con un cuchillo arranco la pintura del cuadro, no nos atrevimos a decir nada, ni siquiera a retirar el marco sin ordenes del señor.</TextoRespuesta>
+          <IdRespuesta>12</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Que habia en la pintura?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>16</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Era un retrato de un viejo antepasado que el señor Charles encontro en la granja Pawtuxet durante su restauracion. Le gusto tanto que la trajo a casa y la colgo en el salon. </TextoRespuesta>
+          <IdRespuesta>13</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Un viejo antepasado? ¿De quien se trataba?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>17</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Y sabe donde esta ahora esa pintura?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>18</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Y no saben a que se debia su mal humor la noche que arranco el cuadro?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>19</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿La granga Pawxutet, que lugar es ese?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>20</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>No sabria decirle, de alguien importante parece, porque el señor Charles estuvo un tiempo buscando informacion sobre el despues de enterarse que eran familia.</TextoRespuesta>
+          <IdRespuesta>14</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>No lo se, señor. [Parece asustada…]</TextoRespuesta>
+          <IdRespuesta>15</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>No se preocupe por nada, estoy aqui para ayudar y todo lo que me pueda decir me ayudara a solventar este desdichado asunto.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>21</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Persuasion</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Por favor, no tenga miedo y digame donde podria estar esa pintura.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>22</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Dejeme preguntarle por otra cosa...</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>23</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>No, pero era algo comun desde hacia un tiempo que el señor Charles llegara a casa malhumorado.</TextoRespuesta>
+          <IdRespuesta>16</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>La granja es una antigua propiedad de la familia Ward, durante mucho tiempo estuvo abandonada, pero fue restaurada recientemente para convertirse en el hogar del señor Charles y su esposa tras la boda. </TextoRespuesta>
+          <IdRespuesta>17</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>true</Comprobacion>
+          <LocalizacionSeleccionada>MansionPawtuxet</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>El señor Charles se la llevo a su habitacion del desvan. Esa a la que tenemos prohibido entrar.</TextoRespuesta>
+          <IdRespuesta>18</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Lo siento, pero de verdad que no se donde podria estar.</TextoRespuesta>
+          <IdRespuesta>19</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>[El ama de llaves parace muy asustada] Esa estatuilla... es… es un regalo que la señora Waitte, la esposa del señor Charles, le hizo antes de su boda. Me asusta mucho ese pedazo de roca, ¿Lo ha tocado usted? es algo que no deberia estar aqui. Me recuerda a las viejas historias que me contaba mi abuela, sobre las gentes de los arrecifes, y sus aquelarres nocturnos a la luz de la luna. Son cosas de las que es mejor mantenerse alejado, yo al menos no quiero acercarme a esa estatuilla.</TextoRespuesta>
+          <IdRespuesta>20</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Quienes son las gentes de los arrecifes?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>25</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Son gente antigua, gente peligrosa, mi abuela siempre nos hablaba de ellos con la intencion de mantenernos lejos de esos lugares, pero posiblemente sea un cuento para asustar a los niños, ¿verdad? las abuelas son muy dadas a esas historias.</TextoRespuesta>
+          <IdRespuesta>21</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Se refiere a los Profundos? ¿Conoce a esas criaturas?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>26</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>TiradaMitosCthulhuFigura</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Es una figura extraña? ¿reconoce lo que representa o el señor Charles o su exposa se lo explico?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>27</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>TiradaCienciasOcultasFigura</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>28</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>¿Profundos? no se que es eso. Lo siento mucho.</TextoRespuesta>
+          <IdRespuesta>22</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>No, no, por dios. Jamas me atreveria a preguntar nada sobre esa… cosa. Y el señor Charles nunca nos hablo sobre ella.</TextoRespuesta>
+          <IdRespuesta>23</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Lo siento muchisimo, pero el señor Charles no nos permitio disponer de una copia de la llave, y con su desaparicion tambien ha desaparecido la llave.</TextoRespuesta>
+          <IdRespuesta>24</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿No tienen llave maestra en la casa?</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>30</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>31</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Persuasion</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Permita que le haga otra pregunta.</TextoPregunta>
+              <IdRespuesta>0</IdRespuesta>
+              <IdPregunta>32</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Para esa puerta no, el señor Charles se ocupo de que asi fuera.</TextoRespuesta>
+          <IdRespuesta>25</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Bueno… a decir verdad… Si habia una llave, pero mi abuela paso por aqui un dia, poco despues de la desaparicion del señor Charles y se la di para que hiciera uno de sus rituales de purificacion con la llave, !Se puso muy insistente¡ y no pense que hiciera daño a nadie con eso. La ultima vez que la vi con ella estaba en el jardin de la casa.</TextoRespuesta>
+          <IdRespuesta>26</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+        <RespuestaBase>
+          <TextoRespuesta>Yo… bueno… si hubiera algo se lo diria, pero lo siento, no sabria como abrir esa puerta..</TextoRespuesta>
+          <IdRespuesta>27</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+      </ConversacionPersonaje>
+      <InicioConversacion>1</InicioConversacion>
+    </PersonajeBase>
+  </PersonajesEscena>
+</EscenaBase>
