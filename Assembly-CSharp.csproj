@@ -82,13 +82,9 @@
      <Compile Include="Assets\scripts\ControladoresEstado\GameCenter.cs" />
      <Compile Include="Assets\scripts\Enums\Enumeraciones.cs" />
      <Compile Include="Assets\scripts\Enums\EstadoJuego.cs" />
-     <Compile Include="Assets\scripts\Enums\Habilidades.cs" />
      <Compile Include="Assets\scripts\Enums\estadoDirecciones.cs" />
      <Compile Include="Assets\scripts\Enums\estadosJugador.cs" />
      <Compile Include="Assets\scripts\Enums\estadosUsuario.cs" />
-     <Compile Include="Assets\scripts\Enums\objetos.cs" />
-     <Compile Include="Assets\scripts\Enums\opcionObjeto.cs" />
-     <Compile Include="Assets\scripts\Enums\personaje.cs" />
      <Compile Include="Assets\scripts\Interfaces\IEscenario.cs" />
      <Compile Include="Assets\scripts\Personajes\Jugadores.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonCoger.cs" />

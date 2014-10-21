@@ -208,7 +208,7 @@ namespace Oscuridad.Personajes
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Nadar + "']", "40");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Ocultar + "']", "25");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Ocultarse + "']", "35");
-				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "55", new string[] {"Idioma:Frances"}); 
+				//xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.len.OtraLengua).ToString() + "']", "Lengua", "55", new string[] {"Idioma:Frances"}); 
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Persuasion + "']", "25");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.PrimerosAuxilios + "']", "30");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Psicologia + "']", "45");
@@ -260,10 +260,10 @@ namespace Oscuridad.Personajes
 				xml.SetAtributo(sHabilidades, "Habilidad[@id='" + (int)Habilidades.LenguaPropia + "']", "Idioma" + "']", "Ingles");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Nadar + "']", "25");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Ocultar + "']", "25");
-				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "45", new string[] {"Idioma:Frances"}); 
-				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "30", new string[] {"Idioma:Aleman"}); 
-				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "25", new string[] {"Idioma:Italiano"}); 
-				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "55", new string[] {"Idioma:Latin"}); 
+//				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "45", new string[] {"Idioma:Frances"}); 
+//				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "30", new string[] {"Idioma:Aleman"}); 
+//				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "25", new string[] {"Idioma:Italiano"}); 
+//				xml.CrearElemento(sHabilidades + "//" + ("Dato[@id='" + (int)Habilidades.OtraLengua).ToString() + "']", "Lengua", "55", new string[] {"Idioma:Latin"}); 
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Persuasion + "']", "15");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.PrimerosAuxilios + "']", "30");
 				xml.SetValor(sHabilidades, "Habilidad[@id='" + (int)Habilidades.Psicologia + "']", "55");

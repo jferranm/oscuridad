@@ -1,14 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\ZoomCamara.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Personajes\Jugadores.cs">
     <Files>
-      <File FileName="oscuridad.sln" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="32" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonVolver.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\VentanaObjetos.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\PreguntaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Personajes\Jugadores.cs" Line="266" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Oscuridad.Enumeraciones;
 
-namespace SerializadorXMLOscuridad
+namespace Oscuridad.Clases
 {
     /// <summary>
     /// Clase base para los objetos interactuables en la escena
     /// </summary>
-    [Serializable()]
+	[System.Serializable]
     public class ObjetoBase
     {
         private string nombre;

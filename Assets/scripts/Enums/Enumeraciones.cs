@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SerializadorXMLOscuridad
+namespace Oscuridad.Enumeraciones
 {
     /// <summary>
     /// tipo de interaccion con el objeto

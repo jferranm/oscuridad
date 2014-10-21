@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Oscuridad.Enumeraciones;
 
-namespace SerializadorXMLOscuridad
+namespace Oscuridad.Clases
 {
     /// <summary>
     /// Clase base para personaje jugador
     /// </summary>
+	[System.Serializable]
     public class JugadorBase
     {
         private Personaje tipoPersonaje;

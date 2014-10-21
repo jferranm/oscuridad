@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Oscuridad.Enumeraciones;
 
-namespace SerializadorXMLOscuridad
+namespace Oscuridad.Clases
 {
     /// <summary>
     /// Clase Base para Respuesta del NPC en una conversacion
     /// </summary>
-    [Serializable()]
+	[System.Serializable]
     public class RespuestaBase
     {
         private string textoRespuesta;
