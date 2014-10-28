@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Oscuridad.Personajes;
 using Oscuridad.Clases;
 using Oscuridad.Enumeraciones;
 
@@ -56,22 +55,19 @@ public class BotonMenu : MonoBehaviour
 
 			case "MariaGibbs":
 				//TODO: ir a mapa
-				GameCenter.InstanceRef.controladoraJugador.Nombre_Jugador("Maria Gibbs");
-				Seleccion_Personaje();
+				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.MarlaGibbs;
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 
 			case "WarrenBedford":
 				//TODO: ir a mapa
-				GameCenter.InstanceRef.controladoraJugador.Nombre_Jugador("Warren Bedford");
-				Seleccion_Personaje();
+				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.WarrenBedford;
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 
 			case "RobertDuncan":
 				//TODO: ir a mapa
-				GameCenter.InstanceRef.controladoraJugador.Nombre_Jugador("Robert Duncan");
-				Seleccion_Personaje();
+				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.RobertDuncan;
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 
@@ -111,29 +107,5 @@ public class BotonMenu : MonoBehaviour
 				}
 				break;	
 		}
-	}
-
-	public void Seleccion_Personaje()
-	{
-		Utils util = new Utils();
-
-		switch (GameCenter.InstanceRef.controladoraJugador.Devolver_Nombre_Jugador()) 
-		{
-			case "Maria Gibbs":	
-				util.crearHojaPersonaje(Personaje.MarlaGibbs);
-				break;
-				
-			case "Warren Bedford": 	
-				util.crearHojaPersonaje(Personaje.WarrenBedford);
-				break;
-				
-			case "Robert Duncan":	
-				util.crearHojaPersonaje(Personaje.RobertDuncan);
-				break;
-		}
-
-		//TODO: inicializar el personaje seleccionado
-		util.crearHojaPersonaje(Personaje.MarlaGibbs);
-		util.Inicializar_XML();
 	}
 }

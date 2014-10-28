@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 using Oscuridad.Interfaces;
 using Oscuridad.Clases;
 using Oscuridad.Enumeraciones;
@@ -38,6 +39,10 @@ namespace Oscuridad.Estados
 
 		public void NivelCargado()
 		{
+			//Cargamos Datos Serializados
+			cXML nuevoxml = new cXML ();
+			nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, "Escena10.xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
+
 			//Inicializamos la escena
 			GameCenter.InstanceRef.controladoraGUI.Devolver_Pantalla_Carga().comenzarFade = true;
 			GameCenter.InstanceRef.Inicializar_Escenario ();

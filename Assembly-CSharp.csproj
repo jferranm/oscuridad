@@ -75,6 +75,7 @@
      <Compile Include="Assets\scripts\Clases\cXML.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" />
+     <Compile Include="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraObjetos.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraSonidos.cs" />
@@ -86,7 +87,6 @@
      <Compile Include="Assets\scripts\Enums\estadosJugador.cs" />
      <Compile Include="Assets\scripts\Enums\estadosUsuario.cs" />
      <Compile Include="Assets\scripts\Interfaces\IEscenario.cs" />
-     <Compile Include="Assets\scripts\Personajes\Jugadores.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonCoger.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonDireccion.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonHablar.cs" />

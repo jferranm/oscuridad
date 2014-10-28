@@ -11,6 +11,7 @@ public class GameCenter : MonoBehaviour
 	public ControladoraTextos controladoraTextos;
 	public ControladoraObjetos controladoraObjetos;
 	public ControladoraGUI controladoraGUI;
+	public ControladoraJuego controladoraJuego;
 
 	//Instancia Singleton
 	private static GameCenter instanceRef;
@@ -54,6 +55,7 @@ public class GameCenter : MonoBehaviour
 		controladoraTextos = ControladoraTextos.InstanceRef ();
 		controladoraObjetos = ControladoraObjetos.InstanceRef ();
 		controladoraGUI = ControladoraGUI.InstanceRef ();
+		controladoraJuego = ControladoraJuego.InstanceRef ();
 
 		controladoraGUI.LocalizarObjetos ();
 		controladoraJugador.Cambiar_Estado(EstadosJugador.enMenus);

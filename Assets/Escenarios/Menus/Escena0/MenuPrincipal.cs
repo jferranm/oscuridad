@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Oscuridad.Interfaces;
-using Oscuridad.Personajes;
 using Oscuridad.Clases;
 using Oscuridad.Enumeraciones;
 using System.IO;
@@ -30,8 +29,6 @@ namespace Oscuridad.Estados
 
 		public void InicializarDatos()
 		{
-			GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado (EstadosJugador.enMenus);
-			GameCenter.InstanceRef.controladoraJugador.estadoCambiado = true;
 		}
 		
 		public void EstadoUpdate()

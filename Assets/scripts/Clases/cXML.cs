@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using System.IO;
 using System.Xml;
+using System.Xml.Serialization;
 
 public class cXML
 {
@@ -300,5 +301,46 @@ public class cXML
             }
 
         return cont;
+    }
+
+    //Serializar Clases
+    //Ejemplo
+
+    /* ClaseASerializar cs = new ClaseASerializar();
+     * cs.uno = 43;
+     * cs.dos = 31;
+     * Guardar_Clase_Serializable<ClaseASerializar>(@"c:\walter\pepe.xml", cs);
+     * 
+     *  [Serializable()]
+     *  public class ClaseASerializar
+     *  {
+     *  public int uno { get; set; }
+     *  public int dos { get; set; }
+     *  }
+     */
+    public void Guardar_Clase_Serializable<T>(string ruta, T objetoClase)
+    {
+        XmlSerializer objetoSerializado = new XmlSerializer(typeof(T));
+
+        // Creamos un nuevo FileStream para serializar el objeto en un fichero
+        TextWriter GrabarFileStream = new StreamWriter(ruta);
+        objetoSerializado.Serialize(GrabarFileStream, objetoClase);
+
+        GrabarFileStream.Close();
+    }
+
+    public T Cargar_Clase_Serializable<T>(string ruta, T objetoClase)
+    {
+        XmlSerializer objetoSerializado = new XmlSerializer(typeof(T));
+
+        // creamos un nuevo FileStream para leer el archivo XML
+        FileStream CargarFileStream = new FileStream(ruta, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+        // Cargamos el objeto cargado usando la funcion Deserialize
+        T objetoCargado = (T)objetoSerializado.Deserialize(CargarFileStream);
+
+        CargarFileStream.Close();
+
+        return objetoCargado;
     }
 }

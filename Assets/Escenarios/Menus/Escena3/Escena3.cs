@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Oscuridad.Interfaces;
-using Oscuridad.Personajes;
 using Oscuridad.Enumeraciones;
 using System.IO;
 
@@ -46,7 +45,7 @@ namespace Oscuridad.Estados
 				if (GUILayout.Button(GameCenter.InstanceRef.controladoraGUI.texturaBotonSeleccionar))
 				{
 					//Creamos el personaje seleccionado
-					Seleccion_Personaje();
+					//Seleccion_Personaje();
 
 					//Lanzamos la escena de Inicio
 					GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
@@ -61,24 +60,6 @@ namespace Oscuridad.Estados
 				}
 
 			GUILayout.EndArea ();		
-		}
-
-		public void Seleccion_Personaje()
-		{
-			Utils util = new Utils();
-			switch (GameCenter.InstanceRef.controladoraJugador.Devolver_Nombre_Jugador()) 
-			{
-				case "Maria Gibbs":	util.crearHojaPersonaje(Personaje.MarlaGibbs);
-									break;
-
-				case "Warren Bedford": 	util.crearHojaPersonaje(Personaje.WarrenBedford);
-										break;
-
-				case "Robert Duncan":	util.crearHojaPersonaje(Personaje.RobertDuncan);
-										break;
-			}
-			util.crearHojaPersonaje(Personaje.MarlaGibbs);
-			util.Inicializar_XML();
 		}
 
 		public void NivelCargado()

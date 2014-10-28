@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Oscuridad.Interfaces;
-using Oscuridad.Personajes;
 using Oscuridad.Clases;
 using Oscuridad.Enumeraciones;
 using System.IO;

@@ -10,6 +10,18 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class JugadorBase
     {
+		private string nombrePersonaje;
+		/// <summary>
+		/// Nombre del Jugador
+		/// </summary>
+		/// <value>
+		/// string con nombre de jugador
+		/// </value>
+		public string NombrePersonaje
+		{
+			get { return nombrePersonaje; }
+			set { nombrePersonaje = value; }
+		}
         private Personaje tipoPersonaje;
         /// <summary>
         /// Tipo de personaje jugador

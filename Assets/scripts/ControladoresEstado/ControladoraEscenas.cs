@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Oscuridad.Interfaces;
-using Oscuridad.Personajes;
 using Oscuridad.Enumeraciones;
 using Oscuridad.Estados;
 

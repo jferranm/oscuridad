@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Oscuridad.Interfaces;
-using Oscuridad.Personajes;
 using Oscuridad.Enumeraciones;
 using Oscuridad.Clases;
 
