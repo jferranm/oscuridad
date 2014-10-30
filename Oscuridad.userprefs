@@ -1,13 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Escenarios\CasaFamiliarWard\Escena10\Escena10.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\ControlMenus.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="4" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Escenarios\CasaFamiliarWard\Escena10\Escena10.cs" Line="47" Column="1" />
-      <File FileName="Assets\scripts\Clases\cXML.cs" Line="344" Column="1" />
+      <File FileName="Assets\scripts\Scripts\ControlMenus.cs" Line="12" Column="1" />
+      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="195" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

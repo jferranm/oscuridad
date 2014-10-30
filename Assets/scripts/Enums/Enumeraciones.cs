@@ -8,6 +8,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// tipo de interaccion con el objeto
     /// </summary>
+	[Serializable]
     public enum opcionObjeto
     {
         Coger,
@@ -19,6 +20,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Enumeracion para la Acciones en el juego que generan eventos.
     /// </summary>
+	[Serializable]
     public enum Acciones
     {
         Ninguna,
@@ -31,6 +33,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Caracteristicas del usuario
     /// </summary>
+	[Serializable]
     public enum Caracteristicas : int
     {
         Fuerza = 1,
@@ -52,6 +55,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Habilidades del usuario
     /// </summary>
+	[Serializable]
     public enum Habilidades : int
     {
         Ninguna = 0,
@@ -96,6 +100,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Nombre de las escenas
     /// </summary>
+	[Serializable]
     public enum Escenas
     {
         ninguna,
@@ -114,6 +119,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Nombre de los objetos
     /// </summary>
+	[Serializable]
     public enum Objetos
     {
         Ninguno,
@@ -138,6 +144,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Nombre del personaje jugador
     /// </summary>
+	[Serializable]
     public enum Personaje : int
     {
         RobertDuncan = 1,
@@ -148,6 +155,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Datos personales del personaje jugador
     /// </summary>
+	[Serializable]
     public enum DatosPersonales : int
     {
         Nombre = 1,
@@ -159,6 +167,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Armas del personaje jugador
     /// </summary>
+	[Serializable]
     public enum Armas : int
     {
         ArmaCorta = 1,
@@ -169,6 +178,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Estados del personaje jugador
     /// </summary>
+	[Serializable]
     public enum estadosJugador
     {
         enMenus,
@@ -182,6 +192,7 @@ namespace Oscuridad.Enumeraciones
     /// <summary>
     /// Localizaciones para el mapa
     /// </summary>
+	[Serializable]
     public enum Localizaciones
     {
         Ninguna,

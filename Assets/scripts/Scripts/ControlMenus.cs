@@ -6,8 +6,7 @@ public class ControlMenus : MonoBehaviour
 {
 	void OnEnable()
 	{
-		ControlXMLGlobal nuevoControl = new ControlXMLGlobal ();
-		if (nuevoControl.Checkear_Estado ()) 
+		if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje == null)
 			Desactiva("Comenzar");
 		else 
 			Desactiva("Continuar");
