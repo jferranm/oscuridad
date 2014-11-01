@@ -40,8 +40,7 @@ namespace Oscuridad.Estados
 		public void NivelCargado()
 		{
 			//Cargamos Datos Serializados
-			cXML nuevoxml = new cXML ();
-			nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, "Escena10.xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
+			GameCenter.InstanceRef.controladoraJuego.escenaActual = GameCenter.InstanceRef.controladoraJuego.Cargar_Escena(Escenas.Escena10);
 
 			//Inicializamos la escena
 			GameCenter.InstanceRef.controladoraGUI.Devolver_Pantalla_Carga().comenzarFade = true;

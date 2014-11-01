@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using Oscuridad.Enumeraciones;
 
@@ -35,8 +36,8 @@ public class BotonDireccion : MonoBehaviour
 
 	private void CambiarEscena()
 	{
-		//GameCenter.InstanceRef.controladoraObjetos.Guardar_Estado_Objetos ();
 		GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
+		GameCenter.InstanceRef.controladoraJuego.Guardar_Escena ((Escenas)Enum.Parse (typeof(Escenas), Application.loadedLevelName));
 		GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(nuevaSalida);
 	}
 }
