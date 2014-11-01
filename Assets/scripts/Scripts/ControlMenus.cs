@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 using Oscuridad.Clases;
 
 public class ControlMenus : MonoBehaviour 
 {
 	void OnEnable()
 	{
-		if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje == null)
+		string archivoJugador = Path.Combine (GameCenter.InstanceRef.USERPATH, "Jugador.xml");
+		if (File.Exists (archivoJugador))
 			Desactiva("Comenzar");
 		else 
 			Desactiva("Continuar");

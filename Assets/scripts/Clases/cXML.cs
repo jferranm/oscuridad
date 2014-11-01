@@ -323,7 +323,7 @@ public class cXML
         XmlSerializer objetoSerializado = new XmlSerializer(typeof(T));
 
         // Creamos un nuevo FileStream para serializar el objeto en un fichero
-        TextWriter GrabarFileStream = new StreamWriter(ruta);
+        TextWriter GrabarFileStream = new StreamWriter(ruta, false);
         objetoSerializado.Serialize(GrabarFileStream, objetoClase);
 
         GrabarFileStream.Close();

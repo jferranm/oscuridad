@@ -42,6 +42,7 @@ public class BotonMenu : MonoBehaviour
 
 			case "Continuar":
 				//TODO: empezar por la ultima pantalla
+				GameCenter.InstanceRef.controladoraJuego.CargarJugador();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 
@@ -56,18 +57,24 @@ public class BotonMenu : MonoBehaviour
 			case "MariaGibbs":
 				//TODO: ir a mapa
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.MarlaGibbs;
+				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
+				GameCenter.InstanceRef.controladoraJuego.CopiarXML();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 
 			case "WarrenBedford":
 				//TODO: ir a mapa
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.WarrenBedford;
+				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
+				GameCenter.InstanceRef.controladoraJuego.CopiarXML();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 
 			case "RobertDuncan":
 				//TODO: ir a mapa
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.RobertDuncan;
+				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
+				GameCenter.InstanceRef.controladoraJuego.CopiarXML();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
 				break;
 

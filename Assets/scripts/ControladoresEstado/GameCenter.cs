@@ -13,6 +13,8 @@ public class GameCenter : MonoBehaviour
 	public ControladoraGUI controladoraGUI;
 	public ControladoraJuego controladoraJuego;
 
+	public string USERPATH;
+
 	//Instancia Singleton
 	private static GameCenter instanceRef;
 	public static GameCenter InstanceRef
@@ -59,6 +61,8 @@ public class GameCenter : MonoBehaviour
 
 		controladoraGUI.LocalizarObjetos ();
 		controladoraJugador.Cambiar_Estado(EstadosJugador.enMenus);
+
+		USERPATH = Application.persistentDataPath;
 	}
 
 	void Start()

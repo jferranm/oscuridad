@@ -104,16 +104,16 @@ namespace Oscuridad.Enumeraciones
     public enum Escenas
     {
         ninguna,
-        escena10,
-        escena11,
-        escena12,
-        escena13,
-        escena14,
-        escena15,
-        escena16,
-        escena17,
-        escena18,
-        escena19
+        Escena10,
+        Escena11,
+        Escena12,
+        Escena13,
+        Escena14,
+        Escena15,
+        Escena16,
+        Escena17,
+        Escena18,
+        Escena19
     }
 
     /// <summary>
