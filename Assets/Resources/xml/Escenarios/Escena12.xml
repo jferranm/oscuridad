@@ -669,4 +669,8 @@
       <InicioConversacion>1</InicioConversacion>
     </PersonajeBase>
   </PersonajesEscena>
+  <EscenaNorte>Escena14</EscenaNorte>
+  <EscenaSur>Escena10</EscenaSur>
+  <EscenaEste>Escena13</EscenaEste>
+  <EscenaOeste>ninguna</EscenaOeste>
 </EscenaBase>

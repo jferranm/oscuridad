@@ -36,32 +36,28 @@ public class PanelDirecciones : MonoBehaviour
 
 	private void Reorganizar_Direcciones()
 	{
-		//Accedemos al xml para saber que direcciones activar
-		ControlXMLGlobal nuevoControlGlobal = new ControlXMLGlobal ();
-		Hashtable listaSalidas = new Hashtable (nuevoControlGlobal.Devolver_Salidas(Application.loadedLevelName));
-
-		//Recorremos la lista k nos devuelve y activamos direccciones
-		foreach (Salidas nuevaSalida in listaSalidas.Values) 
+		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte != Escenas.ninguna) 
 		{
-			switch(nuevaSalida.orientacionSalida)
-			{
-			case "izquierda":
-				CambiarTextura("Izq", GameCenter.InstanceRef.controladoraGUI.texturaFlechasIzqOK, GameCenter.InstanceRef.controladoraEscenas.Devolver_Enum_Escena(nuevaSalida.escenaSalida));
-				break;
-			case "derecha":	
-				CambiarTextura("Der", GameCenter.InstanceRef.controladoraGUI.texturaFlechasDerOK, GameCenter.InstanceRef.controladoraEscenas.Devolver_Enum_Escena(nuevaSalida.escenaSalida));
-				break;
-			case "arriba":
-				CambiarTextura("Arr", GameCenter.InstanceRef.controladoraGUI.texturaFlechasArrOK, GameCenter.InstanceRef.controladoraEscenas.Devolver_Enum_Escena(nuevaSalida.escenaSalida));
-				break;
-			case "abajo":	
-				CambiarTextura("Abj", GameCenter.InstanceRef.controladoraGUI.texturaFlechasAbjOK, GameCenter.InstanceRef.controladoraEscenas.Devolver_Enum_Escena(nuevaSalida.escenaSalida));
-				break;
-			}
+			CambiarTextura("Arr", GameCenter.InstanceRef.controladoraGUI.texturaFlechasArrOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte);
+		}
+
+		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur != Escenas.ninguna) 
+		{
+			CambiarTextura("Abj", GameCenter.InstanceRef.controladoraGUI.texturaFlechasAbjOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur);
+		}
+
+		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste != Escenas.ninguna) 
+		{
+			CambiarTextura("Izq", GameCenter.InstanceRef.controladoraGUI.texturaFlechasIzqOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste);
+		}
+
+		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste != Escenas.ninguna) 
+		{
+			CambiarTextura("Der", GameCenter.InstanceRef.controladoraGUI.texturaFlechasDerOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste);
 		}
 	}
 
-	private void CambiarTextura(string direccion, Texture2D textura, EstadoJuego nuevoEstado)
+	private void CambiarTextura(string direccion, Texture2D textura, Escenas nuevaEscena)
 	{
 		foreach (Transform objetoHijo in this.transform) 
 		{
@@ -69,7 +65,7 @@ public class PanelDirecciones : MonoBehaviour
 			{
 				objetoHijo.guiTexture.texture = textura;
 				objetoHijo.GetComponent<BotonDireccion>().salida = true;
-				objetoHijo.GetComponent<BotonDireccion>().nuevaSalida = nuevoEstado;
+				objetoHijo.GetComponent<BotonDireccion>().nuevaSalida = nuevaEscena;
 			}
 		}
 	}

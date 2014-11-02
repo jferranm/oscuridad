@@ -22,17 +22,6 @@ public class GameCenter : MonoBehaviour
 		get { return instanceRef; }
 	}
 
-	private EstadoJuego estadoActual;
-	
-	public EstadoJuego EstadoActual
-	{
-		get { return estadoActual; }
-		set 
-		{
-			estadoActual = value;
-		}
-	}
-
 	void Awake()
 	{
 		if (instanceRef == null)
@@ -69,7 +58,7 @@ public class GameCenter : MonoBehaviour
 	{
 		controladoraGUI.Start ();
 		controladoraSonidos.Start ();
-		controladoraEscenas.CambiarSceneSegunEnum (EstadoJuego.MenuPrincipal);
+		controladoraEscenas.CambiarSceneSegunEnum (Escenas.MenuPrincipal);
 	}
 	
 	void Update()

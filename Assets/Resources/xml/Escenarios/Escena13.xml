@@ -113,4 +113,8 @@
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />
+  <EscenaNorte>ninguna</EscenaNorte>
+  <EscenaSur>ninguna</EscenaSur>
+  <EscenaEste>ninguna</EscenaEste>
+  <EscenaOeste>Escena12</EscenaOeste>
 </EscenaBase>

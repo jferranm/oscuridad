@@ -8,7 +8,7 @@ public class BotonDireccion : MonoBehaviour
 	[HideInInspector]
 	public bool salida = false;
 	[HideInInspector]
-	public EstadoJuego nuevaSalida;
+	public Escenas nuevaSalida;
 
 	void Update()
 	{

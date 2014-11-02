@@ -20,4 +20,8 @@
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />
+  <EscenaNorte>Escena17</EscenaNorte>
+  <EscenaSur>Escena12</EscenaSur>
+  <EscenaEste>Escena16</EscenaEste>
+  <EscenaOeste>ninguna</EscenaOeste>
 </EscenaBase>

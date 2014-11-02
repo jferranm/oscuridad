@@ -62,13 +62,64 @@ namespace Oscuridad.Clases
             set { personajesEscena = value; }
         }
 
+		private Escenas escenaNorte;
+		/// <summary>
+		/// Direccion de la salida Norte
+		/// </summary>
+		/// <value>
+		/// valor tipo enum Escenas
+		/// </value>
+		public Escenas EscenaNorte
+		{
+			get { return escenaNorte; }
+			set { escenaNorte = value; }
+		}
+
+		private Escenas escenaSur;
+		/// <summary>
+		/// Direccion de la salida Sur
+		/// </summary>
+		/// <value>
+		/// valor tipo enum Escenas
+		/// </value>
+		public Escenas EscenaSur
+		{
+			get { return escenaSur; }
+			set { escenaSur = value; }
+		}
+
+		private Escenas escenaEste;
+		/// <summary>
+		/// Direccion de la salida Este
+		/// </summary>
+		/// <value>
+		/// valor tipo enum Escenas
+		/// </value>
+		public Escenas EscenaEste
+		{
+			get { return escenaEste; }
+			set { escenaEste = value; }
+		}
+
+		private Escenas escenaOeste;
+		/// <summary>
+		/// Direccion de la salida Oeste
+		/// </summary>
+		/// <value>
+		/// valor tipo enum Escenas
+		/// </value>
+		public Escenas EscenaOeste
+		{
+			get { return escenaOeste; }
+			set { escenaOeste = value; }
+		}
+
         /// <summary>
         /// Constructor de la clase <see cref="EscenaBase"/> class.
         /// </summary>
         public EscenaBase()
         {
-            objetosEscena = new List<ObjetoBase>();
-            personajesEscena = new List<PersonajeBase>();
+			Inicializar ();
         }
 
         /// <summary>
@@ -77,8 +128,7 @@ namespace Oscuridad.Clases
         /// <param name="nombre">string con el nombre de la escena</param>
         public EscenaBase(string nombre)
         {
-            objetosEscena = new List<ObjetoBase>();
-            personajesEscena = new List<PersonajeBase>();
+			Inicializar ();
 
             this.nombre = nombre;
         }
@@ -89,8 +139,7 @@ namespace Oscuridad.Clases
         /// <param name="objetos">array de tipo ObjetoBase</param>
         public EscenaBase(ObjetoBase[] objetos)
         {
-            objetosEscena = new List<ObjetoBase>();
-            personajesEscena = new List<PersonajeBase>();
+			Inicializar ();
 
             AddObjeto(objetos);
         }
@@ -101,8 +150,7 @@ namespace Oscuridad.Clases
         /// <param name="personajes">array de tipo PersonajeBase</param>
         public EscenaBase(PersonajeBase[] personajes)
         {
-            objetosEscena = new List<ObjetoBase>();
-            personajesEscena = new List<PersonajeBase>();
+			Inicializar ();
 
             AddPersonaje(personajes);
         }
@@ -115,8 +163,7 @@ namespace Oscuridad.Clases
         /// <param name="personajes">array de tipo PersonajeBase</param>
         public EscenaBase(string nombre, ObjetoBase[] objetos, PersonajeBase[] personajes)
         {
-            objetosEscena = new List<ObjetoBase>();
-            personajesEscena = new List<PersonajeBase>();
+			Inicializar ();
 
             this.nombre = nombre;
             AddObjeto(objetos);
@@ -218,5 +265,19 @@ namespace Oscuridad.Clases
         {
             return personajesEscena.ToArray();
         }
+
+		/// <summary>
+		/// Metodo de inicializacion en constructores
+		/// </summary>
+		public void Inicializar()
+		{
+			objetosEscena = new List<ObjetoBase>();
+			personajesEscena = new List<PersonajeBase>();
+
+			escenaNorte = Escenas.ninguna;
+			escenaSur = Escenas.ninguna;
+			escenaEste = Escenas.ninguna;
+			escenaOeste = Escenas.ninguna;
+		}
     }
 }

@@ -1,9 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Enums\Enumeraciones.cs">
+    <Files>
+      <File FileName="Assets\scripts\Scripts\PanelDirecciones.cs" Line="39" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="284" Column="1" />
+      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="199" Column="10" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" Line="186" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="95" />
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\Scripts\PanelDirecciones.cs" line="39" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

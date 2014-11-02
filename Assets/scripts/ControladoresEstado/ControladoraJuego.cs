@@ -45,7 +45,7 @@ public class ControladoraJuego
 		//Copiamos escenarios
 		foreach (string escenario in Enum.GetNames(typeof(Escenas)))
 		{
-			if(!escenario.Contains("ninguna"))
+			if(escenario != "ninguna" && escenario != "MenuPrincipal" && escenario != "Escena1" && escenario != "Escena2" && escenario != "Escena3")
 			{
 				origen = (TextAsset)Resources.Load("xml/Escenarios/"+escenario, typeof(TextAsset));
 				destino = Path.Combine(GameCenter.InstanceRef.USERPATH, escenario+".xml");

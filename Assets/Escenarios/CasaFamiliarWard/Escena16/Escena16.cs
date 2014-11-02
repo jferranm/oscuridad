@@ -16,9 +16,9 @@ namespace Oscuridad.Estados
 		{
 			manager = managerRef;
 
-			if(Application.loadedLevelName != EstadoJuego.Escena16.ToString())
+			if(Application.loadedLevelName != Escenas.Escena16.ToString())
 			{
-				Application.LoadLevel(EstadoJuego.Escena16.ToString());
+				Application.LoadLevel(Escenas.Escena16.ToString());
 			}
 
 			InicializarDatos ();
