@@ -9,7 +9,6 @@ public class GameCenter : MonoBehaviour
 	public ControladoraEscenas controladoraEscenas;
 	public ControladoraSonidos controladoraSonidos;
 	public ControladoraTextos controladoraTextos;
-	public ControladoraObjetos controladoraObjetos;
 	public ControladoraGUI controladoraGUI;
 	public ControladoraJuego controladoraJuego;
 
@@ -44,7 +43,6 @@ public class GameCenter : MonoBehaviour
 		controladoraEscenas = ControladoraEscenas.InstanceRef ();
 		controladoraSonidos = ControladoraSonidos.InstanceRef ();
 		controladoraTextos = ControladoraTextos.InstanceRef ();
-		controladoraObjetos = ControladoraObjetos.InstanceRef ();
 		controladoraGUI = ControladoraGUI.InstanceRef ();
 		controladoraJuego = ControladoraJuego.InstanceRef ();
 
@@ -90,11 +88,8 @@ public class GameCenter : MonoBehaviour
 		controladoraGUI.DesactivarGUI ();
 
 		//Le pasamos el nombre de la escena a la controladora de Textos
-	//	controladoraTextos.Generar_Descripcion();
+		//	controladoraTextos.Generar_Descripcion();
 
-		//Cargamos el estado de los objetos en la escena...
-		controladoraObjetos.Cargar_Estado_Objetos ();
-		
 		//Iniciamos el Jugador
 		controladoraJugador.Cambiar_Estado(EstadosJugador.enEspera);
 

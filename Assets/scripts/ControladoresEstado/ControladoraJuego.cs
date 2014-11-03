@@ -73,14 +73,14 @@ public class ControladoraJuego
 	{
 		cXML nuevoXML = new cXML ();
 		string pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
-		nuevoXML.Cargar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
+		jugadorActual = nuevoXML.Cargar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
 	}
 
 	public void GrabarJugador()
 	{
 		cXML nuevoXML = new cXML ();
 		string pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
-		jugadorActual = nuevoXML.Cargar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
+		nuevoXML.Guardar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
 	}
 
 	public EscenaBase Cargar_Escena(Escenas escena)

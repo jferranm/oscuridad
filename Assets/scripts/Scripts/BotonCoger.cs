@@ -48,6 +48,6 @@ public class BotonCoger : MonoBehaviour
 		panelVentanaRef.Insertar_Label_Tabla (false, "'" + GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag + "' ahora esta en el inventario", Color.white);
 		
 		//Guardamos el dato que lo hemos cogido en el controlador del objeto
-		GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, true, true, true, true, true);
+		//GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, true, true, true, true, true);
 	}
 }

@@ -317,7 +317,7 @@ public class PanelVentana : MonoBehaviour
 		nuevaDescripcion.Cerrar();
 		
 		//Hacemos que el objeto ya no sea inspeccionable;
-		GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.name, false, false, false, true, false);
+		//GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.name, false, false, false, true, false);
 
 		return listaDescripcionAuxiliar;		
 	}

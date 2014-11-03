@@ -107,7 +107,7 @@
           <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>true</Comprobacion>
-          <EscenaComprobacion>escena11</EscenaComprobacion>
+          <EscenaComprobacion>Escena11</EscenaComprobacion>
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />

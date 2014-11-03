@@ -41,7 +41,7 @@ public class BotonInspeccionar : MonoBehaviour
 			GameCenter.InstanceRef.controladoraTextos.Lanzar_Inspeccionar();
 
 			//Marcamos el objeto como que ya esta inspeccionado
-			GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString(), false, false, false, true, false);
+			//GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString(), false, false, false, true, false);
 		}
 	}
 }

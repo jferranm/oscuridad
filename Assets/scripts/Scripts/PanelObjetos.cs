@@ -31,13 +31,13 @@ public class PanelObjetos : MonoBehaviour
 		if (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef != null) 
 		{
 			//Campturamos el script del objeto
-			Objetos nuevoObjetoInteractuable = GameCenter.InstanceRef.controladoraObjetos.Buscar_Objeto(GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.tag.ToString());
+			//Objetos nuevoObjetoInteractuable = GameCenter.InstanceRef.controladoraObjetos.Buscar_Objeto(GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.tag.ToString());
 
 			//Ponemos la textura al boton coger, activo o inactivo
-			if (nuevoObjetoInteractuable.cogido) 
-				Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
-			else
-				Activar_Desactivar_Textura("BotonCoger", botonCoger);
+			//if (nuevoObjetoInteractuable.cogido) 
+			//	Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
+			//else
+			//	Activar_Desactivar_Textura("BotonCoger", botonCoger);
 			
 			//Ponemos la textura al boton hablar, activo o inactivo
 			if (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.esNPC)
@@ -46,10 +46,10 @@ public class PanelObjetos : MonoBehaviour
 				Activar_Desactivar_Textura("BotonHablar", botonHablarInactivo);
 						
 			//Ponemos la textura al boton inspeccionar, activo o inactivo
-			if (nuevoObjetoInteractuable.inspeccionado) 
-				Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
-			else
-				Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
+			//if (nuevoObjetoInteractuable.inspeccionado) 
+			//	Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
+			//else
+			//	Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
 		}
 	}
 

@@ -192,7 +192,7 @@ namespace Oscuridad.Clases
             comprobacion = comp;
             localizacionSeleccionada = localizacion;
             sinRespuesta = ciega;
-            direccion = direccion;
+            direccionRespuesta = direccion;
         }
 
         /// <summary>

@@ -43,6 +43,6 @@ public class BotonHablar : MonoBehaviour
 		panelVentanaRef.Lanzar_Hablar ();
 
 		//Marcamos que ya hemos hablado con el personaje
-		GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, false, false, true, false, false);
+		//GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, false, false, true, false, false);
 	}
 }

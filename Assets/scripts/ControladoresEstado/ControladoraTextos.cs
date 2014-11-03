@@ -150,7 +150,7 @@ public class ControladoraTextos
 		nuevaDescripcion.Cerrar();
 		
 		//Hacemos que el objeto ya no sea inspeccionable;
-		GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (objetoSeleccionado.tag.ToString(), false, false, false, true, false);
+		//GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (objetoSeleccionado.tag.ToString(), false, false, false, true, false);
 		
 		return listaDescripcionAuxiliar;		
 	}
