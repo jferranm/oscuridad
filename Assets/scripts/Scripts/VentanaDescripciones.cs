@@ -32,22 +32,22 @@ public class VentanaDescripciones: MonoBehaviour
 		{
 			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
-				GameCenter.InstanceRef.controladoraTextos.listaTiradas.Clear();
+				//GameCenter.InstanceRef.controladoraTextos.listaTiradas.Clear();
 
 				if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 				{
-					GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(Application.loadedLevelName);
-					listaTiradas = GameCenter.InstanceRef.controladoraTextos.listaTiradas;
-					cabecera = GameCenter.InstanceRef.controladoraTextos.textoCabecera;
+					//GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(Application.loadedLevelName);
+					//listaTiradas = GameCenter.InstanceRef.controladoraTextos.listaTiradas;
+					//cabecera = GameCenter.InstanceRef.controladoraTextos.textoCabecera;
 				}
 				else
 				{
-					if(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado != null)
-					{
-						GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado.tag.ToString());
-						cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraTextos.textoCabecera;
-						listaTiradas.Clear();
-					}
+					//if(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado != null)
+					//{
+					//	GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado.tag.ToString());
+					//	cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraTextos.textoCabecera;
+					//	listaTiradas.Clear();
+					//}
 				}
 
 				//listaTiradas = GameCenter.InstanceRef.controladoraTextos.listaTiradas;

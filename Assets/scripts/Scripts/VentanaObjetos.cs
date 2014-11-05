@@ -31,11 +31,11 @@ public class VentanaObjetos: MonoBehaviour
 		{
 			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
-				GameCenter.InstanceRef.controladoraTextos.listaObjetos.Clear();
+				//GameCenter.InstanceRef.controladoraTextos.listaObjetos.Clear();
 				//cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraTextos.textoCabecera;
-				cabecera = GameCenter.InstanceRef.controladoraTextos.textoCabecera;
-				GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion_Objeto(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado.tag.ToString());                             
-				listaObjetos = GameCenter.InstanceRef.controladoraTextos.listaObjetos;
+				//cabecera = GameCenter.InstanceRef.controladoraTextos.textoCabecera;
+				//GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion_Objeto(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado.tag.ToString());                             
+				//listaObjetos = GameCenter.InstanceRef.controladoraTextos.listaObjetos;
 			}
 		}
 	}

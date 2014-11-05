@@ -267,6 +267,22 @@ namespace Oscuridad.Clases
         }
 
 		/// <summary>
+		/// Devuelve un objeto segun su nombre
+		/// </summary>
+		/// <param name="nombreObjeto">string de nombre de objeto</param>
+		/// <returns>objeto tipo ObjetoBase</returns>
+		public ObjetoBase Buscar_Objeto(string nombreObjeto)
+		{
+			foreach (ObjetoBase objeto in ObjetosEscena) 
+			{
+				if(objeto.Nombre.Contains(nombreObjeto))
+				   return objeto;
+			}
+
+			return null;
+		}
+
+		/// <summary>
 		/// Metodo de inicializacion en constructores
 		/// </summary>
 		public void Inicializar()

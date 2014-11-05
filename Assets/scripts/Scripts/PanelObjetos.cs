@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Oscuridad.Estados;
 using Oscuridad.Clases;
+using Oscuridad.Enumeraciones;
 
 public class PanelObjetos : MonoBehaviour 
 {
@@ -28,28 +28,34 @@ public class PanelObjetos : MonoBehaviour
 
 	void OnEnable()
 	{
-		if (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef != null) 
+		foreach (opcionObjeto opcion in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoOpciones) 
 		{
-			//Campturamos el script del objeto
-			//Objetos nuevoObjetoInteractuable = GameCenter.InstanceRef.controladoraObjetos.Buscar_Objeto(GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.tag.ToString());
+			// Si no tiene ninguna opcion de objeto lo desconectamos todo
+			if (opcion.Equals(opcionObjeto.Ninguna))
+			{
+				Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
+				Activar_Desactivar_Textura("BotonHablar", botonHablarInactivo);
+				Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
+				break;
+			}
 
 			//Ponemos la textura al boton coger, activo o inactivo
-			//if (nuevoObjetoInteractuable.cogido) 
-			//	Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
-			//else
-			//	Activar_Desactivar_Textura("BotonCoger", botonCoger);
-			
+			if (opcion.Equals(opcionObjeto.Coger))
+				Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
+			else 
+				Activar_Desactivar_Textura("BotonCoger", botonCoger);
+
 			//Ponemos la textura al boton hablar, activo o inactivo
-			if (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.esNPC)
+			if (opcion.Equals(opcionObjeto.Hablar))
 				Activar_Desactivar_Textura("BotonHablar", botonHablar);
 			else
 				Activar_Desactivar_Textura("BotonHablar", botonHablarInactivo);
-						
+			
 			//Ponemos la textura al boton inspeccionar, activo o inactivo
-			//if (nuevoObjetoInteractuable.inspeccionado) 
-			//	Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
-			//else
-			//	Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
+			if (opcion.Equals(opcionObjeto.Coger))
+				Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
+			else
+				Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
 		}
 	}
 

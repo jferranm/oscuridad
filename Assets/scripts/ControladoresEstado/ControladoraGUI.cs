@@ -237,4 +237,8 @@ public class ControladoraGUI
 		menuVentana.SetActive (true);
 		menuDirecciones.SetActive (true);
 	}
+
+	public void Lanzar_Inspeccionar()
+	{
+	}
 }

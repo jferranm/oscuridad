@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Oscuridad.Estados;
 using Oscuridad.Enumeraciones;
+using Oscuridad.Clases;
 
 public class ZoomCamara : MonoBehaviour 
 {
@@ -10,8 +11,6 @@ public class ZoomCamara : MonoBehaviour
 	public Quaternion rotacionInicial;
 
 	private RaycastHit hit;
-	private GameObject objetoPulsado;
-	private ObjetoInteractuablev2 objetoInteractuableRef;
 
 	void OnEnable()
 	{
@@ -38,31 +37,18 @@ public class ZoomCamara : MonoBehaviour
 					Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
 					if(Physics.Raycast(rayo, out hit, Mathf.Infinity))
 					{
-						objetoPulsado = GameObject.FindGameObjectWithTag(hit.collider.tag.ToString());
+						GameCenter.InstanceRef.controladoraJuego.objetoPulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Objeto(hit.collider.tag.ToString());
 						try
 						{
-							objetoInteractuableRef = objetoPulsado.GetComponent<ObjetoInteractuablev2>();
-							GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado = objetoPulsado;
-							GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef = this.objetoInteractuableRef;
-							GameCenter.InstanceRef.controladoraJugador.objetoPulsado = this.objetoPulsado;
-							if (objetoInteractuableRef.conZoom)
-							{
-								//TODO: arreglar el tema de sonidos
-								GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
-								GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomIn);
-							}
-							
-							if (objetoInteractuableRef.conAnimacion)
-							{
-								objetoPulsado.animation.clip = objetoInteractuableRef.animacion;
-								objetoPulsado.animation.Play();
-							}
-							
-							if (objetoInteractuableRef.conSonido)
-							{
-								objetoPulsado.audio.clip = objetoInteractuableRef.sonido;
-								objetoPulsado.audio.Play();
-							}
+							ObjetoInteractuablev2 objetoInteractuableRef = GameObject.FindGameObjectWithTag(hit.collider.tag.ToString()).GetComponent<ObjetoInteractuablev2>();
+							ObjetoBase pruebaObjeto = GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Objeto(hit.collider.tag.ToString());
+							pruebaObjeto.PosicionNueva = objetoInteractuableRef.posicionNueva;
+							pruebaObjeto.RotacionNueva = objetoInteractuableRef.rotacionNueva;
+							pruebaObjeto.Smooth = objetoInteractuableRef.smooth;
+
+							//TODO: arreglar el tema de sonidos
+							GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
+							GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomIn);
 						}
 						catch
 						{

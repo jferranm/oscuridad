@@ -78,7 +78,6 @@
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraSonidos.cs" />
-     <Compile Include="Assets\scripts\ControladoresEstado\ControladoraTextos.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\GameCenter.cs" />
      <Compile Include="Assets\scripts\Enums\Enumeraciones.cs" />
      <Compile Include="Assets\scripts\Enums\estadoDirecciones.cs" />

@@ -371,7 +371,7 @@ public class PanelVentana : MonoBehaviour
 	{
 		ventanaIDTiradas = 2;
 
-		Iniciar_Conversacion (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.inicioConversacion, GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString ());
+		//Iniciar_Conversacion (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.inicioConversacion, GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString ());
 
 	}
 

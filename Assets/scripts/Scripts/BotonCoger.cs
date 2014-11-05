@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Oscuridad.Estados;
+using Oscuridad.Enumeraciones;
 
 public class BotonCoger : MonoBehaviour 
 {
@@ -36,18 +37,17 @@ public class BotonCoger : MonoBehaviour
 
 	private void Coger_Objeto()
 	{
-		GameCenter.InstanceRef.controladoraJugador.objetoPulsado.SetActive (false);
+		//TODO: desactivar objeto
+		//GameCenter.InstanceRef.controladoraJugador.objetoPulsado.SetActive (false);
 
 		panelObjetosRef.Activar_Desactivar_Textura ("BotonCoger", panelObjetosRef.botonCogerInactivo);
 		panelObjetosRef.Activar_Desactivar_Textura ("BotonHablar", panelObjetosRef.botonHablarInactivo);
 		panelObjetosRef.Activar_Desactivar_Textura ("BotonInspeccionar", panelObjetosRef.botonInspeccionarInactivo);
 		
-		//TODO:Insertar_En_Inventario();
+		//Insertar objeto en el inventario del jugador
+		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario (Objetos.Figura);
 		
 		//Le indicamos a la caja de texto que esta en el inventario
 		panelVentanaRef.Insertar_Label_Tabla (false, "'" + GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag + "' ahora esta en el inventario", Color.white);
-		
-		//Guardamos el dato que lo hemos cogido en el controlador del objeto
-		//GameCenter.InstanceRef.controladoraObjetos.Cambiar_Opcion_Objeto (GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, true, true, true, true, true);
 	}
 }

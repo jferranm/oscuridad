@@ -12,6 +12,8 @@ public class ControladoraJuego
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
 
+	public ObjetoBase objetoPulsado;
+
 	private static ControladoraJuego instanceRef;
 	public static ControladoraJuego InstanceRef()
 	{

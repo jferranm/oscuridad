@@ -96,10 +96,11 @@ public class ControladoraJugador
 	IEnumerator JugadorEnZoomIn()
 	{
 		//Ruta de la camara hacia el objeto seleccionado
-		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, objetoInteractuableRef.posicionNueva, Time.deltaTime*objetoInteractuableRef.smooth);
-		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(objetoInteractuableRef.rotacionNueva.x, objetoInteractuableRef.rotacionNueva.y, objetoInteractuableRef.rotacionNueva.z), Time.deltaTime*objetoInteractuableRef.smooth);
+		//Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, objetoInteractuableRef.posicionNueva, Time.deltaTime*objetoInteractuableRef.smooth);
+		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, GameCenter.InstanceRef.controladoraJuego.objetoPulsado.PosicionNueva, Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
+		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva.x, GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva.y, GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva.z), Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
 		
-		if(Camera.main.transform.position.ToString() == objetoInteractuableRef.posicionNueva.ToString())
+		if(Camera.main.transform.position.ToString() == GameCenter.InstanceRef.controladoraJuego.objetoPulsado.PosicionNueva.ToString())
 		{
 			Cambiar_Estado(EstadosJugador.enZoomEspera);
 			estadoCambiado = true;
@@ -110,14 +111,15 @@ public class ControladoraJugador
 	IEnumerator JugadorEnZoomOut()
 	{
 		//Ruta del objeto a la posicion inicial de la camara
-		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*objetoInteractuableRef.smooth);
-		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, zoomCamaraRef.rotacionInicial, Time.deltaTime*objetoInteractuableRef.smooth);
+		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
+		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, zoomCamaraRef.rotacionInicial, Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
 		
 		if(Camera.main.transform.position.ToString() == zoomCamaraRef.posicionInicial.ToString())
 		{
 			Cambiar_Estado(EstadosJugador.enEspera);
 			estadoCambiado = true;
 			objetoInteractuableRef = null;
+			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
 			yield break;
 		}
 	}

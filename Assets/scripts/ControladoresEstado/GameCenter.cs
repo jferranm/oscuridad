@@ -8,7 +8,6 @@ public class GameCenter : MonoBehaviour
 	public ControladoraJugador controladoraJugador;
 	public ControladoraEscenas controladoraEscenas;
 	public ControladoraSonidos controladoraSonidos;
-	public ControladoraTextos controladoraTextos;
 	public ControladoraGUI controladoraGUI;
 	public ControladoraJuego controladoraJuego;
 
@@ -42,7 +41,6 @@ public class GameCenter : MonoBehaviour
 		controladoraJugador = ControladoraJugador.InstanceRef ();
 		controladoraEscenas = ControladoraEscenas.InstanceRef ();
 		controladoraSonidos = ControladoraSonidos.InstanceRef ();
-		controladoraTextos = ControladoraTextos.InstanceRef ();
 		controladoraGUI = ControladoraGUI.InstanceRef ();
 		controladoraJuego = ControladoraJuego.InstanceRef ();
 
