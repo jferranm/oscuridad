@@ -1,19 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Clases Base\ObjetoBase.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\VentanaDescripciones.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\BotonCoger.cs" Line="48" Column="72" />
-      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonCoger.cs" Line="48" Column="72" />
-      <File FileName="Assets\scripts\Scripts\BotonHablar.cs" Line="44" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonInspeccionar.cs" Line="42" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="243" Column="3" />
-      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="138" Column="42" />
-      <File FileName="Assets\scripts\Clases\cXML.cs" Line="340" Column="1" />
-      <File FileName="Assets\scripts\Scripts\PanelDirecciones.cs" Line="39" Column="1" />
-      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="41" Column="84" />
+      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="36" Column="22" />
+      <File FileName="Assets\scripts\Clases\Etiqueta.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena12</Nombre>
+  <NombreEscena>Recibidor</NombreEscena>
   <Descripcion>La entrada de la casa, aqui esta la Ama de Llaves (una mujer mayor, ella y su esposo cuidan de la casa mientras los Ward estan de viaje). Unas escaleras suben al primer piso y a la izquierda se puede entrar al salon.</Descripcion>
   <ObjetosEscena />
   <PersonajesEscena>

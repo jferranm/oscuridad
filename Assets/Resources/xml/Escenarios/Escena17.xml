@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena17</Nombre>
+  <NombreEscena>Pasillo 2</NombreEscena>
   <Descripcion>El pasillo acaba en una ventana que da al jardin, un ultimo tramo de escaleras sube al desvan, ahora reformado como una habitacion mas de la casa. A la derecha al antiguo dormitorio de Charles.
 </Descripcion>
   <ObjetosEscena>

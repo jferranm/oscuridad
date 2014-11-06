@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena11</Nombre>
+  <NombreEscena>Jardin</NombreEscena>
   <Descripcion>El jardin parece poco cuidado, en el centro hay una especie de pequeño altar de piedra cubierto de moho, en el centro esta hueco y lleno de tierra recientemente removida. (aqui estara la llave que permite abrir la puerta del desvan, esta metida en un pequeño saquillo, enterrado en la tierra, con restos de huesos, plumas y algunos objetos raros mas). Desde aqui se ven las ventanas del desvan, una de ellas esta tapiada con maderos, la otra lo estaba, pero ahora esta abierta. </Descripcion>
   <ObjetosEscena />
   <PersonajesEscena />

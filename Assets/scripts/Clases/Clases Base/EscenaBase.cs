@@ -23,6 +23,20 @@ namespace Oscuridad.Clases
             set { nombre = value; }
         }
 
+		private string nombreEscena;
+		/// <summary>
+		/// Nombre descriptivo de la Escena
+		/// </summary>
+		/// <value>
+		/// valor string del nombre descriptivo de la escena
+		/// </value>
+		public string NombreEscena
+		{
+			get { return nombreEscena; }
+			set { nombreEscena = value; }
+		}
+		
+
         private string descripcion;
         /// <summary>
         /// Descripcion de la escena

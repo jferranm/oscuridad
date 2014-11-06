@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena15</Nombre>
+  <NombreEscena>Habitacion Charles</NombreEscena>
   <Descripcion>Practicamente vacia y sin tocar, la cama esta hecha y parece que no se tocado en mucho tiempo. Todos los libros y pertenencias acabaron en el desvan cuando Charles se traslado alli.</Descripcion>
   <ObjetosEscena>
     <ObjetoBase>

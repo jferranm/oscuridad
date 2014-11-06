@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena13</Nombre>
+  <NombreEscena>Salon</NombreEscena>
   <Descripcion>Un amplio y luminoso salon, sobre la chimenea hay un cuadro al que han arrancado la pintura, solo quedan algunos bordes oscuros, aunque no se puede adivinar que habia pintado en el. Sobre la mesita frente al sofa hay un periodico de hace unos dias.</Descripcion>
   <ObjetosEscena>
     <ObjetoBase>

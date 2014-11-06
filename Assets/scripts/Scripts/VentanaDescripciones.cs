@@ -28,17 +28,17 @@ public class VentanaDescripciones: MonoBehaviour
 
 	void OnEnable()
 	{
+		listaTiradas.Clear ();
+
 		if(GameCenter.InstanceRef != null)
 		{
 			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
-				//GameCenter.InstanceRef.controladoraTextos.listaTiradas.Clear();
-
 				if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 				{
-					//GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(Application.loadedLevelName);
-					//listaTiradas = GameCenter.InstanceRef.controladoraTextos.listaTiradas;
-					//cabecera = GameCenter.InstanceRef.controladoraTextos.textoCabecera;
+					listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
+					cabecera = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
+					GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena = "Jardin";
 				}
 				else
 				{
