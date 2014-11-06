@@ -7,9 +7,7 @@
   <PersonajesEscena>
     <PersonajeBase>
       <Nombre>AmaDeLlaves</Nombre>
-      <PersonajeOpciones>
-        <opcionObjeto>Hablar</opcionObjeto>
-      </PersonajeOpciones>
+      <DescripcionNombre>Ama De Llaves</DescripcionNombre>
       <ConversacionPersonaje>
         <RespuestaBase>
           <TextoRespuesta>Buenos días, soy la señora Hopkins, los señores Ward me avisaron de su llegada y me pidieron que le ayudara en todo lo que necesitara, por lo que quedo a su servicio mientras este en esta casa.</TextoRespuesta>
@@ -668,6 +666,17 @@
         </RespuestaBase>
       </ConversacionPersonaje>
       <InicioConversacion>1</InicioConversacion>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
     </PersonajeBase>
   </PersonajesEscena>
   <EscenaNorte>Escena14</EscenaNorte>

@@ -6,6 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>Puerta</Nombre>
+      <DescripcionNombre>Puerta</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>

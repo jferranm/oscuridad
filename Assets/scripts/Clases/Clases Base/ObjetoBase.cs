@@ -24,6 +24,19 @@ namespace Oscuridad.Clases
             set { nombre = value; }
         }
 
+		private string descripcionNombre;
+		/// <summary>
+		/// Descripcion del nombre del objeto
+		/// </summary>
+		/// <value>
+		/// string de descripcion del nombre de objeto
+		/// </value>
+		public string DescripcionNombre
+		{
+			get { return descripcionNombre; }
+			set { descripcionNombre = value; }
+		}
+
         private List<opcionObjeto> objetoOpciones;
         /// <summary>
         /// lista de opciones de interaccion con los objetos
@@ -260,5 +273,22 @@ namespace Oscuridad.Clases
         {
             return tiradasObjeto.ToArray();
         }
+
+		/// <summary>
+		/// Muestra la descripcion del objeto sin tiradas
+		/// </summary>
+		/// <returns>string con la descripcion del objeto</returns>
+		public string MostrarDescripcionBasica()
+		{
+			foreach (ObjetoTiradaBase objeto in tiradasObjeto) 
+			{
+				if (objeto.HabilidadTirada.Equals(Habilidades.Ninguna))
+				{
+					return objeto.TextoDescriptivo;
+				}
+			}
+
+			return null;
+		}
     }
 }

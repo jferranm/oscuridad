@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena14</Nombre>
-  <NombreEscena>Pasillo 1</NombreEscena>
+  <NombreEscena>Pasillo</NombreEscena>
   <Descripcion>El pasillo de la primera planta empieza aqui, a la izquierda se puede entrar al dormitorio de los Ward y el pasillo continua hasta la ventana que da al jardin.</Descripcion>
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
+      <DescripcionNombre>Cuadros</DescripcionNombre>
       <ObjetoOpciones />
       <TiradasObjeto>
         <ObjetoTiradaBase>
@@ -18,6 +19,17 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
       </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

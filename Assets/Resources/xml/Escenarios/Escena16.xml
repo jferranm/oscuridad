@@ -4,66 +4,8 @@
   <NombreEscena>Habitacion Padres Charles</NombreEscena>
   <Descripcion>Un elegante dormitorio.</Descripcion>
   <ObjetosEscena>
-    <ObjetoBase>
-      <Nombre>CuadrosPrimeraPlanta1</Nombre>
-      <ObjetoOpciones />
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
-          <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
-          <HabilidadTirada>Ninguna</HabilidadTirada>
-          <Comprobacion>false</Comprobacion>
-          <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
-          <LocalizacionAccion />
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
-    </ObjetoBase>
-    <ObjetoBase>
-      <Nombre>PeriodicosHabitacionCharles</Nombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
-          <TextoDescriptivo>Son un monton de periodicos de hace varias semanas, de varios dias de la semana.</TextoDescriptivo>
-          <HabilidadTirada>Ninguna</HabilidadTirada>
-          <Comprobacion>false</Comprobacion>
-          <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
-          <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
-          <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos.</TextoDescriptivo>
-          <HabilidadTirada>Descubrir</HabilidadTirada>
-          <Comprobacion>false</Comprobacion>
-          <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
-          <LocalizacionAccion />
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
-    </ObjetoBase>
-    <ObjetoBase>
-      <Nombre>LibrosHabitacionCharles</Nombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
-          <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes.</TextoDescriptivo>
-          <HabilidadTirada>Ninguna</HabilidadTirada>
-          <Comprobacion>false</Comprobacion>
-          <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
-          <LocalizacionAccion />
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
-    </ObjetoBase>
-    <ObjetoBase>
       <Nombre>Mesita</Nombre>
+      <DescripcionNombre>Mesita</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>

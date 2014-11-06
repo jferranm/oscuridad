@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena10</Nombre>
-  <NombreEscena>Exterior Casa</NombreEscena>
+  <NombreEscena>Exterior De La Casa</NombreEscena>
   <Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
   <ObjetosEscena />
   <PersonajesEscena />

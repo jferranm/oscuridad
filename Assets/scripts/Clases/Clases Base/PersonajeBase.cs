@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Oscuridad.Enumeraciones;
 
 namespace Oscuridad.Clases
@@ -21,18 +22,15 @@ namespace Oscuridad.Clases
             set { nombre = value; }
         }
 
-        private List<opcionObjeto> personajeOpciones;
-        /// <summary>
-        /// lista de opcion de tipo enumeracion para las opciones que se pueden hacer con el personaje
-        /// </summary>
-        /// <value>
-        /// lista generica de opciones de objeto
-        /// </value>
-        public List<opcionObjeto> PersonajeOpciones
-        {
-            get { return personajeOpciones; }
-            set { personajeOpciones = value; }
-        }
+		private string descripcionNombre;
+		/// <summary>
+		/// Descripcion del nombre del personaje
+		/// </summary>
+		public string DescripcionNombre
+		{
+			get { return descripcionNombre; }
+			set { descripcionNombre = value; }
+		}
 
         private List<RespuestaBase> conversacionPersonaje;
         /// <summary>
@@ -60,6 +58,45 @@ namespace Oscuridad.Clases
             set { inicioConversacion = value; }
         }
 
+		private Vector3 posicionNueva;
+		/// <summary>
+		/// Posicion de la camara para el zoom
+		/// </summary>
+		/// <value>
+		/// valor tipo Vector3 para posicion en mundo del objeto en zoom
+		/// </value>
+		public Vector3 PosicionNueva
+		{
+			get { return posicionNueva; }
+			set { posicionNueva = value; }
+		}
+		
+		private Vector3 rotacionNueva;
+		/// <summary>
+		/// Posicion de rotacion de la camara para el zoom
+		/// </summary>
+		/// <value>
+		/// valor tipo Vector3 para el valor de rotacion de la camara en mundo del objeto en zoom
+		/// </value>
+		public Vector3 RotacionNueva
+		{
+			get { return rotacionNueva; }
+			set { rotacionNueva = value; }
+		}
+		
+		private float smooth;
+		/// <summary>
+		/// Suavidad de frenado del zoom
+		/// </summary>
+		/// <value>
+		/// valor tipo float para el calculo del frenado del zoom
+		/// </value>
+		public float Smooth
+		{
+			get { return smooth; }
+			set { smooth = value; }
+		}
+
 
         //METODOS
 
@@ -68,7 +105,6 @@ namespace Oscuridad.Clases
         /// </summary>
         public PersonajeBase()
         {
-            personajeOpciones = new List<opcionObjeto>();
             conversacionPersonaje = new List<RespuestaBase>();
         }
 
@@ -78,7 +114,6 @@ namespace Oscuridad.Clases
         /// <param name="nombre">nombre del personaje</param>
         public PersonajeBase(string nombre)
         {
-            personajeOpciones = new List<opcionObjeto>();
             conversacionPersonaje = new List<RespuestaBase>();
 
             this.nombre = nombre;
@@ -87,22 +122,9 @@ namespace Oscuridad.Clases
         /// <summary>
         /// Constructor sobrecargado de la Clase
         /// </summary>
-        /// <param name="opciones">array de tipo enum de opciones de interaccion de personaje</param>
-        public PersonajeBase(opcionObjeto[] opciones)
-        {
-            personajeOpciones = new List<opcionObjeto>();
-            conversacionPersonaje = new List<RespuestaBase>();
-
-            AddOpcion(opciones);
-        }
-
-        /// <summary>
-        /// Constructor sobrecargado de la Clase
-        /// </summary>
         /// <param name="respuestas">array de tipo RespuestaBase de respuestas a mostrar del personaje</param>
         public PersonajeBase(RespuestaBase[] respuestas)
         {
-            personajeOpciones = new List<opcionObjeto>();
             conversacionPersonaje = new List<RespuestaBase>();
 
             AddRespuesta(respuestas);
@@ -114,13 +136,11 @@ namespace Oscuridad.Clases
         /// <param name="nombre">nombre del personaje</param>
         /// <param name="opciones">array de tipo enum de opciones de interaccion de personaje</param>
         /// <param name="respuestas">array de tipo RespuestaBase de respuestas a mostrar del personaje</param>
-        public PersonajeBase(string nombre, opcionObjeto[] opciones, RespuestaBase[] respuestas)
+        public PersonajeBase(string nombre, RespuestaBase[] respuestas)
         {
-            personajeOpciones = new List<opcionObjeto>();
             conversacionPersonaje = new List<RespuestaBase>();
 
             this.nombre = nombre;
-            AddOpcion(opciones);
             AddRespuesta(respuestas);
         }
 
@@ -131,65 +151,13 @@ namespace Oscuridad.Clases
         /// <param name="opciones">array de tipo enum de opciones de interaccion de personaje</param>
         /// <param name="respuestas">array de tipo RespuestaBase de respuestas a mostrar del personaje</param>
         /// <param name="idComienzo">valor entero que marca cual sera la RespuestaBase donde comenzara la conversacion</param>
-        public PersonajeBase(string nombre, opcionObjeto[] opciones, RespuestaBase[] respuestas, int idComienzo)
+        public PersonajeBase(string nombre, RespuestaBase[] respuestas, int idComienzo)
         {
-            personajeOpciones = new List<opcionObjeto>();
             conversacionPersonaje = new List<RespuestaBase>();
 
             this.nombre = nombre;
             inicioConversacion = idComienzo;
-            AddOpcion(opciones);
             AddRespuesta(respuestas);
-        }
-
-        /// <summary>
-        /// Añade una opcion
-        /// </summary>
-        /// <param name="opcion">opcion tipo enum opcionObjeto</param>
-        public void AddOpcion(opcionObjeto opcion)
-        {
-            personajeOpciones.Add(opcion);
-        }
-
-        /// <summary>
-        /// Añade array de opciones
-        /// </summary>
-        /// <param name="opciones">array de tipo enum de opciones de interaccion de personaje</param>
-        public void AddOpcion(opcionObjeto[] opciones)
-        {
-            personajeOpciones.AddRange(opciones);
-        }
-
-        /// <summary>
-        /// Borra una opcion
-        /// </summary>
-        /// <param name="opcion">opcion tipo enum opcionObjeto</param>
-        public void BorrarOpcion(opcionObjeto opcion)
-        {
-            personajeOpciones.Remove(opcion);
-        }
-
-        /// <summary>
-        /// Borra array de opciones
-        /// </summary>
-        /// <param name="opciones">array de tipo enum de opciones de interaccion de personaje</param>
-        public void BorrarOpcion(opcionObjeto[] opciones)
-        {
-            foreach (opcionObjeto opcion in opciones)
-            {
-                personajeOpciones.Remove(opcion);
-            }
-        }
-
-        /// <summary>
-        /// Muesta la opciones del personaje
-        /// </summary>
-        /// <returns>
-        /// array de tipo enum de opcionObjeto
-        /// </returns>
-        public opcionObjeto[] MostrarOpciones()
-        {
-            return personajeOpciones.ToArray();
         }
 
         /// <summary>

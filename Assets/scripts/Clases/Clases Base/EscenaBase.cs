@@ -287,12 +287,28 @@ namespace Oscuridad.Clases
 		/// <returns>objeto tipo ObjetoBase</returns>
 		public ObjetoBase Buscar_Objeto(string nombreObjeto)
 		{
-			foreach (ObjetoBase objeto in ObjetosEscena) 
+			foreach (ObjetoBase objeto in objetosEscena) 
 			{
 				if(objeto.Nombre.Contains(nombreObjeto))
 				   return objeto;
 			}
 
+			return null;
+		}
+
+		/// <summary>
+		/// Devuelve un personaje segun su nombre
+		/// </summary>
+		/// <param name="nombrePersonaje">string de nombre de personaje</param>
+		/// <returns>objeto tipo ObjetoBase</returns>
+		public PersonajeBase Buscar_Personaje(string nombrePersonaje)
+		{
+			foreach (PersonajeBase personaje in personajesEscena) 
+			{
+				if(personaje.Nombre.Contains(nombrePersonaje))
+					return personaje;
+			}
+			
 			return null;
 		}
 

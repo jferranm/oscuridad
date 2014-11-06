@@ -6,6 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>PeriodicoSalon</Nombre>
+      <DescripcionNombre>Periodico Salon</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
@@ -23,9 +24,21 @@
           </LocalizacionAccion>
         </ObjetoTiradaBase>
       </TiradasObjeto>
+      <PosicionNueva>
+        <x>-3110</x>
+        <y>2919.7</y>
+        <z>-3637.5</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>50</x>
+        <y>-50</y>
+        <z>359.8276</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadroSalon</Nombre>
+      <DescripcionNombre>Cuadro Salon</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -67,9 +80,21 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
       </TiradasObjeto>
+      <PosicionNueva>
+        <x>-3112.109</x>
+        <y>2922.003</y>
+        <z>-3633.198</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Figura</Nombre>
+      <DescripcionNombre>Figura</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -111,6 +136,17 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
       </TiradasObjeto>
+      <PosicionNueva>
+        <x>-3108.22</x>
+        <y>2920.53</y>
+        <z>-3632.1</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>18.82451</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

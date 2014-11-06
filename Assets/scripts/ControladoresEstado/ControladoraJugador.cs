@@ -95,12 +95,30 @@ public class ControladoraJugador
 	
 	IEnumerator JugadorEnZoomIn()
 	{
+		Vector3 vectorAuxiliarPosicion = new Vector3 ();
+		Vector3 vectorAuxiliarRotacion = new Vector3 ();
+		float smoothAuxiliar;
+
+		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
+		//Es un Personaje
+		{
+			vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.personajePulsado.PosicionNueva;
+			vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.personajePulsado.RotacionNueva;
+			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Smooth;
+		}
+		else
+		//Es un objeto
+		{
+			vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.PosicionNueva;
+			vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva;
+			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth;
+		}
+
 		//Ruta de la camara hacia el objeto seleccionado
-		//Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, objetoInteractuableRef.posicionNueva, Time.deltaTime*objetoInteractuableRef.smooth);
-		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, GameCenter.InstanceRef.controladoraJuego.objetoPulsado.PosicionNueva, Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
-		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva.x, GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva.y, GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva.z), Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
+		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, vectorAuxiliarPosicion, Time.deltaTime*smoothAuxiliar);
+		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(vectorAuxiliarRotacion.x, vectorAuxiliarRotacion.y, vectorAuxiliarRotacion.z), Time.deltaTime*smoothAuxiliar);
 		
-		if(Camera.main.transform.position.ToString() == GameCenter.InstanceRef.controladoraJuego.objetoPulsado.PosicionNueva.ToString())
+		if(Camera.main.transform.position.ToString() == vectorAuxiliarPosicion.ToString())
 		{
 			Cambiar_Estado(EstadosJugador.enZoomEspera);
 			estadoCambiado = true;
@@ -110,9 +128,18 @@ public class ControladoraJugador
 	
 	IEnumerator JugadorEnZoomOut()
 	{
+		float smoothAuxiliar;
+		
+		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
+		//Es un Personaje
+			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Smooth;
+		else
+		//Es un objeto
+			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth;
+
 		//Ruta del objeto a la posicion inicial de la camara
-		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
-		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, zoomCamaraRef.rotacionInicial, Time.deltaTime*GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth);
+		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*smoothAuxiliar);
+		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, zoomCamaraRef.rotacionInicial, Time.deltaTime*smoothAuxiliar);
 		
 		if(Camera.main.transform.position.ToString() == zoomCamaraRef.posicionInicial.ToString())
 		{
@@ -120,6 +147,7 @@ public class ControladoraJugador
 			estadoCambiado = true;
 			objetoInteractuableRef = null;
 			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
+			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
 			yield break;
 		}
 	}

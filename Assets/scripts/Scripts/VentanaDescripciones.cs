@@ -38,20 +38,13 @@ public class VentanaDescripciones: MonoBehaviour
 				{
 					listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
 					cabecera = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
-					GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena = "Jardin";
 				}
 				else
 				{
-					//if(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado != null)
-					//{
-					//	GameCenter.InstanceRef.controladoraTextos.Generar_Descripcion(GameCenter.InstanceRef.controladoraTextos.objetoSeleccionado.tag.ToString());
-					//	cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraTextos.textoCabecera;
-					//	listaTiradas.Clear();
-					//}
+					listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white));
+					GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre = "Periodico";
+					cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre;
 				}
-
-				//listaTiradas = GameCenter.InstanceRef.controladoraTextos.listaTiradas;
-				//cabecera = GameCenter.InstanceRef.controladoraTextos.textoCabecera;
 			}
 		}
 	}
