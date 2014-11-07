@@ -4,6 +4,7 @@
   <NombreEscena>Habitacion Padres Charles</NombreEscena>
   <Descripcion>Un elegante dormitorio.</Descripcion>
   <ObjetosEscena>
+    <ObjetoBase>
       <Nombre>Mesita</Nombre>
       <DescripcionNombre>Mesita</DescripcionNombre>
       <ObjetoOpciones>
@@ -29,6 +30,17 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
       </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

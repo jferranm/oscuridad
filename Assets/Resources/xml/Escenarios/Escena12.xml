@@ -667,16 +667,16 @@
       </ConversacionPersonaje>
       <InicioConversacion>1</InicioConversacion>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>0.8669586</x>
+        <y>2.620244</y>
+        <z>5.795949</z>
       </PosicionNueva>
       <RotacionNueva>
         <x>0</x>
-        <y>0</y>
+        <y>48.70967</y>
         <z>0</z>
       </RotacionNueva>
-      <Smooth>0</Smooth>
+      <Smooth>2.5</Smooth>
     </PersonajeBase>
   </PersonajesEscena>
   <EscenaNorte>Escena14</EscenaNorte>

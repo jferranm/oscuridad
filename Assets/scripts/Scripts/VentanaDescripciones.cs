@@ -34,16 +34,22 @@ public class VentanaDescripciones: MonoBehaviour
 		{
 			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
-				if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
+				if (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 				{
 					listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
 					cabecera = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
 				}
 				else
 				{
-					listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white));
-					GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre = "Periodico";
-					cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre;
+					if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
+					{
+						listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white));
+						cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre;
+					}
+					else
+					{
+						cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre;
+					}
 				}
 			}
 		}

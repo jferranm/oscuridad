@@ -1,19 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\VentanaDescripciones.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="45" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="17" Column="1" />
+      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="51" Column="96" />
       <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="16" Column="40" />
-      <File FileName="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" Line="27" Column="24" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoBase.cs" Line="285" Column="38" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\Clases\cXML.cs" line="340" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

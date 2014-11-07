@@ -6,7 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>PeriodicosHabitacionCharles</Nombre>
-      <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
+      <DescripcionNombre>Periodico</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -31,20 +31,20 @@
         </ObjetoTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-3110.638</x>
+        <y>2918.554</y>
+        <z>-3632.612</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>29.65486</x>
+        <y>23.13833</y>
+        <z>9.976971</z>
       </RotacionNueva>
-      <Smooth>0</Smooth>
+      <Smooth>2.5</Smooth>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosHabitacionCharles</Nombre>
-      <DescripcionNombre>Libros</DescripcionNombre>
+      <DescripcionNombre>Periodico</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
@@ -60,16 +60,16 @@
         </ObjetoTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-3110.889</x>
+        <y>2921.265</y>
+        <z>-3634.641</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>36.40935</x>
+        <y>89.09454</y>
+        <z>4.190063</z>
       </RotacionNueva>
-      <Smooth>0</Smooth>
+      <Smooth>2.5</Smooth>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

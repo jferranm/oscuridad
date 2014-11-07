@@ -6,7 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
-      <DescripcionNombre>Cuadros</DescripcionNombre>
+      <DescripcionNombre>Periodico</DescripcionNombre>
       <ObjetoOpciones />
       <TiradasObjeto>
         <ObjetoTiradaBase>
@@ -20,16 +20,16 @@
         </ObjetoTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>1.247847</x>
+        <y>0.7988373</y>
+        <z>-11.93245</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>0.05757141</x>
+        <y>87.22562</y>
+        <z>1.18782</z>
       </RotacionNueva>
-      <Smooth>0</Smooth>
+      <Smooth>2.5</Smooth>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />
