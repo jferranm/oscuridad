@@ -6,7 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>Puerta</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Cierre de Puerta</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
@@ -32,6 +32,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

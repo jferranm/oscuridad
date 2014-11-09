@@ -6,7 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>PeriodicoSalon</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Periodico Salon</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
@@ -35,10 +35,11 @@
         <z>359.8276</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadroSalon</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Cuadro Salon</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -91,10 +92,11 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Figura</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Figura</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -147,6 +149,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

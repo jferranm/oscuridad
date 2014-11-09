@@ -7,7 +7,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta2</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Cuadro</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -42,6 +42,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

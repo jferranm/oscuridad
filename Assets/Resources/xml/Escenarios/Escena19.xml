@@ -33,6 +33,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadroDesvan</Nombre>
@@ -81,6 +82,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosDesvan</Nombre>
@@ -110,6 +112,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibroMesa</Nombre>
@@ -159,6 +162,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CirculoInvocacion</Nombre>
@@ -207,10 +211,11 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>ObjetosAlquimia</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Objetos de Alquimia</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -254,6 +259,7 @@
         <z>359.7661</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>HojasPared</Nombre>
@@ -310,6 +316,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

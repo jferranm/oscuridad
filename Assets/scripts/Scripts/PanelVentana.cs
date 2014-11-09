@@ -188,7 +188,7 @@ public class PanelVentana : MonoBehaviour
 			GUILayout.BeginVertical ();
 				if (GUILayout.Button(textoBoton1))
 				{
-					Insertar_Label_Tabla(true, textoBoton1, Color.green);
+					//Insertar_Label_Tabla(true, textoBoton1, Color.green);
 					posicionBarraScrollObjeto.y = Mathf.Infinity;
 					Limpiar_Datos();
 					Iniciar_Conversacion(numeroPregunta1.ToString(), GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString ());
@@ -196,7 +196,7 @@ public class PanelVentana : MonoBehaviour
 				
 				if (GUILayout.Button(textoBoton2))
 				{
-					Insertar_Label_Tabla(true, textoBoton2, Color.green);
+					//Insertar_Label_Tabla(true, textoBoton2, Color.green);
 					posicionBarraScrollObjeto.y = Mathf.Infinity;
 					Limpiar_Datos();
 					Iniciar_Conversacion(numeroPregunta2.ToString(), GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString ());
@@ -204,7 +204,7 @@ public class PanelVentana : MonoBehaviour
 				
 				if (GUILayout.Button(textoBoton3))
 				{
-					Insertar_Label_Tabla(true, textoBoton3, Color.green);
+					//Insertar_Label_Tabla(true, textoBoton3, Color.green);
 					posicionBarraScrollObjeto.y = Mathf.Infinity;
 					Limpiar_Datos();
 					Iniciar_Conversacion(numeroPregunta3.ToString(), GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag.ToString ());
@@ -285,7 +285,7 @@ public class PanelVentana : MonoBehaviour
 	
 	public void Mostrar_Preguntas(Pregunta datosMostrar)
 	{
-		Insertar_Label_Tabla (true, datosMostrar.textoPregunta, Color.white);
+		//Insertar_Label_Tabla (true, datosMostrar.textoPregunta, Color.white);
 		//textoPregunta = datosMostrar.textoPregunta;
 		byte cont = 1;
 		foreach(RespuestaSinTirada nuevaRespuesta in datosMostrar.listaRespuestas.Values)
@@ -341,15 +341,15 @@ public class PanelVentana : MonoBehaviour
 			if(label.Contains("FALLIDA"))
 			{
 				//labels marcados en rojo
-				Insertar_Label_Tabla(false, label, Color.red);
+				//Insertar_Label_Tabla(false, label, Color.red);
 			}
 			else
 			{
 				if(label.Contains("EXITOSA"))
 				{
 					//Labels marcados en verde
-					Insertar_Label_Tabla(true, label.Remove(0, label.IndexOf("\n")+1), Color.green);
-					Insertar_Label_Tabla(false, label.Remove(label.IndexOf("\n")), Color.green);
+					//Insertar_Label_Tabla(true, label.Remove(0, label.IndexOf("\n")+1), Color.green);
+					//Insertar_Label_Tabla(false, label.Remove(label.IndexOf("\n")), Color.green);
 
 					ControlXMLGlobal nuevoControlXML = new ControlXMLGlobal();
 					nuevoControlXML.Crear_Elemento_Descripciones(GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, label.Remove(0, label.IndexOf("\n")+1));
@@ -357,7 +357,7 @@ public class PanelVentana : MonoBehaviour
 				else
 				{
 					//Labels sin marcar
-					Insertar_Label_Tabla (true, label, Color.white);
+					//Insertar_Label_Tabla (true, label, Color.white);
 
 					ControlXMLGlobal nuevoControlXML = new ControlXMLGlobal();
 					nuevoControlXML.Crear_Elemento_Descripciones(GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, label);
@@ -375,17 +375,7 @@ public class PanelVentana : MonoBehaviour
 
 	}
 
-	public void Insertar_Label_Tabla(bool tipo, string texto, Color color)
-	{
-		if (tipo)   //Para la ventana de Objetos
-		{
-			listaObjetos.Add (new Etiqueta(texto, color));
-		} 
-		else 		//Para la ventana de Tiradas
-		{
-			listaTiradas.Add (new Etiqueta(texto, color));
-		}
-	}
+
 }
 
 

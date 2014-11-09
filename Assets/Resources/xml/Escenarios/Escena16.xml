@@ -41,6 +41,7 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

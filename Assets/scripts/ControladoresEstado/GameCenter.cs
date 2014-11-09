@@ -82,11 +82,10 @@ public class GameCenter : MonoBehaviour
 
 	public void Inicializar_Escenario()
 	{
+		controladoraJuego.Inicializar_Objetos ();
+
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();
-
-		//Le pasamos el nombre de la escena a la controladora de Textos
-		//	controladoraTextos.Generar_Descripcion();
 
 		//Iniciamos el Jugador
 		controladoraJugador.Cambiar_Estado(EstadosJugador.enEspera);

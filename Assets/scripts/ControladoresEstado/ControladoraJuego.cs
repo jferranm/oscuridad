@@ -98,4 +98,12 @@ public class ControladoraJuego
 		nuevoxml.Guardar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, escena.ToString () + ".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
 
 	}
+
+	public void Inicializar_Objetos()
+	{
+		foreach (ObjetoBase objeto in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
+		{
+			GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
+		}
+	}
 }

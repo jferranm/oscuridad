@@ -6,7 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>PeriodicosHabitacionCharles</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
@@ -41,10 +41,11 @@
         <z>9.976971</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosHabitacionCharles</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Libros</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
@@ -70,6 +71,7 @@
         <z>4.190063</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

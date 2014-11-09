@@ -21,35 +21,16 @@ public class VentanaDescripciones: MonoBehaviour
 
 	private Vector2 posicionBarraScrollDescripciones;
 
-	private string cabecera = "";
-	private string texto = "";
-
-	private List<Etiqueta> listaTiradas = new List<Etiqueta>();
-
 	void OnEnable()
 	{
-		listaTiradas.Clear ();
-
 		if(GameCenter.InstanceRef != null)
 		{
 			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
 			{
 				if (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 				{
-					listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
-					cabecera = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
-				}
-				else
-				{
-					if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
-					{
-						listaTiradas.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white));
-						cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre;
-					}
-					else
-					{
-						cabecera = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre;
-					}
+					GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
+					GameCenter.InstanceRef.controladoraGUI.cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
 				}
 			}
 		}
@@ -58,14 +39,14 @@ public class VentanaDescripciones: MonoBehaviour
 	void OnGUI() 
 	{ 
 		GUI.skin = skinVentana;
-		GUILayout.Window(0, new Rect(posicion_x * Screen.width, posicion_y * Screen.height, escala_x * Screen.width, escala_y * Screen.width),DescripcionesWindow,cabecera);
+		GUILayout.Window(0, new Rect(posicion_x * Screen.width, posicion_y * Screen.height, escala_x * Screen.width, escala_y * Screen.width), DescripcionesWindow, GameCenter.InstanceRef.controladoraGUI.cabeceraInferior);
 	}
 	
 	void DescripcionesWindow(int windowID) 
 	{
 		posicionBarraScrollDescripciones = GUILayout.BeginScrollView (posicionBarraScrollDescripciones);
 			GUILayout.BeginVertical ();
-				foreach (Etiqueta nuevaEtiqueta in listaTiradas) 
+				foreach (Etiqueta nuevaEtiqueta in GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior) 
 				{
 					GUIStyle fuente = new GUIStyle (GUI.skin.label);
 					fuente.normal.textColor = nuevaEtiqueta.ObtenerColor();

@@ -102,6 +102,19 @@ namespace Oscuridad.Clases
 			set { smooth = value; }
 		}
 
+		private bool objetoActivo;
+		/// <summary>
+		/// mostrar el objeto
+		/// </summary>
+		/// <value>
+		/// valor tipo bool para el mostrar el objeto
+		/// </value>
+		public bool ObjetoActivo
+		{
+			get { return objetoActivo; }
+			set { objetoActivo = value; }
+		}
+
         /// <summary>
         /// Contructor de la clase <see cref="ObjetoBase"/>.
         /// </summary>

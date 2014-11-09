@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 using Oscuridad.Estados;
 using Oscuridad.Enumeraciones;
 
 public class BotonCoger : MonoBehaviour 
 {
-	private PanelVentana panelVentanaRef;
 	private PanelObjetos panelObjetosRef;
 
 	void Start()
 	{
-		panelVentanaRef = GameObject.Find("PanelGuiVentana").GetComponent<PanelVentana> ();
 		panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
 	}
 
@@ -37,17 +36,21 @@ public class BotonCoger : MonoBehaviour
 
 	private void Coger_Objeto()
 	{
-		//TODO: desactivar objeto
-		//GameCenter.InstanceRef.controladoraJugador.objetoPulsado.SetActive (false);
+		//Desactivamos el objeto
+		GameObject.FindGameObjectWithTag(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre).SetActive(false);
 
+		//Deshabilitamos los botones
 		panelObjetosRef.Activar_Desactivar_Textura ("BotonCoger", panelObjetosRef.botonCogerInactivo);
 		panelObjetosRef.Activar_Desactivar_Textura ("BotonHablar", panelObjetosRef.botonHablarInactivo);
 		panelObjetosRef.Activar_Desactivar_Textura ("BotonInspeccionar", panelObjetosRef.botonInspeccionarInactivo);
 		
 		//Insertar objeto en el inventario del jugador
-		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario (Objetos.Figura);
+		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario ((Objetos)Enum.Parse(typeof(Objetos), GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre));
+
+		//Cambiamos a false el valor de objetoActivo a false
+		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoActivo = false;
 		
 		//Le indicamos a la caja de texto que esta en el inventario
-		panelVentanaRef.Insertar_Label_Tabla (false, "'" + GameCenter.InstanceRef.controladoraJugador.objetoPulsado.tag + "' ahora esta en el inventario", Color.white);
+		GameCenter.InstanceRef.controladoraGUI.Insertar_Label_Ventana ("Inferior", "'" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "' ahora esta en el inventario", Color.white);
 	}
 }

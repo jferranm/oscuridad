@@ -6,7 +6,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
-      <DescripcionNombre>Periodico</DescripcionNombre>
+      <DescripcionNombre>Cuadros</DescripcionNombre>
       <ObjetoOpciones />
       <TiradasObjeto>
         <ObjetoTiradaBase>
@@ -30,6 +30,7 @@
         <z>1.18782</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

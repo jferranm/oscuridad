@@ -148,6 +148,7 @@ public class ControladoraJugador
 			objetoInteractuableRef = null;
 			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
 			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
+			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto();
 			yield break;
 		}
 	}

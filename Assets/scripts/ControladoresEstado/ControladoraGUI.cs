@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Oscuridad.Interfaces;
 using Oscuridad.Enumeraciones;
+using Oscuridad.Clases;
 
 [System.Serializable]
 public class ControladoraGUI
@@ -60,15 +62,12 @@ public class ControladoraGUI
 	public Texture2D texturaCursorNormal;
 	public Texture2D texturaCursorSeleccion;
 	//----
-	
-	//---- Booleanas de gui
-	[HideInInspector]
-	public bool mostrarVentana = false;
-	[HideInInspector]
-	public bool mostrarInventario = false;
-	//----
-	
-	//---- Fades
+
+	//---- Listas de Texto para las cajas Descriptivas
+	public List<Etiqueta> listaVentanaInferior = new List<Etiqueta>();
+	public List<Etiqueta> listaVentanaLateral = new List<Etiqueta>();
+	public string cabeceraInferior;
+	public string cabeceraLateral;
 	//----
 
 	public ControladoraGUI()
@@ -238,7 +237,24 @@ public class ControladoraGUI
 		menuDirecciones.SetActive (true);
 	}
 
+	public void Vaciar_Cajas_Texto()
+	{
+		listaVentanaInferior.Clear();
+		listaVentanaLateral.Clear();
+		cabeceraInferior = "";
+		cabeceraLateral = "";
+	}
+
+	public void Insertar_Label_Ventana(string tipo, string texto, Color color)
+	{
+		if (tipo.Contains("Inferior"))   //Para la ventana de Inferior
+			listaVentanaInferior.Add(new Etiqueta(texto, color));
+		else 		//Para la ventana Lateral
+			listaVentanaLateral.Add (new Etiqueta(texto, color));
+	}
+
 	public void Lanzar_Inspeccionar()
 	{
+
 	}
 }
