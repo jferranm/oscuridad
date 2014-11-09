@@ -33,6 +33,7 @@ public class VentanaObjetos: MonoBehaviour
 					{
 						GameCenter.InstanceRef.controladoraGUI.listaVentanaLateral.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white));
 						GameCenter.InstanceRef.controladoraGUI.cabeceraInferior = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre;
+						posicionBarraScrollObjeto.y = Mathf.Infinity;
 					}
 					else
 					{

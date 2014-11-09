@@ -40,6 +40,7 @@ public class PanelObjetos : MonoBehaviour
 			foreach (opcionObjeto opcion in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoOpciones) 
 			{
 				// Si no tiene ninguna opcion de objeto lo desconectamos todo
+				string prueba = opcion.ToString();
 				if (opcion.Equals(opcionObjeto.Ninguna))
 				{
 					Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
@@ -53,7 +54,7 @@ public class PanelObjetos : MonoBehaviour
 					Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
 				else 
 					Activar_Desactivar_Textura("BotonCoger", botonCoger);
-				
+
 				//Ponemos la textura al boton hablar, activo o inactivo
 				if (opcion.Equals(opcionObjeto.Hablar))
 					Activar_Desactivar_Textura("BotonHablar", botonHablar);
@@ -61,10 +62,15 @@ public class PanelObjetos : MonoBehaviour
 					Activar_Desactivar_Textura("BotonHablar", botonHablarInactivo);
 				
 				//Ponemos la textura al boton inspeccionar, activo o inactivo
-				if (opcion.Equals(opcionObjeto.Coger))
+				if (opcion.Equals(opcionObjeto.Observar))
 					Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
 				else
-					Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
+				{
+					if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado)
+						Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
+					else
+						Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
+				}
 			}
 		}
 	}

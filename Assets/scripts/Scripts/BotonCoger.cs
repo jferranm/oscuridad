@@ -51,6 +51,6 @@ public class BotonCoger : MonoBehaviour
 		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoActivo = false;
 		
 		//Le indicamos a la caja de texto que esta en el inventario
-		GameCenter.InstanceRef.controladoraGUI.Insertar_Label_Ventana ("Inferior", "'" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "' ahora esta en el inventario", Color.white);
+		GameCenter.InstanceRef.controladoraGUI.Insertar_Label_Ventana ("Inferior", "'" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "' ahora esta en el inventario", Color.yellow);
 	}
 }

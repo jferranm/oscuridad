@@ -87,6 +87,107 @@ namespace Oscuridad.Clases
             set { inventario = value; }
         }
 
+		public struct habilidadesJugador
+		{
+			public int Antropologia;
+			public int Arqueologia;
+			public int Astronomia;
+			public int BuscarLibros;
+			public int CienciasOcultas;
+			public int Conducir;
+			public int Cerrajeria;
+			public int Charlataneria;
+			public int Credito;
+			public int Derecho;
+			public int Descubrir;
+			public int Disfrazarse;
+			public int Discrecion;
+			public int Escuchar;
+			public int Equitacion;
+			public int Esquivar;
+			public int Fotografia;
+			public int HabilidadArtistica;
+			public int Historia;
+			public int HistoriaNatural;
+			public int LenguaPropia;
+			public int Mecanica;
+			public int MitosDeCthulhu;
+			public int Nadar;
+			public int Ocultar;
+			public int Ocultarse;
+			public int OtraLenguaFrances;
+			public int OtraLenguaLatin;
+			public int OtraLenguaAleman;
+			public int OtraLenguaItaliano;
+			public int Persuasion;
+			public int PrimerosAuxilios;
+			public int Psicologia;
+			public int Quimica;
+			public int Regatear;
+			public int Saltar;
+			public int Examinar;
+		}
+		/// <summary>
+		/// Estructura para los valores de las habilidades del jugador
+		/// </summary>
+		/// <value>
+		/// valores enteros para las habilidades del jugador
+		/// </value>
+		public habilidadesJugador HabilidadesJugador;
+
+		public struct caracteristicasJugador
+		{
+			public int Fuerza;
+			public int Constitucion;
+			public int Tamanyo;
+			public int Destreza;
+			public int Aparicencia;
+			public int Cordura;
+			public int Inteligencia;
+			public int Poder;
+			public int Educacion;
+			public int Idea;
+			public int Suerte;
+			public int Conocimiento;
+			public int Vida;
+			public int BonificacionDanyo;
+		}
+		/// <summary>
+		/// Estructura para los valores de las caracteristicas del jugador
+		/// </summary>
+		/// <value>
+		/// valores enteros para las caracteristicas del jugador
+		/// </value>
+		public caracteristicasJugador CaracteristicasJugador;
+
+		public struct datosPersonalesJugador
+		{
+			public string Nombre;
+			public string Profesion;
+			public int Edad;
+		}
+		/// <summary>
+		/// Estructura para los valores de los datos personales del jugador
+		/// </summary>
+		/// <value>
+		/// valores para los datos personales del jugador
+		/// </value>
+		public datosPersonalesJugador DatosPersonalesJugador;
+
+		public struct armasJugador
+		{
+			public int ArmaCorta;
+			public int Fusil;
+			public int Escopeta;
+		}
+		/// <summary>
+		/// Estructura para los valores de las armas del jugador
+		/// </summary>
+		/// <value>
+		/// valores enteros para las armas del jugador
+		/// </value>
+		public armasJugador ArmasJugador;
+
         /// <summary>
         /// Constructor de la clase <see cref="JugadorBase"/> class.
         /// </summary>
@@ -95,6 +196,10 @@ namespace Oscuridad.Clases
             escenasVisitadas = new List<Escenas>();
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
+			HabilidadesJugador = new habilidadesJugador ();
+			CaracteristicasJugador = new caracteristicasJugador ();
+			DatosPersonalesJugador = new datosPersonalesJugador ();
+			ArmasJugador = new armasJugador ();
 
             estadoJugador = estadosJugador.enMenus;
         }
@@ -108,6 +213,10 @@ namespace Oscuridad.Clases
             escenasVisitadas = new List<Escenas>();
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
+			HabilidadesJugador = new habilidadesJugador ();
+			CaracteristicasJugador = new caracteristicasJugador ();
+			DatosPersonalesJugador = new datosPersonalesJugador ();
+			ArmasJugador = new armasJugador ();
 
             estadoJugador = estadosJugador.enMenus;
             tipoPersonaje = nuevoPersonaje;

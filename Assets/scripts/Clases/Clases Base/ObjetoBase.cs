@@ -115,6 +115,19 @@ namespace Oscuridad.Clases
 			set { objetoActivo = value; }
 		}
 
+		private bool objetoInspeccionado;
+		/// <summary>
+		/// Determina si el objeto a sido inspeccionado
+		/// </summary>
+		/// <value>
+		/// valor tipo bool para determinar si el objeto a sido inspeccionado
+		/// </value>
+		public bool ObjetoInspeccionado
+		{
+			get { return objetoInspeccionado; }
+			set { objetoInspeccionado = value; }
+		}
+
         /// <summary>
         /// Contructor de la clase <see cref="ObjetoBase"/>.
         /// </summary>

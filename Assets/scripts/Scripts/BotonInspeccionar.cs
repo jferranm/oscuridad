@@ -4,7 +4,6 @@ using Oscuridad.Estados;
 
 public class BotonInspeccionar : MonoBehaviour 
 {
-	private PanelVentana panelVentanaRef;
 	private PanelObjetos panelObjetosRef;
 	
 	void Start()

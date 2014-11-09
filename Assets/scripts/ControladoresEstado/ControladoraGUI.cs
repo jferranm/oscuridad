@@ -255,6 +255,16 @@ public class ControladoraGUI
 
 	public void Lanzar_Inspeccionar()
 	{
+		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradas()) 
+		{
+			if(!tirada.HabilidadTirada.Equals(Habilidades.Ninguna))
+			{
+				//TODO: Hacer tirada
+				LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
+				//int resultado = int.Parse(nuevoLanzamiento.Lanzar("1D100"));
 
+				//TODO: Mostrar Resultado
+			}
+		}
 	}
 }

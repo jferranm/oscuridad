@@ -57,6 +57,7 @@ public class BotonMenu : MonoBehaviour
 			case "MariaGibbs":
 				//TODO: ir a mapa
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.MarlaGibbs;
+				GameCenter.InstanceRef.controladoraJuego.Inicializar_Jugador (Personaje.MarlaGibbs);
 				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraJuego.CopiarXML();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
@@ -65,6 +66,7 @@ public class BotonMenu : MonoBehaviour
 			case "WarrenBedford":
 				//TODO: ir a mapa
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.WarrenBedford;
+				GameCenter.InstanceRef.controladoraJuego.Inicializar_Jugador (Personaje.WarrenBedford);
 				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraJuego.CopiarXML();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();
@@ -73,6 +75,7 @@ public class BotonMenu : MonoBehaviour
 			case "RobertDuncan":
 				//TODO: ir a mapa
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.TipoPersonaje = Personaje.RobertDuncan;
+				GameCenter.InstanceRef.controladoraJuego.Inicializar_Jugador (Personaje.MarlaGibbs);
 				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraJuego.CopiarXML();
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena10();

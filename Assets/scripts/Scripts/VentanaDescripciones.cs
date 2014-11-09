@@ -31,6 +31,7 @@ public class VentanaDescripciones: MonoBehaviour
 				{
 					GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
 					GameCenter.InstanceRef.controladoraGUI.cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
+					posicionBarraScrollDescripciones.y = Mathf.Infinity;
 				}
 			}
 		}

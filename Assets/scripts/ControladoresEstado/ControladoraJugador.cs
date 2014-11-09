@@ -121,6 +121,7 @@ public class ControladoraJugador
 		if(Camera.main.transform.position.ToString() == vectorAuxiliarPosicion.ToString())
 		{
 			Cambiar_Estado(EstadosJugador.enZoomEspera);
+			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto();
 			estadoCambiado = true;
 			yield break;
 		}

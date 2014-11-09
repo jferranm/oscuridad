@@ -40,6 +40,170 @@ public class ControladoraJuego
 		escenaActual = new EscenaBase ();
 	}
 
+	public void Inicializar_Jugador(Personaje personaje)
+	{
+		switch (personaje) 
+		{
+			case Personaje.MarlaGibbs:
+			{
+				jugadorActual.DatosPersonalesJugador.Nombre = "Marla Gibbs";
+				jugadorActual.DatosPersonalesJugador.Profesion = "Periodista";
+				jugadorActual.DatosPersonalesJugador.Edad = 32;
+
+				jugadorActual.CaracteristicasJugador.Fuerza = 8;
+				jugadorActual.CaracteristicasJugador.Constitucion = 11;
+				jugadorActual.CaracteristicasJugador.Tamanyo = 9;
+				jugadorActual.CaracteristicasJugador.Inteligencia = 16;
+				jugadorActual.CaracteristicasJugador.Poder = 13;
+				jugadorActual.CaracteristicasJugador.Destreza = 12;
+				jugadorActual.CaracteristicasJugador.Aparicencia = 14;
+				jugadorActual.CaracteristicasJugador.Cordura = 65;
+				jugadorActual.CaracteristicasJugador.Educacion = 17;
+				jugadorActual.CaracteristicasJugador.Idea = 85;
+				jugadorActual.CaracteristicasJugador.Suerte = 65;
+				jugadorActual.CaracteristicasJugador.Conocimiento = 80;
+				jugadorActual.CaracteristicasJugador.Vida = 10;
+
+				jugadorActual.HabilidadesJugador.Antropologia = 40;				
+				jugadorActual.HabilidadesJugador.BuscarLibros = 75;
+				jugadorActual.HabilidadesJugador.CienciasOcultas = 40;
+				jugadorActual.HabilidadesJugador.Conducir = 35;
+				jugadorActual.HabilidadesJugador.Charlataneria = 45;
+				jugadorActual.HabilidadesJugador.Credito = 40;
+				jugadorActual.HabilidadesJugador.Derecho = 45;
+				jugadorActual.HabilidadesJugador.Descubrir = 25;
+				jugadorActual.HabilidadesJugador.Discrecion = 35;
+				jugadorActual.HabilidadesJugador.Escuchar = 25;
+				jugadorActual.HabilidadesJugador.Esquivar = 24;
+				jugadorActual.HabilidadesJugador.Historia = 65;
+				jugadorActual.HabilidadesJugador.LenguaPropia = 80;
+				jugadorActual.HabilidadesJugador.OtraLenguaLatin = 40;
+				jugadorActual.HabilidadesJugador.Mecanica = 20;
+				jugadorActual.HabilidadesJugador.Nadar = 40;
+				jugadorActual.HabilidadesJugador.Ocultar = 25;
+				jugadorActual.HabilidadesJugador.Ocultarse = 35;
+				jugadorActual.HabilidadesJugador.OtraLenguaFrances = 55;
+				jugadorActual.HabilidadesJugador.Persuasion = 25;
+				jugadorActual.HabilidadesJugador.PrimerosAuxilios = 30;
+				jugadorActual.HabilidadesJugador.Psicologia = 45;
+				jugadorActual.HabilidadesJugador.Saltar = 25;
+
+				jugadorActual.ArmasJugador.ArmaCorta = 40;
+				jugadorActual.ArmasJugador.Escopeta = 30;
+				jugadorActual.ArmasJugador.Fusil = 25;
+
+				break;
+			}
+
+			case Personaje.RobertDuncan:
+			{
+				jugadorActual.DatosPersonalesJugador.Nombre = "Robert Duncan";
+				jugadorActual.DatosPersonalesJugador.Profesion = "Detective";
+				jugadorActual.DatosPersonalesJugador.Edad = 36;
+
+				jugadorActual.CaracteristicasJugador.Fuerza = 15;
+				jugadorActual.CaracteristicasJugador.Constitucion = 16;
+				jugadorActual.CaracteristicasJugador.Tamanyo = 12;
+				jugadorActual.CaracteristicasJugador.Inteligencia = 11;
+				jugadorActual.CaracteristicasJugador.Poder = 12;
+				jugadorActual.CaracteristicasJugador.Destreza = 14;
+				jugadorActual.CaracteristicasJugador.Aparicencia = 12;
+				jugadorActual.CaracteristicasJugador.Cordura = 60;
+				jugadorActual.CaracteristicasJugador.Educacion = 14;
+				jugadorActual.CaracteristicasJugador.Idea = 55;
+				jugadorActual.CaracteristicasJugador.Suerte = 60;
+				jugadorActual.CaracteristicasJugador.Conocimiento = 70;
+				jugadorActual.CaracteristicasJugador.Vida = 14;
+
+				jugadorActual.HabilidadesJugador.BuscarLibros = 25;
+				jugadorActual.HabilidadesJugador.Cerrajeria = 40;
+				jugadorActual.HabilidadesJugador.Conducir = 40;
+				jugadorActual.HabilidadesJugador.Charlataneria = 55;
+				jugadorActual.HabilidadesJugador.Credito = 15;
+				jugadorActual.HabilidadesJugador.Derecho  = 55;
+				jugadorActual.HabilidadesJugador.Descubrir = 25;
+				jugadorActual.HabilidadesJugador.Discrecion = 40;
+				jugadorActual.HabilidadesJugador.Disfrazarse = 20;
+				jugadorActual.HabilidadesJugador.Escuchar = 25;
+				jugadorActual.HabilidadesJugador.Esquivar = 25;
+				jugadorActual.HabilidadesJugador.Fotografia = 45;
+				jugadorActual.HabilidadesJugador.Historia = 20;
+				jugadorActual.HabilidadesJugador.LenguaPropia = 55;
+				jugadorActual.HabilidadesJugador.OtraLenguaLatin = 40;
+				jugadorActual.HabilidadesJugador.Mecanica = 20;
+				jugadorActual.HabilidadesJugador.Nadar = 25;
+				jugadorActual.HabilidadesJugador.Ocultar = 25;
+				jugadorActual.HabilidadesJugador.Ocultarse = 40;
+				jugadorActual.HabilidadesJugador.Persuasion = 35;
+				jugadorActual.HabilidadesJugador.PrimerosAuxilios = 30;
+				jugadorActual.HabilidadesJugador.Psicologia = 45;
+				jugadorActual.HabilidadesJugador.Regatear = 75;
+				jugadorActual.HabilidadesJugador.Saltar = 25;
+
+				jugadorActual.ArmasJugador.ArmaCorta = 65;				
+				jugadorActual.ArmasJugador.Escopeta = 30;
+				jugadorActual.ArmasJugador.Fusil = 25;
+
+				break;
+			}
+
+			case Personaje.WarrenBedford:
+			{
+				jugadorActual.DatosPersonalesJugador.Nombre = "Warren Bedford";
+				jugadorActual.DatosPersonalesJugador.Profesion = "Profesor de Historia";
+				jugadorActual.DatosPersonalesJugador.Edad = 56;
+
+				jugadorActual.CaracteristicasJugador.Fuerza = 10;
+				jugadorActual.CaracteristicasJugador.Constitucion = 9;
+				jugadorActual.CaracteristicasJugador.Tamanyo = 10;
+				jugadorActual.CaracteristicasJugador.Inteligencia = 17;
+				jugadorActual.CaracteristicasJugador.Poder = 16;
+				jugadorActual.CaracteristicasJugador.Destreza = 7;
+				jugadorActual.CaracteristicasJugador.Aparicencia =9;				
+				jugadorActual.CaracteristicasJugador.Cordura = 80;
+				jugadorActual.CaracteristicasJugador.Educacion = 23;
+				jugadorActual.CaracteristicasJugador.Idea = 85;
+				jugadorActual.CaracteristicasJugador.Suerte = 80;
+				jugadorActual.CaracteristicasJugador.Conocimiento = 99;
+				jugadorActual.CaracteristicasJugador.Vida = 10;
+
+				jugadorActual.HabilidadesJugador.Antropologia = 25;
+				jugadorActual.HabilidadesJugador.Arqueologia = 50;
+				jugadorActual.HabilidadesJugador.Astronomia = 20;
+				jugadorActual.HabilidadesJugador.BuscarLibros = 75;
+				jugadorActual.HabilidadesJugador.CienciasOcultas = 55;
+				jugadorActual.HabilidadesJugador.Conducir = 50;
+				jugadorActual.HabilidadesJugador.Credito = 75;
+				jugadorActual.HabilidadesJugador.Derecho = 30;
+				jugadorActual.HabilidadesJugador.Descubrir = 25;
+				jugadorActual.HabilidadesJugador.Equitacion = 30;
+				jugadorActual.HabilidadesJugador.Discrecion = 40;
+				jugadorActual.HabilidadesJugador.Disfrazarse = 20;
+				jugadorActual.HabilidadesJugador.Escuchar = 25;
+				jugadorActual.HabilidadesJugador.HabilidadArtistica = 55;
+				jugadorActual.HabilidadesJugador.Historia = 85;
+				jugadorActual.HabilidadesJugador.HistoriaNatural = 35;
+				jugadorActual.HabilidadesJugador.LenguaPropia = 85;
+				jugadorActual.HabilidadesJugador.Nadar = 25;
+				jugadorActual.HabilidadesJugador.Ocultar = 25;
+				jugadorActual.HabilidadesJugador.OtraLenguaFrances = 45; 
+				jugadorActual.HabilidadesJugador.OtraLenguaAleman = 30; 
+				jugadorActual.HabilidadesJugador.OtraLenguaItaliano = 25; 
+				jugadorActual.HabilidadesJugador.OtraLenguaLatin = 55; 
+				jugadorActual.HabilidadesJugador.Persuasion = 15;
+				jugadorActual.HabilidadesJugador.PrimerosAuxilios = 30;
+				jugadorActual.HabilidadesJugador.Psicologia = 55;
+				jugadorActual.HabilidadesJugador.Saltar = 25;
+
+				jugadorActual.ArmasJugador.ArmaCorta = 30;				
+				jugadorActual.ArmasJugador.Escopeta = 30;
+				jugadorActual.ArmasJugador.Fusil = 40;
+
+				break;
+			}
+		}
+	}
+
 	public void CopiarXML()
 	{
 		string destino = null;

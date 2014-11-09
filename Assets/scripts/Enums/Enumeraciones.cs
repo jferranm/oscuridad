@@ -28,20 +28,20 @@
     /// </summary>
     public enum Caracteristicas : int
     {
-        Fuerza = 1,
-        Constitucion = 2,
-        Tamanyo = 3,
-        Destreza = 4,
-        Aparicencia = 5,
-        Cordura = 6,
-        Inteligencia = 7,
-        Poder = 8,
-        Educacion = 9,
-        Idea = 10,
-        Suerte = 11,
-        Conocimiento = 12,
-        Vida = 13,
-        BonificacionDanyo = 14
+        Fuerza,
+        Constitucion,
+        Tamanyo,
+        Destreza,
+        Aparicencia,
+        Cordura,
+        Inteligencia,
+        Poder,
+        Educacion,
+        Idea,
+        Suerte,
+        Conocimiento,
+        Vida,
+        BonificacionDanyo
     }
 
     /// <summary>
@@ -49,43 +49,45 @@
     /// </summary>
     public enum Habilidades : int
     {
-        Ninguna = 0,
-        Antropologia = 1,
-        Arqueologia = 2,
-        Astronomia = 3,
-        BuscarLibros = 4,
-        CienciasOcultas = 5,
-        Conducir = 6,
-        Cerrajeria = 7,
-        Charlataneria = 8,
-        Credito = 9,
-        Derecho = 10,
-        Descubrir = 11,
-        Disfrazarse = 12,
-        Discrecion = 13,
-        Escuchar = 14,
-        Equitacion = 15,
-        Esquivar = 16,
-        Fotografia = 17,
-        HabilidadArtistica = 18,
-        Historia = 19,
-        HistoriaNatural = 20,
-        LenguaPropia = 21,
-        Mecanica = 22,
-        MitosDeCthulhu = 23,
-        Nadar = 24,
-        Ocultar = 25,
-        Ocultarse = 26,
-        OtraLenguaFrances = 27,
-        OtraLenguaLatin = 28,
-        Persuasion = 29,
-        PrimerosAuxilios = 30,
-        Psicologia = 31,
-        Quimica = 32,
-        Regatear = 33,
-        Saltar = 34,
-        Examinar = 35,
-        Fallo = 666
+        Ninguna,
+        Antropologia,
+        Arqueologia,
+        Astronomia,
+        BuscarLibros,
+        CienciasOcultas,
+        Conducir,
+        Cerrajeria,
+        Charlataneria,
+        Credito,
+        Derecho,
+        Descubrir,
+        Disfrazarse,
+        Discrecion,
+        Escuchar,
+        Equitacion,
+        Esquivar,
+        Fotografia,
+        HabilidadArtistica,
+        Historia,
+        HistoriaNatural,
+        LenguaPropia,
+        Mecanica,
+        MitosDeCthulhu,
+        Nadar,
+        Ocultar,
+        Ocultarse,
+        OtraLenguaFrances,
+		OtraLenguaAleman,
+		OtraLenguaItaliano,
+        OtraLenguaLatin,
+        Persuasion,
+        PrimerosAuxilios,
+        Psicologia,
+        Quimica,
+        Regatear,
+        Saltar,
+        Examinar,
+        Fallo
     }
 
     /// <summary>
@@ -139,9 +141,9 @@
     /// </summary>
     public enum Personaje : int
     {
-        RobertDuncan = 1,
-        MarlaGibbs = 2,
-        WarrenBedford = 3
+        RobertDuncan,
+        MarlaGibbs,
+        WarrenBedford
     }
 
     /// <summary>
@@ -149,10 +151,9 @@
     /// </summary>
     public enum DatosPersonales : int
     {
-        Nombre = 1,
-        Profesion = 2,
-        Edad = 3,
-        Foto = 4
+        Nombre,
+        Profesion,
+        Edad,
     }
 
     /// <summary>
@@ -160,9 +161,9 @@
     /// </summary>
     public enum Armas : int
     {
-        ArmaCorta = 1,
-        Fusil = 2,
-        Escopeta = 3
+        ArmaCorta,
+        Fusil,
+        Escopeta
     }
 
     /// <summary>
