@@ -30,9 +30,9 @@ public class PanelObjetos : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
 		{
-			//Es un Personaje
-			Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
-			Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
+			//Es un Personaje y Desactivamos las opciones de coger e inspeccionar
+			Desactivar_Opcion("BotonCoger");
+			Desactivar_Opcion("BotonInspeccionar");
 		}
 		else
 		{
@@ -43,45 +43,79 @@ public class PanelObjetos : MonoBehaviour
 				string prueba = opcion.ToString();
 				if (opcion.Equals(opcionObjeto.Ninguna))
 				{
-					Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
-					Activar_Desactivar_Textura("BotonHablar", botonHablarInactivo);
-					Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
+					//Si no tiene ninguna opcion ese objeto desactivamos todas las opciones
+					Desactivar_Opcion("BotonCoger");
+					Desactivar_Opcion("BotonHablar");
+					Desactivar_Opcion("BotonInspeccionar");
 					break;
 				}
 				
 				//Ponemos la textura al boton coger, activo o inactivo
 				if (opcion.Equals(opcionObjeto.Coger))
-					Activar_Desactivar_Textura("BotonCoger", botonCogerInactivo);
+					Activar_Opcion("BotonCoger");
 				else 
-					Activar_Desactivar_Textura("BotonCoger", botonCoger);
+					Desactivar_Opcion("BotonCoger");
 
 				//Ponemos la textura al boton hablar, activo o inactivo
 				if (opcion.Equals(opcionObjeto.Hablar))
-					Activar_Desactivar_Textura("BotonHablar", botonHablar);
+					Activar_Opcion("BotonHablar");
 				else
-					Activar_Desactivar_Textura("BotonHablar", botonHablarInactivo);
-				
+					Desactivar_Opcion("BotonHablar");
+
 				//Ponemos la textura al boton inspeccionar, activo o inactivo
 				if (opcion.Equals(opcionObjeto.Observar))
-					Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
-				else
 				{
 					if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado)
-						Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionar);
+						Desactivar_Opcion("BotonInspeccionar");
 					else
-						Activar_Desactivar_Textura("BotonInspeccionar", botonInspeccionarInactivo);
+						Activar_Opcion("BotonInspeccionar");
 				}
+				else
+					Desactivar_Opcion("BotonInspeccionar");
 			}
 		}
 	}
 
-	public void Activar_Desactivar_Textura(string objetoActivar, Texture2D texturaSeleccionada)
+	public void Activar_Opcion(string objetoActivar)
 	{
 		foreach (Transform objetoHijo in this.transform) 
 		{
 			if(objetoHijo.name == objetoActivar)
 			{
-				objetoHijo.guiTexture.texture = texturaSeleccionada;
+				switch(objetoActivar)
+				{
+					case "BotonCoger": 
+						objetoHijo.guiTexture.texture = botonCoger;
+						break;
+					case "BotonHablar": 
+						objetoHijo.guiTexture.texture = botonHablar;
+						break;
+					case "BotonInspeccionar": 
+						objetoHijo.guiTexture.texture = botonInspeccionar;
+						break;
+				}
+			}
+		}
+	}
+
+	public void Desactivar_Opcion(string objetoDesactivar)
+	{
+		foreach (Transform objetoHijo in this.transform) 
+		{
+			if(objetoHijo.name == objetoDesactivar)
+			{
+				switch(objetoDesactivar)
+				{
+				case "BotonCoger": 
+					objetoHijo.guiTexture.texture = botonCogerInactivo;
+					break;
+				case "BotonHablar": 
+					objetoHijo.guiTexture.texture = botonHablarInactivo;
+					break;
+				case "BotonInspeccionar": 
+					objetoHijo.guiTexture.texture = botonInspeccionarInactivo;
+					break;
+				}
 			}
 		}
 	}

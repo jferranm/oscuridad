@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Oscuridad.Interfaces;
@@ -66,8 +67,8 @@ public class ControladoraGUI
 	//---- Listas de Texto para las cajas Descriptivas
 	public List<Etiqueta> listaVentanaInferior = new List<Etiqueta>();
 	public List<Etiqueta> listaVentanaLateral = new List<Etiqueta>();
-	public string cabeceraInferior;
-	public string cabeceraLateral;
+	public string cabeceraInferior = "";
+	public string cabeceraLateral = "";
 	//----
 
 	public ControladoraGUI()
@@ -255,16 +256,67 @@ public class ControladoraGUI
 
 	public void Lanzar_Inspeccionar()
 	{
+		bool tiradaConExito = false;
+
 		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradas()) 
 		{
 			if(!tirada.HabilidadTirada.Equals(Habilidades.Ninguna))
 			{
-				//TODO: Hacer tirada
+				//Rescatamos valor de tirada de dados
 				LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
-				//int resultado = int.Parse(nuevoLanzamiento.Lanzar("1D100"));
+				int resultado = nuevoLanzamiento.Lanzar("1D100");
 
-				//TODO: Mostrar Resultado
+				//Rescatamos el valor de la habilidad
+				int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(tirada.HabilidadTirada);
+
+				if(resultado < valorHabilidad)
+				{
+					//Mostramos cartel de que la tirada a sido exitosa
+					Insertar_Label_Ventana("Inferior", "TIRADA EXITOSA", Color.green);
+
+					//Mostramos la descripcion anidada a la tirada de la habilidad
+					Insertar_Label_Ventana("Lateral", tirada.TextoDescriptivo, Color.white);
+
+					//Añadimos a la descripcion minima, la descripcion nueva de la tirada
+					ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Ninguna);
+					aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + tirada.TextoDescriptivo;
+
+					//Borramos todas las tiradas de habilidades del objeto y añadimos la de la descripcion minima
+					GameCenter.InstanceRef.controladoraJuego.objetoPulsado.TiradasObjeto.Clear();
+					GameCenter.InstanceRef.controladoraJuego.objetoPulsado.AddTiradas(aux);
+
+					//Marcamos que a sido una tirada con exito para no mostrar la tirada de fallo
+					tiradaConExito = true;
+					break;
+				}
+				else
+				{
+					Insertar_Label_Ventana("Inferior", "TIRADA FALLIDA", Color.red);
+				}
 			}
 		}
+
+		if (!tiradaConExito) 
+		{
+			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ExisteTirada(Habilidades.Fallo))
+			{
+				//Rescatamos la tirada de Fallo
+				ObjetoTiradaBase fallo = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo);
+
+				//Mostramos la descripcion anidada a la tirada de la habilidad
+				Insertar_Label_Ventana("Lateral", fallo.TextoDescriptivo, Color.white);
+				
+				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
+				ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Ninguna);
+				aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + fallo.TextoDescriptivo;
+				
+				//Borramos todas las tiradas de habilidades del objeto y añadimos la de la descripcion minima
+				GameCenter.InstanceRef.controladoraJuego.objetoPulsado.TiradasObjeto.Clear();
+				GameCenter.InstanceRef.controladoraJuego.objetoPulsado.AddTiradas(aux);
+			}
+		}
+
+		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
+		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
 	}
 }

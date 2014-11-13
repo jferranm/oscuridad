@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Oscuridad.Enumeraciones;
+using Oscuridad.Clases;
 
 namespace Oscuridad.Clases
 {
@@ -315,6 +316,28 @@ namespace Oscuridad.Clases
 			}
 
 			return null;
+		}
+
+		public ObjetoTiradaBase BuscarTirada(Habilidades habilidad)
+		{
+			foreach (ObjetoTiradaBase tirada in MostrarTiradas()) 
+			{
+				if(tirada.HabilidadTirada.Equals(habilidad))
+					return tirada;
+			}
+
+			return null;
+		}
+
+		public bool ExisteTirada(Habilidades habilidad)
+		{
+			foreach (ObjetoTiradaBase tirada in MostrarTiradas()) 
+			{
+				if(tirada.HabilidadTirada.Equals(habilidad))
+					return true;
+			}
+			
+			return false;
 		}
     }
 }

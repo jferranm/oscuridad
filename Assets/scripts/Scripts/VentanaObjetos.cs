@@ -47,7 +47,11 @@ public class VentanaObjetos: MonoBehaviour
 	void OnGUI() 
 	{ 
 		GUI.skin = skinVentana;
-		GUILayout.Window(2, new Rect(posicion_x * Screen.width, posicion_y * Screen.height, escala_x * Screen.width, escala_y * Screen.width), Objetos, GameCenter.InstanceRef.controladoraGUI.cabeceraLateral);
+		try
+		{
+			GUILayout.Window(2, new Rect(posicion_x * Screen.width, posicion_y * Screen.height, escala_x * Screen.width, escala_y * Screen.width), Objetos, GameCenter.InstanceRef.controladoraGUI.cabeceraLateral);
+		}
+		catch {	}
 	}
 	
 	void Objetos(int windowID) 

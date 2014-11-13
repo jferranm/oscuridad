@@ -40,7 +40,11 @@ public class VentanaDescripciones: MonoBehaviour
 	void OnGUI() 
 	{ 
 		GUI.skin = skinVentana;
-		GUILayout.Window(0, new Rect(posicion_x * Screen.width, posicion_y * Screen.height, escala_x * Screen.width, escala_y * Screen.width), DescripcionesWindow, GameCenter.InstanceRef.controladoraGUI.cabeceraInferior);
+		try
+		{
+			GUILayout.Window(0, new Rect(posicion_x * Screen.width, posicion_y * Screen.height, escala_x * Screen.width, escala_y * Screen.width), DescripcionesWindow, GameCenter.InstanceRef.controladoraGUI.cabeceraInferior);
+		}
+		catch {	}
 	}
 	
 	void DescripcionesWindow(int windowID) 

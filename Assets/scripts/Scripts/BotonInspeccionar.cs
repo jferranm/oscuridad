@@ -34,7 +34,7 @@ public class BotonInspeccionar : MonoBehaviour
 		if (this.guiTexture.texture == panelObjetosRef.botonInspeccionar) 
 		{
 			//Desactivamos el icono de Inspeccionar
-			panelObjetosRef.Activar_Desactivar_Textura ("BotonInspeccionar", panelObjetosRef.botonInspeccionarInactivo);
+			panelObjetosRef.Desactivar_Opcion("BotonInspeccionar");
 			
 			//Mostramos el Inicio de la pregunta
 			GameCenter.InstanceRef.controladoraGUI.Lanzar_Inspeccionar();

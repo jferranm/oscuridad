@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using Oscuridad.Enumeraciones;
 
 namespace Oscuridad.Clases
@@ -126,6 +127,127 @@ namespace Oscuridad.Clases
 			public int Regatear;
 			public int Saltar;
 			public int Examinar;
+
+			public int Devolver_Valor_Segun_Enum(Habilidades habilidad)
+			{
+				int aux = 0;
+
+				switch (habilidad) 
+				{
+					case Habilidades.Antropologia:
+						aux =  Antropologia;
+						break;
+					case Habilidades.Arqueologia:
+						aux =  Arqueologia;
+						break;
+					case Habilidades.Astronomia:
+						aux =  Astronomia;
+						break;
+					case Habilidades.BuscarLibros:
+						aux =  BuscarLibros;
+						break;
+					case Habilidades.CienciasOcultas:
+						aux =  CienciasOcultas;
+						break;
+					case Habilidades.Conducir:
+						aux =  Conducir;
+						break;
+					case Habilidades.Cerrajeria:
+						aux =  Cerrajeria;
+						break;
+					case Habilidades.Charlataneria:
+						aux =  Charlataneria;
+						break;
+					case Habilidades.Credito:
+						aux =  Credito;
+						break;
+					case Habilidades.Derecho:
+						aux =  Derecho;
+						break;
+					case Habilidades.Descubrir:
+						aux =  Descubrir;
+						break;
+					case Habilidades.Disfrazarse:
+						aux =  Disfrazarse;
+						break;
+					case Habilidades.Discrecion:
+						aux =  Discrecion;
+						break;
+					case Habilidades.Escuchar:
+						aux =  Escuchar;
+						break;
+					case Habilidades.Equitacion:
+						aux =  Equitacion;
+						break;
+					case Habilidades.Esquivar:
+						aux =  Esquivar;
+						break;
+					case Habilidades.Fotografia:
+						aux =  Fotografia;
+						break;
+					case Habilidades.HabilidadArtistica:
+						aux =  HabilidadArtistica;
+						break;
+					case Habilidades.Historia:
+						aux =  Historia;
+						break;
+					case Habilidades.HistoriaNatural:
+						aux =  HistoriaNatural;
+						break;
+					case Habilidades.LenguaPropia:
+						aux =  LenguaPropia;
+						break;
+					case Habilidades.Mecanica:
+						aux =  Mecanica;
+						break;
+					case Habilidades.MitosDeCthulhu:
+						aux =  MitosDeCthulhu;
+						break;
+					case Habilidades.Nadar:
+						aux =  Nadar;
+						break;
+					case Habilidades.Ocultar:
+						aux =  Ocultar;
+						break;
+					case Habilidades.Ocultarse:
+						aux =  Ocultarse;
+						break;
+					case Habilidades.OtraLenguaFrances:
+						aux =  OtraLenguaFrances;
+						break;
+					case Habilidades.OtraLenguaLatin:
+						aux =  OtraLenguaLatin;
+						break;
+					case Habilidades.OtraLenguaAleman:
+						aux =  OtraLenguaAleman;
+						break;
+					case Habilidades.OtraLenguaItaliano:
+						aux =  OtraLenguaItaliano;
+						break;
+					case Habilidades.Persuasion:
+						aux =  Persuasion;
+						break;
+					case Habilidades.PrimerosAuxilios:
+						aux =  PrimerosAuxilios;
+						break;
+					case Habilidades.Psicologia:
+						aux =  Psicologia;
+						break;
+					case Habilidades.Quimica:
+						aux =  Quimica;
+						break;
+					case Habilidades.Regatear:
+						aux =  Regatear;
+						break;
+					case Habilidades.Saltar:
+						aux =  Saltar;
+						break;
+					case Habilidades.Examinar:
+						aux = Examinar;
+						break;
+				}
+				return aux;
+			}
 		}
 		/// <summary>
 		/// Estructura para los valores de las habilidades del jugador
@@ -196,7 +318,6 @@ namespace Oscuridad.Clases
             escenasVisitadas = new List<Escenas>();
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
-			HabilidadesJugador = new habilidadesJugador ();
 			CaracteristicasJugador = new caracteristicasJugador ();
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
@@ -213,7 +334,6 @@ namespace Oscuridad.Clases
             escenasVisitadas = new List<Escenas>();
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
-			HabilidadesJugador = new habilidadesJugador ();
 			CaracteristicasJugador = new caracteristicasJugador ();
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();

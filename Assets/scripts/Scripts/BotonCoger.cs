@@ -40,9 +40,9 @@ public class BotonCoger : MonoBehaviour
 		GameObject.FindGameObjectWithTag(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre).SetActive(false);
 
 		//Deshabilitamos los botones
-		panelObjetosRef.Activar_Desactivar_Textura ("BotonCoger", panelObjetosRef.botonCogerInactivo);
-		panelObjetosRef.Activar_Desactivar_Textura ("BotonHablar", panelObjetosRef.botonHablarInactivo);
-		panelObjetosRef.Activar_Desactivar_Textura ("BotonInspeccionar", panelObjetosRef.botonInspeccionarInactivo);
+		panelObjetosRef.Desactivar_Opcion("BotonCoger");
+		panelObjetosRef.Desactivar_Opcion("BotonHablar");
+		panelObjetosRef.Desactivar_Opcion("BotonInspeccionar");
 		
 		//Insertar objeto en el inventario del jugador
 		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario ((Objetos)Enum.Parse(typeof(Objetos), GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre));
