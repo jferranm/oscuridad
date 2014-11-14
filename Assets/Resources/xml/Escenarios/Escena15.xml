@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena15</Nombre>
+  <Escena>Escena15</Escena>
   <NombreEscena>Habitacion de Charles</NombreEscena>
   <Descripcion>Practicamente vacia y sin tocar, la cama esta hecha y parece que no se tocado en mucho tiempo. Todos los libros y pertenencias acabaron en el desvan cuando Charles se traslado alli.</Descripcion>
   <ObjetosEscena>
@@ -42,6 +43,7 @@
       </RotacionNueva>
       <Smooth>2.5</Smooth>
       <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>true</ObjetoInspeccionado>
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosHabitacionCharles</Nombre>
@@ -72,6 +74,7 @@
       </RotacionNueva>
       <Smooth>2.5</Smooth>
       <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

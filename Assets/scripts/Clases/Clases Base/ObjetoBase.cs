@@ -25,6 +25,19 @@ namespace Oscuridad.Clases
             set { nombre = value; }
         }
 
+		private Objetos objeto;
+		/// <summary>
+		/// Objeto en enumeracion
+		/// </summary>
+		/// <value>
+		/// valor de tipo enumeracion Objetos
+		/// </value>
+		public Objetos Objeto
+		{
+			get { return objeto; }
+			set { objeto = value; }
+		}
+
 		private string descripcionNombre;
 		/// <summary>
 		/// Descripcion del nombre del objeto

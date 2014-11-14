@@ -23,6 +23,19 @@ namespace Oscuridad.Clases
             set { nombre = value; }
         }
 
+		private Escenas escena;
+		/// <summary>
+		/// Escena en Enumeracion
+		/// </summary>
+		/// <value>
+		/// valor de tipo enum Escenas
+		/// </value>
+		public Escenas Escena
+		{
+			get { return escena; }
+			set { escena = value; }
+		}
+
 		private string nombreEscena;
 		/// <summary>
 		/// Nombre descriptivo de la Escena

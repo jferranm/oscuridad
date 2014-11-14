@@ -270,4 +270,16 @@ public class ControladoraJuego
 			GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
 		}
 	}
+
+	public int Lanzar_Dados(string expresion)
+	{
+		LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
+		return nuevoLanzamiento.Lanzar(expresion);
+	}
+
+	public void Modificar_Tirada_Objeto(string nuevaDescripcion, Habilidades habilidad)
+	{
+		ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(habilidad);
+		aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + nuevaDescripcion;
+	}
 }

@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\BotonHablar.cs">
     <Files>
       <File FileName="Assets\scripts\Scripts\PanelObjetos.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonCoger.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="305" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="282" Column="103" />
+      <File FileName="Assets\scripts\Scripts\BotonHablar.cs" Line="51" Column="52" />
       <File FileName="Assets\scripts\Scripts\BotonInspeccionar.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="267" Column="52" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoBase.cs" Line="330" Column="4" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="18" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="137" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena19</Nombre>
+  <Escena>Escena19</Escena>
   <NombreEscena>Desvan</NombreEscena>
   <Descripcion>Este desvan se acondiciono como habitacion de trabajo de Charles que empezo usando como laboratorio quimico, pero que acabo usando tambien como habitacion. Esta todo desordenado y parece abandonado desde hace un tiempo. Hay un olor extraño aqui dentro que no eres capaz de identificar. Esta oscuro porque han tapado las ventanas con tablas de madera, aunque de una de ellas se han retirado varias tablas y entra algo de luz. Varias velas 	diseminadas por la habitacion iluminan la estancia.
 </Descripcion>

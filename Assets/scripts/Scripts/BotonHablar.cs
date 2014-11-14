@@ -36,6 +36,9 @@ public class BotonHablar : MonoBehaviour
 
 	private void Hablar_Personaje()
 	{
+		//Activar ventana Conversaciones
+		panelVentanaRef.Activar_Ventana_Conversaciones ();
+
 		//Desactivamos el icono de Hablar
 		panelObjetosRef.Desactivar_Opcion("BotonHablar");
 		
@@ -44,5 +47,7 @@ public class BotonHablar : MonoBehaviour
 
 		//Activamos el icono de Hablar
 		panelObjetosRef.Activar_Opcion("BotonHablar");
+
+		panelVentanaRef.Activar_Ventana_Descripciones ();
 	}
 }

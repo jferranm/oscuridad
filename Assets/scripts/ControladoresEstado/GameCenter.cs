@@ -95,6 +95,9 @@ public class GameCenter : MonoBehaviour
 		//Comenzamos BSO
 		Camera.main.audio.clip = controladoraSonidos.bsoEscenaCasa;
 		Camera.main.audio.Play ();
+
+		//Insertamos marcador de Escena visitada en el jugador
+		controladoraJuego.jugadorActual.AddEscenaVisitada (controladoraJuego.escenaActual.Escena);
 	}
 
 

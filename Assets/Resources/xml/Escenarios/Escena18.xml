@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nombre>Escena18</Nombre>
+  <Escena>Escena18</Escena>
   <NombreEscena>Puerta Desvan</NombreEscena>
   <Descripcion>Esta puerta esta cerrada</Descripcion>
   <ObjetosEscena>
@@ -33,6 +34,7 @@
       </RotacionNueva>
       <Smooth>2.5</Smooth>
       <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
     </ObjetoBase>
   </ObjetosEscena>
   <PersonajesEscena />

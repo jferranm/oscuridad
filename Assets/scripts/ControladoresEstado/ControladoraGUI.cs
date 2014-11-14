@@ -197,6 +197,9 @@ public class ControladoraGUI
 		menuObjetos.SetActive(true);
 
 		estadoCambiado = false;
+
+		//Añadimos el objeto a objetos vistos del personaje
+		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Objeto);
 	}
 	
 	public void Mostrar_Ventana_Descriptiva ()
@@ -263,8 +266,7 @@ public class ControladoraGUI
 			if(!tirada.HabilidadTirada.Equals(Habilidades.Ninguna))
 			{
 				//Rescatamos valor de tirada de dados
-				LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
-				int resultado = nuevoLanzamiento.Lanzar("1D100");
+				int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados("1D100");
 
 				//Rescatamos el valor de la habilidad
 				int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(tirada.HabilidadTirada);
@@ -278,12 +280,7 @@ public class ControladoraGUI
 					Insertar_Label_Ventana("Lateral", tirada.TextoDescriptivo, Color.white);
 
 					//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-					ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Ninguna);
-					aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + tirada.TextoDescriptivo;
-
-					//Borramos todas las tiradas de habilidades del objeto y añadimos la de la descripcion minima
-					GameCenter.InstanceRef.controladoraJuego.objetoPulsado.TiradasObjeto.Clear();
-					GameCenter.InstanceRef.controladoraJuego.objetoPulsado.AddTiradas(aux);
+					GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(tirada.TextoDescriptivo, Habilidades.Ninguna);
 
 					//Marcamos que a sido una tirada con exito para no mostrar la tirada de fallo
 					tiradaConExito = true;
@@ -307,12 +304,7 @@ public class ControladoraGUI
 				Insertar_Label_Ventana("Lateral", fallo.TextoDescriptivo, Color.white);
 				
 				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-				ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Ninguna);
-				aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + fallo.TextoDescriptivo;
-				
-				//Borramos todas las tiradas de habilidades del objeto y añadimos la de la descripcion minima
-				GameCenter.InstanceRef.controladoraJuego.objetoPulsado.TiradasObjeto.Clear();
-				GameCenter.InstanceRef.controladoraJuego.objetoPulsado.AddTiradas(aux);
+				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(fallo.TextoDescriptivo, Habilidades.Ninguna);
 			}
 		}
 

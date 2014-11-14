@@ -134,7 +134,7 @@ public class PanelVentana : MonoBehaviour
 
 	private void Mostrar_Caja_Tiradas()
 	{
-		ventanaIDTiradas = 1;
+		Activar_Ventana_Descripciones ();
 
 		if (cajaDescriptivaObjeto) 
 		{
@@ -330,42 +330,6 @@ public class PanelVentana : MonoBehaviour
 		textoBoton3 = "";
 	}
 
-	public void Lanzar_Inspeccionar()
-	{
-		ventanaIDTiradas = 1;
-		List<string> listaAuxiliar = new List<string> ();
-		listaAuxiliar = Texto_Tirada ();
-
-		foreach (string label in listaAuxiliar) 
-		{
-			if(label.Contains("FALLIDA"))
-			{
-				//labels marcados en rojo
-				//Insertar_Label_Tabla(false, label, Color.red);
-			}
-			else
-			{
-				if(label.Contains("EXITOSA"))
-				{
-					//Labels marcados en verde
-					//Insertar_Label_Tabla(true, label.Remove(0, label.IndexOf("\n")+1), Color.green);
-					//Insertar_Label_Tabla(false, label.Remove(label.IndexOf("\n")), Color.green);
-
-					ControlXMLGlobal nuevoControlXML = new ControlXMLGlobal();
-					nuevoControlXML.Crear_Elemento_Descripciones(GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, label.Remove(0, label.IndexOf("\n")+1));
-				}
-				else
-				{
-					//Labels sin marcar
-					//Insertar_Label_Tabla (true, label, Color.white);
-
-					ControlXMLGlobal nuevoControlXML = new ControlXMLGlobal();
-					nuevoControlXML.Crear_Elemento_Descripciones(GameCenter.InstanceRef.controladoraJugador.objetoPulsado.name, label);
-				}
-			}
-
-		}
-	}
 
 	public void Lanzar_Hablar()
 	{
@@ -375,6 +339,15 @@ public class PanelVentana : MonoBehaviour
 
 	}
 
+	public void Activar_Ventana_Conversaciones()
+	{
+		ventanaIDTiradas = 2;
+	}
+
+	public void Activar_Ventana_Descripciones()
+	{
+		ventanaIDTiradas = 1;
+	}
 
 }
 
