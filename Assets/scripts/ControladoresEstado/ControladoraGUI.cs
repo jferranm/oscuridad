@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -252,44 +252,39 @@ public class ControladoraGUI
 	public void Insertar_Label_Ventana(string tipo, string texto, Color color)
 	{
 		if (tipo.Contains("Inferior"))   //Para la ventana de Inferior
-			listaVentanaInferior.Add(new Etiqueta(texto, color));
+			listaVentanaInferior.Add(new Etiqueta(texto, color, false));
 		else 		//Para la ventana Lateral
-			listaVentanaLateral.Add (new Etiqueta(texto, color));
+			listaVentanaLateral.Add (new Etiqueta(texto, color, false));
 	}
+
+	public void Insertar_Label_Ventana(string tipo, string texto, Color color, string textoTirada, Color colorTirada)
+	{
+		if (tipo.Contains("Inferior"))   //Para la ventana de Inferior
+			listaVentanaInferior.Add(new Etiqueta(texto, color, true, textoTirada, colorTirada));
+		else 		//Para la ventana Lateral
+			listaVentanaLateral.Add (new Etiqueta(texto, color, true, textoTirada, colorTirada));
+	}
+
 
 	public void Lanzar_Inspeccionar()
 	{
 		bool tiradaConExito = false;
 
-		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradas()) 
+		//Mostramos el enunciado de examinar
+		Insertar_Label_Ventana("Inferior", "Examinar \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\":", Color.white);
+
+		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradasInspeccionar()) 
 		{
-			if(!tirada.HabilidadTirada.Equals(Habilidades.Ninguna))
+			//Rescatamos el valor de la habilidad
+			int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (tirada.HabilidadTirada);
+
+			//Rescatamos valor de tirada de dados
+			int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
+
+			if(Lanzar_Inspeccionar_Resultado (resultado, valorHabilidad, tirada))
 			{
-				//Rescatamos valor de tirada de dados
-				int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados("1D100");
-
-				//Rescatamos el valor de la habilidad
-				int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(tirada.HabilidadTirada);
-
-				if(resultado < valorHabilidad)
-				{
-					//Mostramos cartel de que la tirada a sido exitosa
-					Insertar_Label_Ventana("Inferior", "TIRADA EXITOSA", Color.green);
-
-					//Mostramos la descripcion anidada a la tirada de la habilidad
-					Insertar_Label_Ventana("Lateral", tirada.TextoDescriptivo, Color.white);
-
-					//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-					GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(tirada.TextoDescriptivo, Habilidades.Ninguna);
-
-					//Marcamos que a sido una tirada con exito para no mostrar la tirada de fallo
-					tiradaConExito = true;
-					break;
-				}
-				else
-				{
-					Insertar_Label_Ventana("Inferior", "TIRADA FALLIDA", Color.red);
-				}
+				tiradaConExito = true;
+				break;
 			}
 		}
 
@@ -297,18 +292,70 @@ public class ControladoraGUI
 		{
 			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ExisteTirada(Habilidades.Fallo))
 			{
-				//Rescatamos la tirada de Fallo
-				ObjetoTiradaBase fallo = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo);
-
 				//Mostramos la descripcion anidada a la tirada de la habilidad
-				Insertar_Label_Ventana("Lateral", fallo.TextoDescriptivo, Color.white);
+				Insertar_Label_Ventana("Lateral", GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
 				
 				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(fallo.TextoDescriptivo, Habilidades.Ninguna);
+				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
 			}
 		}
 
 		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
 		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
+	}
+
+	public bool Lanzar_Inspeccionar_Resultado(int resultado, int valorHabilidad, ObjetoTiradaBase tirada)
+	{
+		bool mostrarResultado = true;
+
+		if (tirada.Comprobacion) 
+		{
+			if(!tirada.EscenaComprobacion.Equals(Escenas.ninguna))
+			{
+				if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenaVista(tirada.EscenaComprobacion))
+					mostrarResultado = true;
+				else
+					mostrarResultado = false;
+			}
+
+			if(!tirada.ObjetoComprobacion.Equals(Objetos.Ninguno))
+			{
+				if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(tirada.ObjetoComprobacion))
+					mostrarResultado = true;
+				else
+					mostrarResultado = false;
+			}
+		}
+
+		if (mostrarResultado) 
+		{
+			if (resultado < valorHabilidad) 
+			{
+				//Mostramos cartel de que la tirada a sido exitosa
+				Insertar_Label_Ventana ("Inferior", "- Tirada " + tirada.HabilidadTirada.ToString () + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Exito", Color.green);
+
+				//Mostramos la descripcion anidada a la tirada de la habilidad
+				Insertar_Label_Ventana ("Lateral", tirada.TextoDescriptivo, Color.white);
+
+				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
+				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto (tirada.TextoDescriptivo, Habilidades.Ninguna);
+
+				//Ejecutamos Accion si la tuviese
+				if(tirada.Accion)
+				{
+					//TODO Añadir Localizacion
+				}
+
+				//Marcamos que a sido una tirada con exito para no mostrar la tirada de fallo
+				return true;
+			} 
+			else 
+			{
+				Insertar_Label_Ventana ("Inferior", "- Tirada " + tirada.HabilidadTirada.ToString () + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Fracaso", Color.red);
+				return false;
+			}
+		}
+
+		return false;
 	}
 }

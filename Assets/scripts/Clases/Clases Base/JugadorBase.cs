@@ -377,5 +377,15 @@ namespace Oscuridad.Clases
         {
             inventario.Remove(objeto);
         }
+
+		public bool EscenaVista (Escenas escena)
+		{
+			return escenasVisitadas.Contains (escena);
+		}
+
+		public bool ObjetoVisto (Objetos objeto)
+		{
+			return objetosVistos.Contains (objeto);
+		}
     }
 }

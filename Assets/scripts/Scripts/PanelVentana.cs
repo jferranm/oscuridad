@@ -127,7 +127,7 @@ public class PanelVentana : MonoBehaviour
 		cajaDescriptivaObjeto = true;
 
 		textoCabeceraObjeto = GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.tag.ToString();
-		listaObjetos.Add(new Etiqueta(Devolver_Texto_Descriptivo (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.tag.ToString()), Color.white));
+		listaObjetos.Add(new Etiqueta(Devolver_Texto_Descriptivo (GameCenter.InstanceRef.controladoraJugador.objetoInteractuableRef.tag.ToString()), Color.white, false));
 
 		textoCabeceraTiradas = "";
 	}
@@ -146,7 +146,7 @@ public class PanelVentana : MonoBehaviour
 			textoCabeceraTiradas = Application.loadedLevelName;
 
 			//Mostramos la descripcion basica de la escena
-			listaTiradas.Add (new Etiqueta (Devolver_Texto_Descriptivo (Application.loadedLevelName.Trim ()), Color.white));
+			listaTiradas.Add (new Etiqueta (Devolver_Texto_Descriptivo (Application.loadedLevelName.Trim ()), Color.white, false	));
 		}
 	}
 
@@ -157,7 +157,7 @@ public class PanelVentana : MonoBehaviour
 				foreach (Etiqueta nuevaEtiqueta in listaObjetos) 
 				{
 					GUIStyle fuente = new GUIStyle (GUI.skin.label);
-					fuente.normal.textColor = nuevaEtiqueta.ObtenerColor();
+					fuente.normal.textColor = nuevaEtiqueta.ObtenerColor(true);
 					GUILayout.Label(nuevaEtiqueta.ObtenerTexto(), fuente);
 				}
 			GUILayout.EndVertical ();

@@ -29,7 +29,7 @@ public class VentanaDescripciones: MonoBehaviour
 			{
 				if (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
 				{
-					GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
+					GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white, false));
 					GameCenter.InstanceRef.controladoraGUI.cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;
 					posicionBarraScrollDescripciones.y = Mathf.Infinity;
 				}
@@ -53,9 +53,19 @@ public class VentanaDescripciones: MonoBehaviour
 			GUILayout.BeginVertical ();
 				foreach (Etiqueta nuevaEtiqueta in GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior) 
 				{
-					GUIStyle fuente = new GUIStyle (GUI.skin.label);
-					fuente.normal.textColor = nuevaEtiqueta.ObtenerColor();
-					GUILayout.Label(nuevaEtiqueta.ObtenerTexto(), fuente);
+					if(nuevaEtiqueta.ObtenerTirada())
+					{
+						GUIStyle estilo = new GUIStyle (GUI.skin.label);
+						estilo.richText = true;
+
+						GUILayout.Label("<color=" + nuevaEtiqueta.ObtenerColor() + ">" + nuevaEtiqueta.ObtenerTexto() + "</color><color=" + nuevaEtiqueta.ObtenerColorTirada().ToString() + ">" + nuevaEtiqueta.ObtenerTextoTirada() + "</color>", estilo);
+					}
+					else
+					{
+						GUIStyle fuente = new GUIStyle (GUI.skin.label);
+						fuente.normal.textColor = nuevaEtiqueta.ObtenerColor(true);
+						GUILayout.Label(nuevaEtiqueta.ObtenerTexto(), fuente);
+					}
 				}
 			GUILayout.EndVertical();
 		GUILayout.EndScrollView();

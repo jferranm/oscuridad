@@ -315,6 +315,25 @@ namespace Oscuridad.Clases
         }
 
 		/// <summary>
+		/// Mostrar lista de decripciones con tirada del objeto que no sean ni Fallo ni Ninguno
+		/// </summary>
+		/// <returns>Array de tipo ObjetoTiradaBase</returns>
+		public ObjetoTiradaBase[] MostrarTiradasInspeccionar()
+		{
+			List<ObjetoTiradaBase> aux = new List<ObjetoTiradaBase> ();
+
+			foreach (ObjetoTiradaBase objetoAux in tiradasObjeto) 
+			{
+				if(!objetoAux.HabilidadTirada.Equals(Habilidades.Ninguna) && !objetoAux.HabilidadTirada.Equals(Habilidades.Fallo))
+				{
+					aux.Add(objetoAux);
+				}
+			}
+
+			return aux.ToArray();
+		}
+
+		/// <summary>
 		/// Muestra la descripcion del objeto sin tiradas
 		/// </summary>
 		/// <returns>string con la descripcion del objeto</returns>

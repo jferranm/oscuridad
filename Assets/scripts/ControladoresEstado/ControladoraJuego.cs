@@ -273,8 +273,11 @@ public class ControladoraJuego
 
 	public int Lanzar_Dados(string expresion)
 	{
-		LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
-		return nuevoLanzamiento.Lanzar(expresion);
+		//LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
+
+		//return nuevoLanzamiento.Lanzar(expresion);
+
+		return UnityEngine.Random.Range (0, 101);
 	}
 
 	public void Modificar_Tirada_Objeto(string nuevaDescripcion, Habilidades habilidad)

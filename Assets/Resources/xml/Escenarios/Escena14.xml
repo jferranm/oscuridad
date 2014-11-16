@@ -7,8 +7,11 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
+      <Objeto>Ninguno</Objeto>
       <DescripcionNombre>Cuadros</DescripcionNombre>
-      <ObjetoOpciones />
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
           <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
