@@ -332,7 +332,7 @@ public class ControladoraGUI
 			if (resultado < valorHabilidad) 
 			{
 				//Mostramos cartel de que la tirada a sido exitosa
-				Insertar_Label_Ventana ("Inferior", "- Tirada " + tirada.HabilidadTirada.ToString () + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Exito", Color.green);
+				Insertar_Label_Ventana ("Inferior", "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(tirada.HabilidadTirada) + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Exito", Color.green);
 
 				//Mostramos la descripcion anidada a la tirada de la habilidad
 				Insertar_Label_Ventana ("Lateral", tirada.TextoDescriptivo, Color.white);
@@ -351,11 +351,15 @@ public class ControladoraGUI
 			} 
 			else 
 			{
-				Insertar_Label_Ventana ("Inferior", "- Tirada " + tirada.HabilidadTirada.ToString () + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Fracaso", Color.red);
+				Insertar_Label_Ventana ("Inferior", "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(tirada.HabilidadTirada) + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Fracaso", Color.red);
 				return false;
 			}
 		}
 
 		return false;
+	}
+
+	public void Lanzar_Hablar()
+	{
 	}
 }

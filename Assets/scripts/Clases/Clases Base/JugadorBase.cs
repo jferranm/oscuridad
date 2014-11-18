@@ -248,6 +248,127 @@ namespace Oscuridad.Clases
 				}
 				return aux;
 			}
+
+			public string Devolver_Descripcion_Segun_Enum(Habilidades habilidad)
+			{
+				string aux = "";
+				
+				switch (habilidad) 
+				{
+				case Habilidades.Antropologia:
+					aux =  "Antropologia";
+					break;
+				case Habilidades.Arqueologia:
+					aux =  "Arqueologia";
+					break;
+				case Habilidades.Astronomia:
+					aux =  "Astronomia";
+					break;
+				case Habilidades.BuscarLibros:
+					aux =  "Buscar Libros";
+					break;
+				case Habilidades.CienciasOcultas:
+					aux =  "Ciencias Ocultas";
+					break;
+				case Habilidades.Conducir:
+					aux =  "Conducir";
+					break;
+				case Habilidades.Cerrajeria:
+					aux =  "Cerrajeria";
+					break;
+				case Habilidades.Charlataneria:
+					aux =  "Charlataneria";
+					break;
+				case Habilidades.Credito:
+					aux =  "Credito";
+					break;
+				case Habilidades.Derecho:
+					aux =  "Derecho";
+					break;
+				case Habilidades.Descubrir:
+					aux =  "Descubrir";
+					break;
+				case Habilidades.Disfrazarse:
+					aux =  "Disfrazarse";
+					break;
+				case Habilidades.Discrecion:
+					aux =  "Discrecion";
+					break;
+				case Habilidades.Escuchar:
+					aux =  "Escuchar";
+					break;
+				case Habilidades.Equitacion:
+					aux =  "Equitacion";
+					break;
+				case Habilidades.Esquivar:
+					aux =  "Esquivar";
+					break;
+				case Habilidades.Fotografia:
+					aux =  "Fotografia";
+					break;
+				case Habilidades.HabilidadArtistica:
+					aux =  "Habilidad Artistica";
+					break;
+				case Habilidades.Historia:
+					aux =  "Historia";
+					break;
+				case Habilidades.HistoriaNatural:
+					aux =  "Historia Natural";
+					break;
+				case Habilidades.LenguaPropia:
+					aux =  "Lengua Propia";
+					break;
+				case Habilidades.Mecanica:
+					aux =  "Mecanica";
+					break;
+				case Habilidades.MitosDeCthulhu:
+					aux =  "Mitos De Cthulhu";
+					break;
+				case Habilidades.Nadar:
+					aux =  "Nadar";
+					break;
+				case Habilidades.Ocultar:
+					aux =  "Ocultar";
+					break;
+				case Habilidades.Ocultarse:
+					aux =  "Ocultarse";
+					break;
+				case Habilidades.OtraLenguaFrances:
+					aux =  "Otra Lengua (Frances)";
+					break;
+				case Habilidades.OtraLenguaLatin:
+					aux =  "Otra Lengua (Latin)";
+					break;
+				case Habilidades.OtraLenguaAleman:
+					aux =  "Otra Lengua (Aleman)";
+					break;
+				case Habilidades.OtraLenguaItaliano:
+					aux =  "Otra Lengua (Italiano)";
+					break;
+				case Habilidades.Persuasion:
+					aux =  "Persuasion";
+					break;
+				case Habilidades.PrimerosAuxilios:
+					aux =  "Primeros Auxilios";
+					break;
+				case Habilidades.Psicologia:
+					aux =  "Psicologia";
+					break;
+				case Habilidades.Quimica:
+					aux =  "Quimica";
+					break;
+				case Habilidades.Regatear:
+					aux =  "Regatear";
+					break;
+				case Habilidades.Saltar:
+					aux =  "Saltar";
+					break;
+				case Habilidades.Examinar:
+					aux = "Examinar";
+					break;
+				}
+				return aux;
+			}
 		}
 		/// <summary>
 		/// Estructura para los valores de las habilidades del jugador

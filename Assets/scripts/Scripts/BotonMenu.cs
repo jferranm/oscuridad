@@ -86,8 +86,7 @@ public class BotonMenu : MonoBehaviour
 				break;
 
 			case "PartidaNueva":
-				ControlXMLGlobal nuevoControl = new ControlXMLGlobal();
-				nuevoControl.Borrar_Configuracion();
+				//TODO: Inicializar Partida, borrar clases y borrar archivos en disco
 				GameCenter.InstanceRef.controladoraEscenas.IrEscena1();
 				break;
 
