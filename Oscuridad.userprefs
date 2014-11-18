@@ -1,18 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\BotonInspeccionar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\VentanaConversaciones.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\BotonMenu.cs" Line="89" Column="74" />
-      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="84" Column="3" />
-      <File FileName="Assets\scripts\Scripts\VentanaConversaciones.cs" Line="76" Column="1" />
-      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="22" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonHablar.cs" Line="46" Column="49" />
-      <File FileName="Assets\scripts\Scripts\BotonInspeccionar.cs" Line="39" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="364" Column="3" />
+      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="43" Column="6" />
+      <File FileName="Assets\scripts\Scripts\VentanaConversaciones.cs" Line="35" Column="1" />
+      <File FileName="Assets\scripts\Scripts\BotonHablar.cs" Line="42" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="371" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\PreguntaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" Line="216" Column="17" />
+      <File FileName="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="45" Column="160" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="371" />
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="380" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

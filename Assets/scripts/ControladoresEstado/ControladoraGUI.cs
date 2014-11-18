@@ -71,6 +71,10 @@ public class ControladoraGUI
 	public string cabeceraLateral = "";
 	//----
 
+	//---- Opciones de Jugador
+	public PreguntaBase[] textoBotones = new PreguntaBase[3];
+	//------
+
 	public ControladoraGUI()
 	{
 
@@ -199,14 +203,10 @@ public class ControladoraGUI
 		estadoCambiado = false;
 
 		//Añadimos el objeto a objetos vistos del personaje
-		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Objeto);
+		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
+			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Objeto);
 	}
-	
-	public void Mostrar_Ventana_Descriptiva ()
-	{
-		
-	}
-	
+
 	public void LocalizarObjetos()
 	{
 		menuObjetos = GameObject.Find ("PanelGuiObjetos");
@@ -264,7 +264,6 @@ public class ControladoraGUI
 		else 		//Para la ventana Lateral
 			listaVentanaLateral.Add (new Etiqueta(texto, color, true, textoTirada, colorTirada));
 	}
-
 
 	public void Lanzar_Inspeccionar()
 	{
@@ -361,5 +360,23 @@ public class ControladoraGUI
 
 	public void Lanzar_Hablar()
 	{
+		cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre;
+		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.personajePulsado.InicioConversacion);
+	}
+
+	public void Reestructurar_Respuestas(int numeroPregunta)
+	{
+		textoBotones = new PreguntaBase[3];
+
+		RespuestaBase nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
+		Insertar_Label_Ventana ("Lateral", nuevaRespuesta.TextoRespuesta, Color.white);
+
+		textoBotones = nuevaRespuesta.MostrarPreguntas ();
+	}
+
+	public void Boton_Pulsado(int indice)
+	{
+		Insertar_Label_Ventana ("Lateral", textoBotones [indice].TextoPregunta, Color.green);
+		Reestructurar_Respuestas (textoBotones [indice].IdRespuesta);
 	}
 }

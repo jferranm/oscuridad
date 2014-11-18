@@ -13,17 +13,10 @@ public class PanelObjetos : MonoBehaviour
 	public Texture2D botonInspeccionar;
 	public Texture2D botonInspeccionarInactivo;
 
-	private PanelVentana panelVentanaRef;
-
 	void Awake()
 	{
 		DontDestroyOnLoad(this);
 		this.gameObject.SetActive(false);
-	}
-
-	void Start()
-	{
-		panelVentanaRef = GameObject.Find("PanelGuiVentana").GetComponent<PanelVentana> ();
 	}
 
 	void OnEnable()
@@ -40,7 +33,6 @@ public class PanelObjetos : MonoBehaviour
 			foreach (opcionObjeto opcion in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoOpciones) 
 			{
 				// Si no tiene ninguna opcion de objeto lo desconectamos todo
-				string prueba = opcion.ToString();
 				if (opcion.Equals(opcionObjeto.Ninguna))
 				{
 					//Si no tiene ninguna opcion ese objeto desactivamos todas las opciones

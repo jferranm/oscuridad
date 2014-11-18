@@ -207,5 +207,16 @@ namespace Oscuridad.Clases
         {
             return conversacionPersonaje.ToArray();
         }
+
+		public RespuestaBase Devolver_Respuesta(int numRespuesta)
+		{
+			foreach (RespuestaBase aux in MostrarRespuestas()) 
+			{
+				if (aux.IdRespuesta.Equals(numRespuesta))
+					return aux;
+			}
+
+			return null;
+		}
     }
 }

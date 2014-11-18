@@ -233,6 +233,7 @@ public class ControladoraJuego
 		catch (IOException ex) 
 		{ 
 			//No se a podido crear el archivo	
+			Debug.LogError(ex.Message);
 		}
 	}
 

@@ -13,11 +13,7 @@ public class PanelVentana : MonoBehaviour
 
 	//----- inventario
 	private Vector2 posicionBarraScrollInventario;
-	private bool enInventario = false;
 	//---
-
-	private List<Etiqueta> listaObjetos = new List<Etiqueta>();
-	private List<Etiqueta> listaTiradas = new List<Etiqueta>();
 
 	void Awake()
 	{
@@ -40,8 +36,13 @@ public class PanelVentana : MonoBehaviour
 				break;
 				
 			case EstadosJugador.enZoomEspera:
-				JugadorEnZoomEspera ();
+			{
+				if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null)
+					JugadorEnZoomEsperaConversacion ();
+				else
+					JugadorEnZoomEspera();
 				break;
+			}
 		}
 	}
 
@@ -115,9 +116,6 @@ public class PanelVentana : MonoBehaviour
 		GUILayout.EndHorizontal ();
 		GUILayout.EndScrollView();
 	}
-
-
-
 }
 
 

@@ -10,12 +10,8 @@ namespace Oscuridad.Estados
 {
 	public class Escena10: IEscenario
 	{
-		private ControladoraEscenas manager;
-
 		public Escena10(ControladoraEscenas managerRef)
 		{
-			manager = managerRef;
-
 			if(Application.loadedLevelName != Escenas.Escena10.ToString())
 			{
 				Application.LoadLevel(Escenas.Escena10.ToString());

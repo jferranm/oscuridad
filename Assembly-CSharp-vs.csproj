@@ -67,7 +67,6 @@
      <Compile Include="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" />
      <Compile Include="Assets\scripts\Clases\Clases Base\PreguntaBase.cs" />
      <Compile Include="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" />
-     <Compile Include="Assets\scripts\Clases\Conversaciones.cs" />
      <Compile Include="Assets\scripts\Clases\Etiqueta.cs" />
      <Compile Include="Assets\scripts\Clases\LanzamientoDados.cs" />
      <Compile Include="Assets\scripts\Clases\cXML.cs" />
@@ -106,19 +105,15 @@
      <Compile Include="Assets\scripts\Scripts\VentanaDescripciones.cs" />
      <Compile Include="Assets\scripts\Scripts\VentanaObjetos.cs" />
      <Compile Include="Assets\scripts\Scripts\ZoomCamara.cs" />
-     <None Include="Assets\Resources\xml\Base\Descripciones.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
      <None Include="Assets\Resources\xml\Escenarios\Escena12.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena13.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena11.xml" />
-     <None Include="Assets\Resources\xml\Base\HojaPersonaje.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena14.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena18.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena16.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena15.xml" />
-     <None Include="Assets\Resources\xml\Base\Conversaciones.xml" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
-     <None Include="Assets\Resources\xml\Base\Global.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena10.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena19.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena17.xml" />
