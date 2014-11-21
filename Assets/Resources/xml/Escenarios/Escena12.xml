@@ -16,7 +16,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Donde estan los señores Ward?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>2</IdRespuesta>
               <IdPregunta>1</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -29,7 +29,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Qué puede contarme del joven señor Charles?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>3</IdRespuesta>
               <IdPregunta>2</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -55,7 +55,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Que le ha pasado al cuadro del salon?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>12</IdRespuesta>
               <IdPregunta>15</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -68,7 +68,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>No he podido evitar fijarme en la figura que hay sobre una de las estanterias del salon. ¿De donde ha salido?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>20</IdRespuesta>
               <IdPregunta>24</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -81,7 +81,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>La habitacion del desvan esta cerrada con llave, ¿Puede usted abrirme, por favor?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>24</IdRespuesta>
               <IdPregunta>29</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -101,19 +101,33 @@
         <RespuestaBase>
           <TextoRespuesta>Los señores Ward estan en Londres, visitando a unos familiares y atendiendo los negocios del señor Ward. Llevan en Londres dos meses, aunque su intencion es volver cuanto antes dada la desaparicion de su hijo.</TextoRespuesta>
           <IdRespuesta>2</IdRespuesta>
-          <PreguntaRespuesta />
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
+              <IdRespuesta>1</IdRespuesta>
+              <IdPregunta>4</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
           <DireccionRespuesta>0</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
-          <TextoRespuesta>El señor Charles siempre ha sido una persona muy introvertida, pero muy amable y respetuaso con todos. Siempre lo he visto imbuido en sus lecturas y desde muy pequeño le ha gustado mucho rodearse de libros. Su timidez y su afan por la lectura no le han permitido socializar mucho. Hasta que conocio a su actual esposa la señora Waitte… y entonces cambio, trasnochaba, llegaba malhumorado a casa, era impertitente con todos nosotros, incluso con sus padres. Al fin nos alegramos que tras la boda dejara la casa. Pero a los pocos meses volvio a esta casa, seguia estando muy raro y se encerraba durante dias en la habitacion del desvan.</TextoRespuesta>
+          <TextoRespuesta>El señor Charles siempre ha sido una persona muy introvertida, pero muy amable y respetuoso con todos. Siempre lo he visto imbuido en sus lecturas y desde muy pequeño le ha gustado mucho rodearse de libros. Su timidez y su afan por la lectura no le han permitido socializar mucho. Hasta que conocio a su actual esposa la señora Waitte… y entonces cambio, trasnochaba, llegaba malhumorado a casa, era impertitente con todos nosotros, incluso con sus padres. Al fin nos alegramos que tras la boda dejara la casa. Pero a los pocos meses volvio a esta casa, seguia estando muy raro y se encerraba durante dias en la habitacion del desvan.</TextoRespuesta>
           <IdRespuesta>3</IdRespuesta>
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Habia alguien mas con quien pasara su tiempo, a parte de con la señora Waitte?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>4</IdRespuesta>
               <IdPregunta>5</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -126,7 +140,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Se rumoreaba que es lo que hacia por las noches o que lugares frecuentaba?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>5</IdRespuesta>
               <IdPregunta>6</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -139,7 +153,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Que quiere decir con que estaba muy raro?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>6</IdRespuesta>
               <IdPregunta>7</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -152,7 +166,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Que hacia tanto tiempo en la habitacion del desvan?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>7</IdRespuesta>
               <IdPregunta>8</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -165,7 +179,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Volvio solo a esta casa, sin su mujer?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>8</IdRespuesta>
               <IdPregunta>9</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -178,7 +192,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Donde se marcharon a vivir tras la boda?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>9</IdRespuesta>
               <IdPregunta>10</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -191,7 +205,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>1</IdRespuesta>
               <IdPregunta>11</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -215,7 +229,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>3</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>No, nadie sabia a que dedicaba sus salidas o si visitaba a alguien durante ese tiempo. Sus padres le preguntaron en varias ocasiones, pero solo comentaba que estaba trabajando en algo que le haria famoso.</TextoRespuesta>
@@ -224,7 +238,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>3</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>Se comportaba de manera extraña con nosotros, y con las pocas visitas que llegaban a la casa, siempre arisco y con esa mirada fria en sus ojos. Como si no nos conociera, algo horrible le debio de pasar.</TextoRespuesta>
@@ -233,7 +247,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>3</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>No sabria decirle, me daba mucho miedo acercarme a esa habitacion, el señor Charles nos prohibia entrar. Muchas noches se escuchaban ruidos horribles en el interior, como si alguien gritara y de repente riera… a veces me parecia oir conversaciones entre varias personas, y el olor, ese horrible olor que lo impregnaba todo. ¡Era realmente horrible!</TextoRespuesta>
@@ -242,7 +256,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>3</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>Si, nos sorprendio mucho verle llegar. Hablo poco con nosotros, los señores ya no estaban en la casa, nos dijo que se instalaria unos dias, pero que no le molestaramos, y que acompañaramos a los visitantes que preguntaran por el a la habitacion del desvan.</TextoRespuesta>
@@ -300,7 +314,7 @@
           <Comprobacion>true</Comprobacion>
           <LocalizacionSeleccionada>MansionPawtuxet</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>3</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>Pues al principio dos hombres,  rudos y con muy mal aspecto, el señor Charles salia con ellos y volvia muy tarde ya solo. Luego empezo a llegar un hombre con barba poblada y gafas oscuras. Le acompañaba junto a la puerta de la habitacion del devan, y no entraba hasta que me veia bajar de nuevo las escaleras.</TextoRespuesta>

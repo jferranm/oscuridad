@@ -72,7 +72,8 @@ public class ControladoraGUI
 	//----
 
 	//---- Opciones de Jugador
-	public PreguntaBase[] textoBotones = new PreguntaBase[3];
+	//public PreguntaBase[] textoBotones = new PreguntaBase[3];
+	public RespuestaBase nuevaRespuesta = new RespuestaBase();
 	//------
 
 	public ControladoraGUI()
@@ -249,28 +250,12 @@ public class ControladoraGUI
 		cabeceraLateral = "";
 	}
 
-	public void Insertar_Label_Ventana(string tipo, string texto, Color color)
-	{
-		if (tipo.Contains("Inferior"))   //Para la ventana de Inferior
-			listaVentanaInferior.Add(new Etiqueta(texto, color, false));
-		else 		//Para la ventana Lateral
-			listaVentanaLateral.Add (new Etiqueta(texto, color, false));
-	}
-
-	public void Insertar_Label_Ventana(string tipo, string texto, Color color, string textoTirada, Color colorTirada)
-	{
-		if (tipo.Contains("Inferior"))   //Para la ventana de Inferior
-			listaVentanaInferior.Add(new Etiqueta(texto, color, true, textoTirada, colorTirada));
-		else 		//Para la ventana Lateral
-			listaVentanaLateral.Add (new Etiqueta(texto, color, true, textoTirada, colorTirada));
-	}
-
 	public void Lanzar_Inspeccionar()
 	{
 		bool tiradaConExito = false;
 
 		//Mostramos el enunciado de examinar
-		Insertar_Label_Ventana("Inferior", "Examinar \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\":", Color.white);
+		Insertar_Ventana_Inferior_Texto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre, Color.yellow, "Examinar");
 
 		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradasInspeccionar()) 
 		{
@@ -292,7 +277,7 @@ public class ControladoraGUI
 			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ExisteTirada(Habilidades.Fallo))
 			{
 				//Mostramos la descripcion anidada a la tirada de la habilidad
-				Insertar_Label_Ventana("Lateral", GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
+				Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
 				
 				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
 				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
@@ -331,10 +316,10 @@ public class ControladoraGUI
 			if (resultado < valorHabilidad) 
 			{
 				//Mostramos cartel de que la tirada a sido exitosa
-				Insertar_Label_Ventana ("Inferior", "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(tirada.HabilidadTirada) + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Exito", Color.green);
+				Insertar_Ventana_Inferior_Texto(true, tirada.HabilidadTirada, resultado);
 
 				//Mostramos la descripcion anidada a la tirada de la habilidad
-				Insertar_Label_Ventana ("Lateral", tirada.TextoDescriptivo, Color.white);
+				Insertar_Ventana_Lateral_Texto(tirada.TextoDescriptivo, Color.white);
 
 				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
 				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto (tirada.TextoDescriptivo, Habilidades.Ninguna);
@@ -343,6 +328,10 @@ public class ControladoraGUI
 				if(tirada.Accion)
 				{
 					//TODO Añadir Localizacion
+					foreach(Localizaciones localizacion in tirada.LocalizacionAccion)
+					{
+						Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+					}
 				}
 
 				//Marcamos que a sido una tirada con exito para no mostrar la tirada de fallo
@@ -350,7 +339,7 @@ public class ControladoraGUI
 			} 
 			else 
 			{
-				Insertar_Label_Ventana ("Inferior", "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(tirada.HabilidadTirada) + "(" + valorHabilidad.ToString () + "%): " + resultado.ToString () + ".", Color.white, "Fracaso", Color.red);
+				Insertar_Ventana_Inferior_Texto(false, tirada.HabilidadTirada, resultado);
 				return false;
 			}
 		}
@@ -366,17 +355,101 @@ public class ControladoraGUI
 
 	public void Reestructurar_Respuestas(int numeroPregunta)
 	{
-		textoBotones = new PreguntaBase[3];
+		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
 
-		RespuestaBase nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
-		Insertar_Label_Ventana ("Lateral", nuevaRespuesta.TextoRespuesta, Color.white);
+		Insertar_Ventana_Lateral_Texto(nuevaRespuesta.TextoRespuesta, Color.white);
 
-		textoBotones = nuevaRespuesta.MostrarPreguntas ();
+		if (nuevaRespuesta.DireccionRespuesta > 0) 
+		{
+			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
+		}
 	}
 
-	public void Boton_Pulsado(int indice)
+	public void Boton_Pulsado(string textoPregunta, int idRespuesta)
 	{
-		Insertar_Label_Ventana ("Lateral", textoBotones [indice].TextoPregunta, Color.green);
-		Reestructurar_Respuestas (textoBotones [indice].IdRespuesta);
+		Insertar_Ventana_Lateral_Texto(textoPregunta, Color.green);
+		Reestructurar_Respuestas (idRespuesta);
+	}
+
+	public bool Comprobar_Pregunta(PreguntaBase pregunta)
+	{
+		if (pregunta.ComprobacionPregunta) 
+		{
+			//Comprobamos que haya visitado la escena antes
+			if (!pregunta.ComprobacionEscenas.Equals (Escenas.ninguna))
+					return GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenasVisitadas.Contains (pregunta.ComprobacionEscenas);
+
+			//Comprobamos que haya alguna accion que active cierta pregunta
+			if (!pregunta.ComprobacionAccion.Equals (Acciones.Ninguna))
+					return GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionesRealizadas.Contains (pregunta.ComprobacionAccion);
+
+			//Comprobamos que haya visto el objeto antes de formular la pregunta
+			if (!pregunta.ComprobacionObjetos.Equals (Objetos.Ninguno))
+					return GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetosVistos.Contains (pregunta.ComprobacionObjetos);
+
+			//Comprobamos con tirada de dados antes de mostrar pregunta
+			if (!pregunta.ComprobacionHabilidad.Equals (Habilidades.Ninguna)) 
+			{
+				//Rescatamos el valor de la habilidad
+				int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (pregunta.ComprobacionHabilidad);
+
+				//Rescatamos valor de tirada de dados
+				int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
+
+				if (resultado < valorHabilidad) 
+					return true;
+			}
+		} 
+		else 
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
+	{
+		listaVentanaLateral.Add (new Etiqueta (textoDescriptivo, color));
+	}
+
+	public void Insertar_Ventana_Lateral_Texto(bool tirada, Habilidades habilidad, int resultado)
+	{
+		listaVentanaLateral.Add (new Etiqueta (tirada, habilidad, resultado));
+	}
+
+	public void Insertar_Ventana_Lateral_Texto(Objetos nombreObjeto, Color color)
+	{
+		listaVentanaLateral.Add (new Etiqueta(nombreObjeto, color));
+	}
+
+	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
+	{
+		listaVentanaLateral.Add (new Etiqueta(nombreLocalizacion, color));
+	}
+
+	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
+	{
+		listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color));
+	}
+
+	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color, string opcion)
+	{
+		listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color, opcion));
+	}
+	
+	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)
+	{
+		listaVentanaInferior.Add (new Etiqueta (tirada, habilidad, resultado));
+	}
+	
+	public void Insertar_Ventana_Inferior_Texto(Objetos nombreObjeto, Color color)
+	{
+		listaVentanaInferior.Add (new Etiqueta (nombreObjeto, color));
+	}
+	
+	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
+	{
+		listaVentanaInferior.Add (new Etiqueta (nombreLocalizacion, color));
 	}
 }

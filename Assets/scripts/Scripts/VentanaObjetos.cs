@@ -31,7 +31,7 @@ public class VentanaObjetos: MonoBehaviour
 				{
 					if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
 					{
-						GameCenter.InstanceRef.controladoraGUI.listaVentanaLateral.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white, false));
+						GameCenter.InstanceRef.controladoraGUI.listaVentanaLateral.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica(), Color.white));
 						GameCenter.InstanceRef.controladoraGUI.cabeceraInferior = "Interaccion con " + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre;
 						posicionBarraScrollObjeto.y = Mathf.Infinity;
 					}
@@ -60,9 +60,10 @@ public class VentanaObjetos: MonoBehaviour
 			GUILayout.BeginVertical ();
 				foreach (Etiqueta nuevaEtiqueta in GameCenter.InstanceRef.controladoraGUI.listaVentanaLateral) 
 				{
-					GUIStyle fuente = new GUIStyle (GUI.skin.label);
-					fuente.normal.textColor = nuevaEtiqueta.ObtenerColor(true);
-					GUILayout.Label(nuevaEtiqueta.ObtenerTexto(), fuente);
+					GUIStyle estilo = new GUIStyle (GUI.skin.label);
+					estilo.richText = true;
+					
+					GUILayout.Label(nuevaEtiqueta.ObtenerTexto(), estilo);
 				}
 			GUILayout.EndVertical ();
 		GUILayout.EndScrollView ();

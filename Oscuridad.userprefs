@@ -1,22 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\VentanaConversaciones.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Etiqueta.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="43" Column="6" />
-      <File FileName="Assets\scripts\Scripts\VentanaConversaciones.cs" Line="35" Column="1" />
-      <File FileName="Assets\scripts\Scripts\BotonHablar.cs" Line="42" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="371" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\PreguntaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" Line="216" Column="17" />
-      <File FileName="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="45" Column="160" />
+      <File FileName="Assets\scripts\Scripts\PanelVentana.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\BotonHablar.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="333" Column="51" />
+      <File FileName="Assets\scripts\Clases\Etiqueta.cs" Line="67" Column="33" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="298" Column="8" />
+      <File FileName="Assets\scripts\Scripts\VentanaObjetos.cs" Line="34" Column="177" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="371" />
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="380" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -7,7 +7,6 @@ using Oscuridad.Clases;
 
 public class PanelVentana : MonoBehaviour 
 {
-	public GameObject ventanaConversacionesRef;
 	public GameObject ventanaDescripcionesRef;
 	public GameObject ventanaObjetosRef;
 
@@ -37,10 +36,7 @@ public class PanelVentana : MonoBehaviour
 				
 			case EstadosJugador.enZoomEspera:
 			{
-				if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null)
-					JugadorEnZoomEsperaConversacion ();
-				else
-					JugadorEnZoomEspera();
+				JugadorEnZoomEspera();
 				break;
 			}
 		}
@@ -56,10 +52,6 @@ public class PanelVentana : MonoBehaviour
 					ventanaDescripcionesRef = objetoHijo.gameObject;
 					break;
 
-				case "VentanaConversaciones":
-					ventanaConversacionesRef = objetoHijo.gameObject;
-					break;
-
 				case "VentanaObjetos":
 					ventanaObjetosRef = objetoHijo.gameObject;
 					break;
@@ -70,28 +62,18 @@ public class PanelVentana : MonoBehaviour
 	private void Desactivar_Ventanas()
 	{
 		ventanaDescripcionesRef.SetActive(false);
-		ventanaConversacionesRef.SetActive(false);
 		ventanaObjetosRef.SetActive(false);
 	}
 
 	private void JugadorEnEspera()
 	{
 		ventanaDescripcionesRef.SetActive(true);
-		ventanaConversacionesRef.SetActive(false);
 		ventanaObjetosRef.SetActive(false);
 	}
 
 	private void JugadorEnZoomEspera()
 	{
 		ventanaDescripcionesRef.SetActive(true);
-		ventanaConversacionesRef.SetActive(false);
-		ventanaObjetosRef.SetActive(true);
-	}
-
-	public void JugadorEnZoomEsperaConversacion()
-	{
-		ventanaDescripcionesRef.SetActive(false);
-		ventanaConversacionesRef.SetActive(true);
 		ventanaObjetosRef.SetActive(true);
 	}
 

@@ -101,7 +101,6 @@
      <Compile Include="Assets\scripts\Scripts\ParpadeoLuz.cs" />
      <Compile Include="Assets\scripts\Scripts\PosicionadorGUIText.cs" />
      <Compile Include="Assets\scripts\Scripts\PosicionadorGUITexture.cs" />
-     <Compile Include="Assets\scripts\Scripts\VentanaConversaciones.cs" />
      <Compile Include="Assets\scripts\Scripts\VentanaDescripciones.cs" />
      <Compile Include="Assets\scripts\Scripts\VentanaObjetos.cs" />
      <Compile Include="Assets\scripts\Scripts\ZoomCamara.cs" />

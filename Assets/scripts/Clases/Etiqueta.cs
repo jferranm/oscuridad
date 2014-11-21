@@ -1,30 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Oscuridad.Enumeraciones;
+using Oscuridad.Clases;
 
 namespace Oscuridad.Clases
 {
 	public class Etiqueta
 	{
 		private string texto;
-		private Color color;
-		private bool tirada;
-		private string textoTirada;
-		private Color colorTirada;
-		
-		public Etiqueta(string texto, Color color, bool tirada)
+
+		public Etiqueta(string textoMostrar, Color colorMostrar)
 		{
-			this.texto = texto;
-			this.color = color;
-			this.tirada = tirada;
+			texto = ObtenerColor (colorMostrar) + textoMostrar + FinDeLineaColor ();
 		}
 
-		public Etiqueta(string texto, Color color, bool tirada, string textoTirada, Color colorTirada)
+		public Etiqueta(string textoMostrar, Color colorMostrar, string opcion)
 		{
-			this.texto = texto;
-			this.color = color;
-			this.tirada = tirada;
-			this.textoTirada = textoTirada;
-			this.colorTirada = colorTirada;
+			switch (opcion) 
+			{
+				case "Examinar":
+					texto = ObtenerColor(colorMostrar) + "Examinar " + Comillas () + textoMostrar + Comillas() + FinDeLineaColor();
+					break;
+			}
+		}
+
+		public Etiqueta(bool tirada, Habilidades habilidad, int resultado)
+		{
+			string aux = "";
+			Color colorTirada;
+			
+			if (tirada) 
+			{
+				aux = "Exito";
+				colorTirada = Color.green;
+			} 
+			else 
+			{
+				aux = "Fracaso";
+				colorTirada = Color.red;
+			}
+
+				texto = ObtenerColor(Color.white) + "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + "." + FinDeLineaColor() + ObtenerColor(colorTirada) + aux + FinDeLineaColor();
+		}
+
+		public Etiqueta(Objetos objetoSeleccionado, Color color)
+		{
+			texto = ObtenerColor(color) + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Objeto_Segun_Enum(objetoSeleccionado) + Comillas() + " ahora esta en el Inventario" + FinDeLineaColor ();
+		}
+
+		public Etiqueta(Localizaciones localizacion, Color color)
+		{
+			texto = ObtenerColor(color) + "Nueva localizacion descubierta: " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(localizacion) + Comillas() + FinDeLineaColor ();
 		}
 
 		public string ObtenerTexto()
@@ -32,46 +58,26 @@ namespace Oscuridad.Clases
 			return this.texto;
 		}
 
-		public string ObtenerColor()
-		{
-			return ObtenerColor(this.color);
-		}
-
-		public Color ObtenerColor(bool seleccion)
-		{
-			return this.color;
-		}
-
-		public bool ObtenerTirada()
-		{
-			return this.tirada;
-		}
-
-		public string ObtenerTextoTirada()
-		{
-			return this.textoTirada;
-		}
-
-		public string ObtenerColorTirada()
-		{
-			return ObtenerColor(this.colorTirada);
-		}
-
-		public Color ObtenerColorTirada(bool seleccion)
-		{
-			return this.colorTirada;
-		}
-
 		private string ObtenerColor(Color color)
 		{
 			if (color.Equals(Color.red))
-				return "red";
-			if (color == Color.green)
-				return "green";	
-			if (color == Color.white)
-				return "white";
+				return "<color=red>";
+			if (color.Equals(Color.green))
+				return "<color=green>";	
+			if (color.Equals(Color.white))
+				return "<color=white>";
 
 			return null;
+		}
+
+		private string FinDeLineaColor()
+		{
+			return "</color>";
+		}
+
+		private string Comillas()
+		{
+			return "\"";
 		}
 	}
 }

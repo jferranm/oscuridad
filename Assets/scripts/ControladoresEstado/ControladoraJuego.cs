@@ -286,4 +286,34 @@ public class ControladoraJuego
 		ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(habilidad);
 		aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + nuevaDescripcion;
 	}
+
+	public string Devolver_Descripcion_Objeto_Segun_Enum(Objetos objeto)
+	{
+		string aux = "";
+
+		foreach (char c in objeto.ToString()) 
+		{
+			if(Char.IsUpper(c))
+				aux += " "+c;
+			else
+				aux += c;
+		}
+
+		return aux;
+	}
+
+	public string Devolver_Descripcion_Localizacion_Segun_Enum(Localizaciones objeto)
+	{
+		string aux = "";
+		
+		foreach (char c in objeto.ToString()) 
+		{
+			if(Char.IsUpper(c))
+				aux += " "+c;
+			else
+				aux += c;
+		}
+		
+		return aux;
+	}
 }

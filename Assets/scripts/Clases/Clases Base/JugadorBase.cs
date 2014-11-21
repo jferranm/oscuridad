@@ -75,6 +75,19 @@ namespace Oscuridad.Clases
             set { objetosVistos = value; }
         }
 
+		private List<Acciones> accionesRealizadas;
+		/// <summary>
+		/// Lista de acciones realizadas por el personaje jugador
+		/// </summary>
+		/// <value>
+		/// Lista generica de tipo Acciones
+		/// </value>
+		public List<Acciones> AccionesRealizadas
+		{
+			get { return accionesRealizadas; }
+			set { accionesRealizadas = value; }
+		}
+
         private List<Objetos> inventario;
         /// <summary>
         /// Lista de objetos en el inventario del personaje jugador
