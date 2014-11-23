@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PantallaCarga : MonoBehaviour 
 {
-	private float fadeSpeed = 0.6f;
+	private float fadeSpeed = 5f;
 	private Transform objetoTextura;
 	private Color colorInicial = new Color();
 
