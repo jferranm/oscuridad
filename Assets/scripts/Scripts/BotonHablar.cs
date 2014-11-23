@@ -13,7 +13,7 @@ public class BotonHablar : MonoBehaviour
 
 	void Update()
 	{
-		foreach (Touch touch in Input.touches)
+		/*foreach (Touch touch in Input.touches)
 		{
 			if (this.guiTexture.HitTest(touch.position))
 			{
@@ -21,7 +21,7 @@ public class BotonHablar : MonoBehaviour
 				Hablar_Personaje();
 				break;
 			}
-		}
+		}*/
 	}
 
 	void OnMouseDown() 

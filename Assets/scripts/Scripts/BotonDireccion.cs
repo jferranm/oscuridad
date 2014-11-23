@@ -12,7 +12,7 @@ public class BotonDireccion : MonoBehaviour
 
 	void Update()
 	{
-		foreach (Touch touch in Input.touches)
+		/*foreach (Touch touch in Input.touches)
 		{
 			if (this.guiTexture.HitTest(touch.position))
 			{
@@ -23,7 +23,7 @@ public class BotonDireccion : MonoBehaviour
 				}
 				break;
 			}
-		}
+		}*/
 	}
 	
 	void OnMouseDown() 

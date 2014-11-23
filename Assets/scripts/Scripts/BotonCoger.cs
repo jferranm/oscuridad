@@ -15,7 +15,7 @@ public class BotonCoger : MonoBehaviour
 
 	void Update()
 	{
-		foreach (Touch touch in Input.touches)
+		/*foreach (Touch touch in Input.touches)
 		{
 			if (this.guiTexture.HitTest(touch.position))
 			{
@@ -23,7 +23,7 @@ public class BotonCoger : MonoBehaviour
 				Coger_Objeto();
 				break;
 			}
-		}
+		}*/
 	}
 	
 	void OnMouseDown() 

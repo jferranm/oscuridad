@@ -119,7 +119,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>1</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>El señor Charles siempre ha sido una persona muy introvertida, pero muy amable y respetuoso con todos. Siempre lo he visto imbuido en sus lecturas y desde muy pequeño le ha gustado mucho rodearse de libros. Su timidez y su afan por la lectura no le han permitido socializar mucho. Hasta que conocio a su actual esposa la señora Waitte… y entonces cambio, trasnochaba, llegaba malhumorado a casa, era impertitente con todos nosotros, incluso con sus padres. Al fin nos alegramos que tras la boda dejara la casa. Pero a los pocos meses volvio a esta casa, seguia estando muy raro y se encerraba durante dias en la habitacion del desvan.</TextoRespuesta>
@@ -264,7 +264,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Que clase de visitas recibio?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>10</IdRespuesta>
               <IdPregunta>12</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -277,7 +277,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Reconocia a algunas de esas visitas?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>11</IdRespuesta>
               <IdPregunta>13</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -290,7 +290,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>3</IdRespuesta>
               <IdPregunta>14</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -323,7 +323,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>8</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>A ninguna de ellas, jamas habia visto a ninguna de esas personas, no eran la clase de gente con la que los señores se suelen relacionar.</TextoRespuesta>
@@ -332,7 +332,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>8</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>El señor Charles llego un dia a casa a altas horas de la noche, muy alterado, y con un cuchillo arranco la pintura del cuadro, no nos atrevimos a decir nada, ni siquiera a retirar el marco sin ordenes del señor.</TextoRespuesta>
@@ -340,7 +340,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Que habia en la pintura?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>13</IdRespuesta>
               <IdPregunta>16</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -363,7 +363,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Un viejo antepasado? ¿De quien se trataba?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>14</IdRespuesta>
               <IdPregunta>17</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -376,7 +376,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Y sabe donde esta ahora esa pintura?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>15</IdRespuesta>
               <IdPregunta>18</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -389,7 +389,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Y no saben a que se debia su mal humor la noche que arranco el cuadro?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>16</IdRespuesta>
               <IdPregunta>19</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -401,8 +401,8 @@
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
-              <TextoPregunta>¿La granga Pawxutet, que lugar es ese?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <TextoPregunta>¿La granja Pawxutet, que lugar es ese?</TextoPregunta>
+              <IdRespuesta>17</IdRespuesta>
               <IdPregunta>20</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -426,7 +426,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>13</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>No lo se, señor. [Parece asustada…]</TextoRespuesta>
@@ -434,7 +434,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>No se preocupe por nada, estoy aqui para ayudar y todo lo que me pueda decir me ayudara a solventar este desdichado asunto.</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>18</IdRespuesta>
               <IdPregunta>21</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -447,7 +447,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Por favor, no tenga miedo y digame donde podria estar esa pintura.</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>19</IdRespuesta>
               <IdPregunta>22</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -460,7 +460,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Dejeme preguntarle por otra cosa...</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>13</IdRespuesta>
               <IdPregunta>23</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -484,7 +484,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>13</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>La granja es una antigua propiedad de la familia Ward, durante mucho tiempo estuvo abandonada, pero fue restaurada recientemente para convertirse en el hogar del señor Charles y su esposa tras la boda. </TextoRespuesta>
@@ -493,7 +493,7 @@
           <Comprobacion>true</Comprobacion>
           <LocalizacionSeleccionada>MansionPawtuxet</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>13</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>El señor Charles se la llevo a su habitacion del desvan. Esa a la que tenemos prohibido entrar.</TextoRespuesta>
@@ -502,7 +502,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>13</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>Lo siento, pero de verdad que no se donde podria estar.</TextoRespuesta>
@@ -511,7 +511,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>13</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>[El ama de llaves parace muy asustada] Esa estatuilla... es… es un regalo que la señora Waitte, la esposa del señor Charles, le hizo antes de su boda. Me asusta mucho ese pedazo de roca, ¿Lo ha tocado usted? es algo que no deberia estar aqui. Me recuerda a las viejas historias que me contaba mi abuela, sobre las gentes de los arrecifes, y sus aquelarres nocturnos a la luz de la luna. Son cosas de las que es mejor mantenerse alejado, yo al menos no quiero acercarme a esa estatuilla.</TextoRespuesta>

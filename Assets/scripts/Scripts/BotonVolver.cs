@@ -7,7 +7,7 @@ public class BotonVolver : MonoBehaviour
 {
 	void Update()
 	{
-		foreach (Touch touch in Input.touches)
+		/*foreach (Touch touch in Input.touches)
 		{
 			if (this.guiTexture.HitTest(touch.position))
 			{
@@ -15,7 +15,7 @@ public class BotonVolver : MonoBehaviour
 				GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomOut);
 				break;
 			}
-		}
+		}*/
 	}
 
 	void OnMouseDown() 

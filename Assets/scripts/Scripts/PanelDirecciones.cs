@@ -25,7 +25,7 @@ public class PanelDirecciones : MonoBehaviour
 
 	void OnEnable()
 	{
-		Input.touches.Initialize();
+		//Input.touches.Initialize();
 
 		//Poner Texturas
 		Inicializar_Texturas();
