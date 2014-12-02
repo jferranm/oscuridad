@@ -25,9 +25,9 @@ public class VentanaObjetos: MonoBehaviour
 	{
 		if(GameCenter.InstanceRef != null)
 		{
-			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
+			if(GameCenter.InstanceRef.controladoraJugador.EstadoJugador != EstadosJugador.enMenus)
 			{
-				if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enZoomEspera)
+				if(GameCenter.InstanceRef.controladoraJugador.EstadoJugador == EstadosJugador.enZoomEspera)
 				{
 					if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
 					{

@@ -25,9 +25,9 @@ public class VentanaDescripciones: MonoBehaviour
 	{
 		if(GameCenter.InstanceRef != null)
 		{
-			if(GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() != EstadosJugador.enMenus)
+			if(GameCenter.InstanceRef.controladoraJugador.EstadoJugador != EstadosJugador.enMenus)
 			{
-				if (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado() == EstadosJugador.enEspera)
+				if (GameCenter.InstanceRef.controladoraJugador.EstadoJugador == EstadosJugador.enEspera)
 				{
 					GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
 					GameCenter.InstanceRef.controladoraGUI.cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.escenaActual.NombreEscena;

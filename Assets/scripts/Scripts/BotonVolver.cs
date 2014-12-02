@@ -20,7 +20,6 @@ public class BotonVolver : MonoBehaviour
 
 	void OnMouseDown() 
 	{
-		//Volvemos al estado del jugador EnEspera
-		GameCenter.InstanceRef.controladoraJugador.Cambiar_Estado(EstadosJugador.enZoomOut);
+		GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomOut;
 	}
 }

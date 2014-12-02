@@ -45,7 +45,7 @@ public class GameCenter : MonoBehaviour
 		controladoraJuego = ControladoraJuego.InstanceRef ();
 
 		controladoraGUI.LocalizarObjetos ();
-		controladoraJugador.Cambiar_Estado(EstadosJugador.enMenus);
+		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 
 		USERPATH = Application.persistentDataPath;
 	}
@@ -59,15 +59,12 @@ public class GameCenter : MonoBehaviour
 	
 	void Update()
 	{
-		controladoraGUI.Update ();
 		controladoraJugador.Update ();
-		controladoraGUI.Update ();
 	}
 
 	void OnGUI()
 	{
 		controladoraEscenas.OnGUI ();
-		controladoraGUI.OnGUI ();
 	}
 
 	void OnLevelWasLoaded(int level)
@@ -88,9 +85,6 @@ public class GameCenter : MonoBehaviour
 
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();
-
-		//Iniciamos el Jugador
-		controladoraJugador.Cambiar_Estado(EstadosJugador.enEspera);
 
 		//Comenzamos BSO
 		Camera.main.audio.clip = controladoraSonidos.bsoEscenaCasa;

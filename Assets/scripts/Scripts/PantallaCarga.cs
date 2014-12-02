@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Oscuridad.Enumeraciones;
 
 public class PantallaCarga : MonoBehaviour 
 {
@@ -48,6 +49,7 @@ public class PantallaCarga : MonoBehaviour
 			comenzarFade = false;
 			GameCenter.InstanceRef.controladoraGUI.Activar_Opciones_Basicas();
 			this.gameObject.SetActive(false);
+			GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enEspera;
 		}
 	}
 

@@ -24,11 +24,12 @@ public class PanelVentana : MonoBehaviour
 	{
 		Cargar_Ventanas_Colgantes();
 		Desactivar_Ventanas();
+		Seleccionar_Ventanas ();
 	}
 
-	void Update()
+	private void Seleccionar_Ventanas()
 	{
-		switch (GameCenter.InstanceRef.controladoraJugador.Devolver_Estado ()) 
+		switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
 		{
 			case EstadosJugador.enEspera:	
 				JugadorEnEspera ();

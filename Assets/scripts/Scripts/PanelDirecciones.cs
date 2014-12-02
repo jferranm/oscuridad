@@ -38,22 +38,22 @@ public class PanelDirecciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte != Escenas.ninguna) 
 		{
-			CambiarTextura("Arr", GameCenter.InstanceRef.controladoraGUI.texturaFlechasArrOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte);
+			//CambiarTextura("Arr", GameCenter.InstanceRef.controladoraGUI.texturaFlechasArrOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte);
 		}
 
 		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur != Escenas.ninguna) 
 		{
-			CambiarTextura("Abj", GameCenter.InstanceRef.controladoraGUI.texturaFlechasAbjOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur);
+			//CambiarTextura("Abj", GameCenter.InstanceRef.controladoraGUI.texturaFlechasAbjOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur);
 		}
 
 		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste != Escenas.ninguna) 
 		{
-			CambiarTextura("Izq", GameCenter.InstanceRef.controladoraGUI.texturaFlechasIzqOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste);
+			//CambiarTextura("Izq", GameCenter.InstanceRef.controladoraGUI.texturaFlechasIzqOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste);
 		}
 
 		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste != Escenas.ninguna) 
 		{
-			CambiarTextura("Der", GameCenter.InstanceRef.controladoraGUI.texturaFlechasDerOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste);
+			//CambiarTextura("Der", GameCenter.InstanceRef.controladoraGUI.texturaFlechasDerOK, GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste);
 		}
 	}
 
@@ -76,25 +76,25 @@ public class PanelDirecciones : MonoBehaviour
 		{
 			if(objetoHijo.name.Contains ("Izq"))
 			{
-				objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasIzqNo;
+				//objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasIzqNo;
 				objetoHijo.GetComponent<BotonDireccion>().salida = false;
 			}
 
 			if(objetoHijo.name.Contains ("Der"))
 			{
-				objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasDerNo;
+				//objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasDerNo;
 				objetoHijo.GetComponent<BotonDireccion>().salida = false;
 			}
 
 			if(objetoHijo.name.Contains ("Arr"))
 			{
-				objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasArrNo;
+				//objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasArrNo;
 				objetoHijo.GetComponent<BotonDireccion>().salida = false;
 			}
 
 			if(objetoHijo.name.Contains ("Abj"))
 			{
-				objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasAbjNo;
+				//objetoHijo.guiTexture.texture = GameCenter.InstanceRef.controladoraGUI.texturaFlechasAbjNo;
 				objetoHijo.GetComponent<BotonDireccion>().salida = false;
 			}
 		}

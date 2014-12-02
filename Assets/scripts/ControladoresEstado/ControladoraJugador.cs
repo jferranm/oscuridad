@@ -18,8 +18,19 @@ public class ControladoraJugador
 	public ObjetoInteractuablev2 objetoInteractuableRef;
 	[HideInInspector]
 	public GameObject objetoPulsado;
-	
-	private EstadosJugador estadosJugador;
+
+	private EstadosJugador estadoJugador;
+	[HideInInspector]
+	public EstadosJugador EstadoJugador
+	{
+		get { return estadoJugador; }
+		set
+		{
+			estadoJugador = value;
+			CambioEnEstado();
+			GameCenter.InstanceRef.controladoraGUI.CambioEnEstado();
+		}
+	}
 	private string nombreJugador;
 
 	public ControladoraJugador()
@@ -41,43 +52,30 @@ public class ControladoraJugador
 	{
 		if (estadoCambiado) 
 		{
-			switch (estadosJugador) 
+			switch (EstadoJugador) 
 			{
-			case EstadosJugador.enEspera:	
-				JugadorEnEspera();
-				break;
-				
-			case EstadosJugador.enZoomIn:
-				GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomIn());
-				break;
-				
-			case EstadosJugador.enZoomOut:
-				GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomOut());
-				break;
-				
-			case EstadosJugador.enZoomEspera:
-				JugadorEnZoomEspera();
-				break;
-				
-			case EstadosJugador.enMenus:
-				JugadorEnMenus();
-				break;
+				case EstadosJugador.enZoomIn:
+					//GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomIn());
+					JugadorEnZoomIn();
+					break;
+					
+				case EstadosJugador.enZoomOut:
+					//GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomOut());
+					JugadorEnZoomOut();
+					break;
 			}
 		}
 	}
 
-	public void Cambiar_Estado(EstadosJugador nuevoEstado)
+	private void CambioEnEstado()
 	{
-		estadosJugador = nuevoEstado;
-		estadoCambiado = true;
-		GameCenter.InstanceRef.controladoraGUI.estadoCambiado = true;
+		if(EstadoJugador.Equals(estadosJugador.enMenus))
+			GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
+
+		if(EstadoJugador.Equals(estadosJugador.enZoomIn) || EstadoJugador.Equals(estadosJugador.enZoomOut))
+			estadoCambiado = true;
 	}
-	
-	public EstadosJugador Devolver_Estado()
-	{
-		return estadosJugador;
-	}
-	
+
 	public void Nombre_Jugador(string nombre)
 	{
 		nombreJugador = nombre;
@@ -88,12 +86,7 @@ public class ControladoraJugador
 		return nombreJugador;
 	}
 	
-	private void JugadorEnEspera()
-	{
-		estadoCambiado = false;
-	}
-	
-	IEnumerator JugadorEnZoomIn()
+	private void JugadorEnZoomIn()
 	{
 		Vector3 vectorAuxiliarPosicion = new Vector3 ();
 		Vector3 vectorAuxiliarRotacion = new Vector3 ();
@@ -118,16 +111,16 @@ public class ControladoraJugador
 		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, vectorAuxiliarPosicion, Time.deltaTime*smoothAuxiliar);
 		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(vectorAuxiliarRotacion.x, vectorAuxiliarRotacion.y, vectorAuxiliarRotacion.z), Time.deltaTime*smoothAuxiliar);
 		
-		if(Camera.main.transform.position.ToString() == vectorAuxiliarPosicion.ToString())
+		if (Camera.main.transform.position.ToString () == vectorAuxiliarPosicion.ToString ()) 
 		{
-			Cambiar_Estado(EstadosJugador.enZoomEspera);
-			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto();
-			estadoCambiado = true;
-			yield break;
-		}
+			EstadoJugador = EstadosJugador.enZoomEspera;
+			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto ();
+			estadoCambiado = false;
+			//yield break;
+		} 
 	}
-	
-	IEnumerator JugadorEnZoomOut()
+
+	private void JugadorEnZoomOut()
 	{
 		float smoothAuxiliar;
 		
@@ -144,19 +137,14 @@ public class ControladoraJugador
 		
 		if(Camera.main.transform.position.ToString() == zoomCamaraRef.posicionInicial.ToString())
 		{
-			Cambiar_Estado(EstadosJugador.enEspera);
-			estadoCambiado = true;
+			EstadoJugador = EstadosJugador.enEspera;
+			estadoCambiado = false;
 			objetoInteractuableRef = null;
 			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
 			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
 			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto();
-			yield break;
+			//yield break;
 		}
-	}
-	
-	private void JugadorEnZoomEspera()
-	{
-		estadoCambiado = false;
 	}
 	
 	private void JugadorEnMenus()
