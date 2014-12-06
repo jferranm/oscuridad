@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Oscuridad.Clases;
 
-public class Eventos : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+public class Eventos : MonoBehaviour 
+{
+	public void BotonComenzar()
+	{
+		GameCenter.InstanceRef.controladoraEscenas.IrEscena1();
 	}
 }
