@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\GameCenter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\cXML.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="58" Column="1" />
-      <File FileName="Assets\Escenarios\CasaFamiliarWard\Escena10\Escena10.cs" Line="42" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="143" Column="24" />
+      <File FileName="Assets\scripts\Clases\cXML.cs" Line="345" Column="6" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Escenarios\CasaFamiliarWard\Escena10\Escena10.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
