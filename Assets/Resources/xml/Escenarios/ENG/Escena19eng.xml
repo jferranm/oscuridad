@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Nombre>Escena19</Nombre>
+  <Escena>Escena19</Escena>
+  <NombreEscena>Desvan</NombreEscena>
+  <Descripcion>This loft was fixed as a work-place that Charles started using as a chemistry lab, but ended up being used also as a bedroom. Everything is messy and looks like abandoned time ago. There is a strange smell inside you are not able to identify. It's dark since windows have been covered with planks of wood, although some of them have been removed from one window, and there's some light coming into the room. Some candles spread around the room light the scene.
+</Descripcion>
+  <ObjetosEscena>
+    <ObjetoBase>
+      <Nombre>Pala</Nombre>
+      <DescripcionNombre>Pala</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Coger</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>This old shovel has been used recently, there are still some traces of soil attached to it.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>CuadroDesvan</Nombre>
+      <DescripcionNombre>Cuadro</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Coger</opcionObjeto>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>The shape of a standing man appears, dressed up elegantly. On the background, you can see an weird landscape, a river, and some twisted lines trees, with a sky which is not normal at all, nearly from another world, full of stars. Someone burned a piece of the painting where his face would be in. On the back of the canvas, it's been handwritten: "Joseph Curwen, 1713".</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Joseph Curwen was an important businessman from Arkham, dealed with exotic goods his ships brought from many places around the planet. Died in odd circumstances. You may check Arkham Advertiser to gather more information about him.</TextoDescriptivo>
+          <HabilidadTirada>Historia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>You can't recognize the position where stars are painted on the canvas, either the author placed them randomly, or it represents a sky that can't be seen from Earth.</TextoDescriptivo>
+          <HabilidadTirada>Astronomia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>LibrosDesvan</Nombre>
+      <DescripcionNombre>Libros</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Every single shelf is empy, although for the traces of dust seems there were plenty of books not long ago. Remaining books are abou Chemistry, Physics and History, all pretty recent.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>LibroMesa</Nombre>
+      <DescripcionNombre>A book over the table</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Seems to be an old book, worn covers, and yellowish pages. It's written in Old English, and it's hard for you to understan what it is about. There is a card which was used to mark pages with the name of a bookstore in Arkham.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>true</Accion>
+          <LocalizacionAccion>
+            <Localizaciones>LibreriaArkham</Localizaciones>
+          </LocalizacionAccion>
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>This is an old copy of Borellus' work. It focuses on Alchemy from a more overnatural point of view. And trough its pages it's told the chance of reviving corpses through ceretain alchemical precedures.</TextoDescriptivo>
+          <HabilidadTirada>CienciasOcultas</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Among the gibberish text, and the nearly unrecognizable draws, you understand it's all about chemical formulas, mixed with unusual religious beliefs.</TextoDescriptivo>
+          <HabilidadTirada>Quimica</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>CirculoInvocacion</Nombre>
+      <DescripcionNombre>Summoning Circle</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Coger</opcionObjeto>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>This is some kind of summoning symbol engraved on the wood with a knife, it's full of strange symbols you can't get to identify, there are traces of soil among the whole circle and also a strange black powder you don't identify.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>This is Ibn Ghazi Powder!, this blasphemous powder is used to discern summoned spirits, and it's blent with ashes and soil. </TextoDescriptivo>
+          <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>There's a mixture of ashes and soil. The strange powder shows hipnotic shines, which you would never consider as normal in this world. You never saw something like this before, and don't think they belong to an element known on Earth.</TextoDescriptivo>
+          <HabilidadTirada>Quimica</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>ObjetosAlquimia</Nombre>
+      <DescripcionNombre>Alchemy items</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>You can see a bunch of containers and alembics made of copper and thick glass. Some of them still got remains of liquid with unhealty colours and everything around smells horribly.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Those are accesories for chemical experiments, which seem have been used often, regadless their cleaning. Traces on the containers are weird and you don't get to identify them.</TextoDescriptivo>
+          <HabilidadTirada>Quimica</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>You clearly recognize traces of Ibn Ghazi disgusting powder, used on blasphemous rituals in order to discern summoned spirits. For the size of traces, it's been used on large amounts, which makes you imagine how horrible was what happened within these four walls...</TextoDescriptivo>
+          <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-5.596652</x>
+        <y>3.80505</y>
+        <z>6.738829</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>26.32251</x>
+        <y>89.47267</y>
+        <z>359.7661</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>HojasPared</Nombre>
+      <DescripcionNombre>Sheets on the wall</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>A bunch of sheets of paper are hanging along the planks next to the window, and some parts of the wall, there are sheets written in several languages, you get to identify Latin, French and English. Some are graphics about alembics and chemistry accessories.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Sheets written in French are a part of an anathomy book, where author dwells on the points where human soul lies.</TextoDescriptivo>
+          <HabilidadTirada>OtraLenguaFrances</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Pages written in Latin deal about how to set and organize a working table in order to make alchemical experiments. Because of their appearance, used to belong to a very old book.</TextoDescriptivo>
+          <HabilidadTirada>OtraLenguaLatin</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>The remaining pages are full of notes, marks, or guides aboud anathomy and chemistry, but from a spiritual point of view rather than physical.</TextoDescriptivo>
+          <HabilidadTirada>LenguaPropia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+  </ObjetosEscena>
+  <PersonajesEscena />
+  <EscenaNorte>ninguna</EscenaNorte>
+  <EscenaSur>ninguna</EscenaSur>
+  <EscenaEste>ninguna</EscenaEste>
+  <EscenaOeste>Escena18</EscenaOeste>
+</EscenaBase>
