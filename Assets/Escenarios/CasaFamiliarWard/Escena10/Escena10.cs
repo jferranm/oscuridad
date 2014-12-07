@@ -15,7 +15,6 @@ namespace Oscuridad.Estados
 			if(Application.loadedLevelName != Escenas.Escena10.ToString())
 			{
 				Application.LoadLevel(Escenas.Escena10.ToString());
-				GameCenter.InstanceRef.controladoraGUI.ActivarGUI();
 			}
 
 			InicializarDatos ();

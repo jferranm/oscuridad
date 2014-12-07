@@ -10,8 +10,10 @@ public class GameCenter : MonoBehaviour
 	public ControladoraSonidos controladoraSonidos;
 	public ControladoraGUI controladoraGUI;
 	public ControladoraJuego controladoraJuego;
+	public GameObject CanvasUIJuego;
 
 	public string USERPATH;
+	public bool ContinuarComenzar;// comenzar true - continuar false
 
 	//Instancia Singleton
 	private static GameCenter instanceRef;
@@ -43,8 +45,9 @@ public class GameCenter : MonoBehaviour
 		controladoraSonidos = ControladoraSonidos.InstanceRef ();
 		controladoraGUI = ControladoraGUI.InstanceRef ();
 		controladoraJuego = ControladoraJuego.InstanceRef ();
+		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
 
-		controladoraGUI.LocalizarObjetos ();
+		//controladoraGUI.LocalizarObjetos ();
 		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 
 		USERPATH = Application.persistentDataPath;
@@ -92,6 +95,8 @@ public class GameCenter : MonoBehaviour
 
 		//Insertamos marcador de Escena visitada en el jugador
 		controladoraJuego.jugadorActual.AddEscenaVisitada (controladoraJuego.escenaActual.Escena);
+
+		CanvasUIJuego.SetActive (true);
 	}
 
 

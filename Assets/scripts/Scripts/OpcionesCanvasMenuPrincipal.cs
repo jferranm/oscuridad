@@ -14,7 +14,9 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 			if(objetoHijo.name == "BotonComenzar")
 			{
 				if(File.Exists(archivoJugador))
+				{
 					objetoHijo.GetChild(0).GetComponent<Text>().text = "CONTINUAR";
+				}
 			}
 		}
 	}

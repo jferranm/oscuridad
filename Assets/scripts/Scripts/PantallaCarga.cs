@@ -1,32 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using Oscuridad.Enumeraciones;
 
 public class PantallaCarga : MonoBehaviour 
 {
 	private float fadeSpeed = 5f;
-	private Transform objetoTextura;
+	private Image imagenTextura;
 	private Color colorInicial = new Color();
 
 	public bool comenzarFade = false;
 
 	void Awake()
 	{
-		DontDestroyOnLoad(this);
-
-		foreach (Transform objetoHijo in this.transform) 
-		{
-			objetoHijo.guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
-			objetoTextura = objetoHijo;
-		}
-
-		colorInicial = objetoTextura.guiTexture.color;
-		this.gameObject.SetActive(false);
+		imagenTextura = this.gameObject.GetComponent<Image> ();
+		colorInicial = imagenTextura.color;
 	}
 	
 	void OnEnable()
 	{
-		objetoTextura.guiTexture.color = colorInicial;
+		imagenTextura.color = colorInicial;
 		comenzarFade = false;
 	}
 
@@ -42,10 +35,10 @@ public class PantallaCarga : MonoBehaviour
 		FadeToClear();
 		
 		//Si la imagen esta casi clara
-		if(objetoTextura.guiTexture.color.a <= 0.05f)
+		if(imagenTextura.color.a <= 0.05f)
 		{
 			//hacemos que el color sea claro y desactivamos el objeto
-			objetoTextura.guiTexture.color = Color.clear;
+			imagenTextura.color = Color.clear;
 			comenzarFade = false;
 			GameCenter.InstanceRef.controladoraGUI.Activar_Opciones_Basicas();
 			this.gameObject.SetActive(false);
@@ -55,6 +48,6 @@ public class PantallaCarga : MonoBehaviour
 
 	void FadeToClear ()
 	{
-		objetoTextura.guiTexture.color = Color.Lerp(objetoTextura.guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
+		imagenTextura.color = Color.Lerp(imagenTextura.color, Color.clear, fadeSpeed * Time.deltaTime);
 	}
 }

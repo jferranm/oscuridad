@@ -21,6 +21,8 @@ public class ControladoraGUI
 	public RespuestaBase nuevaRespuesta = new RespuestaBase();
 	//------
 
+	public GameObject imagenCargando;
+
 	public ControladoraGUI()
 	{
 
@@ -133,13 +135,12 @@ public class ControladoraGUI
 
 	public void Activar_Cargando()
 	{
-		//pantallaCarga.SetActive(true);
+		imagenCargando.SetActive (true);
 	}
 
 	public PantallaCarga Devolver_Pantalla_Carga()
 	{
-		//return pantallaCarga.GetComponent<PantallaCarga>();
-		return null;
+		return imagenCargando.GetComponent<PantallaCarga>();
 	}
 
 	public void Activar_Opciones_Basicas ()
