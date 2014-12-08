@@ -95,6 +95,7 @@
      <Compile Include="Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" />
      <Compile Include="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelDirecciones.cs" />
+     <Compile Include="Assets\scripts\Scripts\PanelInferiorOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelObjetos.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelVentana.cs" />
@@ -107,17 +108,25 @@
      <Compile Include="Assets\scripts\Scripts\VentanaDescripciones.cs" />
      <Compile Include="Assets\scripts\Scripts\VentanaObjetos.cs" />
      <Compile Include="Assets\scripts\Scripts\ZoomCamara.cs" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena18eng.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena15eng.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
      <None Include="Assets\Resources\xml\Escenarios\Escena12.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena19eng.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena10eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena13.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena11.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena11eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena14.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena18.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena16.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena15.xml" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
      <None Include="Assets\Resources\xml\Escenarios\Escena10.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena13eng.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena14eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena19.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena17eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\Escena17.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

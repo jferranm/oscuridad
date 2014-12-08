@@ -22,6 +22,13 @@ public class ControladoraGUI
 	//------
 
 	public GameObject imagenCargando;
+	public GameObject panelLateral;
+	public GameObject panelInferior;
+	public GameObject botonDiario;
+	public GameObject panelDirecciones;
+	public GameObject panelObjetos;
+
+	public string textoDescriptivo;
 
 	public ControladoraGUI()
 	{
@@ -73,11 +80,7 @@ public class ControladoraGUI
 
 	private void JugadorEnEspera()
 	{
-		//Activar Opciones de Juego
-		if(!Devolver_Pantalla_Carga().comenzarFade)
-		{
-			Activar_Opciones_Basicas();
-		}
+		Activar_Opciones_Basicas();
 	}
 	
 	private void JugadorEnZoomIn()
@@ -101,28 +104,19 @@ public class ControladoraGUI
 	{
 		//Activamos el Menu
 		Activar_Opciones_Basicas();
-		//menuObjetos.SetActive(true);
 
 		//Añadimos el objeto a objetos vistos del personaje
 		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
 			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Objeto);
 	}
 
-	public void LocalizarObjetos()
-	{
-		/*menuObjetos = GameObject.Find ("PanelGuiObjetos");
-		menuOpciones = GameObject.Find ("PanelGuiOpciones");
-		menuDirecciones = GameObject.Find ("PanelGuiDirecciones");
-		menuVentana = GameObject.Find ("PanelGuiVentana");
-		pantallaCarga = GameObject.Find ("PantallaCarga");*/
-	}
-	
 	public void DesactivarGUI()
 	{
-		/*menuObjetos.SetActive (false);
-		menuOpciones.SetActive (false);
-		menuDirecciones.SetActive (false);
-		menuVentana.SetActive (false);*/
+		panelObjetos.SetActive (false);
+		panelDirecciones.SetActive (false);
+		botonDiario.SetActive (false);
+		panelLateral.SetActive (false);
+		panelInferior.SetActive (false);
 	}
 
 	public void ActivarGUI()
@@ -138,16 +132,16 @@ public class ControladoraGUI
 		imagenCargando.SetActive (true);
 	}
 
-	public PantallaCarga Devolver_Pantalla_Carga()
+	public void Activar_Fade()
 	{
-		return imagenCargando.GetComponent<PantallaCarga>();
+		imagenCargando.GetComponent<PantallaCarga> ().comenzarFade = true;
 	}
 
 	public void Activar_Opciones_Basicas ()
 	{
-		//menuOpciones.SetActive (true);
-		//menuVentana.SetActive (true);
-		//menuDirecciones.SetActive (true);
+		botonDiario.SetActive (true);
+		panelInferior.SetActive (true);
+		panelDirecciones.SetActive(true);
 	}
 
 	public void Vaciar_Cajas_Texto()

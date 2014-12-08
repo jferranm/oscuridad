@@ -47,7 +47,6 @@ public class GameCenter : MonoBehaviour
 		controladoraJuego = ControladoraJuego.InstanceRef ();
 		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
 
-		//controladoraGUI.LocalizarObjetos ();
 		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 
 		USERPATH = Application.persistentDataPath;

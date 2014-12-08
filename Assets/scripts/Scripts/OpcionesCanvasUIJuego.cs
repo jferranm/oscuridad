@@ -11,6 +11,10 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 	public GameObject botonDiario;
 	[HideInInspector]
 	public GameObject imagenCargando;
+	[HideInInspector]
+	public GameObject panelLateral;
+	[HideInInspector]
+	public GameObject panelInferior;
 
 	void Start()
 	{
@@ -18,18 +22,30 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 		panelDirecciones = GameObject.Find ("PanelDirecciones");
 		botonDiario = GameObject.Find ("BotonDiario");
 		imagenCargando = GameObject.Find ("ImagenCargando");
+		panelLateral = GameObject.Find ("PanelLateral");
+		panelInferior = GameObject.Find ("PanelInferior");
 
 		GameCenter.InstanceRef.controladoraGUI.imagenCargando = imagenCargando;
+		GameCenter.InstanceRef.controladoraGUI.panelLateral = panelLateral;
+		GameCenter.InstanceRef.controladoraGUI.panelInferior = panelInferior;
+		GameCenter.InstanceRef.controladoraGUI.panelDirecciones = panelDirecciones;
+		GameCenter.InstanceRef.controladoraGUI.botonDiario = botonDiario;
+		GameCenter.InstanceRef.controladoraGUI.panelObjetos = panelObjetos;
 
-		panelObjetos.SetActive (false);
-		panelDirecciones.SetActive (false);
-		botonDiario.SetActive (false);
-		imagenCargando.SetActive (false);
+		Desactivar_Todo ();
 	}
 
 	void onEnable()
 	{
-		botonDiario.SetActive (true);
-		panelDirecciones.SetActive (true);
+	}
+
+	private void Desactivar_Todo()
+	{
+		panelObjetos.SetActive (false);
+		panelDirecciones.SetActive (false);
+		botonDiario.SetActive (false);
+		imagenCargando.SetActive (false);
+		panelLateral.SetActive (false);
+		panelInferior.SetActive (false);
 	}
 }

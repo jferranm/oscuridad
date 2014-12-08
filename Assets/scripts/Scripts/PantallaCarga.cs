@@ -40,7 +40,6 @@ public class PantallaCarga : MonoBehaviour
 			//hacemos que el color sea claro y desactivamos el objeto
 			imagenTextura.color = Color.clear;
 			comenzarFade = false;
-			GameCenter.InstanceRef.controladoraGUI.Activar_Opciones_Basicas();
 			this.gameObject.SetActive(false);
 			GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enEspera;
 		}

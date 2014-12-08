@@ -39,7 +39,7 @@ namespace Oscuridad.Estados
 			GameCenter.InstanceRef.controladoraJuego.escenaActual = GameCenter.InstanceRef.controladoraJuego.Cargar_Escena(Escenas.Escena17);
 
 			//Inicializamos la escena
-			GameCenter.InstanceRef.controladoraGUI.Devolver_Pantalla_Carga().comenzarFade = true;
+			GameCenter.InstanceRef.controladoraGUI.Activar_Fade();
 			GameCenter.InstanceRef.Inicializar_Escenario ();
 		}
 	}
