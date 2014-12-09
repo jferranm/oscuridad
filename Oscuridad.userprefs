@@ -1,18 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\PanelInferiorOpciones.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\PanelDireccionesOpciones.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="50" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="355" Column="3" />
-      <File FileName="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" Line="44" Column="1" />
-      <File FileName="Assets\scripts\Scripts\PanelInferiorOpciones.cs" Line="12" Column="46" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\VentanaDescripciones.cs" Line="32" Column="164" />
-      <File FileName="Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" Line="18" Column="49" />
+      <File FileName="Assets\scripts\Scripts\PanelInferiorOpciones.cs" Line="29" Column="89" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PanelDirecciones.cs" Line="41" Column="153" />
+      <File FileName="Assets\scripts\Scripts\PanelDireccionesOpciones.cs" Line="33" Column="1" />
+      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="23" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\Scripts\Eventos.cs" line="24" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

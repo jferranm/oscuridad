@@ -3,28 +3,15 @@ using System.Collections;
 
 public class OpcionesCanvasUIJuego : MonoBehaviour 
 {
-	[HideInInspector]
 	public GameObject panelObjetos;
-	[HideInInspector]
 	public GameObject panelDirecciones;
-	[HideInInspector]
 	public GameObject botonDiario;
-	[HideInInspector]
 	public GameObject imagenCargando;
-	[HideInInspector]
 	public GameObject panelLateral;
-	[HideInInspector]
 	public GameObject panelInferior;
 
 	void Start()
 	{
-		panelObjetos = GameObject.Find ("PanelObjetos");
-		panelDirecciones = GameObject.Find ("PanelDirecciones");
-		botonDiario = GameObject.Find ("BotonDiario");
-		imagenCargando = GameObject.Find ("ImagenCargando");
-		panelLateral = GameObject.Find ("PanelLateral");
-		panelInferior = GameObject.Find ("PanelInferior");
-
 		GameCenter.InstanceRef.controladoraGUI.imagenCargando = imagenCargando;
 		GameCenter.InstanceRef.controladoraGUI.panelLateral = panelLateral;
 		GameCenter.InstanceRef.controladoraGUI.panelInferior = panelInferior;

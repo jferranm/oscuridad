@@ -5,12 +5,7 @@ using Oscuridad.Enumeraciones;
 
 public class PanelInferiorOpciones : MonoBehaviour 
 {
-	Text textoVentana;
-
-	void Start()
-	{
-		textoVentana = this.transform.GetChild (0).GetComponent<Text>();
-	}
+	public Text textoVentana;
 
 	void OnEnable()
 	{
@@ -32,7 +27,6 @@ public class PanelInferiorOpciones : MonoBehaviour
 	private void JugadorEnEspera()
 	{
 		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion;
-//		GameCenter.InstanceRef.controladoraGUI.listaVentanaInferior.Add(new Etiqueta(GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion, Color.white));
 	}
 
 	private void JugadorEnZoomEspera()

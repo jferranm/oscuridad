@@ -19,4 +19,8 @@ public class Eventos : MonoBehaviour
 		else
 			GameCenter.InstanceRef.controladoraEscenas.IrEscena1();
 	}
+
+	public void BotonDireccion(GameObject botonDireccion)
+	{
+	}
 }
