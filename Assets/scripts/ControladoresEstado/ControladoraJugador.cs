@@ -55,12 +55,10 @@ public class ControladoraJugador
 			switch (EstadoJugador) 
 			{
 				case EstadosJugador.enZoomIn:
-					//GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomIn());
 					JugadorEnZoomIn();
 					break;
 					
 				case EstadosJugador.enZoomOut:
-					//GameCenter.InstanceRef.CoroutinaBase(JugadorEnZoomOut());
 					JugadorEnZoomOut();
 					break;
 			}
@@ -114,9 +112,7 @@ public class ControladoraJugador
 		if (Camera.main.transform.position.ToString () == vectorAuxiliarPosicion.ToString ()) 
 		{
 			EstadoJugador = EstadosJugador.enZoomEspera;
-			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto ();
 			estadoCambiado = false;
-			//yield break;
 		} 
 	}
 
@@ -142,8 +138,6 @@ public class ControladoraJugador
 			objetoInteractuableRef = null;
 			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
 			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
-			GameCenter.InstanceRef.controladoraGUI.Vaciar_Cajas_Texto();
-			//yield break;
 		}
 	}
 	

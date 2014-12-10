@@ -83,8 +83,6 @@ public class GameCenter : MonoBehaviour
 	{
 		controladoraJuego.Inicializar_Objetos ();
 
-		controladoraGUI.Vaciar_Cajas_Texto ();
-
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();
 

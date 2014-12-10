@@ -14,6 +14,7 @@ public class PanelDireccionesOpciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
+			Normalizar_Botones();
 			Reorganizar_Direcciones ();
 		}
 	}
@@ -31,6 +32,14 @@ public class PanelDireccionesOpciones : MonoBehaviour
 		
 		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste.Equals(Escenas.ninguna)) 
 			Desactivar (botonOeste);
+	}
+
+	private void Normalizar_Botones()
+	{
+		botonNorte.GetComponent<Image> ().color = new Color (255, 255, 255);
+		botonSur.GetComponent<Image> ().color = new Color (255, 255, 255);
+		botonEste.GetComponent<Image> ().color = new Color (255, 255, 255);
+		botonOeste.GetComponent<Image> ().color = new Color (255, 255, 255);
 	}
 
 	private void Desactivar (GameObject objeto)

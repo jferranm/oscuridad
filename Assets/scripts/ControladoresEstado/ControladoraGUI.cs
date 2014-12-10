@@ -9,13 +9,6 @@ using Oscuridad.Clases;
 [System.Serializable]
 public class ControladoraGUI
 {
-	//---- Listas de Texto para las cajas Descriptivas
-	public List<Etiqueta> listaVentanaInferior = new List<Etiqueta>();
-	public List<Etiqueta> listaVentanaLateral = new List<Etiqueta>();
-	public string cabeceraInferior = "";
-	public string cabeceraLateral = "";
-	//----
-
 	//---- Opciones de Jugador
 	//public PreguntaBase[] textoBotones = new PreguntaBase[3];
 	public RespuestaBase nuevaRespuesta = new RespuestaBase();
@@ -144,14 +137,6 @@ public class ControladoraGUI
 		panelDirecciones.SetActive(true);
 	}
 
-	public void Vaciar_Cajas_Texto()
-	{
-		listaVentanaInferior.Clear();
-		listaVentanaLateral.Clear();
-		cabeceraInferior = "";
-		cabeceraLateral = "";
-	}
-
 	public void Lanzar_Inspeccionar()
 	{
 		bool tiradaConExito = false;
@@ -251,7 +236,7 @@ public class ControladoraGUI
 
 	public void Lanzar_Hablar()
 	{
-		cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre;
+		//cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre;
 		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.personajePulsado.InicioConversacion);
 	}
 
@@ -312,46 +297,46 @@ public class ControladoraGUI
 
 	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
 	{
-		listaVentanaLateral.Add (new Etiqueta (textoDescriptivo, color));
+		//listaVentanaLateral.Add (new Etiqueta (textoDescriptivo, color));
 	}
 
 	public void Insertar_Ventana_Lateral_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
-		listaVentanaLateral.Add (new Etiqueta (tirada, habilidad, resultado));
+		//listaVentanaLateral.Add (new Etiqueta (tirada, habilidad, resultado));
 	}
 
 	public void Insertar_Ventana_Lateral_Texto(Objetos nombreObjeto, Color color)
 	{
-		listaVentanaLateral.Add (new Etiqueta(nombreObjeto, color));
+		//listaVentanaLateral.Add (new Etiqueta(nombreObjeto, color));
 	}
 
 	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
-		listaVentanaLateral.Add (new Etiqueta(nombreLocalizacion, color));
+		//listaVentanaLateral.Add (new Etiqueta(nombreLocalizacion, color));
 	}
 
 	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
 	{
-		listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color));
+		//listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color));
 	}
 
 	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color, string opcion)
 	{
-		listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color, opcion));
+		//listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color, opcion));
 	}
 	
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
-		listaVentanaInferior.Add (new Etiqueta (tirada, habilidad, resultado));
+		//listaVentanaInferior.Add (new Etiqueta (tirada, habilidad, resultado));
 	}
 	
 	public void Insertar_Ventana_Inferior_Texto(Objetos nombreObjeto, Color color)
 	{
-		listaVentanaInferior.Add (new Etiqueta (nombreObjeto, color));
+		//listaVentanaInferior.Add (new Etiqueta (nombreObjeto, color));
 	}
 	
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
-		listaVentanaInferior.Add (new Etiqueta (nombreLocalizacion, color));
+		//listaVentanaInferior.Add (new Etiqueta (nombreLocalizacion, color));
 	}
 }
