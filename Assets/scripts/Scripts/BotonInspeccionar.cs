@@ -4,11 +4,11 @@ using Oscuridad.Estados;
 
 public class BotonInspeccionar : MonoBehaviour 
 {
-	private PanelObjetos panelObjetosRef;
+	//private PanelObjetos panelObjetosRef;
 	
 	void Start()
 	{
-		panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
+		//panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
 	}
 
 	void Update()
@@ -31,13 +31,14 @@ public class BotonInspeccionar : MonoBehaviour
 
 	private void Inspeccionar_Objeto()
 	{
-		if (this.guiTexture.texture == panelObjetosRef.botonInspeccionar) 
-		{
+		//if (this.guiTexture.texture == panelObjetosRef.botonInspeccionar) 
+		//{
 			//Desactivamos el icono de Inspeccionar
-			panelObjetosRef.Desactivar_Opcion("BotonInspeccionar");
+		//	panelObjetosRef.Desactivar_Opcion("BotonInspeccionar");
 			
 			//Mostramos el Inicio de la pregunta
-			GameCenter.InstanceRef.controladoraGUI.Lanzar_Inspeccionar();
-		}
+		//	GameCenter.InstanceRef.controladoraGUI.Lanzar_Inspeccionar();
+		//
+		//}
 	}
 }

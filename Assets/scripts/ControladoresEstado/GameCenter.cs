@@ -13,7 +13,6 @@ public class GameCenter : MonoBehaviour
 	public GameObject CanvasUIJuego;
 
 	public string USERPATH;
-	public bool ContinuarComenzar;// comenzar true - continuar false
 
 	//Instancia Singleton
 	private static GameCenter instanceRef;

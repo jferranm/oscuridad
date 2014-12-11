@@ -67,11 +67,10 @@ public class ControladoraJugador
 
 	private void CambioEnEstado()
 	{
-		if(EstadoJugador.Equals(estadosJugador.enMenus))
-			GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
-
-		if(EstadoJugador.Equals(estadosJugador.enZoomIn) || EstadoJugador.Equals(estadosJugador.enZoomOut))
+		if (EstadoJugador.Equals (EstadosJugador.enZoomIn) || EstadoJugador.Equals (EstadosJugador.enZoomOut)) 
+		{
 			estadoCambiado = true;
+		}
 	}
 
 	public void Nombre_Jugador(string nombre)
@@ -139,11 +138,5 @@ public class ControladoraJugador
 			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
 			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
 		}
-	}
-	
-	private void JugadorEnMenus()
-	{
-		GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
-		estadoCambiado = false;
 	}
 }

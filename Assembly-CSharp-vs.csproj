@@ -95,7 +95,7 @@
      <Compile Include="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelDireccionesOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelInferiorOpciones.cs" />
-     <Compile Include="Assets\scripts\Scripts\PanelObjetos.cs" />
+     <Compile Include="Assets\scripts\Scripts\PanelObjetosOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelVentana.cs" />
      <Compile Include="Assets\scripts\Scripts\PantallaCarga.cs" />

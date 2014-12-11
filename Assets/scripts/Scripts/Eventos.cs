@@ -47,4 +47,12 @@ public class Eventos : MonoBehaviour
 			GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);
 		}
 	}
+
+	public void BotonObjeto(GameObject botonObjeto)
+	{
+		Color rojo = new Color (255,0,0);
+		Image imagenBoton = botonObjeto.GetComponent<Image> ();
+
+
+	}
 }

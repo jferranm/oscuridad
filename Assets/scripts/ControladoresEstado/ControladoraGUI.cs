@@ -42,7 +42,6 @@ public class ControladoraGUI
 
 	public void Start()
 	{
-
 	}
 
 	public void CambioEnEstado()
@@ -97,6 +96,8 @@ public class ControladoraGUI
 	{
 		//Activamos el Menu
 		Activar_Opciones_Basicas();
+		panelObjetos.SetActive (true);
+		panelDirecciones.SetActive (false);
 
 		//Añadimos el objeto a objetos vistos del personaje
 		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
@@ -112,13 +113,6 @@ public class ControladoraGUI
 		panelInferior.SetActive (false);
 	}
 
-	public void ActivarGUI()
-	{
-		/*menuObjetos.SetActive (true);
-		menuOpciones.SetActive (true);
-		menuDirecciones.SetActive (true);
-		menuVentana.SetActive (true);*/
-	}
 
 	public void Activar_Cargando()
 	{

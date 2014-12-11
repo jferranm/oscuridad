@@ -4,11 +4,11 @@ using Oscuridad.Estados;
 
 public class BotonHablar : MonoBehaviour 
 {
-	private PanelObjetos panelObjetosRef;
+	//private PanelObjetos panelObjetosRef;
 
 	void Start()
 	{
-		panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
+		//panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
 	}
 
 	void Update()
@@ -26,16 +26,16 @@ public class BotonHablar : MonoBehaviour
 
 	void OnMouseDown() 
 	{
-		if (this.guiTexture.texture == panelObjetosRef.botonHablar) 
-		{
-			Hablar_Personaje ();
-		}
+		//if (this.guiTexture.texture == panelObjetosRef.botonHablar) 
+		//{
+		//	Hablar_Personaje ();
+		//}
 	}
 
 	private void Hablar_Personaje()
 	{
 		//Desactivamos el icono de Hablar
-		panelObjetosRef.Desactivar_Opcion("BotonHablar");
+		//panelObjetosRef.Desactivar_Opcion("BotonHablar");
 		
 		//Mostramos el Inicio de la pregunta
 		GameCenter.InstanceRef.controladoraGUI.Lanzar_Hablar();

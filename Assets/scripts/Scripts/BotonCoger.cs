@@ -6,11 +6,11 @@ using Oscuridad.Enumeraciones;
 
 public class BotonCoger : MonoBehaviour 
 {
-	private PanelObjetos panelObjetosRef;
+	//rivate PanelObjetos panelObjetosRef;
 
 	void Start()
 	{
-		panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
+		//panelObjetosRef = GameObject.Find("PanelGuiObjetos").GetComponent<PanelObjetos> ();
 	}
 
 	void Update()
@@ -28,10 +28,10 @@ public class BotonCoger : MonoBehaviour
 	
 	void OnMouseDown() 
 	{
-		if (this.guiTexture.texture == panelObjetosRef.botonCoger) 
-		{
-			Coger_Objeto();
-		}
+		//if (this.guiTexture.texture == panelObjetosRef.botonCoger) 
+		//{
+		//	Coger_Objeto();
+		//}
 	}
 
 	private void Coger_Objeto()
@@ -40,9 +40,9 @@ public class BotonCoger : MonoBehaviour
 		GameObject.FindGameObjectWithTag(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre).SetActive(false);
 
 		//Deshabilitamos los botones
-		panelObjetosRef.Desactivar_Opcion("BotonCoger");
-		panelObjetosRef.Desactivar_Opcion("BotonHablar");
-		panelObjetosRef.Desactivar_Opcion("BotonInspeccionar");
+		//panelObjetosRef.Desactivar_Opcion("BotonCoger");
+		//panelObjetosRef.Desactivar_Opcion("BotonHablar");
+		//panelObjetosRef.Desactivar_Opcion("BotonInspeccionar");
 		
 		//Insertar objeto en el inventario del jugador
 		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario ((Objetos)Enum.Parse(typeof(Objetos), GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre));
