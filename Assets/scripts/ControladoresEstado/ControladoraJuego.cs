@@ -316,4 +316,9 @@ public class ControladoraJuego
 		
 		return aux;
 	}
+
+	public string Traduccion_Coger_Objeto(string nombreObjeto)
+	{
+		return nombreObjeto + "Ahora esta en el Inventario";
+	}
 }

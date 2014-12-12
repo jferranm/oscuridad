@@ -64,7 +64,6 @@ public class PanelObjetosOpciones : MonoBehaviour
 	
 	private void Normalizar_Botones()
 	{
-		botonVolver.GetComponent<Image> ().color = new Color (255, 255, 255);
 		botonCoger.GetComponent<Image> ().color = new Color (255, 255, 255);
 		botonHablar.GetComponent<Image> ().color = new Color (255, 255, 255);
 		botonInspeccionar.GetComponent<Image> ().color = new Color (255, 255, 255);
@@ -75,5 +74,17 @@ public class PanelObjetosOpciones : MonoBehaviour
 		Image imagenBoton = objeto.GetComponent<Image> ();
 		
 		imagenBoton.color = new Color (255,0,0);
+	}
+
+	public void Desactivar (string nombreBoton)
+	{
+		if (botonCoger.name.Contains (nombreBoton))
+			Desactivar (botonCoger);
+
+		if (botonHablar.name.Contains (nombreBoton))
+			Desactivar (botonHablar);
+
+		if (botonInspeccionar.name.Contains (nombreBoton))
+			Desactivar (botonInspeccionar);
 	}
 }

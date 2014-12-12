@@ -11,6 +11,8 @@ public class PanelInferiorOpciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
+			GameCenter.InstanceRef.controladoraGUI.textoInferior = textoVentana;
+
 			switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
 			{
 				case EstadosJugador.enEspera:
@@ -31,5 +33,6 @@ public class PanelInferiorOpciones : MonoBehaviour
 
 	private void JugadorEnZoomEspera()
 	{
+		textoVentana.text = "";
 	}
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +21,9 @@ public class ControladoraGUI
 	public GameObject botonDiario;
 	public GameObject panelDirecciones;
 	public GameObject panelObjetos;
+
+	public Text textoLateral;
+	public Text textoInferior;
 
 	public string textoDescriptivo;
 
@@ -96,6 +100,7 @@ public class ControladoraGUI
 	{
 		//Activamos el Menu
 		Activar_Opciones_Basicas();
+		panelLateral.SetActive (true);
 		panelObjetos.SetActive (true);
 		panelDirecciones.SetActive (false);
 
@@ -289,6 +294,12 @@ public class ControladoraGUI
 		return false;
 	}
 
+	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
+	{
+		textoInferior.text += Reformatear_Texto (textoDescriptivo, color);
+	}
+
+	
 	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
 	{
 		//listaVentanaLateral.Add (new Etiqueta (textoDescriptivo, color));
@@ -309,11 +320,6 @@ public class ControladoraGUI
 		//listaVentanaLateral.Add (new Etiqueta(nombreLocalizacion, color));
 	}
 
-	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
-	{
-		//listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color));
-	}
-
 	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color, string opcion)
 	{
 		//listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color, opcion));
@@ -332,5 +338,32 @@ public class ControladoraGUI
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
 		//listaVentanaInferior.Add (new Etiqueta (nombreLocalizacion, color));
+	}
+
+	private string Reformatear_Texto (string textoDescriptivo, Color color)
+	{
+		return Environment.NewLine + ObtenerColor(color) + Comillas() + textoDescriptivo + Comillas() + FinDeLineaColor ();
+	}
+
+	private string ObtenerColor(Color color)
+	{
+		if (color.Equals(Color.red))
+			return "<color=red>";
+		if (color.Equals(Color.green))
+			return "<color=green>";	
+		if (color.Equals(Color.white))
+			return "<color=white>";
+		
+		return null;
+	}
+	
+	private string FinDeLineaColor()
+	{
+		return "</color>";
+	}
+	
+	private string Comillas()
+	{
+		return "\"";
 	}
 }

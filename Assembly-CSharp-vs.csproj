@@ -81,11 +81,9 @@
      <Compile Include="Assets\scripts\Enums\estadosJugador.cs" />
      <Compile Include="Assets\scripts\Enums\estadosUsuario.cs" />
      <Compile Include="Assets\scripts\Interfaces\IEscenario.cs" />
-     <Compile Include="Assets\scripts\Scripts\BotonCoger.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonHablar.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonInspeccionar.cs" />
      <Compile Include="Assets\scripts\Scripts\BotonMenu.cs" />
-     <Compile Include="Assets\scripts\Scripts\BotonVolver.cs" />
      <Compile Include="Assets\scripts\Scripts\CambioEstadoObjeto.cs" />
      <Compile Include="Assets\scripts\Scripts\ControlMenus.cs" />
      <Compile Include="Assets\scripts\Scripts\Eventos.cs" />
