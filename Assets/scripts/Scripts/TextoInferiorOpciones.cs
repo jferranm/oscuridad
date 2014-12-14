@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using Oscuridad.Enumeraciones;
 
-public class PanelInferiorOpciones : MonoBehaviour 
+public class TextoInferiorOpciones : MonoBehaviour 
 {
 	public Text textoVentana;
 
@@ -12,27 +12,30 @@ public class PanelInferiorOpciones : MonoBehaviour
 		if (GameCenter.InstanceRef != null) 
 		{
 			GameCenter.InstanceRef.controladoraGUI.textoInferior = textoVentana;
-
+			
 			switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
 			{
 				case EstadosJugador.enEspera:
-						JugadorEnEspera ();
-						break;
-
+					JugadorEnEspera ();
+					break;
+					
 				case EstadosJugador.enZoomEspera:
-						JugadorEnZoomEspera ();
-						break;
+					JugadorEnZoomEspera ();
+					break;
 			}
 		}
 	}
-
+	
 	private void JugadorEnEspera()
 	{
 		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion;
 	}
-
+	
 	private void JugadorEnZoomEspera()
 	{
-		textoVentana.text = "";
+		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
+			textoVentana.text = "Interactuando con \"" + GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre + "\"";
+		else 
+			textoVentana.text = "Inspeccionando \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
 	}
 }
