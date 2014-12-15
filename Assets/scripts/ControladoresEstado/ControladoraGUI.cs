@@ -296,20 +296,19 @@ public class ControladoraGUI
 
 	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
 	{
-		textoInferior.text += Reformatear_Texto (textoDescriptivo, color);
+		textoInferior.text += Environment.NewLine + ObtenerColor(color) + Comillas() + textoDescriptivo + Comillas() + FinDeLineaColor ();
 	}
-
 	
 	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
 	{
-		//listaVentanaLateral.Add (new Etiqueta (textoDescriptivo, color));
+		textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
 	}
 
 	public void Insertar_Ventana_Lateral_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
-		//listaVentanaLateral.Add (new Etiqueta (tirada, habilidad, resultado));
+		//
 	}
-
+	
 	public void Insertar_Ventana_Lateral_Texto(Objetos nombreObjeto, Color color)
 	{
 		//listaVentanaLateral.Add (new Etiqueta(nombreObjeto, color));
@@ -327,7 +326,21 @@ public class ControladoraGUI
 	
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
-		//listaVentanaInferior.Add (new Etiqueta (tirada, habilidad, resultado));
+		string aux = "";
+		Color colorTirada;
+		
+		if (tirada) 
+		{
+			aux = "Exito";
+			colorTirada = Color.green;
+		} 
+		else 
+		{
+			aux = "Fracaso";
+			colorTirada = Color.red;
+		}
+		
+		textoInferior.text += Environment.NewLine + ObtenerColor(Color.white) + "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + "." + FinDeLineaColor() + ObtenerColor(colorTirada) + aux + FinDeLineaColor();
 	}
 	
 	public void Insertar_Ventana_Inferior_Texto(Objetos nombreObjeto, Color color)
@@ -337,12 +350,7 @@ public class ControladoraGUI
 	
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
-		//listaVentanaInferior.Add (new Etiqueta (nombreLocalizacion, color));
-	}
-
-	private string Reformatear_Texto (string textoDescriptivo, Color color)
-	{
-		return Environment.NewLine + ObtenerColor(color) + Comillas() + textoDescriptivo + Comillas() + FinDeLineaColor ();
+		textoInferior.text = Environment.NewLine + ObtenerColor(color) + "Nueva localizacion descubierta: " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
 	}
 
 	private string ObtenerColor(Color color)

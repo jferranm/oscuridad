@@ -10,6 +10,8 @@ public class TextoLateralOpciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
+			GameCenter.InstanceRef.controladoraGUI.textoLateral = textoCuerpo;
+
 			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
 				textoCuerpo.text = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica();
 			else

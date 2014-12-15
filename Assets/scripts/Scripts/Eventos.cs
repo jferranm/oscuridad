@@ -60,6 +60,9 @@ public class Eventos : MonoBehaviour
 
 			if(botonObjeto.name.Contains("Coger"))
 				Coger_Objeto();
+
+			if(botonObjeto.name.Contains("Inspeccionar"))
+				Inspeccionar_Objeto();
 		}
 	}
 
@@ -81,5 +84,13 @@ public class Eventos : MonoBehaviour
 		
 		//Le indicamos a la caja de texto que esta en el inventario
 		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.Traduccion_Coger_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre), Color.yellow);
+	}
+
+	private void Inspeccionar_Objeto()
+	{
+		//Deshabilitamos el boton Inspeccionar para no poder pulsar mas veces sobre el mientras se esta inspeccionando
+		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Inspeccionar");
+
+		GameCenter.InstanceRef.controladoraGUI.Lanzar_Inspeccionar();
 	}
 }
