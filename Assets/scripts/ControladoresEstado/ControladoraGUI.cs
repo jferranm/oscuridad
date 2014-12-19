@@ -27,6 +27,8 @@ public class ControladoraGUI
 
 	public string textoDescriptivo;
 
+	private GameObject botonPregunta;
+
 	public ControladoraGUI()
 	{
 
@@ -46,6 +48,7 @@ public class ControladoraGUI
 
 	public void Start()
 	{
+
 	}
 
 	public void CambioEnEstado()
@@ -140,9 +143,6 @@ public class ControladoraGUI
 	{
 		bool tiradaConExito = false;
 
-		//Mostramos el enunciado de examinar
-		Insertar_Ventana_Inferior_Texto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre, Color.yellow, "Examinar");
-
 		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradasInspeccionar()) 
 		{
 			//Rescatamos el valor de la habilidad
@@ -235,7 +235,7 @@ public class ControladoraGUI
 
 	public void Lanzar_Hablar()
 	{
-		//cabeceraInferior = GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre;
+		botonPregunta = GameObject.Find ("BotonPregunta");
 		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.personajePulsado.InicioConversacion);
 	}
 
@@ -248,6 +248,17 @@ public class ControladoraGUI
 		if (nuevaRespuesta.DireccionRespuesta > 0) 
 		{
 			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
+		} 
+		else 
+		{
+			foreach(PreguntaBase nuevaPregunta in nuevaRespuesta.MostrarPreguntas())
+			{
+				//Button botonPregunta = (Button)UnityEngine.Object.Instantiate(Resources.Load("Prefabs/BotonPregunta", typeof(Button)));
+				GameObject botonClonadoPregunta = GameObject.Instantiate(botonPregunta, botonPregunta.transform.position, botonPregunta.transform.rotation) as GameObject;
+				botonClonadoPregunta.transform.SetParent(panelInferior.transform);
+				//Text textoPregunta = botonPregunta.GetComponent<Text>();
+				//botonPregunta.GetComponent<Text>().text = nuevaPregunta.TextoPregunta;
+			}
 		}
 	}
 
@@ -304,26 +315,6 @@ public class ControladoraGUI
 		textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
 	}
 
-	public void Insertar_Ventana_Lateral_Texto(bool tirada, Habilidades habilidad, int resultado)
-	{
-		//
-	}
-	
-	public void Insertar_Ventana_Lateral_Texto(Objetos nombreObjeto, Color color)
-	{
-		//listaVentanaLateral.Add (new Etiqueta(nombreObjeto, color));
-	}
-
-	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
-	{
-		//listaVentanaLateral.Add (new Etiqueta(nombreLocalizacion, color));
-	}
-
-	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color, string opcion)
-	{
-		//listaVentanaInferior.Add (new Etiqueta (textoDescriptivo, color, opcion));
-	}
-	
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
 		string aux = "";
@@ -341,11 +332,6 @@ public class ControladoraGUI
 		}
 		
 		textoInferior.text += Environment.NewLine + ObtenerColor(Color.white) + "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + "." + FinDeLineaColor() + ObtenerColor(colorTirada) + aux + FinDeLineaColor();
-	}
-	
-	public void Insertar_Ventana_Inferior_Texto(Objetos nombreObjeto, Color color)
-	{
-		//listaVentanaInferior.Add (new Etiqueta (nombreObjeto, color));
 	}
 	
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)

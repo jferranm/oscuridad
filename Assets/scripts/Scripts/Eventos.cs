@@ -63,6 +63,9 @@ public class Eventos : MonoBehaviour
 
 			if(botonObjeto.name.Contains("Inspeccionar"))
 				Inspeccionar_Objeto();
+
+			if(botonObjeto.name.Contains("Hablar"))
+				Hablar_Personaje();
 		}
 	}
 
@@ -92,5 +95,17 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Inspeccionar");
 
 		GameCenter.InstanceRef.controladoraGUI.Lanzar_Inspeccionar();
+	}
+
+	private void Hablar_Personaje()
+	{
+		//Deshabilitamos el boton Hablar para no poder pulsar mas veces sobre el mientras se esta hablando
+		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Hablar");
+
+		GameCenter.InstanceRef.controladoraGUI.Lanzar_Hablar ();
+	}
+
+	public void BotonPregunta()
+	{
 	}
 }

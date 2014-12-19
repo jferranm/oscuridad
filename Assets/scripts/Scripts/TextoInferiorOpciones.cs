@@ -34,7 +34,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 	private void JugadorEnZoomEspera()
 	{
 		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
-			textoVentana.text = "Interactuando con \"" + GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre + "\"";
+			textoVentana.text = "";
 		else 
 			textoVentana.text = "Inspeccionando \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
 	}
