@@ -40,6 +40,13 @@ public class ControladoraJuego
 		escenaActual = new EscenaBase ();
 	}
 
+	public void Inicializar_Partida(Personaje personaje)
+	{
+		Inicializar_Jugador (personaje);
+		CopiarXML();
+		GrabarJugador ();
+	}
+
 	public void Inicializar_Jugador(Personaje personaje)
 	{
 		switch (personaje) 

@@ -21,6 +21,36 @@ public class Eventos : MonoBehaviour
 			GameCenter.InstanceRef.controladoraEscenas.IrEscena1();
 	}
 
+	public void BotonPersonaje(string nombrePersonaje)
+	{
+		switch (nombrePersonaje) 
+		{
+			case "Maria":
+				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.MarlaGibbs);
+				break;
+
+			case "Robert":
+				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.RobertDuncan);
+				break;
+
+			case "Warren":
+				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.WarrenBedford);
+				break;
+		}
+
+		GameCenter.InstanceRef.controladoraEscenas.IrEscena10 ();
+	}
+
+	public void BotonAtras(string nombreEscena)
+	{
+		switch (nombreEscena) 
+		{
+			case "Escena1":
+				GameCenter.InstanceRef.controladoraEscenas.IrMenuPrincipal();
+				break;
+		}
+	}
+
 	public void BotonDireccion(GameObject botonDireccion)
 	{
 		Color rojo = new Color (255,0,0);
