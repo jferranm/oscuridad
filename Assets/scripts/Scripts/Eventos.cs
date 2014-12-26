@@ -138,4 +138,9 @@ public class Eventos : MonoBehaviour
 	public void BotonPregunta()
 	{
 	}
+
+	public void CajaTexto_OnChange(Vector2 nuevaPosicion)
+	{
+		Debug.Log (nuevaPosicion);
+	}
 }
