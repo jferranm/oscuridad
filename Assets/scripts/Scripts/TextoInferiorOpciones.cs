@@ -6,6 +6,18 @@ using Oscuridad.Enumeraciones;
 public class TextoInferiorOpciones : MonoBehaviour 
 {
 	public Text textoVentana;
+	public RectTransform rectCajaTexto;
+	public RectTransform scrollRectTransform;
+	public float y;
+	public float yTotal;
+	
+	private bool final;
+
+	void Awake()
+	{
+		y = rectCajaTexto.localPosition.y;
+		yTotal = 1;
+	}
 
 	void OnEnable()
 	{
@@ -25,6 +37,13 @@ public class TextoInferiorOpciones : MonoBehaviour
 			}
 		}
 	}
+
+	void OnDisable()
+	{
+		rectCajaTexto.localPosition = new Vector2 (0, y);
+		final = false;
+		scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
+	}
 	
 	private void JugadorEnEspera()
 	{
@@ -37,5 +56,33 @@ public class TextoInferiorOpciones : MonoBehaviour
 			textoVentana.text = "";
 		else 
 			textoVentana.text = "Inspeccionando \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
+	}
+
+	void Update()
+	{
+		if (textoVentana.preferredHeight > scrollRectTransform.rect.height) 
+		{
+			if (!final) 
+			{
+				if (rectCajaTexto.offsetMax.y > rectCajaTexto.sizeDelta.magnitude) 
+				{
+					yTotal = rectCajaTexto.localPosition.y;
+					final = true;
+				}
+			}
+
+			if (rectCajaTexto.localPosition.y < y) 
+				rectCajaTexto.localPosition = new Vector2 (0, y);
+
+			if (final) 
+			{
+				if (rectCajaTexto.localPosition.y > yTotal) 
+					rectCajaTexto.localPosition = new Vector2 (0, yTotal);
+			}
+		} 
+		else 
+		{
+			scrollRectTransform.GetComponent<ScrollRect>().vertical = false;
+		}
 	}
 }
