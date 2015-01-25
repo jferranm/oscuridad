@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Oscuridad.Enumeraciones;
+using Oscuridad.Clases;
 
 public class GameCenter : MonoBehaviour 
 {
@@ -85,15 +86,19 @@ public class GameCenter : MonoBehaviour
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();
 
+		//Activamos Camara
+		controladoraJuego.camaraActiva = null;
+		controladoraJuego.cameraActiva = null;
+		controladoraJuego.Desactivar_Camaras ();
+		controladoraJuego.Cambiar_Camara (controladoraJuego.escenaActual.CamaraInicio.Nombre);
+
 		//Comenzamos BSO
-		Camera.main.audio.clip = controladoraSonidos.bsoEscenaCasa;
-		Camera.main.audio.Play ();
+		controladoraJuego.cameraActiva.audio.clip = controladoraSonidos.bsoEscenaCasa;
+		controladoraJuego.cameraActiva.audio.Play ();
 
 		//Insertamos marcador de Escena visitada en el jugador
-		controladoraJuego.jugadorActual.AddEscenaVisitada (controladoraJuego.escenaActual.Escena);
+		controladoraJuego.jugadorActual.AddEscenaVisitada (controladoraJuego.camaraActiva.Escena);
 
 		CanvasUIJuego.SetActive (true);
 	}
-
-
 }

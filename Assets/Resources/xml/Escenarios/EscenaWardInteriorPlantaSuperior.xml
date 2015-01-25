@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Escena>EscenaWardInteriorPlantaSuperior</Escena>
+  <ObjetosEscena>
+    <ObjetoBase>
+      <Nombre>CuadrosPrimeraPlanta1</Nombre>
+      <Objeto>Ninguno</Objeto>
+      <DescripcionNombre>Cuadros</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-7.1</x>
+        <y>311.6</y>
+        <z>8.77</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>CuadrosPrimeraPlanta2</Nombre>
+      <DescripcionNombre>Cuadro</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Mas pinturas de la familia, reunidos en el exterior de la casa, en lo que parece el jardin.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
+          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <Comprobacion>true</Comprobacion>
+          <EscenaComprobacion>WardJardin</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-13.97</x>
+        <y>311.459</y>
+        <z>9.073</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>PeriodicosHabitacionCharles</Nombre>
+      <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Son un monton de periodicos de hace varias semanas, de varios dias de la semana.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos.</TextoDescriptivo>
+          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-16.97</x>
+        <y>307.92</y>
+        <z>18.01</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>57.44051</x>
+        <y>-180</y>
+        <z>-360</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>LibrosHabitacionCharles</Nombre>
+      <DescripcionNombre>Libros</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-17.0</x>
+        <y>309.57</y>
+        <z>20.4</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>20.58954</x>
+        <y>-120.1132</y>
+        <z>6.678711</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>Mesita</Nombre>
+      <DescripcionNombre>Mesita</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Sobre una mesita hay unas cuantas fotos enmarcadas. Son fotos de los padres de Charles, otra de Charles de joven y la ultima es una foto de bodas, donde aparece Charles y su esposa, con el velo puesto.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>En la foto de boda se ve a Charles algo desmejorado, la figura de su esposa, aunque cubierta por el velo, te transmite una sensacion de temor, como si sus ojos te devolvieran la mirada desde debajo del velo.</TextoDescriptivo>
+          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>Puerta</Nombre>
+      <DescripcionNombre>Cierre de Puerta</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>La puerta esta cerrada con llave</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-15.38</x>
+        <y>309.88</y>
+        <z>-10.54</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>-180</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>Pala</Nombre>
+      <DescripcionNombre>Pala</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Coger</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Esta vieja pala ha sido usada recientemente, aun quedan rastro de tierra en ella.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>0</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>CuadroDesvan</Nombre>
+      <DescripcionNombre>Cuadro</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Coger</opcionObjeto>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Aparece la figura de un hombre de pie, elegantemente vestido, de fondo se puede ver un paisaje extraño, un rio, y arboles de formas retorcidas, con un cielo de color para nada normal, casi de otro mundo, cubierto de estrellas. Han quemado el trozo del cuadro donde iria su rostro. En la parte de atras del lienzo aparece escrito a mano: "Joseph Curwen, 1713".</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Joseph Curwen fue un importante hombre de negocios de Arkham, comerciaba con exoticas mercancias que traian sus barcos desde muchos puntos del planeta. Murio en extrañas circustancias. Tal vez en el Arkham Advertiser puedas encontrar mas datos sobre el.</TextoDescriptivo>
+          <HabilidadTirada>Historia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>No reconoces la disposicion de las estrellas pintadas en el lienzo, o el autor se invento su colocacion o representa un cielo que no puede ser visto desde la tierra.</TextoDescriptivo>
+          <HabilidadTirada>Astronomia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>LibrosDesvan</Nombre>
+      <DescripcionNombre>Libros</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>todas las estanterias estan vacias, aunque por las marcas de polvo estuvieron repletas de libros no hace mucho. Los que quedan tratan sobre Quimica, Fisica e Historia, todos muy recientes.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-14.1</x>
+        <y>307.62</y>
+        <z>-21.2</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>26.36841</x>
+        <y>-179.5187</y>
+        <z>-0.08934021</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>LibroMesa</Nombre>
+      <DescripcionNombre>Libro sobre la mesa</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Parece un libro antiguo, con las tapas gastadas, y hojas amarillentas. Esta escrito en ingles antiguo, y te cuesta mucho entender de que trata. Tiene una tarjeta que se usaba para marcar pagina con el nombre de una librería en Arkham </TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>true</Accion>
+          <LocalizacionAccion>
+            <Localizaciones>LibreriaArkham</Localizaciones>
+          </LocalizacionAccion>
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Es una antigua copia del trabajo de Borellus, esta centrado en la Alquimia desde un punto de vista mas sobrenatural. Y en sus paginas se cuenta la posibilidad de revivir cadaveres mediante ciertos procesos alquimicos.</TextoDescriptivo>
+          <HabilidadTirada>CienciasOcultas</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Entre el galimatias de texto, y dibujos casi irreconocibles, te parece entender que trata sobre formulas quimicas, mezcladas con ideas religiosas un tanto extrañas.</TextoDescriptivo>
+          <HabilidadTirada>Quimica</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-8.85</x>
+        <y>309.42</y>
+        <z>-18.9</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>52.06859</x>
+        <y>-180</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>CirculoInvocacion</Nombre>
+      <DescripcionNombre>Circulo de Invocacion</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Coger</opcionObjeto>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Es una especie de simbolo de invocacion arañado en la madera con un cuchillo, esta repleto de simbolos extraños que no consigues identificar, hay resto de tierra por todo el circulo y de un extraño polvo negro que no consigues identificar</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>¡Es Polvo de Ibn Ghazi!, este blasfemo polvo es usado para dislumbrar espiritus convocados, y esta mezclado con cenizas y tierra. </TextoDescriptivo>
+          <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Hay una mezcla de cenizas, y tierra. El extraño polvo negro presenta unos brillos hipnoticos y que para nada considerarias  normales en este mundo. Jamas habias visto algo parecido y dudas que pertenezca a algun elemente conocido de la tierra.</TextoDescriptivo>
+          <HabilidadTirada>Quimica</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-14.08</x>
+        <y>310.68</y>
+        <z>-15.339</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>59.4</x>
+        <y>-180</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>ObjetosAlquimia</Nombre>
+      <DescripcionNombre>Objetos de Alquimia</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Ves un monton de recipientes y alambiques de cobre y cristal grueso. En algunos quedan restos de liquidos de colores malsanos y todo huele muy mal.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Son accesorios para experimentos quimicos, que por lo que parece se han utilizado asiduamente sin preocuparse por su limpieza. Los restos de los recipientes son extraños y no consigues identificarlos.</TextoDescriptivo>
+          <HabilidadTirada>Quimica</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Reconoces claramente restos del repugnante polvo de Ibn Ghazi, un polvo usado en blasfemos rituales para vislumbrar espiritus convocados. Por la cantidad de restos ha sido usado en grandes cantidades, lo que te hace imaginar lo horrible de los actos ocurridos entre estas cuatro paredes…</TextoDescriptivo>
+          <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-9.25</x>
+        <y>310.02</y>
+        <z>-19.46</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>30.36632</x>
+        <y>-250.2294</y>
+        <z>0.008621216</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+    <ObjetoBase>
+      <Nombre>HojasPared</Nombre>
+      <DescripcionNombre>Hojas en la pared</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Un monton de hojas cuelgan de los tableros de la ventana y de algunas partes de la pared, hay hojas con texto en varios idiomas, consigues identificar el latin, el Frances y el ingles. Algunas son graficos de alambiques y accesorios de quimica.</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Las hojas en frances son partes de un libro sobre anatomia, donde se detallan los puntos donde segun el autor reside el alma humana.</TextoDescriptivo>
+          <HabilidadTirada>OtraLenguaFrances</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Las paginas en latin cuentan como organizar e instalar una mesa de trabajo para realizar experimentos alquimicos. Por su aspecto pertecian a un libro muy antiguo.</TextoDescriptivo>
+          <HabilidadTirada>OtraLenguaLatin</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>El resto de paginas y hojas estan repletas de anotaciones, marcas o guias sobre anatomia y quimica, pero desde un punto de vista mas espiritual que fisico.</TextoDescriptivo>
+          <HabilidadTirada>LenguaPropia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>-6.89</x>
+        <y>310.56</y>
+        <z>-18.38</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>0</x>
+        <y>-180</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+    </ObjetoBase>
+  </ObjetosEscena>
+  <PersonajesEscena />
+  <ListaCamaras>
+    <CamaraEscenaBase>
+      <Nombre>CamaraPasillo</Nombre>
+      <Escena>WardPasillo</Escena>
+      <NombreEscena>Pasillo</NombreEscena>
+      <Descripcion>El pasillo de la primera planta empieza aqui, a la izquierda se puede entrar al dormitorio de los Ward y el pasillo continua hasta la ventana que da al jardin, un ultimo tramo de escaleras sube al desvan, ahora reformado como una habitacion mas de la casa. A la derecha al antiguo dormitorio de Charles.</Descripcion>
+      <EscenaNorte>CamaraPuertaDesvan</EscenaNorte>
+      <EscenaSur>EscenaWardInteriorPlantaBaja</EscenaSur>
+      <EscenaEste>CamaraHabPadres</EscenaEste>
+      <EscenaOeste>CamaraHabCharles</EscenaOeste>
+      <EscenaHabilitar>Escena14</EscenaHabilitar>
+    </CamaraEscenaBase>
+    <CamaraEscenaBase>
+      <Nombre>CamaraHabCharles</Nombre>
+      <Escena>WardHabitacionCharles</Escena>
+      <NombreEscena>Habitacion de Charles</NombreEscena>
+      <Descripcion>Practicamente vacia y sin tocar, la cama esta hecha y parece que no se tocado en mucho tiempo. Todos los libros y pertenencias acabaron en el desvan cuando Charles se traslado alli.</Descripcion>
+      <EscenaNorte>ninguna</EscenaNorte>
+      <EscenaSur>ninguna</EscenaSur>
+      <EscenaEste>CamaraPasillo</EscenaEste>
+      <EscenaOeste>ninguna</EscenaOeste>
+      <EscenaHabilitar>Escena15</EscenaHabilitar>
+    </CamaraEscenaBase>
+    <CamaraEscenaBase>
+      <Nombre>CamaraHabPadres</Nombre>
+      <Escena>WardHabitacionPadres</Escena>
+      <NombreEscena>Habitacion de los Padres de Charles</NombreEscena>
+      <Descripcion>Un elegante dormitorio.</Descripcion>
+      <EscenaNorte>ninguna</EscenaNorte>
+      <EscenaSur>ninguna</EscenaSur>
+      <EscenaEste>ninguna</EscenaEste>
+      <EscenaOeste>CamaraPasillo</EscenaOeste>
+      <EscenaHabilitar>Escena16</EscenaHabilitar>
+    </CamaraEscenaBase>
+    <CamaraEscenaBase>
+      <Nombre>CamaraPuertaDesvan</Nombre>
+      <Escena>WardPuertaDesvan</Escena>
+      <NombreEscena>Puerta del Desvan</NombreEscena>
+      <Descripcion>Esta puerta esta cerrada</Descripcion>
+      <EscenaNorte>CamaraDesvan</EscenaNorte>
+      <EscenaSur>CamaraPasillo</EscenaSur>
+      <EscenaEste>ninguna</EscenaEste>
+      <EscenaOeste>ninguna</EscenaOeste>
+      <EscenaHabilitar>Escena18</EscenaHabilitar>
+    </CamaraEscenaBase>
+    <CamaraEscenaBase>
+      <Nombre>CamaraDesvan</Nombre>
+      <Escena>WardDesvan</Escena>
+      <NombreEscena>Desvan</NombreEscena>
+      <Descripcion>Este desvan se acondiciono como habitacion de trabajo de Charles que empezo usando como laboratorio quimico, pero que acabo usando tambien como habitacion. Esta todo desordenado y parece abandonado desde hace un tiempo. Hay un olor extraño aqui dentro que no eres capaz de identificar. Esta oscuro porque han tapado las ventanas con tablas de madera, aunque de una de ellas se han retirado varias tablas y entra algo de luz. Varias velas diseminadas por la habitacion iluminan la estancia.</Descripcion>
+      <EscenaNorte>ninguna</EscenaNorte>
+      <EscenaSur>CamaraPuertaDesvan</EscenaSur>
+      <EscenaEste>ninguna</EscenaEste>
+      <EscenaOeste>ninguna</EscenaOeste>
+      <EscenaHabilitar>Escena19</EscenaHabilitar>
+    </CamaraEscenaBase>
+  </ListaCamaras>
+  <CamaraInicio>
+      <Nombre>CamaraPasillo</Nombre>
+      <Escena>WardPasillo</Escena>
+      <NombreEscena>Pasillo</NombreEscena>
+      <Descripcion>El pasillo de la primera planta empieza aqui, a la izquierda se puede entrar al dormitorio de los Ward y el pasillo continua hasta la ventana que da al jardin, un ultimo tramo de escaleras sube al desvan, ahora reformado como una habitacion mas de la casa. A la derecha al antiguo dormitorio de Charles.</Descripcion>
+      <EscenaNorte>CamaraPuertaDesvan</EscenaNorte>
+      <EscenaSur>EscenaWardInteriorPlantaBaja</EscenaSur>
+      <EscenaEste>CamaraHabPadres</EscenaEste>
+      <EscenaOeste>CamaraHabCharles</EscenaOeste>
+      <EscenaHabilitar>Escena14</EscenaHabilitar>
+  </CamaraInicio>
+  <EscenasDeshabilitar>
+    <string>Escena14</string>
+    <string>Escena15</string>
+    <string>Escena16</string>
+    <string>Escena18</string>
+    <string>Escena19</string>
+  </EscenasDeshabilitar>
+</EscenaBase>

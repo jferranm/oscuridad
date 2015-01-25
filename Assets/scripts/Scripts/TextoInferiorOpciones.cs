@@ -25,16 +25,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 		{
 			GameCenter.InstanceRef.controladoraGUI.textoInferior = textoVentana;
 			
-			switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
-			{
-				case EstadosJugador.enEspera:
-					JugadorEnEspera ();
-					break;
-					
-				case EstadosJugador.enZoomEspera:
-					JugadorEnZoomEspera ();
-					break;
-			}
+			Reiniciar_Texto();
 		}
 	}
 
@@ -47,7 +38,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 	
 	private void JugadorEnEspera()
 	{
-		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.escenaActual.Descripcion;
+		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.camaraActiva.Descripcion;
 	}
 	
 	private void JugadorEnZoomEspera()
@@ -83,6 +74,20 @@ public class TextoInferiorOpciones : MonoBehaviour
 		else 
 		{
 			scrollRectTransform.GetComponent<ScrollRect>().vertical = false;
+		}
+	}
+
+	public void Reiniciar_Texto()
+	{
+		switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
+		{
+			case EstadosJugador.enEspera:
+				JugadorEnEspera ();
+				break;
+			
+			case EstadosJugador.enZoomEspera:
+				JugadorEnZoomEspera ();
+				break;
 		}
 	}
 }

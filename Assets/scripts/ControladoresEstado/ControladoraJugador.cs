@@ -105,10 +105,12 @@ public class ControladoraJugador
 		}
 
 		//Ruta de la camara hacia el objeto seleccionado
-		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, vectorAuxiliarPosicion, Time.deltaTime*smoothAuxiliar);
-		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, Quaternion.Euler(vectorAuxiliarRotacion.x, vectorAuxiliarRotacion.y, vectorAuxiliarRotacion.z), Time.deltaTime*smoothAuxiliar);
-		
-		if (Camera.main.transform.position.ToString () == vectorAuxiliarPosicion.ToString ()) 
+		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position = Vector3.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position, vectorAuxiliarPosicion, Time.deltaTime*smoothAuxiliar);
+		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.rotation = Quaternion.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.rotation, Quaternion.Euler(vectorAuxiliarRotacion.x, vectorAuxiliarRotacion.y, vectorAuxiliarRotacion.z), Time.deltaTime*smoothAuxiliar);
+
+		Debug.Log ("Posicion Objeto:" + GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position);
+		Debug.Log ("Posicion Camara:" + vectorAuxiliarPosicion);
+		if (GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position.ToString().Equals(vectorAuxiliarPosicion.ToString())) 
 		{
 			EstadoJugador = EstadosJugador.enZoomEspera;
 			estadoCambiado = false;
@@ -127,10 +129,10 @@ public class ControladoraJugador
 			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth;
 
 		//Ruta del objeto a la posicion inicial de la camara
-		Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*smoothAuxiliar);
-		Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, zoomCamaraRef.rotacionInicial, Time.deltaTime*smoothAuxiliar);
+		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position = Vector3.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*smoothAuxiliar);
+		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.rotation = Quaternion.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.rotation, zoomCamaraRef.rotacionInicial, Time.deltaTime*smoothAuxiliar);
 		
-		if(Camera.main.transform.position.ToString() == zoomCamaraRef.posicionInicial.ToString())
+		if(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position.ToString() == zoomCamaraRef.posicionInicial.ToString())
 		{
 			EstadoJugador = EstadosJugador.enEspera;
 			estadoCambiado = false;

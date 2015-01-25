@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Oscuridad.Enumeraciones;
 
 namespace Oscuridad.Clases
@@ -10,19 +11,6 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class EscenaBase
     {
-        private string nombre;
-        /// <summary>
-        /// Nombre de la Escena
-        /// </summary>
-        /// <value>
-        /// valor string del nombre de la escena
-        /// </value>
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
-
 		private Escenas escena;
 		/// <summary>
 		/// Escena en Enumeracion
@@ -35,33 +23,6 @@ namespace Oscuridad.Clases
 			get { return escena; }
 			set { escena = value; }
 		}
-
-		private string nombreEscena;
-		/// <summary>
-		/// Nombre descriptivo de la Escena
-		/// </summary>
-		/// <value>
-		/// valor string del nombre descriptivo de la escena
-		/// </value>
-		public string NombreEscena
-		{
-			get { return nombreEscena; }
-			set { nombreEscena = value; }
-		}
-		
-
-        private string descripcion;
-        /// <summary>
-        /// Descripcion de la escena
-        /// </summary>
-        /// <value>
-        /// valor string de la descripcion de la escena
-        /// </value>
-        public string Descripcion
-        {
-            get { return descripcion; }
-            set { descripcion = value; }
-        }
 
         private List<ObjetoBase> objetosEscena;
         /// <summary>
@@ -89,56 +50,25 @@ namespace Oscuridad.Clases
             set { personajesEscena = value; }
         }
 
-		private Escenas escenaNorte;
-		/// <summary>
-		/// Direccion de la salida Norte
-		/// </summary>
-		/// <value>
-		/// valor tipo enum Escenas
-		/// </value>
-		public Escenas EscenaNorte
+		private List<CamaraEscenaBase> listaCamaras;
+		public List<CamaraEscenaBase> ListaCamaras
 		{
-			get { return escenaNorte; }
-			set { escenaNorte = value; }
+			get { return listaCamaras; }
+			set { listaCamaras = value; }
 		}
 
-		private Escenas escenaSur;
-		/// <summary>
-		/// Direccion de la salida Sur
-		/// </summary>
-		/// <value>
-		/// valor tipo enum Escenas
-		/// </value>
-		public Escenas EscenaSur
+		private CamaraEscenaBase camaraInicio;
+		public CamaraEscenaBase CamaraInicio
 		{
-			get { return escenaSur; }
-			set { escenaSur = value; }
+			get { return camaraInicio;}
+			set { camaraInicio = value; }
 		}
 
-		private Escenas escenaEste;
-		/// <summary>
-		/// Direccion de la salida Este
-		/// </summary>
-		/// <value>
-		/// valor tipo enum Escenas
-		/// </value>
-		public Escenas EscenaEste
+		private List<string> escenasDeshabilitar;
+		public List<string> EscenasDeshabilitar
 		{
-			get { return escenaEste; }
-			set { escenaEste = value; }
-		}
-
-		private Escenas escenaOeste;
-		/// <summary>
-		/// Direccion de la salida Oeste
-		/// </summary>
-		/// <value>
-		/// valor tipo enum Escenas
-		/// </value>
-		public Escenas EscenaOeste
-		{
-			get { return escenaOeste; }
-			set { escenaOeste = value; }
+			get { return escenasDeshabilitar; }
+			set { escenasDeshabilitar = value; }
 		}
 
         /// <summary>
@@ -147,17 +77,6 @@ namespace Oscuridad.Clases
         public EscenaBase()
         {
 			Inicializar ();
-        }
-
-        /// <summary>
-        /// Constructor de la clase <see cref="EscenaBase"/> class.
-        /// </summary>
-        /// <param name="nombre">string con el nombre de la escena</param>
-        public EscenaBase(string nombre)
-        {
-			Inicializar ();
-
-            this.nombre = nombre;
         }
 
         /// <summary>
@@ -179,21 +98,6 @@ namespace Oscuridad.Clases
         {
 			Inicializar ();
 
-            AddPersonaje(personajes);
-        }
-
-        /// <summary>
-        /// Constructor de la clase <see cref="EscenaBase"/> class.
-        /// </summary>
-        /// <param name="nombre">string de nombre de escena</param>
-        /// <param name="objetos">array de tipo ObjetoBase</param>
-        /// <param name="personajes">array de tipo PersonajeBase</param>
-        public EscenaBase(string nombre, ObjetoBase[] objetos, PersonajeBase[] personajes)
-        {
-			Inicializar ();
-
-            this.nombre = nombre;
-            AddObjeto(objetos);
             AddPersonaje(personajes);
         }
 
@@ -325,6 +229,17 @@ namespace Oscuridad.Clases
 			return null;
 		}
 
+		public CamaraEscenaBase Buscar_Camara(string nombreCamara)
+		{
+			foreach (CamaraEscenaBase camara in ListaCamaras) 
+			{
+				if(camara.Nombre.Contains(nombreCamara))
+					return camara;
+			}
+			
+			return null;
+		}
+
 		/// <summary>
 		/// Metodo de inicializacion en constructores
 		/// </summary>
@@ -332,11 +247,8 @@ namespace Oscuridad.Clases
 		{
 			objetosEscena = new List<ObjetoBase>();
 			personajesEscena = new List<PersonajeBase>();
-
-			escenaNorte = Escenas.ninguna;
-			escenaSur = Escenas.ninguna;
-			escenaEste = Escenas.ninguna;
-			escenaOeste = Escenas.ninguna;
+			listaCamaras = new List<CamaraEscenaBase> ();
+			escenasDeshabilitar = new List<string> ();
 		}
     }
 }

@@ -6,9 +6,6 @@ using Oscuridad.Enumeraciones;
 [System.Serializable]
 public class ControladoraSonidos
 {
-	public AudioSource fuenteSonidos;
-	public AudioSource fuenteBSO;
-
 	//Sonidos
 	public AudioClip sonidoFalloPulsar;
 	public AudioClip sonidoAcertarPulsar;
@@ -36,9 +33,6 @@ public class ControladoraSonidos
 	{
 		sonidoFalloPulsar = Resources.Load("Sonidos/pulsarFallo", typeof(AudioClip)) as AudioClip;
 		sonidoAcertarPulsar = Resources.Load("Sonidos/pulsarAcertar", typeof(AudioClip)) as AudioClip;
-		bsoEscenaCasa = Resources.Load("Musica/SoloContraLaOscuridad1", typeof(AudioClip)) as AudioClip;
-
-		fuenteSonidos = new AudioSource ();
-		fuenteBSO = new AudioSource ();
+		bsoEscenaCasa = Resources.Load("Musica/Escenario 1_v1", typeof(AudioClip)) as AudioClip;
 	}
 }

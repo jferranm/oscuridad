@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Escena>EscenaWardExterior</Escena>
+  <ObjetosEscena />
+  <PersonajesEscena />
+  <ListaCamaras>
+    <CamaraEscenaBase>
+      <Nombre>CamaraCasa</Nombre>
+      <Escena>WardCasa</Escena>
+      <NombreEscena>Exterior De La Casa</NombreEscena>
+      <Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
+      <EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
+      <EscenaSur>ninguna</EscenaSur>
+      <EscenaEste>CamaraJardin</EscenaEste>
+      <EscenaOeste>ninguna</EscenaOeste>
+      <EscenaHabilitar></EscenaHabilitar>
+    </CamaraEscenaBase>
+    <CamaraEscenaBase>
+      <Nombre>CamaraJardin</Nombre>
+      <Escena>WardJardin</Escena>
+      <NombreEscena>Jardin</NombreEscena>
+      <Descripcion>El jardin parece poco cuidado, en el centro hay una especie de pequeño altar de piedra cubierto de moho, en el centro esta hueco y lleno de tierra recientemente removida. Desde aqui se ven las ventanas del desvan, una de ellas esta tapiada con maderos, la otra lo estaba, pero ahora esta abierta. </Descripcion>
+      <EscenaNorte>ninguna</EscenaNorte>
+      <EscenaSur>ninguna</EscenaSur>
+      <EscenaEste>ninguna</EscenaEste>
+      <EscenaOeste>CamaraCasa</EscenaOeste>
+      <EscenaHabilitar></EscenaHabilitar>
+    </CamaraEscenaBase>
+  </ListaCamaras>
+  <CamaraInicio>
+    <Nombre>CamaraCasa</Nombre>
+    <Escena>WardCasa</Escena>
+    <NombreEscena>Exterior De La Casa</NombreEscena>
+    <Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
+    <EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
+    <EscenaSur>ninguna</EscenaSur>
+    <EscenaEste>CamaraJardin</EscenaEste>
+    <EscenaOeste>ninguna</EscenaOeste>
+    <EscenaHabilitar></EscenaHabilitar>
+  </CamaraInicio>
+  <EscenasDeshabilitar />
+</EscenaBase>

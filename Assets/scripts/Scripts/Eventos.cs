@@ -15,7 +15,7 @@ public class Eventos : MonoBehaviour
 		{
 			//TODO: empezar por la ultima pantalla
 			GameCenter.InstanceRef.controladoraJuego.CargarJugador ();
-			GameCenter.InstanceRef.controladoraEscenas.IrEscena10 ();
+			GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
 		}
 		else
 			GameCenter.InstanceRef.controladoraEscenas.IrEscena1();
@@ -38,7 +38,7 @@ public class Eventos : MonoBehaviour
 				break;
 		}
 
-		GameCenter.InstanceRef.controladoraEscenas.IrEscena10 ();
+		GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
 	}
 
 	public void BotonAtras(string nombreEscena)
@@ -55,26 +55,82 @@ public class Eventos : MonoBehaviour
 	{
 		Color rojo = new Color (255,0,0);
 		Image imagenBoton = botonDireccion.GetComponent<Image> ();
+		bool tipoDireccion = false; //true Escena - false Camara
 
 		Escenas escenaSeleccionada = Escenas.ninguna;
+		string camaraSeleccionada = "";
 		
 		if (!imagenBoton.color.Equals (rojo)) 
 		{
 			if(botonDireccion.name.Contains("Arriba"))
-			   escenaSeleccionada = GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte;
+			{
+				if(GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaNorte.Contains("Escena"))
+				{
+					tipoDireccion = true;
+					escenaSeleccionada = (Escenas)Enum.Parse (typeof(Escenas), GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaNorte);
+				}
+				else
+				{
+					tipoDireccion = false;
+					camaraSeleccionada = GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaNorte;
+				}
+			}
 			  
 			if(botonDireccion.name.Contains("Abajo"))
-			   escenaSeleccionada = GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur;
+			{
+				if(GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaSur.Contains("Escena"))
+				{
+					tipoDireccion = true;
+					escenaSeleccionada = (Escenas)Enum.Parse (typeof(Escenas), GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaSur);
+				}
+				else
+				{
+					tipoDireccion = false;
+					camaraSeleccionada = GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaSur;
+				}
+			}
 
 			if(botonDireccion.name.Contains("Izquierda"))
-				escenaSeleccionada = GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste;
+			{
+				if(GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaEste.Contains("Escena"))
+				{
+					tipoDireccion = true;
+					escenaSeleccionada = (Escenas)Enum.Parse (typeof(Escenas), GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaEste);
+				}
+				else
+				{
+					tipoDireccion = false;
+					camaraSeleccionada = GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaEste;
+				}
+			}
 
 			if(botonDireccion.name.Contains("Derecha"))
-				escenaSeleccionada = GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste;
+			{
+				if(GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaOeste.Contains("Escena"))
+				{
+					tipoDireccion = true;
+					escenaSeleccionada = (Escenas)Enum.Parse (typeof(Escenas), GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaOeste);
+				}
+				else
+				{
+					tipoDireccion = false;
+					camaraSeleccionada = GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaOeste;
+				}
+			}
 
-			GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
-			GameCenter.InstanceRef.controladoraJuego.Guardar_Escena ((Escenas)Enum.Parse (typeof(Escenas), Application.loadedLevelName));
-			GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);
+			if(tipoDireccion)
+			{
+				GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
+				GameCenter.InstanceRef.controladoraJuego.Guardar_Escena ((Escenas)Enum.Parse (typeof(Escenas), Application.loadedLevelName));
+				GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);
+			}
+			else
+			{
+				GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddEscenaVisitada (GameCenter.InstanceRef.controladoraJuego.camaraActiva.Escena);
+				GameCenter.InstanceRef.controladoraJuego.Cambiar_Camara(camaraSeleccionada);
+				GameCenter.InstanceRef.controladoraGUI.panelDirecciones.GetComponent<PanelDireccionesOpciones>().Reiniciar_Direcciones();
+				GameCenter.InstanceRef.controladoraGUI.textoInferior.GetComponent<TextoInferiorOpciones>().Reiniciar_Texto();
+			}
 		}
 	}
 

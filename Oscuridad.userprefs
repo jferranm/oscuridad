@@ -1,21 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\TextoLateralOpciones.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\TextoLateralOpciones.cs" Line="25" Column="1" />
-      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\PanelLateralOpciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\TextoInferiorOpciones.cs" Line="86" Column="4" />
-      <File FileName="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="103" Column="3" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="13" Column="25" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="113" Column="132" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="381" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\Scripts\PanelInferiorOpciones.cs" line="36" />
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJugador.cs" line="115" />
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJugador.cs" line="88" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

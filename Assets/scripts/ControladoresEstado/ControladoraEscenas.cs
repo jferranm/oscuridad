@@ -72,54 +72,19 @@ public class ControladoraEscenas
 		estadoActivo = new Escena3(this);
 	}
 	
-	public void IrEscena10()
+	public void IrEscenaWardExterior()
 	{
-		estadoActivo = new Escena10(this);
-	}
-	
-	public void IrEscena11()
-	{
-		estadoActivo = new Escena11(this);
-	}
-	
-	public void IrEscena12()
-	{
-		estadoActivo = new Escena12(this);
-	}
-	
-	public void IrEscena13()
-	{
-		estadoActivo = new Escena13(this);
+		estadoActivo = new EscenaWardExterior (this);
 	}
 
-	public void IrEscena14()
+	public void IrEscenaWardInteriorPlantaBaja()
 	{
-		estadoActivo = new Escena14(this);
-	}
-	
-	public void IrEscena15()
-	{
-		estadoActivo = new Escena15(this);
-	}
-	
-	public void IrEscena16()
-	{
-		estadoActivo = new Escena16(this);
+		estadoActivo = new EscenaWardInteriorPlantaBaja (this);
 	}
 
-	public void IrEscena17()
+	public void IrEscenaWardInteriorPlantaSuperior()
 	{
-		estadoActivo = new Escena17(this);
-	}
-	
-	public void IrEscena18()
-	{
-		estadoActivo = new Escena18(this);
-	}
-	
-	public void IrEscena19()
-	{
-		estadoActivo = new Escena19(this);
+		estadoActivo = new EscenaWardInteriorPlantaSuperior (this);
 	}
 	
 	public void CambiarSceneSegunEnum(Escenas temp)
@@ -142,44 +107,16 @@ public class ControladoraEscenas
 					IrEscena3 ();
 					break;
 
-			case Escenas.Escena10:
-					IrEscena10 ();
-					break;
-			
-			case Escenas.Escena11:
-					IrEscena11 ();
-					break;
-			
-			case Escenas.Escena12:
-					IrEscena12 ();
+			case Escenas.EscenaWardExterior:
+					IrEscenaWardExterior();
 					break;
 
-			case Escenas.Escena13:
-					IrEscena13 ();
-					break;
-			
-			case Escenas.Escena14:
-					IrEscena14 ();
-					break;
-			
-			case Escenas.Escena15:
-					IrEscena15 ();
+			case Escenas.EscenaWardInteriorPlantaBaja:
+					IrEscenaWardInteriorPlantaBaja();
 					break;
 
-			case Escenas.Escena16:
-					IrEscena16 ();
-					break;
-			
-			case Escenas.Escena17:
-					IrEscena17 ();
-					break;
-			
-			case Escenas.Escena18:
-					IrEscena18 ();
-					break;
-
-			case Escenas.Escena19:
-					IrEscena19 ();
+			case Escenas.EscenaWardInteriorPlantaSuperior:
+					IrEscenaWardInteriorPlantaSuperior();
 					break;
 		}
 

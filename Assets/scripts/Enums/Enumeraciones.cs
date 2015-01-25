@@ -26,7 +26,7 @@
     /// <summary>
     /// Caracteristicas del usuario
     /// </summary>
-    public enum Caracteristicas : int
+    public enum Caracteristicas
     {
         Fuerza,
         Constitucion,
@@ -47,7 +47,7 @@
     /// <summary>
     /// Habilidades del usuario
     /// </summary>
-    public enum Habilidades : int
+    public enum Habilidades
     {
         Ninguna,
         Antropologia,
@@ -100,16 +100,18 @@
 		Escena1,
 		Escena2,
 		Escena3,
-        Escena10,
-        Escena11,
-        Escena12,
-        Escena13,
-        Escena14,
-        Escena15,
-        Escena16,
-        Escena17,
-        Escena18,
-        Escena19
+        WardCasa,
+        WardJardin,
+        WardRecibidor,
+        WardSalon,
+        WardPasillo,
+        WardHabitacionPadres,
+        WardHabitacionCharles,
+        WardPuertaDesvan,
+        WardDesvan,
+		EscenaWardExterior,
+		EscenaWardInteriorPlantaBaja,
+		EscenaWardInteriorPlantaSuperior
     }
 
     /// <summary>

@@ -14,23 +14,22 @@ public class PanelDireccionesOpciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
-			Normalizar_Botones();
-			Reorganizar_Direcciones ();
+			Reiniciar_Direcciones();
 		}
 	}
 
 	private void Reorganizar_Direcciones()
 	{
-		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaNorte.Equals(Escenas.ninguna)) 
+		if (GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaNorte.Equals("ninguna")) 
 			Desactivar (botonNorte);
 
-		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaSur.Equals(Escenas.ninguna)) 
+		if (GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaSur.Equals("ninguna"))
 			Desactivar (botonSur);
 
-		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaEste.Equals(Escenas.ninguna)) 
+		if (GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaEste.Equals("ninguna"))
 			Desactivar (botonEste);
 		
-		if (GameCenter.InstanceRef.controladoraJuego.escenaActual.EscenaOeste.Equals(Escenas.ninguna)) 
+		if (GameCenter.InstanceRef.controladoraJuego.camaraActiva.EscenaOeste.Equals("ninguna"))
 			Desactivar (botonOeste);
 	}
 
@@ -47,5 +46,11 @@ public class PanelDireccionesOpciones : MonoBehaviour
 		Image imagenBoton = objeto.GetComponent<Image> ();
 
 		imagenBoton.color = new Color (255,0,0);
+	}
+
+	public void Reiniciar_Direcciones()
+	{
+		Normalizar_Botones();
+		Reorganizar_Direcciones ();
 	}
 }

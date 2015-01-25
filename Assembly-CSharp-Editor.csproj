@@ -74,28 +74,21 @@
      <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_OptionsScreen.cs" />
      <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_OverviewScreen.cs" />
      <Compile Include="Assets\BuildReport\Scripts\Editor\Window\Screen\BRT_SizeStatsScreen.cs" />
+     <None Include="Assets\Resources\xml\Escenarios\EscenaWardExterior.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena18eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena15eng.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena12.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena19eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena10eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena13.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena11.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena11eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena14.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena18.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena16.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena15.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\BuildReport\VERSION.txt" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena10.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena13eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena14eng.xml" />
      <None Include="Assets\BuildReport\README.txt" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena19.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena17eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\Escena17.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\EscenaWardInteriorPlantaBaja.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

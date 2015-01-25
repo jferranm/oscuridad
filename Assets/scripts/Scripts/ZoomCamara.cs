@@ -12,11 +12,6 @@ public class ZoomCamara : MonoBehaviour
 
 	private RaycastHit hit;
 
-	void OnEnable()
-	{
-		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = this;
-	}
-
 	void Start() 
 	{
 		posicionInicial.x = transform.position.x;
@@ -34,7 +29,7 @@ public class ZoomCamara : MonoBehaviour
 			{
 				try
 				{
-					Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+					Ray rayo = this.camera.ScreenPointToRay(Input.mousePosition);
 					if(Physics.Raycast(rayo, out hit, Mathf.Infinity))
 					{
 						GameCenter.InstanceRef.controladoraJuego.objetoPulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Objeto(hit.collider.tag.ToString());
@@ -42,25 +37,7 @@ public class ZoomCamara : MonoBehaviour
 
 						try
 						{
-							//TODO: recordar borrar el paso de datos a la clase cuando todos los zooms esten establecidos
 							ObjetoInteractuablev2 objetoInteractuableRef = GameObject.FindGameObjectWithTag(hit.collider.tag.ToString()).GetComponent<ObjetoInteractuablev2>();
-
-							if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null)
-							//Es un personaje
-							{
-								PersonajeBase pruebaPersonaje = GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Personaje(hit.collider.tag.ToString());
-								pruebaPersonaje.PosicionNueva = objetoInteractuableRef.posicionNueva;
-								pruebaPersonaje.RotacionNueva = objetoInteractuableRef.rotacionNueva;
-								pruebaPersonaje.Smooth = objetoInteractuableRef.smooth;
-							}
-							else
-							//Es un objeto
-							{
-								ObjetoBase pruebaObjeto = GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Objeto(hit.collider.tag.ToString());
-								pruebaObjeto.PosicionNueva = objetoInteractuableRef.posicionNueva;
-								pruebaObjeto.RotacionNueva = objetoInteractuableRef.rotacionNueva;
-								pruebaObjeto.Smooth = objetoInteractuableRef.smooth;
-							}
 
 							//TODO: arreglar el tema de sonidos
 							GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
@@ -70,6 +47,9 @@ public class ZoomCamara : MonoBehaviour
 						{
 							GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
 						}
+					}
+					else
+					{
 					}
 				} catch {}
 			

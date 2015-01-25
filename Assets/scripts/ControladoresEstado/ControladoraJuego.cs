@@ -11,6 +11,8 @@ public class ControladoraJuego
 {
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
+	public CamaraEscenaBase camaraActiva;
+	public Camera cameraActiva;
 
 	public ObjetoBase objetoPulsado;
 	public PersonajeBase personajePulsado;
@@ -275,7 +277,11 @@ public class ControladoraJuego
 	{
 		foreach (ObjetoBase objeto in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
 		{
-			GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
+			try 
+			{
+				GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
+			}
+			catch {}
 		}
 	}
 
@@ -327,5 +333,55 @@ public class ControladoraJuego
 	public string Traduccion_Coger_Objeto(string nombreObjeto)
 	{
 		return nombreObjeto + "Ahora esta en el Inventario";
+	}
+
+	public void Cambiar_Camara(string camara)
+	{
+		float sourceBSOTime = 0;
+		AudioClip sourceBSOAudio = null;
+
+		if(this.camaraActiva != null)
+		{
+			sourceBSOTime = cameraActiva.audio.time;
+			sourceBSOAudio = cameraActiva.audio.clip;
+			cameraActiva.audio.Stop();
+			cameraActiva.enabled = false;
+			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
+				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar), false);
+		}
+
+		cameraActiva = GameObject.Find (camara).camera;
+		cameraActiva.enabled = true;
+		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();;
+		camaraActiva = this.escenaActual.Buscar_Camara (camara);
+
+		if (sourceBSOAudio != null) 
+		{
+			cameraActiva.audio.clip = sourceBSOAudio;
+			cameraActiva.audio.time = sourceBSOTime;
+			cameraActiva.audio.Play();
+			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
+			{
+				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
+				Inicializar_Objetos();
+			}
+		}
+	}
+
+	public void Desactivar_Camaras()
+	{
+		foreach (CamaraEscenaBase nueva in this.escenaActual.ListaCamaras) 
+		{
+			GameObject.Find(nueva.Nombre).camera.enabled = false;
+		}
+	}
+
+	public void DesactivarHijos(GameObject g, bool a) 
+	{
+		g.SetActive (a);
+		
+		foreach (Transform child in g.transform) {
+			DesactivarHijos(child.gameObject, a);
+		}
 	}
 }
