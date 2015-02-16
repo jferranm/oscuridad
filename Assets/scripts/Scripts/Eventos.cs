@@ -10,22 +10,36 @@ public class Eventos : MonoBehaviour
 	public void BotonComenzar()
 	{
 		string archivoJugador = Path.Combine (GameCenter.InstanceRef.USERPATH, "Jugador.xml");
+		OpcionesCanvasMenuPrincipal opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
 
 		if (File.Exists (archivoJugador)) 
 		{
 			//TODO: empezar por la ultima pantalla
 			GameCenter.InstanceRef.controladoraJuego.CargarJugador ();
 			GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
+		} 
+		else 
+		{
+			opciones.escena0.SetActive (false);
+			opciones.escena2.SetActive (false);
+			opciones.escena1.SetActive (true);
 		}
-		else
-			GameCenter.InstanceRef.controladoraEscenas.IrEscena1();
+	}
+
+	public void BotonOpciones()
+	{
+		OpcionesCanvasMenuPrincipal opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
+
+		opciones.escena0.SetActive (false);
+		opciones.escena1.SetActive (false);
+		opciones.escena2.SetActive (true);
 	}
 
 	public void BotonPersonaje(string nombrePersonaje)
 	{
 		switch (nombrePersonaje) 
 		{
-			case "Maria":
+			case "Marla":
 				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.MarlaGibbs);
 				break;
 
@@ -41,16 +55,11 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
 	}
 
-	public void BotonAtras(string nombreEscena)
+	public void BotonSalir()
 	{
-		switch (nombreEscena) 
-		{
-			case "Escena1":
-				GameCenter.InstanceRef.controladoraEscenas.IrMenuPrincipal();
-				break;
-		}
+		Application.Quit ();
 	}
-
+	
 	public void BotonDireccion(GameObject botonDireccion)
 	{
 		Color rojo = new Color (255,0,0);

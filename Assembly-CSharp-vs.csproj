@@ -74,6 +74,7 @@
      <Compile Include="Assets\scripts\Enums\estadosJugador.cs" />
      <Compile Include="Assets\scripts\Enums\estadosUsuario.cs" />
      <Compile Include="Assets\scripts\Interfaces\IEscenario.cs" />
+     <Compile Include="Assets\scripts\Scripts\AumentarRendimiento.cs" />
      <Compile Include="Assets\scripts\Scripts\Eventos.cs" />
      <Compile Include="Assets\scripts\Scripts\FondoPantalla.cs" />
      <Compile Include="Assets\scripts\Scripts\ObjetoInteractuablev2.cs" />

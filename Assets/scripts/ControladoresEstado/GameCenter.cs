@@ -12,6 +12,7 @@ public class GameCenter : MonoBehaviour
 	public ControladoraGUI controladoraGUI;
 	public ControladoraJuego controladoraJuego;
 	public GameObject CanvasUIJuego;
+	public GameObject CanvasMenuPrincipal;
 
 	public string USERPATH;
 
@@ -45,11 +46,17 @@ public class GameCenter : MonoBehaviour
 		controladoraSonidos = ControladoraSonidos.InstanceRef ();
 		controladoraGUI = ControladoraGUI.InstanceRef ();
 		controladoraJuego = ControladoraJuego.InstanceRef ();
-		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
 
-		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
+		//-------------- Opciones varias -------------------------\\
+		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);
 
 		USERPATH = Application.persistentDataPath;
+
+		//-------------- Inicializamos Jugador --------------------\\
+		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 	}
 
 	void Start()

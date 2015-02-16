@@ -219,15 +219,12 @@ public class ControladoraJuego
 		TextAsset origen = null;
 
 		//Copiamos escenarios
-		foreach (string escenario in Enum.GetNames(typeof(Escenas)))
+		foreach (string escenario in Enum.GetNames(typeof(XmlDatosEscenas)))
 		{
-			if(escenario != "ninguna" && escenario != "MenuPrincipal" && escenario != "Escena1" && escenario != "Escena2" && escenario != "Escena3")
-			{
-				origen = (TextAsset)Resources.Load("xml/Escenarios/"+escenario, typeof(TextAsset));
-				destino = Path.Combine(GameCenter.InstanceRef.USERPATH, escenario+".xml");
-				if (!File.Exists (destino))
-					Crear_Fichero (origen, destino);
-			}
+			origen = (TextAsset)Resources.Load("xml/Escenarios/"+escenario, typeof(TextAsset));
+			destino = Path.Combine(GameCenter.InstanceRef.USERPATH, escenario+".xml");
+			if (!File.Exists (destino))
+				Crear_Fichero (origen, destino);
 		}
 	}
 

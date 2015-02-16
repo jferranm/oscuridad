@@ -211,4 +211,14 @@
 		enZoomEspera,
 		enInventario
 	};
+
+	/// <summary>
+	/// Enumeracion para la copia de xml al dispositivo
+	/// </summary>
+	public enum XmlDatosEscenas
+	{
+		EscenaWardExterior,
+		EscenaWardInteriorPlantaBaja,
+		EscenaWardInteriorPlantaSuperior
+	};
 }
