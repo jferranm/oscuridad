@@ -37,8 +37,6 @@ public class ZoomCamara : MonoBehaviour
 
 						try
 						{
-							ObjetoInteractuablev2 objetoInteractuableRef = GameObject.FindGameObjectWithTag(hit.collider.tag.ToString()).GetComponent<ObjetoInteractuablev2>();
-
 							//TODO: arreglar el tema de sonidos
 							GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
 							GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;

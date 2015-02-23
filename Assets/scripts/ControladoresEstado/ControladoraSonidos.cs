@@ -13,6 +13,9 @@ public class ControladoraSonidos
 	//B.S.O.
 	public AudioClip bsoEscenaCasa;
 
+	public float volumenSonido = 1f;
+	public float volumenMusica = 1f;
+
 	public ControladoraSonidos()
 	{
 	}

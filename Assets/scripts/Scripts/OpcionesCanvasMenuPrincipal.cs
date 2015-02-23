@@ -9,6 +9,11 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 	public GameObject escena1;
 	public GameObject escena2;
 
+	public Toggle toggleMusica;
+	public Slider sliderMusica;
+	public Toggle toggleSonido;
+	public Slider sliderSonido;
+
 	void OnEnable()
 	{
 		if (escena0.activeSelf) 
@@ -17,7 +22,7 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 
 			foreach (Transform objetoHijo in escena0.transform) 
 			{
-				if (objetoHijo.name.Equals ("botonComenzar")) 
+				if (objetoHijo.name.Equals ("btComenzar")) 
 				{
 					if (File.Exists (archivoJugador)) 
 						objetoHijo.GetChild (0).GetComponent<Text> ().text = "CONTINUAR";

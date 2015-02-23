@@ -35,6 +35,15 @@ public class Eventos : MonoBehaviour
 		opciones.escena2.SetActive (true);
 	}
 
+	public void BotonPartidaNueva()
+	{
+		OpcionesCanvasMenuPrincipal opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
+
+		opciones.escena0.SetActive (false);
+		opciones.escena1.SetActive (true);
+		opciones.escena2.SetActive (false);
+	}
+
 	public void BotonPersonaje(string nombrePersonaje)
 	{
 		switch (nombrePersonaje) 
@@ -58,6 +67,34 @@ public class Eventos : MonoBehaviour
 	public void BotonSalir()
 	{
 		Application.Quit ();
+	}
+
+	public void ActivarDesactivarMusica(bool seleccion)
+	{
+		if (seleccion) 
+		{
+			GameCenter.InstanceRef.controladoraSonidos.volumenMusica = 1f;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.enabled = true;
+		} 
+		else
+		{
+			GameCenter.InstanceRef.controladoraSonidos.volumenMusica = 0;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.enabled = false;
+		}
+	}
+
+	public void ActivarDesactivarSonido(bool seleccion)
+	{
+		if (seleccion) 
+		{
+			GameCenter.InstanceRef.controladoraSonidos.volumenSonido = 1f;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.enabled = true;
+		} 
+		else
+		{
+			GameCenter.InstanceRef.controladoraSonidos.volumenSonido = 0;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.enabled = false;
+		}
 	}
 	
 	public void BotonDireccion(GameObject botonDireccion)
