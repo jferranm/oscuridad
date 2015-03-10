@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: vBugInitializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.8544617, y: 116.723412, z: -239.451126}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d735273b24a88448afc9d337353bde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 0
+  dontDestroyOnLoad: 1
+  settings:
+    general:
+      debugMode: 0
+      multiThreading: 1
+      framePadding: 10
+      verticalSlice:
+        maxPendingQueueSize: 15
+        maxPendingLifetimeMS: 5000
+        allowMainThreadSleep: 0
+        maxPendingSleep: 5
+        sleepTimeMS: 30
+      dataProcessing:
+        threadSleepTime: 5
+        processPackageMaxQueueSize: 64
+        processPackageMaxPendingSize: 64
+        processingType: 1
+    recording:
+      systemInfoRecording:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: 30
+          targetInterval: 1
+          frameOffset: 0
+        autoEnableProfiler: 1
+        memoryUpdateInterval: 30
+        gcForceFullCollection: 0
+        recordTexture2Ds: 1
+        recordRenderTextures: 1
+        recordMaterials: 1
+        recordMeshes: 1
+        recordAnimations: 1
+        recordAudioClips: 1
+      debugLogsRecording:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: -1
+          targetInterval: -1
+          frameOffset: 0
+      humanInputRecording:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: -1
+          targetInterval: -1
+          frameOffset: 0
+        activeProviders:
+        - MouseInputProvider
+        - KeyboardInputProvider
+        - TouchInputProvider
+        - AxisInputProvider
+        mouse:
+          moveDistanceThreshold: 5
+          holdDurationThreshold: .25
+        axis:
+          useGetAxisRaw: 0
+          detectMotionThreshold: .5
+          definitions:
+          - x: Horizontal
+            y: Vertical
+          - x: Fire1
+            y: 
+          - x: Fire2
+            y: 
+          - x: Fire3
+            y: 
+          - x: Jump
+            y: 
+          - x: Mouse X
+            y: Mouse Y
+          - x: Mouse X
+            y: Mouse Y
+          - x: Mouse ScrollWheel
+            y: 
+          - x: Window Shake X
+            y: Window Shake Y
+      meshDataRecording:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: 30
+          targetInterval: 3
+          frameOffset: 1
+        forceKeyFrameInterval: 120
+        scanRecursiveUp: 1
+        maxBlendWeights: 1
+        activeProviders:
+        - MeshFilterProvider
+        - SkinnedMeshProvider
+      particleDataRecording:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: 30
+          targetInterval: 3
+          frameOffset: 0
+        activeProviders:
+        - ShurikenParticleDataProvider
+        - LegacyParticleDataProvider
+      materialDataRecording:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: 30
+          targetInterval: 3
+          frameOffset: 0
+      gameObjectReflection:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: 30
+          targetInterval: 3
+          frameOffset: 2
+        allowStaticGameObjectScanning: 0
+        allowCustomClassPropertyScanning: 0
+        objectMemberScanDepth: 3
+        collecionMemberMaxSize: 25
+      screenCapture:
+        enabled: 1
+        captureInterval:
+          maxFrameRate: 30
+          targetInterval: 3
+          frameOffset: 2
+        maxScreenCaptureSize: 512
+        cropMethod: 0
+        quality: 3
+        captureMethod: 0
+        rtFormat: 0
+        rtDepth: 24
+        jitRenderLowQuality: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

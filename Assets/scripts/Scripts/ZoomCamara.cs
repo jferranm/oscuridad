@@ -29,7 +29,7 @@ public class ZoomCamara : MonoBehaviour
 			{
 				try
 				{
-					Ray rayo = this.camera.ScreenPointToRay(Input.mousePosition);
+					Ray rayo = this.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
 					if(Physics.Raycast(rayo, out hit, Mathf.Infinity))
 					{
 						GameCenter.InstanceRef.controladoraJuego.objetoPulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Objeto(hit.collider.tag.ToString());
@@ -37,17 +37,17 @@ public class ZoomCamara : MonoBehaviour
 
 						try
 						{
-							//TODO: arreglar el tema de sonidos
-							GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
+							GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
 							GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
 						}
 						catch
 						{
-							GameCenter.InstanceRef.audio.PlayOneShot(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
+							GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
 						}
 					}
 					else
 					{
+						GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
 					}
 				} catch {}
 			

@@ -339,24 +339,24 @@ public class ControladoraJuego
 
 		if(this.camaraActiva != null)
 		{
-			sourceBSOTime = cameraActiva.audio.time;
-			sourceBSOAudio = cameraActiva.audio.clip;
-			cameraActiva.audio.Stop();
+			sourceBSOTime = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time;
+			sourceBSOAudio = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip;
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Stop();
 			cameraActiva.enabled = false;
 			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
 				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar), false);
 		}
 
-		cameraActiva = GameObject.Find (camara).camera;
+		cameraActiva = GameObject.Find (camara).GetComponent<Camera>();
 		cameraActiva.enabled = true;
-		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();;
+		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();
 		camaraActiva = this.escenaActual.Buscar_Camara (camara);
 
 		if (sourceBSOAudio != null) 
 		{
-			cameraActiva.audio.clip = sourceBSOAudio;
-			cameraActiva.audio.time = sourceBSOTime;
-			cameraActiva.audio.Play();
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip = sourceBSOAudio;
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time = sourceBSOTime;
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Play();
 			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
 			{
 				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
@@ -369,7 +369,7 @@ public class ControladoraJuego
 	{
 		foreach (CamaraEscenaBase nueva in this.escenaActual.ListaCamaras) 
 		{
-			GameObject.Find(nueva.Nombre).camera.enabled = false;
+			GameObject.Find(nueva.Nombre).GetComponent<Camera>().enabled = false;
 		}
 	}
 

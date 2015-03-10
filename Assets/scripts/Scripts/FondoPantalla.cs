@@ -7,6 +7,6 @@ public class FondoPantalla : MonoBehaviour
 	{
 		this.transform.position = Vector3.zero;
 		this.transform.localScale = Vector3.zero;
-		this.guiTexture.pixelInset = new Rect(0,0, Screen.width, Screen.height);
+		this.GetComponent<GUITexture>().pixelInset = new Rect(0,0, Screen.width, Screen.height);
 	}
 }

@@ -108,8 +108,6 @@ public class ControladoraJugador
 		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position = Vector3.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position, vectorAuxiliarPosicion, Time.deltaTime*smoothAuxiliar);
 		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.rotation = Quaternion.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.rotation, Quaternion.Euler(vectorAuxiliarRotacion.x, vectorAuxiliarRotacion.y, vectorAuxiliarRotacion.z), Time.deltaTime*smoothAuxiliar);
 
-		Debug.Log ("Posicion Objeto:" + GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position);
-		Debug.Log ("Posicion Camara:" + vectorAuxiliarPosicion);
 		if (GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position.ToString().Equals(vectorAuxiliarPosicion.ToString())) 
 		{
 			EstadoJugador = EstadosJugador.enZoomEspera;

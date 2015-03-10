@@ -15,7 +15,7 @@ public class AumentarRendimiento : MonoBehaviour {
  private float[] rayGridX = new float[] {0.00f, 0.01f, 0.06f, 0.11f, 0.16f, 0.21f, 0.26f, 0.31f, 0.36f, 0.41f, 0.43f, 0.45f, 0.47f, 0.48f, 0.49f, 0.50f, 0.51f, 0.52f, 0.53f, 0.55f, 0.57f, 0.59f, 0.64f, 0.69f, 0.74f, 0.79f, 0.84f, 0.89f, 0.94f, 0.99f, 1.00f};
  void Start ()
  {
-  camera.farClipPlane = defaultFarPlane;
+  GetComponent<Camera>().farClipPlane = defaultFarPlane;
 
   StartCoroutine (AdjustFarPlane());
  }
@@ -24,7 +24,7 @@ public class AumentarRendimiento : MonoBehaviour {
  {
   while (true)
   {
-   int farPlane = (int) camera.farClipPlane + farPlaneBuffer;
+   int farPlane = (int) GetComponent<Camera>().farClipPlane + farPlaneBuffer;
    int distance = minDistance;
    bool ExtendFarPlane = false;
 
@@ -48,19 +48,19 @@ public class AumentarRendimiento : MonoBehaviour {
     // Far plane should extend instantly, but recede slowly.
     if (ExtendFarPlane == false)
     {
-     camera.farClipPlane -= rateOfReceding;
-     if (camera.farClipPlane < minDistance) camera.farClipPlane = minDistance;
+     GetComponent<Camera>().farClipPlane -= rateOfReceding;
+     if (GetComponent<Camera>().farClipPlane < minDistance) GetComponent<Camera>().farClipPlane = minDistance;
     }
     else
     {
-     camera.farClipPlane = distance;
+     GetComponent<Camera>().farClipPlane = distance;
     }
   }
  }
 
  int CastOcclusionRay (float graphX, float graphY)
  {
-  Ray ray = camera.ViewportPointToRay (new Vector3 (graphX, graphY, 0));
+  Ray ray = GetComponent<Camera>().ViewportPointToRay (new Vector3 (graphX, graphY, 0));
 
   if (makeRaysVisible == true) Debug.DrawRay (ray.origin, ray.direction*20, Color.red);
 

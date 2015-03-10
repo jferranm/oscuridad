@@ -55,6 +55,9 @@ public class GameCenter : MonoBehaviour
 
 		USERPATH = Application.persistentDataPath;
 
+		controladoraSonidos.EmisorBSO = GameObject.Find ("EmisorBSO");
+		controladoraSonidos.EmisorFX = GameObject.Find ("EmisorFX");
+
 		//-------------- Inicializamos Jugador --------------------\\
 		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 	}
@@ -100,8 +103,7 @@ public class GameCenter : MonoBehaviour
 		controladoraJuego.Cambiar_Camara (controladoraJuego.escenaActual.CamaraInicio.Nombre);
 
 		//Comenzamos BSO
-		controladoraJuego.cameraActiva.audio.clip = controladoraSonidos.bsoEscenaCasa;
-		controladoraJuego.cameraActiva.audio.Play ();
+		controladoraSonidos.Lanzar_Bso (Application.loadedLevelName);
 
 		//Insertamos marcador de Escena visitada en el jugador
 		controladoraJuego.jugadorActual.AddEscenaVisitada (controladoraJuego.camaraActiva.Escena);

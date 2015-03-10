@@ -7,6 +7,26 @@ using Oscuridad.Enumeraciones;
 
 public class Eventos : MonoBehaviour 
 {
+	public bool toggleMusica
+	{
+		set{ ActivarDesactivarMusica(value);}
+	}
+
+	public float volumenMusica
+	{
+		set { AjustarVolumenMusica(value); }
+	}
+
+	public bool toggleSonido
+	{
+		set{ ActivarDesactivarSonido(value);}
+	}
+
+	public float volumenSonido
+	{
+		set { AjustarVolumenSonido(value); }
+	}
+
 	public void BotonComenzar()
 	{
 		string archivoJugador = Path.Combine (GameCenter.InstanceRef.USERPATH, "Jugador.xml");
@@ -69,34 +89,48 @@ public class Eventos : MonoBehaviour
 		Application.Quit ();
 	}
 
-	public void ActivarDesactivarMusica(bool seleccion)
+	public void ActivarDesactivarMusica(bool eleccion)
 	{
-		if (seleccion) 
+		if (eleccion) 
 		{
-			GameCenter.InstanceRef.controladoraSonidos.volumenMusica = 1f;
+			volumenMusica = 1;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value = 1;
 			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.enabled = true;
 		} 
-		else
+		else 
 		{
-			GameCenter.InstanceRef.controladoraSonidos.volumenMusica = 0;
+			volumenMusica = 0;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value = 0;
 			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.enabled = false;
 		}
 	}
 
-	public void ActivarDesactivarSonido(bool seleccion)
+	public void AjustarVolumenMusica(float nuevoVolumen)
 	{
-		if (seleccion) 
+		GameCenter.InstanceRef.controladoraSonidos.volumenMusica = nuevoVolumen;
+	}
+
+	public void ActivarDesactivarSonido(bool eleccion)
+	{
+		if (eleccion) 
 		{
-			GameCenter.InstanceRef.controladoraSonidos.volumenSonido = 1f;
+			volumenSonido = 1;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value = 1;
 			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.enabled = true;
 		} 
-		else
+		else 
 		{
-			GameCenter.InstanceRef.controladoraSonidos.volumenSonido = 0;
+			volumenSonido = 0;
+			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value = 0;
 			GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.enabled = false;
 		}
 	}
-	
+
+	public void AjustarVolumenSonido(float nuevoVolumen)
+	{
+		GameCenter.InstanceRef.controladoraSonidos.volumenSonido = nuevoVolumen;
+	}
+
 	public void BotonDireccion(GameObject botonDireccion)
 	{
 		Color rojo = new Color (255,0,0);
