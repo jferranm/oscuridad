@@ -42,9 +42,16 @@ public class ControladoraSonidos
 		if (instanceRef == null)
 		{
 			instanceRef = new ControladoraSonidos();
+			instanceRef.Inicializar();
 		}
 		
 		return instanceRef;
+	}
+
+	public void Inicializar()
+	{
+		EmisorBSO = GameObject.Find ("EmisorBSO");
+		EmisorFX = GameObject.Find ("EmisorFX");
 	}
 
 	public void Start()

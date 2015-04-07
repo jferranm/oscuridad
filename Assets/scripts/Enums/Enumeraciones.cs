@@ -221,4 +221,14 @@
 		EscenaWardInteriorPlantaBaja,
 		EscenaWardInteriorPlantaSuperior
 	};
+
+	/// <summary>
+	/// Enumeracion para el idioma del juego
+	/// </summary>
+	public enum Idioma
+	{
+		spanish,
+		english,
+		french
+	}
 }

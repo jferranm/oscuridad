@@ -43,9 +43,15 @@ public class ControladoraJugador
 		if (instanceRef == null)
 		{
 			instanceRef = new ControladoraJugador();
+			instanceRef.Inicializar();
 		}
 
 		return instanceRef;
+	}
+
+	public void Inicializar()
+	{
+		EstadoJugador = EstadosJugador.enMenus;
 	}
 
 	public void Update()

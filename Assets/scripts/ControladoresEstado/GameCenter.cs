@@ -40,6 +40,8 @@ public class GameCenter : MonoBehaviour
 	
 	private void InicializarControladoras()
 	{
+		USERPATH = Application.persistentDataPath;
+
 		//-------------- Inicializo los Handlers ----------------\\
 		controladoraJugador = ControladoraJugador.InstanceRef ();
 		controladoraEscenas = ControladoraEscenas.InstanceRef ();
@@ -52,14 +54,6 @@ public class GameCenter : MonoBehaviour
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);
-
-		USERPATH = Application.persistentDataPath;
-
-		controladoraSonidos.EmisorBSO = GameObject.Find ("EmisorBSO");
-		controladoraSonidos.EmisorFX = GameObject.Find ("EmisorFX");
-
-		//-------------- Inicializamos Jugador --------------------\\
-		controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 	}
 
 	void Start()

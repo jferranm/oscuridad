@@ -9,10 +9,14 @@ using Oscuridad.Clases;
 [System.Serializable]
 public class ControladoraJuego
 {
+	private string pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
+	private string pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
+
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
 	public CamaraEscenaBase camaraActiva;
 	public Camera cameraActiva;
+	public Config configuracionJuego;
 
 	public ObjetoBase objetoPulsado;
 	public PersonajeBase personajePulsado;
@@ -35,6 +39,8 @@ public class ControladoraJuego
 		jugadorActual.EstadoJugador = estadosJugador.enMenus;
 
 		escenaActual = new EscenaBase ();
+
+		CargarConfiguracion ();
 	}
 
 	public void InicializarEscena()
@@ -243,31 +249,54 @@ public class ControladoraJuego
 		}
 	}
 
+	public void CargarConfiguracion()
+	{
+		cXML nuevoXML = new cXML ();
+
+		if (File.Exists (pathConfig))
+			configuracionJuego = nuevoXML.Cargar_Clase_Serializable<Config> (pathConfig, configuracionJuego);
+		else 
+		{
+			configuracionJuego = new Config(Application.systemLanguage);
+			GrabarConfiguracion();
+		}
+
+		nuevoXML.Cerrar ();
+	}
+
+	public void GrabarConfiguracion()
+	{
+		cXML nuevoXML = new cXML ();
+		nuevoXML.Guardar_Clase_Serializable<Config> (pathConfig, configuracionJuego);
+		nuevoXML.Cerrar ();
+	}
+
 	public void CargarJugador()
 	{
 		cXML nuevoXML = new cXML ();
-		string pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
 		jugadorActual = nuevoXML.Cargar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
+		nuevoXML.Cerrar ();
 	}
 
 	public void GrabarJugador()
 	{
 		cXML nuevoXML = new cXML ();
-		string pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
 		nuevoXML.Guardar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
+		nuevoXML.Cerrar ();
 	}
 
 	public EscenaBase Cargar_Escena(Escenas escena)
 	{
 		cXML nuevoxml = new cXML ();
 		return nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, escena.ToString()+".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
+		nuevoxml.Cerrar ();
 	}
 
 	public void Guardar_Escena(Escenas escena)
 	{
 		cXML nuevoxml = new cXML ();
 		nuevoxml.Guardar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, escena.ToString () + ".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
-
+		nuevoxml.Cerrar ();
 	}
 
 	public void Inicializar_Objetos()
