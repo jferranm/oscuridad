@@ -25,6 +25,58 @@ namespace Oscuridad.Clases
 			set { idiomaJuego = value; }
 		}
 
+		private bool sonidoActivado;
+		/// <summary>
+		/// booleana para control de activacion/desactivacion de sonido en el juego
+		/// </summary>
+		/// <value>
+		/// true activado, false desactivado
+		/// </value>
+		public bool SonidoActivado 
+		{
+			get { return sonidoActivado; }
+			set { sonidoActivado = value; }
+		}
+
+		private float volumenSonido;
+		/// <summary>
+		/// Control del volumen del sonido
+		/// </summary>
+		/// <value>
+		/// valor tipo float con el valor del volumen del sonido
+		/// </value>
+		public float VolumenSonido 
+		{
+			get { return volumenSonido; }
+			set { volumenSonido = value; }
+		}
+
+		private bool musicaActivada;
+		/// <summary>
+		/// Control de la activacion/desactivacion de la musica
+		/// </summary>
+		/// <value>
+		/// true activada, false desactivada
+		/// </value>
+		public bool MusicaActivada 
+		{
+			get { return musicaActivada; }
+			set { musicaActivada = value; }
+		}
+
+		private float volumenMusica;
+		/// <summary>
+		/// Control del volumen de la musica
+		/// </summary>
+		/// <value>
+		/// valor float con el volumen de la musica
+		/// </value>
+		public float VolumenMusica 
+		{
+			get { return volumenMusica;	}
+			set { volumenMusica = value; }
+		}
+
 		/// <summary>
 		/// Constructor de la clase <see cref="Config"/>.
 		/// </summary>
@@ -49,10 +101,10 @@ namespace Oscuridad.Clases
 		{
 			switch (idioma) 
 			{
-				case SystemLanguage.English : return Idioma.english;
-				case SystemLanguage.French : return Idioma.french;
-				case SystemLanguage.Spanish : return Idioma.spanish;
-				default: return Idioma.english;
+				case SystemLanguage.English : return Idioma.eng;
+				case SystemLanguage.French : return Idioma.fr;
+				case SystemLanguage.Spanish : return Idioma.spa;
+				default: return Idioma.eng;
 			}
 		}
 	}

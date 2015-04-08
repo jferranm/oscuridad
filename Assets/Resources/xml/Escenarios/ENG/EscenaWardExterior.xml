@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Escena>EscenaWardExterior</Escena>
+  <ObjetosEscena />
+  <PersonajesEscena />
+  <ListaCamaras>
+    <CamaraEscenaBase>
+      <Nombre>CamaraCasa</Nombre>
+      <Escena>WardCasa</Escena>
+      <NombreEscena>Exterior of the House</NombreEscena>
+      <Descripcion>It's a big and stylish house. On the left, there is a small entrance to the private garden.</Descripcion>
+      <EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
+      <EscenaSur>ninguna</EscenaSur>
+      <EscenaEste>CamaraJardin</EscenaEste>
+      <EscenaOeste>ninguna</EscenaOeste>
+      <EscenaHabilitar></EscenaHabilitar>
+    </CamaraEscenaBase>
+    <CamaraEscenaBase>
+      <Nombre>CamaraJardin</Nombre>
+      <Escena>WardJardin</Escena>
+      <NombreEscena>Garden</NombreEscena>
+      <Descripcion>Garden seems a bit untidy, on the middle there's a small altar made of stone covered with mold, the center is hollow and filled of recent soil. From here you can see attic windows, one of them covered with wooden planks, another was, but now is open. </Descripcion>
+      <EscenaNorte>ninguna</EscenaNorte>
+      <EscenaSur>ninguna</EscenaSur>
+      <EscenaEste>ninguna</EscenaEste>
+      <EscenaOeste>CamaraCasa</EscenaOeste>
+      <EscenaHabilitar></EscenaHabilitar>
+    </CamaraEscenaBase>
+  </ListaCamaras>
+  <CamaraInicio>
+    <Nombre>CamaraCasa</Nombre>
+    <Escena>WardCasa</Escena>
+    <NombreEscena>Exterior of the House</NombreEscena>
+    <Descripcion>It's a big and stylish house. On the left, there is a small entrance to the private garden.</Descripcion>
+    <EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
+    <EscenaSur>ninguna</EscenaSur>
+    <EscenaEste>CamaraJardin</EscenaEste>
+    <EscenaOeste>ninguna</EscenaOeste>
+    <EscenaHabilitar></EscenaHabilitar>
+  </CamaraInicio>
+  <EscenasDeshabilitar />
+</EscenaBase>

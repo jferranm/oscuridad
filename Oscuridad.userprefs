@@ -2,9 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="44" Column="3" />
-      <File FileName="Assets\scripts\Clases\Clases Base\Config.cs" Line="54" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="299" Column="22" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="42" Column="3" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="324" Column="76" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

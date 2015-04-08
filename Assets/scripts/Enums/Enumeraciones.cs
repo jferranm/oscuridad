@@ -227,8 +227,20 @@
 	/// </summary>
 	public enum Idioma
 	{
-		spanish,
-		english,
-		french
+		spa,
+		eng,
+		fr
 	}
+
+	/// <summary>
+	/// Enumeracion para el control del estado del usuario
+	/// </summary>
+	public enum estadoUsuario
+	{
+		enHojaDePersonaje,
+		enInventario,
+		enMapa,
+		enOpciones,
+		enJuego
+	};
 }

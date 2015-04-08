@@ -33,12 +33,6 @@ public class ControladoraEscenas
 		}
 	}
 	
-	public void OnGUI()
-	{
-		if(estadoActivo != null)
-			estadoActivo.Mostrar();
-	}
-	
 	public void OnLevelWasLoaded(int level)
 	{
 		if (estadoActivo != null)

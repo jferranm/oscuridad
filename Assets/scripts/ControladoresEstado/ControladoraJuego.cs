@@ -9,14 +9,16 @@ using Oscuridad.Clases;
 [System.Serializable]
 public class ControladoraJuego
 {
-	private string pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
-	private string pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
+	private string pathConfig;
+	private string pathJugador;
+	private string pathIdioma;
 
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
 	public CamaraEscenaBase camaraActiva;
 	public Camera cameraActiva;
 	public Config configuracionJuego;
+	public Idioma idiomaJuego;
 
 	public ObjetoBase objetoPulsado;
 	public PersonajeBase personajePulsado;
@@ -35,6 +37,9 @@ public class ControladoraJuego
 
 	public void Inicializar()
 	{
+		pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
+		pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
+
 		jugadorActual = new JugadorBase ();
 		jugadorActual.EstadoJugador = estadosJugador.enMenus;
 
@@ -225,12 +230,19 @@ public class ControladoraJuego
 		TextAsset origen = null;
 
 		//Copiamos escenarios
-		foreach (string escenario in Enum.GetNames(typeof(XmlDatosEscenas)))
+		foreach(string idiomaXml in Enum.GetNames(typeof(Idioma)))
 		{
-			origen = (TextAsset)Resources.Load("xml/Escenarios/"+escenario, typeof(TextAsset));
-			destino = Path.Combine(GameCenter.InstanceRef.USERPATH, escenario+".xml");
-			if (!File.Exists (destino))
-				Crear_Fichero (origen, destino);
+			if(!Directory.Exists(GameCenter.InstanceRef.USERPATH + "/" + idiomaXml))
+				Crear_Directorio(GameCenter.InstanceRef.USERPATH + "/" + idiomaXml);
+
+			foreach (string escenario in Enum.GetNames(typeof(XmlDatosEscenas)))
+			{
+				origen = (TextAsset)Resources.Load("xml/Escenarios/"+ idiomaXml.ToUpper() + "/" + escenario, typeof(TextAsset));
+				destino = GameCenter.InstanceRef.USERPATH + "/" + idiomaXml + "/" + escenario + ".xml";
+
+				if (!File.Exists (destino))
+					Crear_Fichero (origen, destino);
+			}
 		}
 	}
 
@@ -249,6 +261,18 @@ public class ControladoraJuego
 		}
 	}
 
+	public void Crear_Directorio(string nuevoDestino)
+	{
+		try
+		{
+			Directory.CreateDirectory(nuevoDestino);
+		}
+		catch (IOException ex) 
+		{
+			Debug.LogError(ex.Message);
+		}
+	}
+
 	public void CargarConfiguracion()
 	{
 		cXML nuevoXML = new cXML ();
@@ -261,6 +285,8 @@ public class ControladoraJuego
 			GrabarConfiguracion();
 		}
 
+		idiomaJuego = configuracionJuego.IdiomaJuego;
+		pathIdioma = Path.Combine (GameCenter.InstanceRef.USERPATH, idiomaJuego.ToString ());
 		nuevoXML.Cerrar ();
 	}
 
@@ -288,14 +314,14 @@ public class ControladoraJuego
 	public EscenaBase Cargar_Escena(Escenas escena)
 	{
 		cXML nuevoxml = new cXML ();
-		return nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, escena.ToString()+".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
+		return nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (pathIdioma, escena.ToString()+".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
 		nuevoxml.Cerrar ();
 	}
 
 	public void Guardar_Escena(Escenas escena)
 	{
 		cXML nuevoxml = new cXML ();
-		nuevoxml.Guardar_Clase_Serializable<EscenaBase> (Path.Combine (Application.persistentDataPath, escena.ToString () + ".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
+		nuevoxml.Guardar_Clase_Serializable<EscenaBase> (Path.Combine (pathIdioma, escena.ToString () + ".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
 		nuevoxml.Cerrar ();
 	}
 

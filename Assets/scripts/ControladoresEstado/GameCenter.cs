@@ -68,19 +68,9 @@ public class GameCenter : MonoBehaviour
 		controladoraJugador.Update ();
 	}
 
-	void OnGUI()
-	{
-		controladoraEscenas.OnGUI ();
-	}
-
 	void OnLevelWasLoaded(int level)
 	{
 		controladoraEscenas.OnLevelWasLoaded(level);
-	}
-
-	public void CoroutinaBase(IEnumerator CoroutinaAEjecutar)
-	{
-		StartCoroutine(CoroutinaAEjecutar);
 	}
 
 	public void Inicializar_Escenario()

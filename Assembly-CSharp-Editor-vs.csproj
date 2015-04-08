@@ -107,22 +107,26 @@
      <Compile Include="Assets\vBug\Editor\Windows\vBugToolbarNavigation.cs" />
      <Compile Include="Assets\vBug\Editor\Windows\vBugWindowMediator.cs" />
      <None Include="Assets\vBug\Documentation\vBug - Changelog.txt" />
-     <None Include="Assets\Resources\xml\Escenarios\EscenaWardExterior.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaBaja.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena18eng.xml" />
      <None Include="Assets\Resources\vBug\vBugShaderData.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena15eng.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena19eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena10eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena11eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\EscenaWardInteriorPlantaSuperior.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaSuperior.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaBaja.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaBaja.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardExterior.xml" />
      <None Include="Assets\BuildReport\VERSION.txt" />
+     <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena13eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena14eng.xml" />
      <None Include="Assets\BuildReport\README.txt" />
+     <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardExterior.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardExterior.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\Escena17eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\EscenaWardInteriorPlantaBaja.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.4/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -130,7 +134,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.4/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CSharp">
- <HintPath>D:/Programacion/SVN/OscuridadGit/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
+ <HintPath>D:/Programacion/SVN/OscuridadGit/SoloContraLaOscuridad/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
