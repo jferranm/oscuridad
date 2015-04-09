@@ -5,13 +5,13 @@
     <ObjetoBase>
       <Nombre>PeriodicoSalon</Nombre>
       <Objeto>Ninguno</Objeto>
-      <DescripcionNombre>Periodico Salon</DescripcionNombre>
+      <DescripcionNombre>Living Room Newspaper</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Es un ejemplar del Arkham Advertiser de hace unos dias. En primera plana se habla de los saqueos nocturnos que se estan produciendo en el viejo cementerio desde hace unos meses. Se han abierto las tumbas de antiguos ciudadanos de Arkham y se han robado sus restos sin que la policia haya podido averiguar nada sobre los asaltantes. El vigilante del Cementerio, el señor Eduard Smith, cuenta que no ha sido capaz de descubrir a los ladrones de tumbas durante sus fechorias. Lo extraño del ultimo caso ocurrido es que se han abierto varias fosas en lugares donde no habia lapidas, por lo que la policia sospecha que no tiene relacion con los casos de saqueo de tumbas, y se trata mas bien de escondrijos de contrabando.</TextoDescriptivo>
+          <TextoDescriptivo>This is a copy of Arkham Advertiser days ago. On the cover speak of night plundering was taking place in the old cemetery for some months. The tombs of ancient Arkham citizens have been opened, and all their remains stolen without police being able to find out anything about the robbers. The cemetery keeper, Mr.Edward Smith, says he hasn't been able to discover the tomb robbers during their misdeeds. The strange thing on the most recent case is that some graves were digged on places where there were no tombstones, and that's why police suspect this is not connected to tomb robberies, and it's more about smugglers hiding places.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -40,13 +40,13 @@
     <ObjetoBase>
       <Nombre>CuadroSalon</Nombre>
       <Objeto>Ninguno</Objeto>
-      <DescripcionNombre>Cuadro Salon</DescripcionNombre>
+      <DescripcionNombre>Living Room Paint</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>El cuadro colgado encima de la chimenea es de gran tamaño, y su marco esta ricamente elaborado. Destaca del resto de cuadros de la casa como si no fuera este su lugar. Falta la pintura que parece arrancada.</TextoDescriptivo>
+          <TextoDescriptivo>Paint hanging up over the chemeny has a big size, and its frame is richly elaborated. It highlights from the rest of paints on the house, as it didn't belong to this place. The paint that seems to be teared out is missing.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -55,7 +55,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>El marco esta intacto, y parece antiguo. La pintura ha sido arrancada cortando los bordes con algo afilado, quedan trozos en las esquinas.</TextoDescriptivo>
+          <TextoDescriptivo>The frame is intact, and looks ancient. Paint has been teared by cutting boders with something sharp, some parts remain on the corners.</TextoDescriptivo>
           <HabilidadTirada>Examinar</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -64,7 +64,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Por los restos que quedan a la vista, y la tonalidad de los colores y el estilo de las pinceladas dirias que el cuadro se pinto hace mas de 50 años. Distingues en los restos, lo que podria ser un paisaje.</TextoDescriptivo>
+          <TextoDescriptivo>For the traces that remain visible, colour hue, and brushstrokes you would say it was painted more than 50 years ago. You can see on traces, what could be a landscape.</TextoDescriptivo>
           <HabilidadTirada>HabilidadArtistica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -73,7 +73,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Observando detenidamente los restos de lienzo en el cuadro, parece que habia representado algun tipo de bosque o lugar arbolado, pero los arboles tienen una forma poco comun, con sus ramas en posiciones extrañas.</TextoDescriptivo>
+          <TextoDescriptivo>Looking turgher along the traces of paint, seems it represented some kind of wood or wooded site, but trees shape is uncommon, with their limbs in strange positions.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -99,13 +99,13 @@
     <ObjetoBase>
       <Nombre>Figura</Nombre>
       <Objeto>Ninguno</Objeto>
-      <DescripcionNombre>Figura</DescripcionNombre>
+      <DescripcionNombre>Figure</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>En esta estanteria hay libros muy comunes, historia y biografias de personajes famosos. El busto que hace de soporte de algunos de estos libros es extraño y produce una sensacion de desasosiego con solo mirarlo.</TextoDescriptivo>
+          <TextoDescriptivo>On this shelf there are very common books, histories and biographies of celebrities. The bust that bears some of those books is weird, and produces a feel of uneasiness just looking at it.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -114,7 +114,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>La figura parece un humanoide con tentaculos en el rostro, una desagradable mezcla de cefalopodo y humano, con miembros gruesos y retorcidos, su aspecto es aterrador.</TextoDescriptivo>
+          <TextoDescriptivo>Figure seems a humanoid with tentacles on its face, an unpleasant mixture of cephalopod and human, with thick and twisted limbs, its look was terrifying.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -123,7 +123,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>La figura representa sin ninguna duda a un Profundo, un adorador de Cthulhu. El como ha llegado esa horrible figura a esta casa es un misterio aterrador.</TextoDescriptivo>
+          <TextoDescriptivo>Figure represents with no doubt a Deep One, a Cthulhu worshiper. How such a terrifying figure arrived to this house is a scary mystery.</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -132,7 +132,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>No sabrias identificar el material con el que esta hecho o lo que representa, pero tocarlo es desagradable al tacto, y su mera vision te pone nervioso.</TextoDescriptivo>
+          <TextoDescriptivo>You can't get to identify the material it's made with or what is represents, but touching it is unpleasant on touch, and its mere vision makes you nervous.</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -860,8 +860,8 @@
     <CamaraEscenaBase>
       <Nombre>CamaraSalon</Nombre>
       <Escena>WardSalon</Escena>
-      <NombreEscena>Salon</NombreEscena>
-      <Descripcion>Un amplio y luminoso salon, sobre la chimenea hay un cuadro al que han arrancado la pintura, solo quedan algunos bordes oscuros, aunque no se puede adivinar que habia pintado en el. Sobre la mesita frente al sofa hay un periodico de hace unos dias.</Descripcion>
+      <NombreEscena>Living Room</NombreEscena>
+      <Descripcion>A spacious and bright living room, over the chimney a book whose paint was torn off, only some dark borders remain, although you can't guess what was painted on it. Over the table in fron of the couch there's a newspaper some days ago.</Descripcion>
       <EscenaNorte>ninguna</EscenaNorte>
       <EscenaSur>ninguna</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>

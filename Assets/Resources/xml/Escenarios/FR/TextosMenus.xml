@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextosMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <btComenzar>Commencer</btComenzar>
+  <btContinuar>Continuer</btContinuar>
+  <btOpciones>Options</btOpciones>
+  <btSalir>Sortir</btSalir>
+  <btPartidaNueva>Nouveau Jeu</btPartidaNueva>
+  <toggleSonido>Son</toggleSonido>
+  <toggleMusica>Music</toggleMusica>
+  <btIdioma>French</btIdioma>
+</TextosMenus>

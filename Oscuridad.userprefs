@@ -1,15 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Clases Base\TextosMenus.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="42" Column="3" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="324" Column="76" />
+      <File FileName="Assets\scripts\Clases\Clases Base\Config.cs" Line="112" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\TextosMenus.cs" Line="9" Column="62" />
+      <File FileName="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" Line="46" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\oscuridad\Assets\scripts\Scripts\PanelInferiorOpciones.cs" line="36" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

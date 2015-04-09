@@ -62,6 +62,7 @@
      <Compile Include="Assets\scripts\Clases\Clases Base\PersonajeBase.cs" />
      <Compile Include="Assets\scripts\Clases\Clases Base\PreguntaBase.cs" />
      <Compile Include="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" />
+     <Compile Include="Assets\scripts\Clases\Clases Base\TextosMenus.cs" />
      <Compile Include="Assets\scripts\Clases\LanzamientoDados.cs" />
      <Compile Include="Assets\scripts\Clases\cXML.cs" />
      <Compile Include="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" />
@@ -166,25 +167,22 @@
      <Compile Include="Assets\vBug\vBug.cs" />
      <None Include="Assets\vBug\Documentation\vBug - Changelog.txt" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaBaja.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena18eng.xml" />
      <None Include="Assets\Resources\vBug\vBugShaderData.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena15eng.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena19eng.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaSuperior.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\SPA\TextosMenus.xml" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaBaja.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\ENG\TextosMenus.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaBaja.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardExterior.xml" />
      <None Include="Assets\BuildReport\VERSION.txt" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaSuperior.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena13eng.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena14eng.xml" />
      <None Include="Assets\BuildReport\README.txt" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardExterior.xml" />
+     <None Include="Assets\Resources\xml\Escenarios\FR\TextosMenus.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardExterior.xml" />
-     <None Include="Assets\Resources\xml\Escenarios\ENG\Escena17eng.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.4/UnityEngine.UI.dll</HintPath>
  </Reference>

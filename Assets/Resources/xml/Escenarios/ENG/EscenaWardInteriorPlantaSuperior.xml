@@ -5,13 +5,13 @@
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
       <Objeto>Ninguno</Objeto>
-      <DescripcionNombre>Cuadros</DescripcionNombre>
+      <DescripcionNombre>Paints</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
+          <TextoDescriptivo>On paints you can recognize the members or Ward family, Mr. and Mrs. Ward and a young Charles.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -36,13 +36,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta2</Nombre>
-      <DescripcionNombre>Cuadro</DescripcionNombre>
+      <DescripcionNombre>Paint</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Mas pinturas de la familia, reunidos en el exterior de la casa, en lo que parece el jardin.</TextoDescriptivo>
+          <TextoDescriptivo>More paintings of the family, together outside the house, in which seems to be the garden.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -51,7 +51,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
+          <TextoDescriptivo>You recognize the garden in one of the paintings, but there is nothing about the unusual stoned hillock you saw there a while ago.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>true</Comprobacion>
           <EscenaComprobacion>WardJardin</EscenaComprobacion>
@@ -76,13 +76,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>PeriodicosHabitacionCharles</Nombre>
-      <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
+      <DescripcionNombre>A Pile of Newspapers</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Son un monton de periodicos de hace varias semanas, de varios dias de la semana.</TextoDescriptivo>
+          <TextoDescriptivo>It's a bunch of newspapers weeks ago, some days of the week.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -91,7 +91,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos.</TextoDescriptivo>
+          <TextoDescriptivo>Every single newspapaer was opened on the events column.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -116,13 +116,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosHabitacionCharles</Nombre>
-      <DescripcionNombre>Libros</DescripcionNombre>
+      <DescripcionNombre>Books</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes.</TextoDescriptivo>
+          <TextoDescriptivo>Books laying on the armchair deal with the history of Providence, all pretty recent.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -218,13 +218,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Pala</Nombre>
-      <DescripcionNombre>Pala</DescripcionNombre>
+      <DescripcionNombre>Old Shovel</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Coger</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Esta vieja pala ha sido usada recientemente, aun quedan rastro de tierra en ella.</TextoDescriptivo>
+          <TextoDescriptivo>This old shovel has been used recently, there are still some traces of soil attached to it.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -248,14 +248,14 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadroDesvan</Nombre>
-      <DescripcionNombre>Cuadro</DescripcionNombre>
+      <DescripcionNombre>Paint</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Coger</opcionObjeto>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Aparece la figura de un hombre de pie, elegantemente vestido, de fondo se puede ver un paisaje extraño, un rio, y arboles de formas retorcidas, con un cielo de color para nada normal, casi de otro mundo, cubierto de estrellas. Han quemado el trozo del cuadro donde iria su rostro. En la parte de atras del lienzo aparece escrito a mano: "Joseph Curwen, 1713".</TextoDescriptivo>
+          <TextoDescriptivo>The shape of a standing man appears, dressed up elegantly. On the background, you can see an weird landscape, a river, and some twisted lines trees, with a sky which is not normal at all, nearly from another world, full of stars. Someone burned a piece of the painting where his face would be in. On the back of the canvas, it's been handwritten: "Joseph Curwen, 1713".</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -264,7 +264,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Joseph Curwen fue un importante hombre de negocios de Arkham, comerciaba con exoticas mercancias que traian sus barcos desde muchos puntos del planeta. Murio en extrañas circustancias. Tal vez en el Arkham Advertiser puedas encontrar mas datos sobre el.</TextoDescriptivo>
+          <TextoDescriptivo>Joseph Curwen was an important businessman from Arkham, dealed with exotic goods his ships brought from many places around the planet. Died in odd circumstances. You may check Arkham Advertiser to gather more information about him.</TextoDescriptivo>
           <HabilidadTirada>Historia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -273,7 +273,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>No reconoces la disposicion de las estrellas pintadas en el lienzo, o el autor se invento su colocacion o representa un cielo que no puede ser visto desde la tierra.</TextoDescriptivo>
+          <TextoDescriptivo>You can't recognize the position where stars are painted on the canvas, either the author placed them randomly, or it represents a sky that can't be seen from Earth.</TextoDescriptivo>
           <HabilidadTirada>Astronomia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -297,13 +297,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosDesvan</Nombre>
-      <DescripcionNombre>Libros</DescripcionNombre>
+      <DescripcionNombre>Books</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>todas las estanterias estan vacias, aunque por las marcas de polvo estuvieron repletas de libros no hace mucho. Los que quedan tratan sobre Quimica, Fisica e Historia, todos muy recientes.</TextoDescriptivo>
+          <TextoDescriptivo>Every single shelf is empy, although for the traces of dust seems there were plenty of books not long ago. Remaining books are abou Chemistry, Physics and History, all pretty recent.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -327,13 +327,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibroMesa</Nombre>
-      <DescripcionNombre>Libro sobre la mesa</DescripcionNombre>
+      <DescripcionNombre>A Book Over the Table</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Parece un libro antiguo, con las tapas gastadas, y hojas amarillentas. Esta escrito en ingles antiguo, y te cuesta mucho entender de que trata. Tiene una tarjeta que se usaba para marcar pagina con el nombre de una librería en Arkham </TextoDescriptivo>
+          <TextoDescriptivo>Seems to be an old book, worn covers, and yellowish pages. It's written in Old English, and it's hard for you to understan what it is about. There is a card which was used to mark pages with the name of a bookstore in Arkham.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -344,7 +344,7 @@
           </LocalizacionAccion>
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Es una antigua copia del trabajo de Borellus, esta centrado en la Alquimia desde un punto de vista mas sobrenatural. Y en sus paginas se cuenta la posibilidad de revivir cadaveres mediante ciertos procesos alquimicos.</TextoDescriptivo>
+          <TextoDescriptivo>This is an old copy of Borellus' work. It focuses on Alchemy from a more overnatural point of view. And trough its pages it's told the chance of reviving corpses through ceretain alchemical precedures.</TextoDescriptivo>
           <HabilidadTirada>CienciasOcultas</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -353,7 +353,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Entre el galimatias de texto, y dibujos casi irreconocibles, te parece entender que trata sobre formulas quimicas, mezcladas con ideas religiosas un tanto extrañas.</TextoDescriptivo>
+          <TextoDescriptivo>Among the gibberish text, and the nearly unrecognizable draws, you understand it's all about chemical formulas, mixed with unusual religious beliefs.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -377,14 +377,14 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CirculoInvocacion</Nombre>
-      <DescripcionNombre>Circulo de Invocacion</DescripcionNombre>
+      <DescripcionNombre>Summoning Circle</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Coger</opcionObjeto>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Es una especie de simbolo de invocacion arañado en la madera con un cuchillo, esta repleto de simbolos extraños que no consigues identificar, hay resto de tierra por todo el circulo y de un extraño polvo negro que no consigues identificar</TextoDescriptivo>
+          <TextoDescriptivo>This is some kind of summoning symbol engraved on the wood with a knife, it's full of strange symbols you can't get to identify, there are traces of soil among the whole circle and also a strange black powder you don't identify.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -393,7 +393,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>¡Es Polvo de Ibn Ghazi!, este blasfemo polvo es usado para dislumbrar espiritus convocados, y esta mezclado con cenizas y tierra. </TextoDescriptivo>
+          <TextoDescriptivo>¡This is Ibn Ghazi Powder!, this blasphemous powder is used to discern summoned spirits, and it's blent with ashes and soil.</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -402,7 +402,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Hay una mezcla de cenizas, y tierra. El extraño polvo negro presenta unos brillos hipnoticos y que para nada considerarias  normales en este mundo. Jamas habias visto algo parecido y dudas que pertenezca a algun elemente conocido de la tierra.</TextoDescriptivo>
+          <TextoDescriptivo>There's a mixture of ashes and soil. The strange powder shows hipnotic shines, which you would never consider as normal in this world. You never saw something like this before, and don't think they belong to an element known on Earth.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -426,13 +426,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>ObjetosAlquimia</Nombre>
-      <DescripcionNombre>Objetos de Alquimia</DescripcionNombre>
+      <DescripcionNombre>Alchemy Items</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Ves un monton de recipientes y alambiques de cobre y cristal grueso. En algunos quedan restos de liquidos de colores malsanos y todo huele muy mal.</TextoDescriptivo>
+          <TextoDescriptivo>You can see a bunch of containers and alembics made of copper and thick glass. Some of them still got remains of liquid with unhealty colours and everything around smells horribly.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -441,7 +441,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Son accesorios para experimentos quimicos, que por lo que parece se han utilizado asiduamente sin preocuparse por su limpieza. Los restos de los recipientes son extraños y no consigues identificarlos.</TextoDescriptivo>
+          <TextoDescriptivo>Those are accesories for chemical experiments, which seem have been used often, regadless their cleaning. Traces on the containers are weird and you don't get to identify them.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -450,7 +450,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Reconoces claramente restos del repugnante polvo de Ibn Ghazi, un polvo usado en blasfemos rituales para vislumbrar espiritus convocados. Por la cantidad de restos ha sido usado en grandes cantidades, lo que te hace imaginar lo horrible de los actos ocurridos entre estas cuatro paredes…</TextoDescriptivo>
+          <TextoDescriptivo>You clearly recognize traces of Ibn Ghazi disgusting powder, used on blasphemous rituals in order to discern summoned spirits. For the size of traces, it's been used on large amounts, which makes you imagine how horrible was what happened within these four walls...</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -474,13 +474,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>HojasPared</Nombre>
-      <DescripcionNombre>Hojas en la pared</DescripcionNombre>
+      <DescripcionNombre>Sheets on the Wall</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Un monton de hojas cuelgan de los tableros de la ventana y de algunas partes de la pared, hay hojas con texto en varios idiomas, consigues identificar el latin, el Frances y el ingles. Algunas son graficos de alambiques y accesorios de quimica.</TextoDescriptivo>
+          <TextoDescriptivo>A bunch of sheets of paper are hanging along the planks next to the window, and some parts of the wall, there are sheets written in several languages, you get to identify Latin, French and English. Some are graphics about alembics and chemistry accessories.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -489,7 +489,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Las hojas en frances son partes de un libro sobre anatomia, donde se detallan los puntos donde segun el autor reside el alma humana.</TextoDescriptivo>
+          <TextoDescriptivo>Sheets written in French are a part of an anathomy book, where author dwells on the points where human soul lies.</TextoDescriptivo>
           <HabilidadTirada>OtraLenguaFrances</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -498,7 +498,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Las paginas en latin cuentan como organizar e instalar una mesa de trabajo para realizar experimentos alquimicos. Por su aspecto pertecian a un libro muy antiguo.</TextoDescriptivo>
+          <TextoDescriptivo>Pages written in Latin deal about how to set and organize a working table in order to make alchemical experiments. Because of their appearance, used to belong to a very old book.</TextoDescriptivo>
           <HabilidadTirada>OtraLenguaLatin</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -507,7 +507,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>El resto de paginas y hojas estan repletas de anotaciones, marcas o guias sobre anatomia y quimica, pero desde un punto de vista mas espiritual que fisico.</TextoDescriptivo>
+          <TextoDescriptivo>The remaining pages are full of notes, marks, or guides aboud anathomy and chemistry, but from a spiritual point of view rather than physical.</TextoDescriptivo>
           <HabilidadTirada>LenguaPropia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -535,8 +535,8 @@
     <CamaraEscenaBase>
       <Nombre>CamaraPasillo</Nombre>
       <Escena>WardPasillo</Escena>
-      <NombreEscena>Pasillo</NombreEscena>
-      <Descripcion>El pasillo de la primera planta empieza aqui, a la izquierda se puede entrar al dormitorio de los Ward y el pasillo continua hasta la ventana que da al jardin, un ultimo tramo de escaleras sube al desvan, ahora reformado como una habitacion mas de la casa. A la derecha al antiguo dormitorio de Charles.</Descripcion>
+      <NombreEscena>Corridor</NombreEscena>
+      <Descripcion>First floor corridor starts here; on the left, Ward's bedroom can be found and the corridor keeps going to the window facing the garden, A last flight of stairs leads up to the loft, now reformed like any other room in the house. On the right side, Charles' old bedroom.</Descripcion>
       <EscenaNorte>CamaraPuertaDesvan</EscenaNorte>
       <EscenaSur>EscenaWardInteriorPlantaBaja</EscenaSur>
       <EscenaEste>CamaraHabPadres</EscenaEste>
@@ -546,8 +546,8 @@
     <CamaraEscenaBase>
       <Nombre>CamaraHabCharles</Nombre>
       <Escena>WardHabitacionCharles</Escena>
-      <NombreEscena>Habitacion de Charles</NombreEscena>
-      <Descripcion>Practicamente vacia y sin tocar, la cama esta hecha y parece que no se tocado en mucho tiempo. Todos los libros y pertenencias acabaron en el desvan cuando Charles se traslado alli.</Descripcion>
+      <NombreEscena>Charles's Room</NombreEscena>
+      <Descripcion>Nearly empty and intact, the bed is made and seems it hasn't been touched for a long time. Every single book and belongings eneded up on the attic when Charles moved there.</Descripcion>
       <EscenaNorte>ninguna</EscenaNorte>
       <EscenaSur>ninguna</EscenaSur>
       <EscenaEste>CamaraPasillo</EscenaEste>
@@ -568,8 +568,8 @@
     <CamaraEscenaBase>
       <Nombre>CamaraPuertaDesvan</Nombre>
       <Escena>WardPuertaDesvan</Escena>
-      <NombreEscena>Puerta del Desvan</NombreEscena>
-      <Descripcion>Esta puerta esta cerrada</Descripcion>
+      <NombreEscena>Attic Door</NombreEscena>
+      <Descripcion>This door is locked</Descripcion>
       <EscenaNorte>CamaraDesvan</EscenaNorte>
       <EscenaSur>CamaraPasillo</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>
@@ -579,8 +579,8 @@
     <CamaraEscenaBase>
       <Nombre>CamaraDesvan</Nombre>
       <Escena>WardDesvan</Escena>
-      <NombreEscena>Desvan</NombreEscena>
-      <Descripcion>Este desvan se acondiciono como habitacion de trabajo de Charles que empezo usando como laboratorio quimico, pero que acabo usando tambien como habitacion. Esta todo desordenado y parece abandonado desde hace un tiempo. Hay un olor extraño aqui dentro que no eres capaz de identificar. Esta oscuro porque han tapado las ventanas con tablas de madera, aunque de una de ellas se han retirado varias tablas y entra algo de luz. Varias velas diseminadas por la habitacion iluminan la estancia.</Descripcion>
+      <NombreEscena>Attic</NombreEscena>
+      <Descripcion>This loft was fixed as a work-place that Charles started using as a chemistry lab, but ended up being used also as a bedroom. Everything is messy and looks like abandoned time ago. There is a strange smell inside you are not able to identify. It's dark since windows have been covered with planks of wood, although some of them have been removed from one window, and there's some light coming into the room. Some candles spread around the room light the scene.</Descripcion>
       <EscenaNorte>ninguna</EscenaNorte>
       <EscenaSur>CamaraPuertaDesvan</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>
@@ -591,8 +591,8 @@
   <CamaraInicio>
       <Nombre>CamaraPasillo</Nombre>
       <Escena>WardPasillo</Escena>
-      <NombreEscena>Pasillo</NombreEscena>
-      <Descripcion>El pasillo de la primera planta empieza aqui, a la izquierda se puede entrar al dormitorio de los Ward y el pasillo continua hasta la ventana que da al jardin, un ultimo tramo de escaleras sube al desvan, ahora reformado como una habitacion mas de la casa. A la derecha al antiguo dormitorio de Charles.</Descripcion>
+      <NombreEscena>Corridor</NombreEscena>
+      <Descripcion>First floor corridor starts here; on the left, Ward's bedroom can be found and the corridor keeps going to the window facing the garden, A last flight of stairs leads up to the loft, now reformed like any other room in the house. On the right side, Charles' old bedroom.</Descripcion>
       <EscenaNorte>CamaraPuertaDesvan</EscenaNorte>
       <EscenaSur>EscenaWardInteriorPlantaBaja</EscenaSur>
       <EscenaEste>CamaraHabPadres</EscenaEste>

@@ -26,13 +26,7 @@
       </textDimensions>
     </Info>
     <Info>
-      <name>__EDITOR_SELECTION</name>
-      <propertyNames />
-      <propertyTypes />
-      <textDimensions />
-    </Info>
-    <Info>
-      <name>__EDITOR_SELECTION</name>
+      <name>Hidden/Editor Gizmo</name>
       <propertyNames />
       <propertyTypes />
       <textDimensions />
@@ -48,12 +42,6 @@
       <textDimensions>
         <TextDim>TexDim2D</TextDim>
       </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Editor Gizmo</name>
-      <propertyNames />
-      <propertyTypes />
-      <textDimensions />
     </Info>
     <Info>
       <name>__EDITOR_WIRE</name>
@@ -120,6 +108,18 @@
     </Info>
     <Info>
       <name>Hidden/Internal-GUITexture</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Hidden/Internal-GUITextureBlit</name>
       <propertyNames>
         <string>_MainTex</string>
       </propertyNames>
@@ -302,21 +302,6 @@
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/AlphaBasedSelection</name>
-      <propertyNames>
-        <string>_MainTex</string>
-        <string>_Cutoff</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-        <PropType>Range</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-        <TextDim>TexDimAny</TextDim>
       </textDimensions>
     </Info>
     <Info>

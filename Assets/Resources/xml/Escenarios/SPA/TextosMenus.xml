@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextosMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <btComenzar>Comenzar</btComenzar>
+  <btContinuar>Continuar</btContinuar>
+  <btOpciones>Opciones</btOpciones>
+  <btSalir>Salir</btSalir>
+  <btPartidaNueva>Partida Nueva</btPartidaNueva>
+  <toggleSonido>Sonido</toggleSonido>
+  <toggleMusica>Musica</toggleMusica>
+  <btIdioma>Spanish</btIdioma>
+</TextosMenus>
