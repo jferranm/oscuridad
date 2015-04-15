@@ -25,7 +25,7 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 			{ 
 				if (escena0.activeSelf) 
 				{
-					Application.Quit();
+					GameCenter.InstanceRef.Salir();
 					return;
 				}
 
@@ -66,7 +66,14 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 
 		foreach (Transform objetoHijo in escena2.transform) 
 		{
-			objetoHijo.GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
+			try
+			{
+				objetoHijo.GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
+			}
+			catch
+			{
+				objetoHijo.GetChild (0).GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
+			}
 		}
 	}
 }

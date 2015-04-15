@@ -1,25 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\GameCenter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="38" Column="3" />
-      <File FileName="Assets\scripts\Clases\Clases Base\TextosMenus.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\Config.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\cXML.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="101" Column="23" />
+      <File FileName="Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" Line="71" Column="5" />
+      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="89" Column="35" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="319" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\TextosMenus.cs" Line="109" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="27" />
+      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\Clases\Clases Base\TextosMenus.cs" line="109" />
       <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="319" />
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" line="86" />
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="28" />
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" line="96" />
-      <Breakpoint hitAction="PrintExpression" traceExpression="{controladoraJuego}" file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\ControladoresEstado\GameCenter.cs" line="50" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

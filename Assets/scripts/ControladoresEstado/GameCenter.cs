@@ -95,4 +95,9 @@ public class GameCenter : MonoBehaviour
 
 		CanvasUIJuego.SetActive (true);
 	}
+
+	public void Salir()
+	{
+		Application.Quit ();
+	}
 }

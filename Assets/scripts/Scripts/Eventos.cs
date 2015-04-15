@@ -86,7 +86,7 @@ public class Eventos : MonoBehaviour
 
 	public void BotonSalir()
 	{
-		Application.Quit ();
+		GameCenter.InstanceRef.Salir ();
 	}
 
 	public void BotonIdioma()
