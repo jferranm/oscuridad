@@ -18,7 +18,16 @@ public class ControladoraJuego
 	public CamaraEscenaBase camaraActiva;
 	public Camera cameraActiva;
 	public Config configuracionJuego;
-	public Idioma idiomaJuego;
+	public TextosMenus textosMenusTraduccion;
+	public Idioma idiomaJuego
+	{
+		set 
+		{ 
+			configuracionJuego.IdiomaJuego = value;
+			pathIdioma = GameCenter.InstanceRef.USERPATH + "/" + configuracionJuego.IdiomaJuego.ToString ();
+			CargarTraduccion ();
+		}
+	}
 
 	public ObjetoBase objetoPulsado;
 	public PersonajeBase personajePulsado;
@@ -44,7 +53,10 @@ public class ControladoraJuego
 		jugadorActual.EstadoJugador = estadosJugador.enMenus;
 
 		escenaActual = new EscenaBase ();
-
+		configuracionJuego = new Config(Application.systemLanguage);
+		textosMenusTraduccion = new TextosMenus ();
+		
+		CopiarXML();
 		CargarConfiguracion ();
 	}
 
@@ -56,7 +68,6 @@ public class ControladoraJuego
 	public void Inicializar_Partida(Personaje personaje)
 	{
 		Inicializar_Jugador (personaje);
-		CopiarXML();
 		GrabarJugador ();
 	}
 
@@ -243,6 +254,12 @@ public class ControladoraJuego
 				if (!File.Exists (destino))
 					Crear_Fichero (origen, destino);
 			}
+
+			origen = (TextAsset)Resources.Load("xml/Escenarios/"+ idiomaXml.ToUpper() + "/TextosMenus", typeof(TextAsset));
+			destino = GameCenter.InstanceRef.USERPATH + "/" + idiomaXml + "/TextosMenus.xml";
+
+			if (!File.Exists (destino))
+				Crear_Fichero (origen, destino);
 		}
 	}
 
@@ -280,13 +297,10 @@ public class ControladoraJuego
 		if (File.Exists (pathConfig))
 			configuracionJuego = nuevoXML.Cargar_Clase_Serializable<Config> (pathConfig, configuracionJuego);
 		else 
-		{
-			configuracionJuego = new Config(Application.systemLanguage);
 			GrabarConfiguracion();
-		}
 
 		idiomaJuego = configuracionJuego.IdiomaJuego;
-		pathIdioma = Path.Combine (GameCenter.InstanceRef.USERPATH, idiomaJuego.ToString ());
+
 		nuevoXML.Cerrar ();
 	}
 
@@ -294,6 +308,14 @@ public class ControladoraJuego
 	{
 		cXML nuevoXML = new cXML ();
 		nuevoXML.Guardar_Clase_Serializable<Config> (pathConfig, configuracionJuego);
+		nuevoXML.Cerrar ();
+	}
+
+	public void CargarTraduccion()
+	{
+		cXML nuevoXML = new cXML ();
+		string pathTextos = Path.Combine (pathIdioma, "TextosMenus.xml");
+		textosMenusTraduccion = nuevoXML.Cargar_Clase_Serializable<TextosMenus> (pathTextos, textosMenusTraduccion);
 		nuevoXML.Cerrar ();
 	}
 
@@ -314,8 +336,10 @@ public class ControladoraJuego
 	public EscenaBase Cargar_Escena(Escenas escena)
 	{
 		cXML nuevoxml = new cXML ();
-		return nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (pathIdioma, escena.ToString()+".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
+		escenaActual = nuevoxml.Cargar_Clase_Serializable<EscenaBase> (Path.Combine (pathIdioma, escena.ToString()+".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
 		nuevoxml.Cerrar ();
+
+		return escenaActual;
 	}
 
 	public void Guardar_Escena(Escenas escena)

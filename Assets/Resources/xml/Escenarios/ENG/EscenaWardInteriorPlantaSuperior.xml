@@ -147,13 +147,13 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Mesita</Nombre>
-      <DescripcionNombre>Mesita</DescripcionNombre>
+      <DescripcionNombre>Table</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>Sobre una mesita hay unas cuantas fotos enmarcadas. Son fotos de los padres de Charles, otra de Charles de joven y la ultima es una foto de bodas, donde aparece Charles y su esposa, con el velo puesto.</TextoDescriptivo>
+          <TextoDescriptivo>On a table there are a few framed photos. Are Charles's parent' photos, another from young Charles and the last is a wedding photo, which shows Charles and his wife appears with the veil on.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -162,7 +162,7 @@
           <LocalizacionAccion />
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
-          <TextoDescriptivo>En la foto de boda se ve a Charles algo desmejorado, la figura de su esposa, aunque cubierta por el velo, te transmite una sensacion de temor, como si sus ojos te devolvieran la mirada desde debajo del velo.</TextoDescriptivo>
+          <TextoDescriptivo>In the wedding picture, Charles looks worn down, the figure of his wife, though veiled, shows a feeling of fear, as if his eyes you returned the gaze from under the veil.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>

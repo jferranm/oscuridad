@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.IO;
+using Oscuridad.Clases;
 
 public class OpcionesCanvasMenuPrincipal : MonoBehaviour 
 {
@@ -14,35 +15,8 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 	public Toggle toggleSonido;
 	public Slider sliderSonido;
 
-	void OnEnable()
-	{
-		if (escena0.activeSelf) 
-		{
-			string archivoJugador = Path.Combine (Application.persistentDataPath, "Jugador.xml");
-
-			foreach (Transform objetoHijo in escena0.transform) 
-			{
-				if (objetoHijo.name.Equals ("btComenzar")) 
-				{
-					if (File.Exists (archivoJugador)) 
-						objetoHijo.GetChild (0).GetComponent<Text> ().text = "CONTINUAR";
-
-					return;
-				}
-			}
-
-			return;
-		}
-
-		if (escena1.activeSelf) 
-		{
-		}
-
-		if (escena2.activeSelf) 
-		{
-		}
-	}
-
+	private string archivoJugador;
+	
 	void Update()
 	{
 		if (this.gameObject.activeSelf) 
@@ -73,6 +47,26 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 					return;
 				}
 			}
+		}
+	}
+
+	public void TraduccionMenu()
+	{
+		archivoJugador = Path.Combine (Application.persistentDataPath, "Jugador.xml");
+
+		foreach (Transform objetoHijo in escena0.transform) 
+		{
+			objetoHijo.GetChild (0).GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
+			if (objetoHijo.name.Equals ("btComenzar")) 
+			{
+				if (File.Exists (archivoJugador)) 
+					objetoHijo.GetChild (0).GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btContinuar");
+			}
+		}
+
+		foreach (Transform objetoHijo in escena2.transform) 
+		{
+			objetoHijo.GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
 		}
 	}
 }

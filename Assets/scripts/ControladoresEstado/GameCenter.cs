@@ -51,6 +51,7 @@ public class GameCenter : MonoBehaviour
 
 		//-------------- Opciones varias -------------------------\\
 		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().TraduccionMenu ();
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);

@@ -849,8 +849,8 @@
     <CamaraEscenaBase>
       <Nombre>CamaraRecibidor</Nombre>
       <Escena>WardRecibidor</Escena>
-      <NombreEscena>Recibidor</NombreEscena>
-      <Descripcion>La entrada de la casa, aqui esta la Ama de Llaves (una mujer mayor, ella y su esposo cuidan de la casa mientras los Ward estan de viaje). Unas escaleras suben al primer piso y a la izquierda se puede entrar al salon.</Descripcion>
+      <NombreEscena>Hall</NombreEscena>
+      <Descripcion>The hall of the house, here is the Housekeeper (an old lady, she and her husband take care of the house while the Ward are traveling). Stairs lead to the first floor and on the left you can enter the living room.</Descripcion>
       <EscenaNorte>EscenaWardInteriorPlantaSuperior</EscenaNorte>
       <EscenaSur>EscenaWardExterior</EscenaSur>
       <EscenaEste>CamaraSalon</EscenaEste>
@@ -872,8 +872,8 @@
   <CamaraInicio>
     <Nombre>CamaraRecibidor</Nombre>
       <Escena>WardRecibidor</Escena>
-      <NombreEscena>Recibidor</NombreEscena>
-      <Descripcion>La entrada de la casa, aqui esta la Ama de Llaves (una mujer mayor, ella y su esposo cuidan de la casa mientras los Ward estan de viaje). Unas escaleras suben al primer piso y a la izquierda se puede entrar al salon.</Descripcion>
+      <NombreEscena>Hall</NombreEscena>
+      <Descripcion>The hall of the house, here is the Housekeeper (an old lady, she and her husband take care of the house while the Ward are traveling). Stairs lead to the first floor and on the left you can enter the living room.</Descripcion>
       <EscenaNorte>EscenaWardInteriorPlantaSuperior</EscenaNorte>
       <EscenaSur>EscenaWardExterior</EscenaSur>
       <EscenaEste>CamaraSalon</EscenaEste>

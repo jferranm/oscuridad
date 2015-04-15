@@ -89,6 +89,21 @@ public class Eventos : MonoBehaviour
 		Application.Quit ();
 	}
 
+	public void BotonIdioma()
+	{
+		switch (GameCenter.InstanceRef.controladoraJuego.configuracionJuego.IdiomaJuego) 
+		{
+			case Idioma.spa : 	GameCenter.InstanceRef.controladoraJuego.idiomaJuego = Idioma.eng;
+								break;
+			case Idioma.eng : 	GameCenter.InstanceRef.controladoraJuego.idiomaJuego = Idioma.fr;
+								break;
+			case Idioma.fr : 	GameCenter.InstanceRef.controladoraJuego.idiomaJuego = Idioma.spa;
+								break;
+		}
+
+		GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().TraduccionMenu ();
+	}
+
 	public void ActivarDesactivarMusica(bool eleccion)
 	{
 		if (eleccion) 

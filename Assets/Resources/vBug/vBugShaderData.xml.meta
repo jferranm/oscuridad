@@ -2,6 +2,18 @@
 <ShaderProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <shaders>
     <Info>
+      <name>__EDITOR_SELECTION</name>
+      <propertyNames />
+      <propertyTypes />
+      <textDimensions />
+    </Info>
+    <Info>
+      <name>__EDITOR_SELECTION</name>
+      <propertyNames />
+      <propertyTypes />
+      <textDimensions />
+    </Info>
+    <Info>
       <name>__GUI_SHADER_TEXTURECLIP_TEXT</name>
       <propertyNames>
         <string>_MainTex</string>
@@ -26,12 +38,6 @@
       </textDimensions>
     </Info>
     <Info>
-      <name>Hidden/Editor Gizmo</name>
-      <propertyNames />
-      <propertyTypes />
-      <textDimensions />
-    </Info>
-    <Info>
       <name>Hidden/Editor Gizmo Textured</name>
       <propertyNames>
         <string>_MainTex</string>
@@ -42,6 +48,12 @@
       <textDimensions>
         <TextDim>TexDim2D</TextDim>
       </textDimensions>
+    </Info>
+    <Info>
+      <name>Hidden/Editor Gizmo</name>
+      <propertyNames />
+      <propertyTypes />
+      <textDimensions />
     </Info>
     <Info>
       <name>__EDITOR_WIRE</name>
@@ -302,6 +314,21 @@
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Hidden/AlphaBasedSelection</name>
+      <propertyNames>
+        <string>_MainTex</string>
+        <string>_Cutoff</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+        <PropType>Range</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDim2D</TextDim>
+        <TextDim>TexDimAny</TextDim>
       </textDimensions>
     </Info>
     <Info>
