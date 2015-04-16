@@ -6,6 +6,14 @@ using Oscuridad.Clases;
 
 public class OpcionesCanvasMenuPrincipal : MonoBehaviour 
 {
+	public Text botonComenzar;
+	public Text botonOpciones;
+	public Text botonSalir;
+	public Text botonPartidaNueva;
+	public Text botonMusica;
+	public Text botonSonido;
+	public Text botonIdioma;
+
 	public GameObject escena0;
 	public GameObject escena1;
 	public GameObject escena2;
@@ -54,26 +62,14 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 	{
 		archivoJugador = Path.Combine (Application.persistentDataPath, "Jugador.xml");
 
-		foreach (Transform objetoHijo in escena0.transform) 
-		{
-			objetoHijo.GetChild (0).GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
-			if (objetoHijo.name.Equals ("btComenzar")) 
-			{
-				if (File.Exists (archivoJugador)) 
-					objetoHijo.GetChild (0).GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btContinuar");
-			}
-		}
-
-		foreach (Transform objetoHijo in escena2.transform) 
-		{
-			try
-			{
-				objetoHijo.GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
-			}
-			catch
-			{
-				objetoHijo.GetChild (0).GetComponent<Text> ().text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(objetoHijo.name);
-			}
-		}
+		botonComenzar.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btComenzar");
+		if (File.Exists (archivoJugador)) 
+			botonComenzar.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btContinuar");
+		botonOpciones.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btOpciones");
+		botonSalir.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btSalir");
+		botonPartidaNueva.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btPartidaNueva");
+		botonMusica.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("toggleMusica");
+		botonSonido.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("toggleSonido");
+		botonIdioma.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("btIdioma");
 	}
 }

@@ -51,6 +51,7 @@ public class GameCenter : MonoBehaviour
 
 		//-------------- Opciones varias -------------------------\\
 		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
+		CanvasMenuPrincipal = GameObject.Find ("CanvasMenuPrincipal");
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().TraduccionMenu ();
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
@@ -98,6 +99,12 @@ public class GameCenter : MonoBehaviour
 
 	public void Salir()
 	{
+		controladoraJuego.configuracionJuego.SonidoActivado = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleSonido.IsActive ();
+		controladoraJuego.configuracionJuego.MusicaActivada = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleMusica.IsActive ();
+		controladoraJuego.configuracionJuego.VolumenSonido = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value;
+		controladoraJuego.configuracionJuego.VolumenMusica = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value;
+
+		controladoraJuego.GrabarConfiguracion ();
 		Application.Quit ();
 	}
 }
