@@ -167,6 +167,7 @@
      <Compile Include="Assets\vBug\vBug.cs" />
      <None Include="Assets\vBug\Documentation\vBug - Changelog.txt" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaBaja.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Resources\vBug\vBugShaderData.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaSuperior.xml" />
