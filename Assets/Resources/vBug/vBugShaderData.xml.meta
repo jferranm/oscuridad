@@ -2,6 +2,42 @@
 <ShaderProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <shaders>
     <Info>
+      <name>__GUI_SHADER_TEXTURECLIP_TEXT</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>__GUI_SHADER_TEXTURECLIP</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>__EDITOR_SELECTION</name>
+      <propertyNames />
+      <propertyTypes />
+      <textDimensions />
+    </Info>
+    <Info>
+      <name>__EDITOR_SELECTION</name>
+      <propertyNames />
+      <propertyTypes />
+      <textDimensions />
+    </Info>
+    <Info>
       <name>Hidden/Editor Gizmo Textured</name>
       <propertyNames>
         <string>_MainTex</string>
@@ -344,10 +380,34 @@
       </textDimensions>
     </Info>
     <Info>
+      <name>Hidden/Handles Lines</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
       <name>Hidden/SceneView grid</name>
       <propertyNames />
       <propertyTypes />
       <textDimensions />
+    </Info>
+    <Info>
+      <name>Hidden/Internal-GUITextureClipInactive</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
     </Info>
     <Info>
       <name>Hidden/Handles Shaded</name>
@@ -371,10 +431,37 @@
       </textDimensions>
     </Info>
     <Info>
+      <name>Hidden/AlphaBasedSelection</name>
+      <propertyNames>
+        <string>_MainTex</string>
+        <string>_Cutoff</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+        <PropType>Range</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDim2D</TextDim>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
       <name>Hidden/SceneViewWireframe</name>
       <propertyNames />
       <propertyTypes />
       <textDimensions />
+    </Info>
+    <Info>
+      <name>Hidden/2D Handles Lines</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
     </Info>
     <Info>
       <name>Bumped Diffuse</name>

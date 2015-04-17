@@ -322,21 +322,21 @@ public class ControladoraGUI
 		
 		if (tirada) 
 		{
-			aux = "Exito";
+			aux = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Exito;
 			colorTirada = Color.green;
 		} 
 		else 
 		{
-			aux = "Fracaso";
+			aux = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Fracaso;
 			colorTirada = Color.red;
 		}
 		
-		textoInferior.text += Environment.NewLine + ObtenerColor(Color.white) + "- Tirada " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + "." + FinDeLineaColor() + ObtenerColor(colorTirada) + aux + FinDeLineaColor();
+		textoInferior.text += Environment.NewLine + ObtenerColor(Color.white) + "- " + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Tirada + " " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + "." + FinDeLineaColor() + ObtenerColor(colorTirada) + aux + FinDeLineaColor();
 	}
 	
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
-		textoInferior.text = Environment.NewLine + ObtenerColor(color) + "Nueva localizacion descubierta: " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		textoInferior.text = Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
 	}
 
 	private string ObtenerColor(Color color)

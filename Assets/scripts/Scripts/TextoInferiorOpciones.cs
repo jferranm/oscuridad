@@ -46,7 +46,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
 			textoVentana.text = "";
 		else 
-			textoVentana.text = "Inspeccionando \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
+			textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
 	}
 
 	void Update()

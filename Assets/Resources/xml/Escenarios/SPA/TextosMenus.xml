@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextosMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <btComenzar>Comenzar</btComenzar>
-  <btContinuar>Continuar</btContinuar>
-  <btOpciones>Opciones</btOpciones>
-  <btSalir>Salir</btSalir>
-  <btPartidaNueva>Partida Nueva</btPartidaNueva>
-  <toggleSonido>Sonido</toggleSonido>
-  <toggleMusica>Musica</toggleMusica>
-  <btIdioma>Spanish</btIdioma>
+  <BtComenzar>Comenzar</BtComenzar>
+  <BtContinuar>Continuar</BtContinuar>
+  <BtOpciones>Opciones</BtOpciones>
+  <BtSalir>Salir</BtSalir>
+  <BtPartidaNueva>Partida Nueva</BtPartidaNueva>
+  <ToggleSonido>Sonido</ToggleSonido>
+  <ToggleMusica>Musica</ToggleMusica>
+  <BtIdioma>Español</BtIdioma>
+  <Exito>Exito</Exito>
+  <Fracaso>Fracaso</Fracaso>
+  <Tirada>Tirada</Tirada>
+  <LocalizacionDescubierta>Nueva localizacion descubierta:</LocalizacionDescubierta>
+  <Inspeccionando>Inspeccionando</Inspeccionando>
 </TextosMenus>

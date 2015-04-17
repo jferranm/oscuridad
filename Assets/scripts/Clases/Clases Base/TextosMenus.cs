@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using Oscuridad.Enumeraciones;
@@ -66,7 +66,42 @@ namespace Oscuridad.Clases
 			get { return btIdioma; }
 			set { btIdioma = value;	}
 		}
-		
+
+		private string exito;
+		public string Exito 
+		{
+			get { return exito;	}
+			set { exito = value; }
+		}
+
+		private string fracaso;
+		public string Fracaso 
+		{
+			get { return fracaso;	}
+			set { fracaso = value; }
+		}
+
+		private string tirada;
+		public string Tirada
+		{
+			get { return tirada;	}
+			set { tirada = value; }
+		}
+
+		private string localizacionDescubierta;
+		public string LocalizacionDescubierta
+		{
+			get { return localizacionDescubierta;	}
+			set { localizacionDescubierta = value; }
+		}
+
+		private string inspeccionando;
+		public string Inspeccionando
+		{
+			get { return inspeccionando;	}
+			set { inspeccionando = value; }
+		}
+
 		/// <summary>
 		/// Constructor de la clase <see cref="TextosMenus"/>.
 		/// </summary>

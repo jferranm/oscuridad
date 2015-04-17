@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextosMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <btComenzar>Start</btComenzar>
-  <btContinuar>Continue</btContinuar>
-  <btOpciones>Options</btOpciones>
-  <btSalir>Exit</btSalir>
-  <btPartidaNueva>New Game</btPartidaNueva>
-  <toggleSonido>Sound</toggleSonido>
-  <toggleMusica>Music</toggleMusica>
-  <btIdioma>English</btIdioma>
+  <BtComenzar>Start</BtComenzar>
+  <BtContinuar>Continue</BtContinuar>
+  <BtOpciones>Options</BtOpciones>
+  <BtSalir>Exit</BtSalir>
+  <BtPartidaNueva>New Game</BtPartidaNueva>
+  <ToggleSonido>Sound</ToggleSonido>
+  <ToggleMusica>Music</ToggleMusica>
+  <BtIdioma>English</BtIdioma>
+  <Exito>Success</Exito>
+  <Fracaso>Failure</Fracaso>
+  <Tirada>Roll</Tirada>
+  <LocalizacionDescubierta>New location discovered:</LocalizacionDescubierta>
+  <Inspeccionando>Examine</Inspeccionando>
 </TextosMenus>
