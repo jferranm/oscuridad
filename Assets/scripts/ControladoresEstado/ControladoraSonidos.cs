@@ -19,6 +19,7 @@ public class ControladoraSonidos
 	public AudioSource emisorBSO;
 
 	public AudioClip bsoEscenarioWard;
+	public AudioClip bsoMenuPrincipal;
 	//-------------------------------------
 
 	public float volumenSonido
@@ -59,6 +60,7 @@ public class ControladoraSonidos
 		sonidoFalloPulsar = Resources.Load("Sonidos/pulsarFallo", typeof(AudioClip)) as AudioClip;
 		sonidoAcertarPulsar = Resources.Load("Sonidos/pulsarAcertar", typeof(AudioClip)) as AudioClip;
 		bsoEscenarioWard = Resources.Load("Musica/EscenarioWard", typeof(AudioClip)) as AudioClip;
+		bsoMenuPrincipal = Resources.Load("Musica/MenuPrincipal", typeof(AudioClip)) as AudioClip;
 
 		emisorFX = EmisorFX.GetComponent<AudioSource> ();
 		emisorBSO = EmisorBSO.GetComponent<AudioSource> ();
@@ -69,6 +71,13 @@ public class ControladoraSonidos
 		if(escenarioActual.Contains("EscenaWard"))
 		{
 			EmisorBSO.GetComponent<AudioSource>().clip = bsoEscenarioWard;
+			emisorBSO.Play ();
+			return;
+		}
+
+		if(escenarioActual.Contains("Menu"))
+		{
+			EmisorBSO.GetComponent<AudioSource>().clip = bsoMenuPrincipal;
 			emisorBSO.Play ();
 			return;
 		}

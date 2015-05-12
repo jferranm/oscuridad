@@ -99,8 +99,8 @@ public class GameCenter : MonoBehaviour
 
 	public void Salir()
 	{
-		controladoraJuego.configuracionJuego.SonidoActivado = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleSonido.IsActive ();
-		controladoraJuego.configuracionJuego.MusicaActivada = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleMusica.IsActive ();
+		controladoraJuego.configuracionJuego.SonidoActivado = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleSonido.isOn;
+		controladoraJuego.configuracionJuego.MusicaActivada = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleMusica.isOn;
 		controladoraJuego.configuracionJuego.VolumenSonido = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value;
 		controladoraJuego.configuracionJuego.VolumenMusica = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value;
 

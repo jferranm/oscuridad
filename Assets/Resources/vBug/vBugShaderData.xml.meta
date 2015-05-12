@@ -2,30 +2,6 @@
 <ShaderProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <shaders>
     <Info>
-      <name>__GUI_SHADER_TEXTURECLIP_TEXT</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>__GUI_SHADER_TEXTURECLIP</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
       <name>__EDITOR_SELECTION</name>
       <propertyNames />
       <propertyTypes />
@@ -62,6 +38,30 @@
       <textDimensions />
     </Info>
     <Info>
+      <name>__GUI_SHADER_TEXTURECLIP_TEXT</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>__GUI_SHADER_TEXTURECLIP</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
       <name>Diffuse</name>
       <propertyNames>
         <string>_Color</string>
@@ -83,114 +83,6 @@
       <textDimensions />
     </Info>
     <Info>
-      <name>Hidden/Shadow-ScreenBlur</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Camera-DepthTexture</name>
-      <propertyNames>
-        <string>_MainTex</string>
-        <string>_Cutoff</string>
-        <string>_Color</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-        <PropType>Float</PropType>
-        <PropType>Color</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Camera-DepthNormalTexture</name>
-      <propertyNames>
-        <string>_MainTex</string>
-        <string>_Cutoff</string>
-        <string>_Color</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-        <PropType>Float</PropType>
-        <PropType>Color</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Internal-PrePassLighting</name>
-      <propertyNames>
-        <string>_LightTexture0</string>
-        <string>_LightTextureB0</string>
-        <string>_ShadowMapTexture</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-        <PropType>TexEnv</PropType>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDim2D</TextDim>
-        <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Internal-PrePassCollectShadows</name>
-      <propertyNames>
-        <string>_ShadowMapTexture</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Internal-CombineDepthNormals</name>
-      <propertyNames />
-      <propertyTypes />
-      <textDimensions />
-    </Info>
-    <Info>
-      <name>Hidden/BlitCopy</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Hidden/Shadow-ScreenBlurRotated</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
       <name>Hidden/InternalClear</name>
       <propertyNames />
       <propertyTypes />
@@ -198,12 +90,6 @@
     </Info>
     <Info>
       <name>Hidden/Internal-Flare</name>
-      <propertyNames />
-      <propertyTypes />
-      <textDimensions />
-    </Info>
-    <Info>
-      <name>Hidden/Internal-Halo</name>
       <propertyNames />
       <propertyTypes />
       <textDimensions />
@@ -310,6 +196,87 @@
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Bumped Diffuse</name>
+      <propertyNames>
+        <string>_Color</string>
+        <string>_MainTex</string>
+        <string>_BumpMap</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>Color</PropType>
+        <PropType>TexEnv</PropType>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDim2D</TextDim>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Transparent/VertexLit</name>
+      <propertyNames>
+        <string>_Color</string>
+        <string>_SpecColor</string>
+        <string>_Emission</string>
+        <string>_Shininess</string>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>Color</PropType>
+        <PropType>Color</PropType>
+        <PropType>Color</PropType>
+        <PropType>Range</PropType>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Transparent/Diffuse</name>
+      <propertyNames>
+        <string>_Color</string>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>Color</PropType>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Mobile/VertexLit</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDim2D</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
+      <name>Mobile/Diffuse</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
         <TextDim>TexDim2D</TextDim>
       </textDimensions>
     </Info>
@@ -431,6 +398,18 @@
       </textDimensions>
     </Info>
     <Info>
+      <name>Hidden/Preview Encoded Normals</name>
+      <propertyNames>
+        <string>_MainTex</string>
+      </propertyNames>
+      <propertyTypes>
+        <PropType>TexEnv</PropType>
+      </propertyTypes>
+      <textDimensions>
+        <TextDim>TexDimAny</TextDim>
+      </textDimensions>
+    </Info>
+    <Info>
       <name>Hidden/AlphaBasedSelection</name>
       <propertyNames>
         <string>_MainTex</string>
@@ -461,24 +440,6 @@
       </propertyTypes>
       <textDimensions>
         <TextDim>TexDimAny</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Bumped Diffuse</name>
-      <propertyNames>
-        <string>_Color</string>
-        <string>_MainTex</string>
-        <string>_BumpMap</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>Color</PropType>
-        <PropType>TexEnv</PropType>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDim2D</TextDim>
-        <TextDim>TexDim2D</TextDim>
       </textDimensions>
     </Info>
     <Info>
@@ -650,18 +611,6 @@
       </textDimensions>
     </Info>
     <Info>
-      <name>Mobile/Diffuse</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
       <name>Mobile/Particles/Alpha Blended</name>
       <propertyNames>
         <string>_MainTex</string>
@@ -729,18 +678,6 @@
     </Info>
     <Info>
       <name>Mobile/Unlit (Supports Lightmap)</name>
-      <propertyNames>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Mobile/VertexLit</name>
       <propertyNames>
         <string>_MainTex</string>
       </propertyNames>
@@ -1823,21 +1760,6 @@
       </textDimensions>
     </Info>
     <Info>
-      <name>Transparent/Diffuse</name>
-      <propertyNames>
-        <string>_Color</string>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>Color</PropType>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
       <name>Transparent/Specular</name>
       <propertyNames>
         <string>_Color</string>
@@ -1852,30 +1774,6 @@
         <PropType>TexEnv</PropType>
       </propertyTypes>
       <textDimensions>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDimAny</TextDim>
-        <TextDim>TexDim2D</TextDim>
-      </textDimensions>
-    </Info>
-    <Info>
-      <name>Transparent/VertexLit</name>
-      <propertyNames>
-        <string>_Color</string>
-        <string>_SpecColor</string>
-        <string>_Emission</string>
-        <string>_Shininess</string>
-        <string>_MainTex</string>
-      </propertyNames>
-      <propertyTypes>
-        <PropType>Color</PropType>
-        <PropType>Color</PropType>
-        <PropType>Color</PropType>
-        <PropType>Range</PropType>
-        <PropType>TexEnv</PropType>
-      </propertyTypes>
-      <textDimensions>
-        <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>
         <TextDim>TexDimAny</TextDim>

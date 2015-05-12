@@ -9,6 +9,7 @@ using Oscuridad.Clases;
 [System.Serializable]
 public class ControladoraJuego
 {
+	#region VARIABLES
 	private string pathConfig;
 	private string pathJugador;
 	private string pathIdioma;
@@ -44,6 +45,9 @@ public class ControladoraJuego
 		return instanceRef;
 	}
 
+	#endregion
+
+	#region METODOS INICIALIZACION
 	public void Inicializar()
 	{
 		pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
@@ -235,6 +239,20 @@ public class ControladoraJuego
 		}
 	}
 
+	public void Inicializar_Objetos()
+	{
+		foreach (ObjetoBase objeto in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
+		{
+			try 
+			{
+				GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
+			}
+			catch {}
+		}
+	}
+	#endregion
+
+	#region METODOS IO
 	public void CopiarXML()
 	{
 		string destino = null;
@@ -289,13 +307,18 @@ public class ControladoraJuego
 			Debug.LogError(ex.Message);
 		}
 	}
+	#endregion
 
+	#region METODOS CONFIGURACION
 	public void CargarConfiguracion()
 	{
 		cXML nuevoXML = new cXML ();
 
-		if (File.Exists (pathConfig))
+		if (File.Exists (pathConfig)) 
+		{
 			configuracionJuego = nuevoXML.Cargar_Clase_Serializable<Config> (pathConfig, configuracionJuego);
+			Modificar_Configuracion_Audio(configuracionJuego.VolumenSonido, configuracionJuego.VolumenMusica, configuracionJuego.SonidoActivado, configuracionJuego.MusicaActivada);
+		}
 		else 
 			GrabarConfiguracion();
 
@@ -304,13 +327,24 @@ public class ControladoraJuego
 		nuevoXML.Cerrar ();
 	}
 
+	public void Modificar_Configuracion_Audio(float volumenAudio, float volumenMusica, bool activarAudio, bool activarMusica)
+	{
+		OpcionesCanvasMenuPrincipal opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
+		opciones.sliderSonido.value = volumenAudio;
+		opciones.sliderMusica.value = volumenMusica;
+		opciones.toggleMusica.isOn = activarMusica;
+		opciones.toggleSonido.isOn = activarAudio;
+	}
+
 	public void GrabarConfiguracion()
 	{
 		cXML nuevoXML = new cXML ();
 		nuevoXML.Guardar_Clase_Serializable<Config> (pathConfig, configuracionJuego);
 		nuevoXML.Cerrar ();
 	}
+	#endregion
 
+	#region METODOS TRADUCCION
 	public void CargarTraduccion()
 	{
 		cXML nuevoXML = new cXML ();
@@ -319,6 +353,13 @@ public class ControladoraJuego
 		nuevoXML.Cerrar ();
 	}
 
+	public string Traduccion_Coger_Objeto(string nombreObjeto)
+	{
+		return nombreObjeto + "Ahora esta en el Inventario";
+	}
+	#endregion
+
+	#region METODOS JUGADOR
 	public void CargarJugador()
 	{
 		cXML nuevoXML = new cXML ();
@@ -332,7 +373,9 @@ public class ControladoraJuego
 		nuevoXML.Guardar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
 		nuevoXML.Cerrar ();
 	}
+	#endregion
 
+	#region METODOS ESCENA
 	public EscenaBase Cargar_Escena(Escenas escena)
 	{
 		cXML nuevoxml = new cXML ();
@@ -348,19 +391,61 @@ public class ControladoraJuego
 		nuevoxml.Guardar_Clase_Serializable<EscenaBase> (Path.Combine (pathIdioma, escena.ToString () + ".xml"), GameCenter.InstanceRef.controladoraJuego.escenaActual);
 		nuevoxml.Cerrar ();
 	}
+	#endregion
 
-	public void Inicializar_Objetos()
+	#region METODOS CAMARAS
+	public void Cambiar_Camara(string camara)
 	{
-		foreach (ObjetoBase objeto in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
+		float sourceBSOTime = 0;
+		AudioClip sourceBSOAudio = null;
+		
+		if(this.camaraActiva != null)
 		{
-			try 
+			sourceBSOTime = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time;
+			sourceBSOAudio = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip;
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Stop();
+			cameraActiva.enabled = false;
+			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
+				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar), false);
+		}
+		
+		cameraActiva = GameObject.Find (camara).GetComponent<Camera>();
+		cameraActiva.enabled = true;
+		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();
+		camaraActiva = this.escenaActual.Buscar_Camara (camara);
+		
+		if (sourceBSOAudio != null) 
+		{
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip = sourceBSOAudio;
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time = sourceBSOTime;
+			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Play();
+			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
 			{
-				GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
+				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
+				Inicializar_Objetos();
 			}
-			catch {}
 		}
 	}
+	
+	public void Desactivar_Camaras()
+	{
+		foreach (CamaraEscenaBase nueva in this.escenaActual.ListaCamaras) 
+		{
+			GameObject.Find(nueva.Nombre).GetComponent<Camera>().enabled = false;
+		}
+	}
+	
+	public void DesactivarHijos(GameObject g, bool a) 
+	{
+		g.SetActive (a);
+		
+		foreach (Transform child in g.transform) {
+			DesactivarHijos(child.gameObject, a);
+		}
+	}
+	#endregion
 
+	#region METODOS VARIOS
 	public int Lanzar_Dados(string expresion)
 	{
 		//LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
@@ -405,59 +490,5 @@ public class ControladoraJuego
 		
 		return aux;
 	}
-
-	public string Traduccion_Coger_Objeto(string nombreObjeto)
-	{
-		return nombreObjeto + "Ahora esta en el Inventario";
-	}
-
-	public void Cambiar_Camara(string camara)
-	{
-		float sourceBSOTime = 0;
-		AudioClip sourceBSOAudio = null;
-
-		if(this.camaraActiva != null)
-		{
-			sourceBSOTime = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time;
-			sourceBSOAudio = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip;
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Stop();
-			cameraActiva.enabled = false;
-			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
-				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar), false);
-		}
-
-		cameraActiva = GameObject.Find (camara).GetComponent<Camera>();
-		cameraActiva.enabled = true;
-		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();
-		camaraActiva = this.escenaActual.Buscar_Camara (camara);
-
-		if (sourceBSOAudio != null) 
-		{
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip = sourceBSOAudio;
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time = sourceBSOTime;
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Play();
-			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
-			{
-				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
-				Inicializar_Objetos();
-			}
-		}
-	}
-
-	public void Desactivar_Camaras()
-	{
-		foreach (CamaraEscenaBase nueva in this.escenaActual.ListaCamaras) 
-		{
-			GameObject.Find(nueva.Nombre).GetComponent<Camera>().enabled = false;
-		}
-	}
-
-	public void DesactivarHijos(GameObject g, bool a) 
-	{
-		g.SetActive (a);
-		
-		foreach (Transform child in g.transform) {
-			DesactivarHijos(child.gameObject, a);
-		}
-	}
+	#endregion
 }

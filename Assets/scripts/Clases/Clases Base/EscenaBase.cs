@@ -11,6 +11,7 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class EscenaBase
     {
+		#region VARIABLES
 		private Escenas escena;
 		/// <summary>
 		/// Escena en Enumeracion
@@ -70,7 +71,9 @@ namespace Oscuridad.Clases
 			get { return escenasDeshabilitar; }
 			set { escenasDeshabilitar = value; }
 		}
+		#endregion
 
+		#region CONSTRUCTORES
         /// <summary>
         /// Constructor de la clase <see cref="EscenaBase"/> class.
         /// </summary>
@@ -100,7 +103,9 @@ namespace Oscuridad.Clases
 
             AddPersonaje(personajes);
         }
+		#endregion
 
+		#region METODOS
         /// <summary>
         /// Añade un objeto a la escena
         /// </summary>
@@ -250,5 +255,7 @@ namespace Oscuridad.Clases
 			listaCamaras = new List<CamaraEscenaBase> ();
 			escenasDeshabilitar = new List<string> ();
 		}
+
+		#endregion
     }
 }
