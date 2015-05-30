@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_5;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_2;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -92,80 +92,6 @@
      <Compile Include="Assets\scripts\Scripts\TextoInferiorOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\TextoLateralOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\ZoomCamara.cs" />
-     <Compile Include="Assets\vBug\Components\Misc\SimpleFpsCounter.cs" />
-     <Compile Include="Assets\vBug\Components\ObjectCapture\vBugGameObjectReflectable.cs" />
-     <Compile Include="Assets\vBug\Components\ObjectCapture\vBugMeshRecordable.cs" />
-     <Compile Include="Assets\vBug\Components\ObjectCapture\vBugParticleRecordable.cs" />
-     <Compile Include="Assets\vBug\Components\vBugInitializer.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\DataProcessing\DataProcessingManager.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\DataProcessing\WorkloadDistributionManager.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\SceneHierarchyCache.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\BaseActivityGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\DebugLog\DebugLogSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\DebugLog\DebugLogsGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\DebugLog\vBugLogger.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\GameObjectReflection\ExposedObjectDescriptor.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\GameObjectReflection\GameObjectReflectionGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\GameObjectReflection\GameObjectSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\HumanInput\HumanInputGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\HumanInput\HumanInputSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\HumanInput\InputProviders\AxisInputProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\HumanInput\InputProviders\KeyboardInputProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\HumanInput\InputProviders\MouseInputProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\HumanInput\InputProviders\TouchInputProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MaterialData\MaterialDataGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MaterialData\MaterialDataSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MeshData\MeshDataChangeDetector.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MeshData\MeshDataGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MeshData\MeshDataProviders\MeshFilterProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MeshData\MeshDataProviders\MeshGrabberHelper.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MeshData\MeshDataProviders\SkinnedMeshProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\MeshData\MeshDataSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ParticleData\ParticleDataGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ParticleData\ParticleDataProviders\LegacyParticleDataProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ParticleData\ParticleDataProviders\ShurikenParticleDataProvider.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ParticleData\ParticleDataSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ScreenCapture\ScreenGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ScreenCapture\ScreencaptureRequest.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\ScreenCapture\ScreencaptureSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\SystemInfo\SystemInfoGrabber.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityGrabbers\SystemInfo\SystemSnapshot.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\UnityActivityRecorder.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\UnityActivityRecorder\VerticalActivitySlice.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\vBugEnvironment.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\vBugInternalDelegatescs.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\vBugInternalEnums.cs" />
-     <Compile Include="Assets\vBug\Runtime\Internal\vBugInternalInterfaces.cs" />
-     <Compile Include="Assets\vBug\Shared\Settings\vBugEditorSettings.cs" />
-     <Compile Include="Assets\vBug\Shared\Settings\vBugGlobalSettings.cs" />
-     <Compile Include="Assets\vBug\Shared\Settings\vBugRecordingSettings.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Compression\CLZF.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Extentions\Matrix4x4Extention.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Extentions\TransformExtention.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\ColorHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\DataProviderHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\DateTimeHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\GameObjectUtility.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\MathHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\RenderSettingsHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\SystemHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\TextureHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Helpers\TexturePool.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\IO\IORuntimeHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\IO\IOSharedHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\IO\SerializeRuntimeHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\IO\SerializeSharedHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Serialization\ComposedByteStream.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Serialization\ComposedPrimitives.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\Serialization\SerializableSurrogates.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\ShadersAndMaterials\MaterialSerializeHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\ShadersAndMaterials\ShaderPropertyHelper.cs" />
-     <Compile Include="Assets\vBug\Shared\Utils\vBugHiddenUniqueComponent.cs" />
-     <Compile Include="Assets\vBug\Shared\vBugCaptureMethods.cs" />
-     <Compile Include="Assets\vBug\Shared\vBugNamespaceEnums.cs" />
-     <Compile Include="Assets\vBug\Shared\vBugPublicDelegates.cs" />
-     <Compile Include="Assets\vBug\vBug.cs" />
-     <None Include="Assets\vBug\Documentation\vBug - Changelog.txt" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaBaja.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Resources\vBug\vBugShaderData.xml" />
@@ -176,19 +102,20 @@
      <None Include="Assets\Resources\xml\Escenarios\ENG\TextosMenus.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaBaja.xml" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardExterior.xml" />
-     <None Include="Assets\BuildReport\VERSION.txt" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaSuperior.xml" />
-     <None Include="Assets\BuildReport\README.txt" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardExterior.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\TextosMenus.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardExterior.xml" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CSharp">
- <HintPath>D:/Programacion/SVN/OscuridadGit/SoloContraLaOscuridad/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
+ <HintPath>D:/Programacion/SVN/Oscuridad5.0/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
