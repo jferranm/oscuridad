@@ -31,7 +31,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 
 	void OnDisable()
 	{
-		rectCajaTexto.localPosition = new Vector2 (0, y);
+		//rectCajaTexto.localPosition = new Vector2 (0, y);
 		final = false;
 		scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
 	}
