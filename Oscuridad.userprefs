@@ -1,22 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\TextoLateralOpciones.cs">
-    <Files>
-      <File FileName="Assets\scripts\Scripts\TextoInferiorOpciones.cs" Line="56" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="80" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Escenarios\CasaFamiliarWard\EscenaWardExterior\EscenaWardExterior.cs" Line="43" Column="26" />
-      <File FileName="Assets\scripts\Scripts\TextoLateralOpciones.cs" Line="36" Column="5" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\ControladoresEstado\ControladoraSonidos.cs" line="80" />
+      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\Clases\Clases Base\EscenaBase.cs" line="231" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

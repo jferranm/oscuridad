@@ -135,7 +135,8 @@
         LibroMesa,
         CirculoInvocacion,
         ObjetosAlquimia,
-        HojasPared
+        HojasPared,
+		Altar
     }
 
     /// <summary>

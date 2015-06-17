@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Escena>EscenaWardExterior</Escena>
-  <ObjetosEscena />
+  <ObjetosEscena>
+    <ObjetoBase>
+      <Nombre>Altar</Nombre>
+      <Objeto>Ninguno</Objeto>
+      <DescripcionNombre>Altar Jardin</DescripcionNombre>
+      <ObjetoOpciones>
+        <opcionObjeto>Ninguna</opcionObjeto>
+      </ObjetoOpciones>
+      <TiradasObjeto>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Es un Altar en el jardin</TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>true</Accion>
+          <LocalizacionAccion />
+        </ObjetoTiradaBase>
+      </TiradasObjeto>
+      <PosicionNueva>
+        <x>16.99</x>
+        <y>4.9</y>
+        <z>-7.6</z>
+      </PosicionNueva>
+      <RotacionNueva>
+        <x>42.65001</x>
+        <y>134.7</y>
+        <z>0</z>
+      </RotacionNueva>
+      <Smooth>2.5</Smooth>
+      <ObjetoActivo>true</ObjetoActivo>
+      <ObjetoInspeccionado>false</ObjetoInspeccionado>
+    </ObjetoBase>
+  </ObjetosEscena>
   <PersonajesEscena />
   <ListaCamaras>
     <CamaraEscenaBase>
