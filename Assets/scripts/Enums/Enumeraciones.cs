@@ -170,19 +170,6 @@
     }
 
     /// <summary>
-    /// Estados del personaje jugador
-    /// </summary>
-    public enum estadosJugador
-    {
-        enMenus,
-        enEspera,
-        enZoomIn,
-        enZoomOut,
-        enZoomEspera,
-        enInventario
-    }
-
-    /// <summary>
     /// Localizaciones para el mapa
     /// </summary>
     public enum Localizaciones

@@ -36,14 +36,14 @@ namespace Oscuridad.Clases
             set { tipoPersonaje = value; }
         }
 
-        private estadosJugador estadoJugador;
+        private EstadosJugador estadoJugador;
         /// <summary>
         /// estados del personaje jugador
         /// </summary>
         /// <value>
         /// enum tipo estadosJugador
         /// </value>
-        public estadosJugador EstadoJugador
+        public EstadosJugador EstadoJugador
         {
             get { return estadoJugador; }
             set { estadoJugador = value; }
@@ -456,7 +456,7 @@ namespace Oscuridad.Clases
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
 
-            estadoJugador = estadosJugador.enMenus;
+            estadoJugador = EstadosJugador.enMenus;
         }
 
         /// <summary>
@@ -472,7 +472,7 @@ namespace Oscuridad.Clases
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
 
-            estadoJugador = estadosJugador.enMenus;
+            estadoJugador = EstadosJugador.enMenus;
             tipoPersonaje = nuevoPersonaje;
         }
 

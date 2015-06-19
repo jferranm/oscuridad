@@ -10,10 +10,8 @@ using Oscuridad.Clases;
 [System.Serializable]
 public class ControladoraGUI
 {
-	//---- Opciones de Jugador
-	//public PreguntaBase[] textoBotones = new PreguntaBase[3];
+	#region VARIABLES PUBLICAS
 	public RespuestaBase nuevaRespuesta = new RespuestaBase();
-	//------
 
 	public GameObject imagenCargando;
 	public GameObject panelLateral;
@@ -27,8 +25,9 @@ public class ControladoraGUI
 
 	public string textoDescriptivo;
 
-	private GameObject botonPregunta;
+	#endregion
 
+	#region CONSTRUCTORES
 	public ControladoraGUI()
 	{
 
@@ -46,10 +45,9 @@ public class ControladoraGUI
 		return instanceRef;
 	}
 
-	public void Start()
-	{
+	#endregion
 
-	}
+	#region ESTADOS JUGADOR
 
 	public void CambioEnEstado()
 	{
@@ -112,6 +110,13 @@ public class ControladoraGUI
 			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Objeto);
 	}
 
+	public void Activar_Opciones_Basicas ()
+	{
+		botonDiario.SetActive (true);
+		panelInferior.SetActive (true);
+		panelDirecciones.SetActive(true);
+	}
+
 	public void DesactivarGUI()
 	{
 		panelObjetos.SetActive (false);
@@ -121,6 +126,9 @@ public class ControladoraGUI
 		panelInferior.SetActive (false);
 	}
 
+	#endregion
+
+	#region METODOS CARGA NIVEL Y TRANSICIONES
 
 	public void Activar_Cargando()
 	{
@@ -132,12 +140,9 @@ public class ControladoraGUI
 		imagenCargando.GetComponent<PantallaCarga> ().comenzarFade = true;
 	}
 
-	public void Activar_Opciones_Basicas ()
-	{
-		botonDiario.SetActive (true);
-		panelInferior.SetActive (true);
-		panelDirecciones.SetActive(true);
-	}
+	#endregion
+
+	#region PANEL INTERACCION OBJETOS Y PERSONAJES
 
 	public void Lanzar_Inspeccionar()
 	{
@@ -235,7 +240,6 @@ public class ControladoraGUI
 
 	public void Lanzar_Hablar()
 	{
-		botonPregunta = GameObject.Find ("BotonPregunta");
 		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.personajePulsado.InicioConversacion);
 	}
 
@@ -253,11 +257,7 @@ public class ControladoraGUI
 		{
 			foreach(PreguntaBase nuevaPregunta in nuevaRespuesta.MostrarPreguntas())
 			{
-				//Button botonPregunta = (Button)UnityEngine.Object.Instantiate(Resources.Load("Prefabs/BotonPregunta", typeof(Button)));
-				GameObject botonClonadoPregunta = GameObject.Instantiate(botonPregunta, botonPregunta.transform.position, botonPregunta.transform.rotation) as GameObject;
-				botonClonadoPregunta.transform.SetParent(panelInferior.transform);
-				//Text textoPregunta = botonPregunta.GetComponent<Text>();
-				//botonPregunta.GetComponent<Text>().text = nuevaPregunta.TextoPregunta;
+				Insertar_Ventana_Inferior_Texto(nuevaPregunta.TextoPregunta, Color.yellow);
 			}
 		}
 	}
@@ -360,4 +360,6 @@ public class ControladoraGUI
 	{
 		return "\"";
 	}
+
+	#endregion
 }

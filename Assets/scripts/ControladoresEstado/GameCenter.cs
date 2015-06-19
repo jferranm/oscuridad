@@ -60,7 +60,6 @@ public class GameCenter : MonoBehaviour
 
 	void Start()
 	{
-		controladoraGUI.Start ();
 		controladoraSonidos.Start ();
 		controladoraEscenas.CambiarSceneSegunEnum (Escenas.MenuPrincipal);
 	}

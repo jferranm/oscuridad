@@ -54,7 +54,7 @@ public class ControladoraJuego
 		pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
 
 		jugadorActual = new JugadorBase ();
-		jugadorActual.EstadoJugador = estadosJugador.enMenus;
+		jugadorActual.EstadoJugador = EstadosJugador.enMenus;
 
 		escenaActual = new EscenaBase ();
 		configuracionJuego = new Config(Application.systemLanguage);
