@@ -22,6 +22,7 @@ public class ControladoraGUI
 
 	public Text textoLateral;
 	public Text textoInferior;
+	public ListaPreguntas listaPreguntas;
 
 	public string textoDescriptivo;
 
@@ -255,10 +256,11 @@ public class ControladoraGUI
 		} 
 		else 
 		{
-			foreach(PreguntaBase nuevaPregunta in nuevaRespuesta.MostrarPreguntas())
-			{
-				Insertar_Ventana_Inferior_Texto(nuevaPregunta.TextoPregunta, Color.yellow);
-			}
+			listaPreguntas.Generar_Preguntas(nuevaRespuesta.MostrarPreguntas());
+			//foreach(PreguntaBase nuevaPregunta in nuevaRespuesta.MostrarPreguntas())
+			//{
+			//	Insertar_Ventana_Inferior_Texto(nuevaPregunta.TextoPregunta, Color.yellow);
+			//}
 		}
 	}
 
