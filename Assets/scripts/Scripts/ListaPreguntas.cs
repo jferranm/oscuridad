@@ -11,7 +11,7 @@ public class ListaPreguntas: MonoBehaviour
 	private int itemCount;
 	private int columnCount = 1;
 
-	void OnEnable()
+	void Start()
 	{
 		if(GameCenter.InstanceRef != null)
 			GameCenter.InstanceRef.controladoraGUI.listaPreguntas = this.gameObject.GetComponent<ListaPreguntas>();
@@ -19,6 +19,8 @@ public class ListaPreguntas: MonoBehaviour
 
 	public void Generar_Preguntas(PreguntaBase[] preguntas)
 	{
+		Vaciar_Contenedor ();
+
 		itemCount = preguntas.Length;
 
 		RectTransform rowRectTransform = itemPrefab.GetComponent<RectTransform>();
@@ -49,6 +51,15 @@ public class ListaPreguntas: MonoBehaviour
 			x = rectTransform.offsetMin.x + width;
 			y = rectTransform.offsetMin.y + height;
 			rectTransform.offsetMax = new Vector2(x, y);
+		}
+	}
+
+	private void Vaciar_Contenedor()
+	{
+		foreach (Transform objetoHijo in gameObject.transform) 
+		{
+			if(!objetoHijo.gameObject.name.Contains("Cuerpo"))
+				GameObject.Destroy(objetoHijo.gameObject);
 		}
 	}
 }

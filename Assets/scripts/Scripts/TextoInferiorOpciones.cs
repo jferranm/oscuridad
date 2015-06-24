@@ -19,14 +19,16 @@ public class TextoInferiorOpciones : MonoBehaviour
 		yTotal = 1;
 	}
 
+	void Start()
+	{
+		if (GameCenter.InstanceRef != null) 
+			GameCenter.InstanceRef.controladoraGUI.textoInferior = textoVentana;
+	}
+
 	void OnEnable()
 	{
 		if (GameCenter.InstanceRef != null) 
-		{
-			GameCenter.InstanceRef.controladoraGUI.textoInferior = textoVentana;
-			
 			Reiniciar_Texto();
-		}
 	}
 
 	void OnDisable()

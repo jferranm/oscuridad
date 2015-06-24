@@ -18,12 +18,20 @@ public class TextoLateralOpciones : MonoBehaviour
 		yTotal = 1;
 	}
 
-	void OnEnable()
+	void Start()
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
 			GameCenter.InstanceRef.controladoraGUI.textoLateral = textoCuerpo;
+			GameCenter.InstanceRef.controladoraGUI.textoLateralOpciones = gameObject.GetComponent<TextoLateralOpciones>();
+		}
+	}
 
+
+	void OnEnable()
+	{
+		if (GameCenter.InstanceRef != null) 
+		{
 			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
 				textoCuerpo.text = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica();
 			else
@@ -66,5 +74,12 @@ public class TextoLateralOpciones : MonoBehaviour
 		{
 			scrollRectTransform.GetComponent<ScrollRect>().vertical = false;
 		}
+	}
+
+	public void Nuevo_Texto_Anyadido()
+	{
+		yTotal = scrollRectTransform.rect.height;
+		rectCajaTexto.localPosition = new Vector2 (0, yTotal);
+		final = false;
 	}
 }

@@ -21,6 +21,7 @@ public class ControladoraGUI
 	public GameObject panelObjetos;
 
 	public Text textoLateral;
+	public TextoLateralOpciones textoLateralOpciones;
 	public Text textoInferior;
 	public ListaPreguntas listaPreguntas;
 
@@ -314,7 +315,12 @@ public class ControladoraGUI
 	
 	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
 	{
-		textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
+		if(textoLateral.text.Equals(string.Empty))
+			textoLateral.text = ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
+		else
+			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
+
+		textoLateralOpciones.Nuevo_Texto_Anyadido ();
 	}
 
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)

@@ -7,6 +7,8 @@ using Oscuridad.Enumeraciones;
 
 public class Eventos : MonoBehaviour 
 {
+	#region MENU PRINCIPAL
+
 	public bool toggleMusica
 	{
 		set{ ActivarDesactivarMusica(value);}
@@ -146,6 +148,10 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraSonidos.volumenSonido = nuevoVolumen;
 	}
 
+	#endregion
+
+	#region PANEL DIRECCIONES
+
 	public void BotonDireccion(GameObject botonDireccion)
 	{
 		Color rojo = new Color (255,0,0);
@@ -229,6 +235,10 @@ public class Eventos : MonoBehaviour
 		}
 	}
 
+	#endregion
+
+	#region PANEL OBJETOS
+
 	public void BotonObjeto(GameObject botonObjeto)
 	{
 		Color rojo = new Color (255,0,0);
@@ -286,12 +296,10 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraGUI.Lanzar_Hablar ();
 	}
 
-	public void BotonPregunta()
+	public void BotonPregunta(GameObject respuesta)
 	{
+		GameCenter.InstanceRef.controladoraGUI.Reestructurar_Respuestas(int.Parse (respuesta.name));
 	}
 
-	public void CajaTexto_OnChange(Vector2 nuevaPosicion)
-	{
-		Debug.Log (nuevaPosicion);
-	}
+	#endregion
 }
