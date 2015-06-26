@@ -37,9 +37,9 @@ public class ListaPreguntas: MonoBehaviour
 
 			GameObject newItem = Instantiate(itemPrefab) as GameObject;
 			newItem.name = preguntas[i].IdRespuesta.ToString();
-			Text prueba = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
+			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
-			prueba.text = preguntas[i].TextoPregunta;
+			contendorTexto.text = preguntas[i].TextoPregunta;
 			newItem.transform.SetParent(gameObject.transform);
 			
 			RectTransform rectTransform = newItem.GetComponent<RectTransform>();
@@ -49,7 +49,10 @@ public class ListaPreguntas: MonoBehaviour
 			rectTransform.offsetMin = new Vector2(x, y);
 
 			x = rectTransform.offsetMin.x + width;
-			y = rectTransform.offsetMin.y + height;
+			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contendorTexto.text) > x)
+				y = rectTransform.offsetMin.y + (height * 2) ;
+			else
+				y = rectTransform.offsetMin.y + height;
 			rectTransform.offsetMax = new Vector2(x, y);
 		}
 	}

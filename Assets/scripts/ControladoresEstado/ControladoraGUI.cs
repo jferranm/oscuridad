@@ -256,13 +256,7 @@ public class ControladoraGUI
 			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
 		} 
 		else 
-		{
 			listaPreguntas.Generar_Preguntas(nuevaRespuesta.MostrarPreguntas());
-			//foreach(PreguntaBase nuevaPregunta in nuevaRespuesta.MostrarPreguntas())
-			//{
-			//	Insertar_Ventana_Inferior_Texto(nuevaPregunta.TextoPregunta, Color.yellow);
-			//}
-		}
 	}
 
 	public void Boton_Pulsado(string textoPregunta, int idRespuesta)
@@ -319,8 +313,6 @@ public class ControladoraGUI
 			textoLateral.text = ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
 		else
 			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
-
-		textoLateralOpciones.Nuevo_Texto_Anyadido ();
 	}
 
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)

@@ -8,15 +8,6 @@ public class TextoLateralOpciones : MonoBehaviour
 	public RectTransform rectCajaTexto;
 	public RectTransform scrollRectTransform;
 	public float y;
-	public float yTotal;
-
-	private bool final;
-
-	void Awake()
-	{
-		y = rectCajaTexto.localPosition.y;
-		yTotal = 1;
-	}
 
 	void Start()
 	{
@@ -25,6 +16,8 @@ public class TextoLateralOpciones : MonoBehaviour
 			GameCenter.InstanceRef.controladoraGUI.textoLateral = textoCuerpo;
 			GameCenter.InstanceRef.controladoraGUI.textoLateralOpciones = gameObject.GetComponent<TextoLateralOpciones>();
 		}
+
+		y = rectCajaTexto.localPosition.y;
 	}
 
 
@@ -41,9 +34,8 @@ public class TextoLateralOpciones : MonoBehaviour
 
 	void OnDisable()
 	{
-		//rectCajaTexto.localPosition = new Vector2 (0, y);
-		final = false;
 		scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
+		Posicion_Inicial_Caja ();
 	}
 
 	void Update()
@@ -52,23 +44,11 @@ public class TextoLateralOpciones : MonoBehaviour
 		{
 			scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
 
-			if (!final) 
-			{
-				if (rectCajaTexto.offsetMax.y > rectCajaTexto.sizeDelta.magnitude) 
-				{
-					yTotal = rectCajaTexto.localPosition.y;
-					final = true;
-				}
-			}
-			
 			if (rectCajaTexto.localPosition.y < y) 
-				rectCajaTexto.localPosition = new Vector2 (0, y);
-			
-			if (final) 
-			{
-				if (rectCajaTexto.localPosition.y > yTotal) 
-					rectCajaTexto.localPosition = new Vector2 (0, yTotal);
-			}
+				Posicion_Inicial_Caja();
+
+			if (rectCajaTexto.localPosition.y > rectCajaTexto.rect.height) 
+				rectCajaTexto.localPosition = new Vector2 (0, rectCajaTexto.rect.height);
 		} 
 		else 
 		{
@@ -76,10 +56,8 @@ public class TextoLateralOpciones : MonoBehaviour
 		}
 	}
 
-	public void Nuevo_Texto_Anyadido()
+	public void Posicion_Inicial_Caja()
 	{
-		yTotal = scrollRectTransform.rect.height;
-		rectCajaTexto.localPosition = new Vector2 (0, yTotal);
-		final = false;
+		rectCajaTexto.localPosition = new Vector2 (0, y);
 	}
 }

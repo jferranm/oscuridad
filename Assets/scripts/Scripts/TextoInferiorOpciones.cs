@@ -9,20 +9,13 @@ public class TextoInferiorOpciones : MonoBehaviour
 	public RectTransform rectCajaTexto;
 	public RectTransform scrollRectTransform;
 	public float y;
-	public float yTotal;
-	
-	private bool final;
-
-	void Awake()
-	{
-		y = rectCajaTexto.localPosition.y;
-		yTotal = 1;
-	}
 
 	void Start()
 	{
 		if (GameCenter.InstanceRef != null) 
 			GameCenter.InstanceRef.controladoraGUI.textoInferior = textoVentana;
+
+		y = rectCajaTexto.localPosition.y;
 	}
 
 	void OnEnable()
@@ -33,9 +26,8 @@ public class TextoInferiorOpciones : MonoBehaviour
 
 	void OnDisable()
 	{
-		//rectCajaTexto.localPosition = new Vector2 (0, y);
-		final = false;
 		scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
+		Posicion_Inicial_Caja ();
 	}
 	
 	private void JugadorEnEspera()
@@ -55,23 +47,13 @@ public class TextoInferiorOpciones : MonoBehaviour
 	{
 		if (textoVentana.preferredHeight > scrollRectTransform.rect.height) 
 		{
-			if (!final) 
-			{
-				if (rectCajaTexto.offsetMax.y > rectCajaTexto.sizeDelta.magnitude) 
-				{
-					yTotal = rectCajaTexto.localPosition.y;
-					final = true;
-				}
-			}
-
+			scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
+			
 			if (rectCajaTexto.localPosition.y < y) 
-				rectCajaTexto.localPosition = new Vector2 (0, y);
-
-			if (final) 
-			{
-				if (rectCajaTexto.localPosition.y > yTotal) 
-					rectCajaTexto.localPosition = new Vector2 (0, yTotal);
-			}
+				Posicion_Inicial_Caja();
+			
+			if (rectCajaTexto.localPosition.y > rectCajaTexto.rect.height) 
+				rectCajaTexto.localPosition = new Vector2 (0, rectCajaTexto.rect.height);
 		} 
 		else 
 		{
@@ -81,6 +63,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 
 	public void Reiniciar_Texto()
 	{
+		Posicion_Inicial_Caja ();
 		switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
 		{
 			case EstadosJugador.enEspera:
@@ -91,5 +74,10 @@ public class TextoInferiorOpciones : MonoBehaviour
 				JugadorEnZoomEspera ();
 				break;
 		}
+	}
+
+	public void Posicion_Inicial_Caja()
+	{
+		rectCajaTexto.localPosition = new Vector2 (0, y);
 	}
 }
