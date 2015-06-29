@@ -10,6 +10,7 @@ public class ListaPreguntas: MonoBehaviour
 
 	private int itemCount;
 	private int columnCount = 1;
+	private GameObject cuerpo;
 
 	void Start()
 	{
@@ -19,7 +20,7 @@ public class ListaPreguntas: MonoBehaviour
 
 	public void Generar_Preguntas(PreguntaBase[] preguntas)
 	{
-		Vaciar_Contenedor ();
+		cuerpo = Buscar_Contenedor ();
 
 		itemCount = preguntas.Length;
 
@@ -40,16 +41,19 @@ public class ListaPreguntas: MonoBehaviour
 			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
 			contendorTexto.text = preguntas[i].TextoPregunta;
-			newItem.transform.SetParent(gameObject.transform);
+			//newItem.transform.SetParent(gameObject.transform);
+			newItem.transform.SetParent(cuerpo.transform);
 			
 			RectTransform rectTransform = newItem.GetComponent<RectTransform>();
 
 			float x = -containerRectTransform.rect.width / 2 + width * (i % columnCount);
+ 			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contendorTexto.text, 16) > containerRectTransform.rect.width)
+				j++;
 			float y = containerRectTransform.rect.height / 2 - height * j;
 			rectTransform.offsetMin = new Vector2(x, y);
 
 			x = rectTransform.offsetMin.x + width;
-			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contendorTexto.text) > x)
+			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contendorTexto.text, 16) > containerRectTransform.rect.width)
 				y = rectTransform.offsetMin.y + (height * 2) ;
 			else
 				y = rectTransform.offsetMin.y + height;
@@ -57,13 +61,15 @@ public class ListaPreguntas: MonoBehaviour
 		}
 	}
 
-	private void Vaciar_Contenedor()
+	private GameObject Buscar_Contenedor()
 	{
 		foreach (Transform objetoHijo in gameObject.transform) 
 		{
-			if(!objetoHijo.gameObject.name.Contains("Cuerpo"))
-				GameObject.Destroy(objetoHijo.gameObject);
+			if(objetoHijo.gameObject.name.Contains("Cuerpo"))
+				return objetoHijo.gameObject;
 		}
+
+		return null;
 	}
 }
 

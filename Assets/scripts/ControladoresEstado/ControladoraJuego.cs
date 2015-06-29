@@ -491,9 +491,11 @@ public class ControladoraJuego
 		return aux;
 	}
 
-	public float Devolver_Tamanyo_Cadena(string texto)
+	public float Devolver_Tamanyo_Cadena(string texto, int sizeFuente)
 	{
-		return new GUIStyle().CalcSize(new GUIContent(texto)).x;
+		GUIStyle miEstilo = new GUIStyle ();
+		miEstilo.fontSize = sizeFuente;
+		return miEstilo.CalcSize(new GUIContent(texto)).x;
 	}
 
 	#endregion
