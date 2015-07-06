@@ -23,6 +23,7 @@ public class ControladoraGUI
 	public Text textoLateral;
 	public TextoLateralOpciones textoLateralOpciones;
 	public Text textoInferior;
+	public TextoInferiorOpciones textoInferiorOpciones;
 	public ListaPreguntas listaPreguntas;
 
 	public string textoDescriptivo;

@@ -14,21 +14,23 @@ public class ListaPreguntas: MonoBehaviour
 
 	void Start()
 	{
-		if(GameCenter.InstanceRef != null)
-			GameCenter.InstanceRef.controladoraGUI.listaPreguntas = this.gameObject.GetComponent<ListaPreguntas>();
+		if (GameCenter.InstanceRef != null) 
+		{
+			GameCenter.InstanceRef.controladoraGUI.listaPreguntas = this.gameObject.GetComponent<ListaPreguntas> ();
+		}
 	}
 
 	public void Generar_Preguntas(PreguntaBase[] preguntas)
 	{
-		cuerpo = Buscar_Contenedor ();
-
 		itemCount = preguntas.Length;
-
 		RectTransform rowRectTransform = itemPrefab.GetComponent<RectTransform>();
-		RectTransform containerRectTransform = gameObject.GetComponent<RectTransform>();
+		cuerpo = Buscar_Contenedor ("PanelPreguntas");
+		RectTransform containerRectTransform = cuerpo.GetComponent<RectTransform> ();
 		
 		float width = containerRectTransform.rect.width;
 		float height = rowRectTransform.rect.height;
+
+		float sizeY = 0;
 		
 		int j = 0;
 		for (int i = 0; i < itemCount; i++)
@@ -41,7 +43,6 @@ public class ListaPreguntas: MonoBehaviour
 			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
 			contendorTexto.text = preguntas[i].TextoPregunta;
-			//newItem.transform.SetParent(gameObject.transform);
 			newItem.transform.SetParent(cuerpo.transform);
 			
 			RectTransform rectTransform = newItem.GetComponent<RectTransform>();
@@ -58,14 +59,25 @@ public class ListaPreguntas: MonoBehaviour
 			else
 				y = rectTransform.offsetMin.y + height;
 			rectTransform.offsetMax = new Vector2(x, y);
+
+			sizeY += y;
+		}
+
+		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
+		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectCajaTexto.localPosition = new Vector2 (GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.localPosition.x, (sizeY/2));
+		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.y = GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectCajaTexto.localPosition.y;
+
+		foreach (Button boton in cuerpo.GetComponentsInChildren<Button>()) 
+		{
+			boton.transform.localPosition = new Vector2(cuerpo.transform.localPosition.x, boton.transform.localPosition.y + (GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.y * -1));
 		}
 	}
 
-	private GameObject Buscar_Contenedor()
+	private GameObject Buscar_Contenedor(string nombreContenedor)
 	{
 		foreach (Transform objetoHijo in gameObject.transform) 
 		{
-			if(objetoHijo.gameObject.name.Contains("Cuerpo"))
+			if(objetoHijo.gameObject.name.Contains(nombreContenedor))
 				return objetoHijo.gameObject;
 		}
 
