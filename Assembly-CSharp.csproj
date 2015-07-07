@@ -87,6 +87,7 @@
      <Compile Include="Assets\scripts\Scripts\PanelLateralOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelObjetosOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PanelOpciones.cs" />
+     <Compile Include="Assets\scripts\Scripts\PanelPreguntasOpciones.cs" />
      <Compile Include="Assets\scripts\Scripts\PantallaCarga.cs" />
      <Compile Include="Assets\scripts\Scripts\ParpadeoLuz.cs" />
      <Compile Include="Assets\scripts\Scripts\TextoCabeceraOpciones.cs" />

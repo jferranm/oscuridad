@@ -22,6 +22,9 @@ public class ListaPreguntas: MonoBehaviour
 
 	public void Generar_Preguntas(PreguntaBase[] preguntas)
 	{
+		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.gameObject.SetActive (false);
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.gameObject.SetActive (true);
+
 		itemCount = preguntas.Length;
 		RectTransform rowRectTransform = itemPrefab.GetComponent<RectTransform>();
 		cuerpo = Buscar_Contenedor ("PanelPreguntas");
@@ -63,9 +66,10 @@ public class ListaPreguntas: MonoBehaviour
 			sizeY += y;
 		}
 
-		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
-		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectCajaTexto.localPosition = new Vector2 (GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.localPosition.x, (sizeY/2));
-		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.y = GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectCajaTexto.localPosition.y;
+		//GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2 (GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.x, (sizeY/2));
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.y = GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.y;
 
 		foreach (Button boton in cuerpo.GetComponentsInChildren<Button>()) 
 		{
