@@ -40,7 +40,10 @@ public class TextoInferiorOpciones : MonoBehaviour
 	
 	private void JugadorEnZoomEspera()
 	{
-		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
+		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null)
+			textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre + "\"";
+		else
+			textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
 		rectCajaTexto.gameObject.SetActive(true);
 	}
 

@@ -66,14 +66,13 @@ public class ListaPreguntas: MonoBehaviour
 			sizeY += y;
 		}
 
-		//GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2 (GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.x, (sizeY/2));
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.y = GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.y;
 
 		foreach (Button boton in cuerpo.GetComponentsInChildren<Button>()) 
 		{
-			boton.transform.localPosition = new Vector2(cuerpo.transform.localPosition.x, boton.transform.localPosition.y + (GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.y * -1));
+			boton.transform.localPosition = new Vector2(cuerpo.transform.localPosition.x, boton.transform.localPosition.y + (GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.y * -1));
 		}
 	}
 
