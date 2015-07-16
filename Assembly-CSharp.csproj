@@ -96,6 +96,7 @@
      <Compile Include="Assets\scripts\Scripts\ZoomCamara.cs" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaBaja.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Resources\vBug\vBugShaderData.xml" />
      <None Include="Assets\Resources\Prefabs\MobileTransparent.shader" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\TextosMenus.xml" />
@@ -106,7 +107,6 @@
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaSuperior.xml" />
      <None Include="Assets\Cultist Altar\Materials\BumpedTransGloss\BumpedTransGloss.shader" />
      <None Include="Assets\Resources\xml\Escenarios\ENG\EscenaWardInteriorPlantaSuperior.xml" />
-     <None Include="Assets\Resources\vBug\vBugShaderData.xml" />
      <None Include="Assets\Resources\xml\Escenarios\SPA\EscenaWardExterior.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\TextosMenus.xml" />
      <None Include="Assets\Resources\xml\Escenarios\FR\EscenaWardExterior.xml" />
@@ -120,7 +120,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CSharp">
- <HintPath>J:/GITHUB/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
+ <HintPath>D:/Programacion/SVN/Oscuridad5.0/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
