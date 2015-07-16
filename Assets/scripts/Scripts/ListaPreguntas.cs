@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;
 using Oscuridad.Clases;
 
@@ -78,13 +79,7 @@ public class ListaPreguntas: MonoBehaviour
 
 	private GameObject Buscar_Contenedor(string nombreContenedor)
 	{
-		foreach (Transform objetoHijo in gameObject.transform) 
-		{
-			if(objetoHijo.gameObject.name.Contains(nombreContenedor))
-				return objetoHijo.gameObject;
-		}
-
-		return null;
+		return gameObject.GetComponentsInChildren<Transform> ().ToList().Find (x => x.gameObject.name.Equals(nombreContenedor)).gameObject;
 	}
 }
 
