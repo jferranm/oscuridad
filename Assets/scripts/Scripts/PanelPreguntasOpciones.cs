@@ -20,7 +20,8 @@ public class PanelPreguntasOpciones : MonoBehaviour
 	
 	void OnEnable()
 	{
-		scrollRectTransform.GetComponent<ScrollRect> ().content = rectPanelPreguntas;
+		//if (GameCenter.InstanceRef != null) 
+			//Reiniciar_Texto ();
 	}
 	
 	void OnDisable()
@@ -31,19 +32,23 @@ public class PanelPreguntasOpciones : MonoBehaviour
 	
 	void Update()
 	{
+		Debug.Log ("y: " + y);
 		if (GameCenter.InstanceRef.controladoraJugador.EstadoJugador.Equals (EstadosJugador.enEspera) || GameCenter.InstanceRef.controladoraJugador.EstadoJugador.Equals (EstadosJugador.enZoomEspera)) 
 		{
 			if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
 			{
+				Debug.Log ("rectPanelPreguntas.rect.height: " + rectPanelPreguntas.rect.height.ToString () + " - scrollRectTransform.rect.height: " + scrollRectTransform.rect.height.ToString ());    
 				if (rectPanelPreguntas.rect.height > scrollRectTransform.rect.height) 
 				{
 					scrollRectTransform.GetComponent<ScrollRect> ().vertical = true;
-
+					
+					Debug.Log ("rectrectPanelPreguntas.localposition.y: " + rectPanelPreguntas.localPosition.y.ToString ());
 					if (rectPanelPreguntas.localPosition.y < y) 
 						Posicion_Inicial_Caja ();
-
-					if (rectPanelPreguntas.localPosition.y > (y * -1)) 
-						rectPanelPreguntas.localPosition = new Vector2 (0, (y * -1));
+					
+					Debug.Log ("rectrectPanelPreguntas.localposition.y: " + rectPanelPreguntas.localPosition.y + " - rectPanelPreguntas.rect.height: " + rectPanelPreguntas.rect.height.ToString ());
+					if (rectPanelPreguntas.localPosition.y > rectPanelPreguntas.rect.height) 
+						rectPanelPreguntas.localPosition = new Vector2 (0, rectPanelPreguntas.rect.height);
 				} 
 				else 
 					scrollRectTransform.GetComponent<ScrollRect> ().vertical = false;
