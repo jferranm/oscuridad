@@ -84,5 +84,6 @@ public class TextoInferiorOpciones : MonoBehaviour
 	public void Posicion_Inicial_Caja()
 	{
 		rectCajaTexto.localPosition = new Vector2 (0, y);
+		scrollRectTransform.GetComponent<ScrollRect> ().content = rectCajaTexto;
 	}
 }
