@@ -120,7 +120,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CSharp">
- <HintPath>D:/Programacion/SVN/Oscuridad5.0/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
+ <HintPath>J:/GITHUB/oscuridad/Assets/Resources/dll/Mono.CSharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
