@@ -1,28 +1,16 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\ListaPreguntas.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\ListaPreguntas.cs" Line="83" Column="3" />
-      <File FileName="Assets\scripts\Scripts\TextoInferiorOpciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\PanelPreguntasOpciones.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\PanelPreguntasOpciones.cs">
-    <Files>
-      <File FileName="Assets\scripts\Scripts\ListaPreguntas.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\TextoInferiorOpciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\PanelPreguntasOpciones.cs" Line="18" Column="94" />
->>>>>>> origin/master
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PanelPreguntasOpciones.cs" Line="45" Column="1" />
+      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="306" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="369" Column="42" />
+      <File FileName="Assets\scripts\Scripts\ListaPreguntas.cs" Line="37" Column="117" />
+      <File FileName="Assets\scripts\Scripts\TextoLateralOpciones.cs" Line="51" Column="124" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\OscuridadGit\SoloContraLaOscuridad\oscuridad\Assets\scripts\ControladoresEstado\ControladoraSonidos.cs" line="80" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="Assets\scripts\Scripts\OpcionesCanvasMenuPrincipal.cs" line="87" offsetX="1076" offsetY="1054" expression="GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

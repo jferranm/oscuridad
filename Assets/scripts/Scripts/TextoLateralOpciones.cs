@@ -8,6 +8,9 @@ public class TextoLateralOpciones : MonoBehaviour
 	public RectTransform rectCajaTexto;
 	public RectTransform scrollRectTransform;
 	public float y;
+	public float velocidadDeslizamiento;
+
+	private bool deslizar = false;
 
 	void Start()
 	{
@@ -40,24 +43,37 @@ public class TextoLateralOpciones : MonoBehaviour
 
 	void Update()
 	{
-		if (textoCuerpo.preferredHeight > scrollRectTransform.rect.height) 
+		if (deslizar) 
 		{
-			scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
-
-			if (rectCajaTexto.localPosition.y < y) 
-				Posicion_Inicial_Caja();
-
-			if (rectCajaTexto.localPosition.y > rectCajaTexto.rect.height) 
-				rectCajaTexto.localPosition = new Vector2 (0, rectCajaTexto.rect.height);
+			if(rectCajaTexto.localPosition.y > rectCajaTexto.rect.height)
+				deslizar = false;
+			else
+				rectCajaTexto.localPosition = new Vector2 (0, rectCajaTexto.localPosition.y + (velocidadDeslizamiento + Time.deltaTime));
 		} 
 		else 
 		{
-			scrollRectTransform.GetComponent<ScrollRect>().vertical = false;
+			if (textoCuerpo.preferredHeight > scrollRectTransform.rect.height) 
+			{
+				scrollRectTransform.GetComponent<ScrollRect> ().vertical = true;
+
+				if (rectCajaTexto.localPosition.y < y) 
+					Posicion_Inicial_Caja ();
+
+				if (rectCajaTexto.localPosition.y > rectCajaTexto.rect.height) 
+					rectCajaTexto.localPosition = new Vector2 (0, rectCajaTexto.rect.height);
+			} 
+			else 
+				scrollRectTransform.GetComponent<ScrollRect> ().vertical = false;
 		}
 	}
 
 	public void Posicion_Inicial_Caja()
 	{
 		rectCajaTexto.localPosition = new Vector2 (0, y);
+	}
+
+	public void Deslizar_Texto()
+	{
+		deslizar = true;
 	}
 }

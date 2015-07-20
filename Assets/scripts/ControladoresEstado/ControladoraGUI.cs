@@ -252,6 +252,7 @@ public class ControladoraGUI
 		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
 
 		Insertar_Ventana_Lateral_Texto(nuevaRespuesta.TextoRespuesta, Color.white);
+		Deslizar_Ventana_Lateral ();
 
 		if (nuevaRespuesta.DireccionRespuesta > 0) 
 		{
@@ -361,6 +362,11 @@ public class ControladoraGUI
 	private string Comillas()
 	{
 		return "\"";
+	}
+
+	private void Deslizar_Ventana_Lateral()
+	{
+		textoLateralOpciones.Deslizar_Texto ();
 	}
 
 	#endregion

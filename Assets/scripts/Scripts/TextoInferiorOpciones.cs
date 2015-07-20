@@ -69,6 +69,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 	public void Reiniciar_Texto()
 	{
 		Posicion_Inicial_Caja ();
+		scrollRectTransform.GetComponent<ScrollRect> ().content = rectCajaTexto;
 		switch (GameCenter.InstanceRef.controladoraJugador.EstadoJugador) 
 		{
 			case EstadosJugador.enEspera:

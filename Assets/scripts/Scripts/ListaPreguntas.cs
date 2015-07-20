@@ -29,6 +29,12 @@ public class ListaPreguntas: MonoBehaviour
 		itemCount = preguntas.Length;
 		RectTransform rowRectTransform = itemPrefab.GetComponent<RectTransform>();
 		cuerpo = Buscar_Contenedor ("PanelPreguntas");
+		foreach (Transform hijo in cuerpo.transform) 
+		{
+			GameObject.Destroy(hijo.gameObject);
+		}
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(0,0));
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2(0,0);
 		RectTransform containerRectTransform = cuerpo.GetComponent<RectTransform> ();
 		
 		float width = containerRectTransform.rect.width;
