@@ -41,9 +41,9 @@ public class PanelPreguntasOpciones : MonoBehaviour
 					
 					if (rectPanelPreguntas.localPosition.y < y) 
 						Posicion_Inicial_Caja ();
-					
-					if (rectPanelPreguntas.localPosition.y > rectPanelPreguntas.rect.height) 
-						rectPanelPreguntas.localPosition = new Vector2 (0, rectPanelPreguntas.rect.height);
+
+					if (rectPanelPreguntas.localPosition.y > (y * -1)) 
+						rectPanelPreguntas.localPosition = new Vector2 (0, (y * -1));
 				} 
 				else 
 					scrollRectTransform.GetComponent<ScrollRect> ().vertical = false;

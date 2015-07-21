@@ -33,8 +33,8 @@ public class ListaPreguntas: MonoBehaviour
 		{
 			GameObject.Destroy(hijo.gameObject);
 		}
-		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(0,0));
-		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2(0,0);
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(0,0);
+		//GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2(0,0);
 		RectTransform containerRectTransform = cuerpo.GetComponent<RectTransform> ();
 		
 		float width = containerRectTransform.rect.width;
@@ -70,11 +70,14 @@ public class ListaPreguntas: MonoBehaviour
 				y = rectTransform.offsetMin.y + height;
 			rectTransform.offsetMax = new Vector2(x, y);
 
-			sizeY += y;
+			//sizeY += y;
+			//sizeY += rectTransform.offsetMax.y - rectTransform.offsetMin.y;
 		}
 
-		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax.x, (sizeY * -1));
-		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2 (GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.x, (sizeY/2));
+		//rectTransform.offsetMin = new Vector2(rectTransform.offsetMin.x, bottom);
+		//rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x, top);
+
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMin = new Vector2(GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMin.x, (sizeY * -1));
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.y = GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.y;
 
 		foreach (Button boton in cuerpo.GetComponentsInChildren<Button>()) 
