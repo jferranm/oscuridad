@@ -251,7 +251,9 @@ public class ControladoraGUI
 	{
 		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
 
-		Insertar_Ventana_Lateral_Texto(nuevaRespuesta.TextoRespuesta, Color.white);
+		if(textoLateral.text != string.Empty)
+			Blanquear_Texto_Lateral ("yellow", "white");
+		Insertar_Ventana_Lateral_Texto(nuevaRespuesta.TextoRespuesta, Color.yellow);
 		Deslizar_Ventana_Lateral ();
 
 		if (nuevaRespuesta.DireccionRespuesta > 0) 
@@ -313,7 +315,7 @@ public class ControladoraGUI
 	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
 	{
 		if(textoLateral.text.Equals(string.Empty))
-			textoLateral.text = ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
+			textoLateral.text = ObtenerColor(Color.white) + textoDescriptivo + FinDeLineaColor ();
 		else
 			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
 	}
@@ -350,6 +352,8 @@ public class ControladoraGUI
 			return "<color=green>";	
 		if (color.Equals(Color.white))
 			return "<color=white>";
+		if (color.Equals (Color.yellow))
+			return "<color=yellow>";
 		
 		return null;
 	}
@@ -367,6 +371,11 @@ public class ControladoraGUI
 	private void Deslizar_Ventana_Lateral()
 	{
 		textoLateralOpciones.Deslizar_Texto ();
+	}
+
+	private void Blanquear_Texto_Lateral(string colorACambiar, string colorNuevo)
+	{
+		textoLateral.text = textoLateral.text.Replace(colorACambiar, colorNuevo);
 	}
 
 	#endregion

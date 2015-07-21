@@ -40,7 +40,7 @@ public class ListaPreguntas: MonoBehaviour
 		float width = containerRectTransform.rect.width;
 		float height = rowRectTransform.rect.height;
 
-		float sizeY = 0;
+		float posicionUltimoElemento = 0;
 		
 		int j = 0;
 		for (int i = 0; i < itemCount; i++)
@@ -52,7 +52,7 @@ public class ListaPreguntas: MonoBehaviour
 			newItem.name = preguntas[i].IdRespuesta.ToString();
 			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
-			contendorTexto.text = preguntas[i].TextoPregunta;
+			contendorTexto.text = "- " + preguntas[i].TextoPregunta;
 			newItem.transform.SetParent(cuerpo.transform);
 			
 			RectTransform rectTransform = newItem.GetComponent<RectTransform>();
@@ -69,15 +69,11 @@ public class ListaPreguntas: MonoBehaviour
 			else
 				y = rectTransform.offsetMin.y + height;
 			rectTransform.offsetMax = new Vector2(x, y);
-
-			//sizeY += y;
-			//sizeY += rectTransform.offsetMax.y - rectTransform.offsetMin.y;
+		
+			posicionUltimoElemento = rectTransform.offsetMin.y + rectTransform.rect.size.y;
 		}
 
-		//rectTransform.offsetMin = new Vector2(rectTransform.offsetMin.x, bottom);
-		//rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x, top);
-
-		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMin = new Vector2(GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMin.x, (sizeY * -1));
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMin = new Vector2(GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMin.x, posicionUltimoElemento);
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.y = GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition.y;
 
 		foreach (Button boton in cuerpo.GetComponentsInChildren<Button>()) 
