@@ -10,6 +10,8 @@ public class TextoLateralOpciones : MonoBehaviour
 	public float y;
 	public float velocidadDeslizamiento;
 
+	public float valorFreno = 0;
+
 	private bool deslizar = false;
 
 	void Start()
@@ -32,6 +34,8 @@ public class TextoLateralOpciones : MonoBehaviour
 				textoCuerpo.text = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica();
 			else
 				textoCuerpo.text = "";
+
+			deslizar = false;
 		}
 	}
 
@@ -39,13 +43,14 @@ public class TextoLateralOpciones : MonoBehaviour
 	{
 		scrollRectTransform.GetComponent<ScrollRect>().vertical = true;
 		Posicion_Inicial_Caja ();
+		valorFreno = 0;
 	}
 
 	void Update()
 	{
 		if (deslizar) 
 		{
-			if(rectCajaTexto.localPosition.y > rectCajaTexto.rect.height)
+			if(rectCajaTexto.localPosition.y > valorFreno)
 				deslizar = false;
 			else
 				rectCajaTexto.localPosition = new Vector2 (0, rectCajaTexto.localPosition.y + (velocidadDeslizamiento + Time.deltaTime));
@@ -72,8 +77,9 @@ public class TextoLateralOpciones : MonoBehaviour
 		rectCajaTexto.localPosition = new Vector2 (0, y);
 	}
 
-	public void Deslizar_Texto()
+	public void Deslizar_Texto(float anteriorSizeCajaTexto)
 	{
 		deslizar = true;
+		valorFreno = y + anteriorSizeCajaTexto;
 	}
 }

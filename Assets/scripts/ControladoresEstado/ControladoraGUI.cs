@@ -253,8 +253,10 @@ public class ControladoraGUI
 
 		if(textoLateral.text != string.Empty)
 			Blanquear_Texto_Lateral ("yellow", "white");
+		float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
 		Insertar_Ventana_Lateral_Texto(nuevaRespuesta.TextoRespuesta, Color.yellow);
-		Deslizar_Ventana_Lateral ();
+		//if(anteriorSizeCajaTexto > 0)
+			Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
 
 		if (nuevaRespuesta.DireccionRespuesta > 0) 
 		{
@@ -368,9 +370,9 @@ public class ControladoraGUI
 		return "\"";
 	}
 
-	private void Deslizar_Ventana_Lateral()
+	private void Deslizar_Ventana_Lateral(float anteriorSizeCajaTexto)
 	{
-		textoLateralOpciones.Deslizar_Texto ();
+		textoLateralOpciones.Deslizar_Texto (anteriorSizeCajaTexto);
 	}
 
 	private void Blanquear_Texto_Lateral(string colorACambiar, string colorNuevo)
