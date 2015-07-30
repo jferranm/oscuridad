@@ -251,19 +251,31 @@ public class ControladoraGUI
 	{
 		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
 
-		if(textoLateral.text != string.Empty)
-			Blanquear_Texto_Lateral ("yellow", "white");
-		float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
-		Insertar_Ventana_Lateral_Texto(nuevaRespuesta.TextoRespuesta, Color.yellow);
-		//if(anteriorSizeCajaTexto > 0)
-			Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
-
-		if (nuevaRespuesta.DireccionRespuesta > 0) 
+		if (nuevaRespuesta != null) 
 		{
-			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
+			if (textoLateral.text != string.Empty) 
+			{
+				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
+				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
+			} 
+			else 
+			{
+				Blanquear_Texto_Lateral ("yellow", "white");
+				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+			}
+
+			listaPreguntas.Generar_Preguntas (nuevaRespuesta.MostrarPreguntas ());
 		} 
 		else 
-			listaPreguntas.Generar_Preguntas(nuevaRespuesta.MostrarPreguntas());
+		{
+			Vaciar_Texto_Lateral();
+			//Vaciar Panel Preguntas
+			textoInferiorOpciones.gameObject.SetActive (true);
+			panelPreguntasOpciones.gameObject.SetActive (false);
+			panelObjetos.GetComponent<PanelObjetosOpciones> ().Activar ("Hablar");
+		}
+
 	}
 
 	public void Boton_Pulsado(string textoPregunta, int idRespuesta)
@@ -378,6 +390,11 @@ public class ControladoraGUI
 	private void Blanquear_Texto_Lateral(string colorACambiar, string colorNuevo)
 	{
 		textoLateral.text = textoLateral.text.Replace(colorACambiar, colorNuevo);
+	}
+
+	private void Vaciar_Texto_Lateral()
+	{
+		textoLateral.text = string.Empty;
 	}
 
 	#endregion

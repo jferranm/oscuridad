@@ -193,7 +193,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Me marcho, buenos dias.</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>-1</IdRespuesta>
               <IdPregunta>3</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>

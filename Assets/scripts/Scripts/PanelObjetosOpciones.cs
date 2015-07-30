@@ -76,6 +76,13 @@ public class PanelObjetosOpciones : MonoBehaviour
 		imagenBoton.color = new Color (255,0,0);
 	}
 
+	private void Activar (GameObject objeto)
+	{
+		Image imagenBoton = objeto.GetComponent<Image> ();
+		
+		imagenBoton.color = new Color (255,255,255);
+	}
+
 	public void Desactivar (string nombreBoton)
 	{
 		if (botonCoger.name.Contains (nombreBoton))
@@ -87,4 +94,17 @@ public class PanelObjetosOpciones : MonoBehaviour
 		if (botonInspeccionar.name.Contains (nombreBoton))
 			Desactivar (botonInspeccionar);
 	}
+
+	public void Activar (string nombreBoton)
+	{
+		if (botonCoger.name.Contains (nombreBoton))
+			Activar (botonCoger);
+		
+		if (botonHablar.name.Contains (nombreBoton))
+			Activar (botonHablar);
+		
+		if (botonInspeccionar.name.Contains (nombreBoton))
+			Activar (botonInspeccionar);
+	}
+
 }
