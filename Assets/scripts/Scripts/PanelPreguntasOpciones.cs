@@ -55,4 +55,15 @@ public class PanelPreguntasOpciones : MonoBehaviour
 	{
 		rectPanelPreguntas.localPosition = new Vector2 (0, y);
 	}
+
+	public void Vaciar_Panel()
+	{
+		foreach (Transform hijo in this.gameObject.transform) 
+		{
+			GameObject.Destroy(hijo.gameObject);
+		}
+
+		rectPanelPreguntas.offsetMax = new Vector2 (0, 0);
+		rectPanelPreguntas.offsetMin = new Vector2 (0, 0);
+	}
 }

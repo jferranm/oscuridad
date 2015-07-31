@@ -26,6 +26,7 @@ public class ControladoraGUI
 	public TextoInferiorOpciones textoInferiorOpciones;
 	public PanelPreguntasOpciones panelPreguntasOpciones;
 	public ListaPreguntas listaPreguntas;
+	public PanelObjetosOpciones panelObjetosOpciones;
 
 	public string textoDescriptivo;
 
@@ -270,10 +271,10 @@ public class ControladoraGUI
 		else 
 		{
 			Vaciar_Texto_Lateral();
-			//Vaciar Panel Preguntas
+			Vaciar_Panel_Preguntas();
 			textoInferiorOpciones.gameObject.SetActive (true);
 			panelPreguntasOpciones.gameObject.SetActive (false);
-			panelObjetos.GetComponent<PanelObjetosOpciones> ().Activar ("Hablar");
+			panelObjetosOpciones.Activar ("Hablar");
 		}
 
 	}
@@ -392,9 +393,14 @@ public class ControladoraGUI
 		textoLateral.text = textoLateral.text.Replace(colorACambiar, colorNuevo);
 	}
 
-	private void Vaciar_Texto_Lateral()
+	public void Vaciar_Texto_Lateral()
 	{
 		textoLateral.text = string.Empty;
+	}
+
+	public void Vaciar_Panel_Preguntas()
+	{
+		panelPreguntasOpciones.Vaciar_Panel();
 	}
 
 	#endregion

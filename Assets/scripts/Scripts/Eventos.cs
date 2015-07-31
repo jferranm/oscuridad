@@ -247,7 +247,7 @@ public class Eventos : MonoBehaviour
 		if (!imagenBoton.color.Equals (rojo)) 
 		{
 			if(botonObjeto.name.Contains("Volver"))
-				GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomOut;
+				Volver_Vista();
 
 			if(botonObjeto.name.Contains("Coger"))
 				Coger_Objeto();
@@ -294,6 +294,17 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Hablar");
 
 		GameCenter.InstanceRef.controladoraGUI.Lanzar_Hablar ();
+	}
+
+	private void Volver_Vista()
+	{
+		GameCenter.InstanceRef.controladoraGUI.Vaciar_Texto_Lateral();
+		GameCenter.InstanceRef.controladoraGUI.Vaciar_Panel_Preguntas();
+		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.gameObject.SetActive (true);
+		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.gameObject.SetActive (false);
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Normalizar_Botones();
+
+		GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomOut;
 	}
 
 	public void BotonPregunta(GameObject respuesta)

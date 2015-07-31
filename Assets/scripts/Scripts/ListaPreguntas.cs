@@ -34,8 +34,9 @@ public class ListaPreguntas: MonoBehaviour
 			GameObject.Destroy(hijo.gameObject);
 		}
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.offsetMax = new Vector2(0,0);
-		//GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.rectPanelPreguntas.localPosition = new Vector2(0,0);
 		RectTransform containerRectTransform = cuerpo.GetComponent<RectTransform> ();
+		containerRectTransform.offsetMax = new Vector2 (0, 0);
+		containerRectTransform.offsetMin = new Vector2 (0, 0);
 		
 		float width = containerRectTransform.rect.width;
 		float height = rowRectTransform.rect.height;

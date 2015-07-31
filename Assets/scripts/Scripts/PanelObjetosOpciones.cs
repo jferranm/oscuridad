@@ -9,7 +9,12 @@ public class PanelObjetosOpciones : MonoBehaviour
 	public GameObject botonCoger;
 	public GameObject botonHablar;
 	public GameObject botonInspeccionar;
-	
+
+	void Start()
+	{
+		if (GameCenter.InstanceRef != null) 
+			GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones = gameObject.GetComponent<PanelObjetosOpciones>();
+	}
 	void OnEnable()
 	{
 		if (GameCenter.InstanceRef != null) 
@@ -62,7 +67,7 @@ public class PanelObjetosOpciones : MonoBehaviour
 		}
 	}
 	
-	private void Normalizar_Botones()
+	public void Normalizar_Botones()
 	{
 		botonCoger.GetComponent<Image> ().color = new Color (255, 255, 255);
 		botonHablar.GetComponent<Image> ().color = new Color (255, 255, 255);
