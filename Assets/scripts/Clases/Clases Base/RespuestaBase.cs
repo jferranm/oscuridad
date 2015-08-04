@@ -10,6 +10,7 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class RespuestaBase
     {
+		#region VARIABLES
         private string textoRespuesta;
         /// <summary>
         /// Texto de la respuesta del NPC
@@ -101,6 +102,9 @@ namespace Oscuridad.Clases
             set { direccionRespuesta = value; }
         }
 
+		#endregion
+
+		#region CONSTRUCTORES
         /// <summary>
         /// Constructor de la clase <see cref="RespuestaBase"/>
         /// </summary>
@@ -195,6 +199,10 @@ namespace Oscuridad.Clases
             direccionRespuesta = direccion;
         }
 
+		#endregion
+
+		#region METODOS
+
         /// <summary>
         /// Añade una pregunta a la respuesta del NPC
         /// </summary>
@@ -242,5 +250,7 @@ namespace Oscuridad.Clases
         {
             return preguntasRespuesta.ToArray();
         }
+
+		#endregion
     }
 }

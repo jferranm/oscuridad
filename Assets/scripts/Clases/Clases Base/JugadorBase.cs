@@ -11,6 +11,7 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class JugadorBase
     {
+		#region VARIABLES
 		private string nombrePersonaje;
 		/// <summary>
 		/// Nombre del Jugador
@@ -444,6 +445,10 @@ namespace Oscuridad.Clases
 		/// </value>
 		public armasJugador ArmasJugador;
 
+		#endregion
+
+		#region CONSTRUCTORES
+
         /// <summary>
         /// Constructor de la clase <see cref="JugadorBase"/> class.
         /// </summary>
@@ -452,6 +457,7 @@ namespace Oscuridad.Clases
             escenasVisitadas = new List<Escenas>();
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
+			accionesRealizadas = new List<Acciones> ();
 			CaracteristicasJugador = new caracteristicasJugador ();
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
@@ -468,6 +474,7 @@ namespace Oscuridad.Clases
             escenasVisitadas = new List<Escenas>();
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
+			accionesRealizadas = new List<Acciones> ();
 			CaracteristicasJugador = new caracteristicasJugador ();
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
@@ -475,6 +482,10 @@ namespace Oscuridad.Clases
             estadoJugador = EstadosJugador.enMenus;
             tipoPersonaje = nuevoPersonaje;
         }
+
+		#endregion
+
+		#region METODOS
 
         /// <summary>
         /// Añade una escena visitada
@@ -494,6 +505,15 @@ namespace Oscuridad.Clases
             objetosVistos.Add(objetoVisto);
         }
 
+		/// <summary>
+		/// Añade una accion realizada
+		/// </summary>
+		/// <param name="accionRealizada">objeto tipo Acciones</param>
+		public void AddEscenaVisitada(Acciones accionRealizada)
+		{
+			accionesRealizadas.Add(accionRealizada);
+		}
+
         /// <summary>
         /// Añade un objeto al inventario
         /// </summary>
@@ -512,14 +532,36 @@ namespace Oscuridad.Clases
             inventario.Remove(objeto);
         }
 
+		/// <summary>
+		/// Checkea que se haya visitado una escena
+		/// </summary>
+		/// <param name="escena">objeto tipo Escenas</param>
+		/// <returns> true si se a visitado, false sino</returns>
 		public bool EscenaVista (Escenas escena)
 		{
-			return escenasVisitadas.Contains (escena);
+			return EscenasVisitadas.Contains (escena);
 		}
 
+		/// <summary>
+		/// Checkea que se haya interactuado con un objeto
+		/// </summary>
+		/// <param name="objeto">objeto tipo Objetos</param>
+		/// <returns> true si se a interactuado con el objeto, false sino</returns>
 		public bool ObjetoVisto (Objetos objeto)
 		{
-			return objetosVistos.Contains (objeto);
+			return ObjetosVistos.Contains (objeto);
 		}
+
+		/// <summary>
+		/// Checkea que se haya realizado un tipo de accion
+		/// </summary>
+		/// <param name="accion">objeto tipo Acciones</param>
+		/// <returns> true si se a realizado la accion, false sino</returns>
+		public bool AccionRealizada (Acciones accion)
+		{
+			return AccionesRealizadas.Contains(accion);
+		}
+
+		#endregion
     }
 }

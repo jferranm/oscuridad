@@ -11,7 +11,7 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class PersonajeBase
     {
-        
+		#region VARIABLES
         private string nombre;
         /// <summary>
         /// Nombre del personaje
@@ -97,8 +97,9 @@ namespace Oscuridad.Clases
 			set { smooth = value; }
 		}
 
+		#endregion
 
-        //METODOS
+		#region CONSTRUCTORES
 
         /// <summary>
         /// Constructor de la Clase
@@ -160,6 +161,10 @@ namespace Oscuridad.Clases
             AddRespuesta(respuestas);
         }
 
+		#endregion
+
+		#region METODOS
+
         /// <summary>
         /// Añade una respuesta a la conversacion
         /// </summary>
@@ -218,5 +223,7 @@ namespace Oscuridad.Clases
 
 			return null;
 		}
+
+		#endregion
     }
 }

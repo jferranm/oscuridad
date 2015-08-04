@@ -10,6 +10,8 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class PreguntaBase
     {
+		#region VARIABLES
+
         private string textoPregunta;
         /// <summary>
         /// Texto de la pregunta
@@ -153,6 +155,9 @@ namespace Oscuridad.Clases
             set { comprobacionAccion = value; }
         }
 
+		#endregion
+
+		#region CONSTRUCTORES
 
         /// <summary>
         /// Constructor de la Clase <see cref="PreguntaBase"/>
@@ -212,6 +217,6 @@ namespace Oscuridad.Clases
             comprobacionAccion = accion;
         }
 
-                   
+		#endregion                  
     }
 }

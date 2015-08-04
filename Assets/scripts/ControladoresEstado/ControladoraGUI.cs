@@ -266,8 +266,8 @@ public class ControladoraGUI
 				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
 			}
 
-			listaPreguntas.Generar_Preguntas (nuevaRespuesta.MostrarPreguntas ());
-		} 
+			listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
+		}
 		else 
 		{
 			Vaciar_Texto_Lateral();
@@ -277,6 +277,66 @@ public class ControladoraGUI
 			panelObjetosOpciones.Activar ("Hablar");
 		}
 
+	}
+
+	/// <summary>
+	/// Filtra las respuestas a la pregunta segun haya avanzado el personaje o tirada
+	/// </summary>
+	/// <param name="lista">Lista de PreguntaBase a evaluar</param>
+	/// <value>
+	/// Lista de PreguntaBase evaluadas y filtradas
+	/// </value>
+	private PreguntaBase[] Filtrar_Preguntas(PreguntaBase[] lista)
+	{
+		List<PreguntaBase> nuevasPreguntas = new List<PreguntaBase> ();
+
+		foreach (PreguntaBase preguntaNueva in lista) 
+		{
+			if (preguntaNueva.ComprobacionPregunta)
+			{
+				if (preguntaNueva.ComprobacionAccion != null)
+				{
+					if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(preguntaNueva.ComprobacionAccion))
+						nuevasPreguntas.Add(preguntaNueva);
+				}
+				else
+				{
+					if (preguntaNueva.ComprobacionEscenas != null)
+					{
+						if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenaVista(preguntaNueva.ComprobacionEscenas))
+							nuevasPreguntas.Add(preguntaNueva);
+					}
+					else
+					{
+						if (preguntaNueva.ComprobacionHabilidad != null)
+						{
+							//Tirada de Habilidad
+							nuevasPreguntas.Add(preguntaNueva);
+						}
+						else
+						{
+							if (preguntaNueva.ComprobacionObjetos != null)
+							{
+								if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(preguntaNueva.ComprobacionObjetos))
+									nuevasPreguntas.Add(preguntaNueva);
+							}
+							else
+							{
+								if(preguntaNueva.PreguntaTirada)
+								{
+									//Tirada de pregunta
+									nuevasPreguntas.Add(preguntaNueva);
+								}
+							}
+						}
+					}
+				}
+			}
+			else
+				nuevasPreguntas.Add(preguntaNueva);
+		}
+
+		return nuevasPreguntas.ToArray ();
 	}
 
 	public void Boton_Pulsado(string textoPregunta, int idRespuesta)
