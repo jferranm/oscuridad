@@ -9,8 +9,14 @@ public class ZoomCamara : MonoBehaviour
 	public Vector3 posicionInicial;
 	[HideInInspector]
 	public Quaternion rotacionInicial;
+	public Escenas escenaVistaCamara;
 
 	private RaycastHit hit;
+
+	void OnEnabled()
+	{
+
+	}
 
 	void Start() 
 	{

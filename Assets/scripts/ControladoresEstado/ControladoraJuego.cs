@@ -425,6 +425,8 @@ public class ControladoraJuego
 				Inicializar_Objetos();
 			}
 		}
+
+		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddEscenaVisitada(cameraActiva.GetComponent<ZoomCamara>().escenaVistaCamara);;
 	}
 	
 	public void Desactivar_Camaras()

@@ -4,7 +4,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>PeriodicoSalon</Nombre>
-      <Objeto>Ninguno</Objeto>
+      <Objeto>PeriodicoSalon</Objeto>
       <DescripcionNombre>Periodico Salon</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
@@ -39,7 +39,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadroSalon</Nombre>
-      <Objeto>Ninguno</Objeto>
+      <Objeto>CuadroSalon</Objeto>
       <DescripcionNombre>Cuadro Salon</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -98,7 +98,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Figura</Nombre>
-      <Objeto>Ninguno</Objeto>
+      <Objeto>Figura</Objeto>
       <DescripcionNombre>Figura</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -193,7 +193,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Me marcho, buenos dias.</TextoPregunta>
-              <IdRespuesta>-1</IdRespuesta>
+              <IdRespuesta>0</IdRespuesta>
               <IdPregunta>3</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>

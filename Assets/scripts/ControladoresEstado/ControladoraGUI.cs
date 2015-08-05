@@ -283,9 +283,7 @@ public class ControladoraGUI
 	/// Filtra las respuestas a la pregunta segun haya avanzado el personaje o tirada
 	/// </summary>
 	/// <param name="lista">Lista de PreguntaBase a evaluar</param>
-	/// <value>
-	/// Lista de PreguntaBase evaluadas y filtradas
-	/// </value>
+	/// <return>Lista de PreguntaBase evaluadas y filtradas</return>
 	private PreguntaBase[] Filtrar_Preguntas(PreguntaBase[] lista)
 	{
 		List<PreguntaBase> nuevasPreguntas = new List<PreguntaBase> ();
@@ -294,28 +292,28 @@ public class ControladoraGUI
 		{
 			if (preguntaNueva.ComprobacionPregunta)
 			{
-				if (preguntaNueva.ComprobacionAccion != null)
+				if (preguntaNueva.ComprobacionAccion != Acciones.Ninguna)
 				{
 					if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(preguntaNueva.ComprobacionAccion))
 						nuevasPreguntas.Add(preguntaNueva);
 				}
 				else
 				{
-					if (preguntaNueva.ComprobacionEscenas != null)
+					if (preguntaNueva.ComprobacionEscenas != Escenas.ninguna)
 					{
 						if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenaVista(preguntaNueva.ComprobacionEscenas))
 							nuevasPreguntas.Add(preguntaNueva);
 					}
 					else
 					{
-						if (preguntaNueva.ComprobacionHabilidad != null)
+						if (preguntaNueva.ComprobacionHabilidad != Habilidades.Ninguna)
 						{
 							//Tirada de Habilidad
 							nuevasPreguntas.Add(preguntaNueva);
 						}
 						else
 						{
-							if (preguntaNueva.ComprobacionObjetos != null)
+							if (preguntaNueva.ComprobacionObjetos != Objetos.Ninguno)
 							{
 								if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(preguntaNueva.ComprobacionObjetos))
 									nuevasPreguntas.Add(preguntaNueva);
@@ -336,7 +334,17 @@ public class ControladoraGUI
 				nuevasPreguntas.Add(preguntaNueva);
 		}
 
-		return nuevasPreguntas.ToArray ();
+
+		return Ordenar_Preguntas(nuevasPreguntas.ToArray());
+	}
+
+	/// <summary>
+	/// Ordena las preguntas para que la ultima de ellas sea la de volver al menu, salir o volver a la pregunta anterior
+	/// </summary>
+	/// <param name="lista">Lista de PreguntaBase a ordenar</param>
+	/// <return>Lista de PreguntaBase ordenadas</return>
+	private PreguntaBase[] Ordenar_Preguntas(PreguntaBase[] preguntas)
+	{
 	}
 
 	public void Boton_Pulsado(string textoPregunta, int idRespuesta)

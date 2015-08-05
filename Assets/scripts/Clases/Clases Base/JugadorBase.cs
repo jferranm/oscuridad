@@ -493,7 +493,8 @@ namespace Oscuridad.Clases
         /// <param name="escenaVisitada">objeto tipo Escenas</param>
         public void AddEscenaVisitada(Escenas escenaVisitada)
         {
-            escenasVisitadas.Add(escenaVisitada);
+			if(!escenasVisitadas.Contains(escenaVisitada) && escenaVisitada != Escenas.ninguna)
+            	escenasVisitadas.Add(escenaVisitada);
         }
 
         /// <summary>
@@ -502,7 +503,8 @@ namespace Oscuridad.Clases
         /// <param name="objetoVisto">objeto tipo Objetos</param>
         public void AddObjetoVisto(Objetos objetoVisto)
         {
-            objetosVistos.Add(objetoVisto);
+			if(!objetosVistos.Contains(objetoVisto))
+            	objetosVistos.Add(objetoVisto);
         }
 
 		/// <summary>
@@ -511,7 +513,8 @@ namespace Oscuridad.Clases
 		/// <param name="accionRealizada">objeto tipo Acciones</param>
 		public void AddEscenaVisitada(Acciones accionRealizada)
 		{
-			accionesRealizadas.Add(accionRealizada);
+			if(!accionesRealizadas.Contains(accionRealizada))
+				accionesRealizadas.Add(accionRealizada);
 		}
 
         /// <summary>

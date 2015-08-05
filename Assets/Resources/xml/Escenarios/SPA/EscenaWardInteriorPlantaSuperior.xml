@@ -4,7 +4,7 @@
   <ObjetosEscena>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
-      <Objeto>Ninguno</Objeto>
+      <Objeto>CuadrosPrimeraPlanta1</Objeto>
       <DescripcionNombre>Cuadros</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
@@ -36,6 +36,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadrosPrimeraPlanta2</Nombre>
+	  <Objeto>CuadrosPrimeraPlanta2</Objeto>
       <DescripcionNombre>Cuadro</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -76,6 +77,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>PeriodicosHabitacionCharles</Nombre>
+	  <Objeto>PeriodicosHabitacionCharles</Objeto>
       <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -116,6 +118,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosHabitacionCharles</Nombre>
+	  <Objeto>LibrosHabitacionCharles</Objeto>
       <DescripcionNombre>Libros</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
@@ -147,6 +150,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Mesita</Nombre>
+	  <Objeto>Mesita</Objeto>
       <DescripcionNombre>Mesita</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -187,6 +191,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Puerta</Nombre>
+	  <Objeto>Puerta</Objeto>
       <DescripcionNombre>Cierre de Puerta</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
@@ -218,6 +223,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>Pala</Nombre>
+	  <Objeto>Pala</Objeto>
       <DescripcionNombre>Pala</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Coger</opcionObjeto>
@@ -248,6 +254,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CuadroDesvan</Nombre>
+	  <Objeto>CuadroDesvan</Objeto>
       <DescripcionNombre>Cuadro</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Coger</opcionObjeto>
@@ -297,6 +304,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibrosDesvan</Nombre>
+	  <Objeto>LibrosDesvan</Objeto>
       <DescripcionNombre>Libros</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Ninguna</opcionObjeto>
@@ -327,6 +335,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>LibroMesa</Nombre>
+	  <Objeto>LibroMesa</Objeto>
       <DescripcionNombre>Libro sobre la mesa</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -377,6 +386,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>CirculoInvocacion</Nombre>
+	  <Objeto>CirculoInvocacion</Objeto>
       <DescripcionNombre>Circulo de Invocacion</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Coger</opcionObjeto>
@@ -426,6 +436,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>ObjetosAlquimia</Nombre>
+	  <Objeto>ObjetosAlquimia</Objeto>
       <DescripcionNombre>Objetos de Alquimia</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>
@@ -474,6 +485,7 @@
     </ObjetoBase>
     <ObjetoBase>
       <Nombre>HojasPared</Nombre>
+	  <Objeto>HojasPared</Objeto>
       <DescripcionNombre>Hojas en la pared</DescripcionNombre>
       <ObjetoOpciones>
         <opcionObjeto>Observar</opcionObjeto>

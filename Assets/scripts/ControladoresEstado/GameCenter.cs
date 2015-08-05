@@ -90,9 +90,6 @@ public class GameCenter : MonoBehaviour
 		//Comenzamos BSO
 		controladoraSonidos.Lanzar_Bso (Application.loadedLevelName);
 
-		//Insertamos marcador de Escena visitada en el jugador
-		controladoraJuego.jugadorActual.AddEscenaVisitada (controladoraJuego.camaraActiva.Escena);
-
 		CanvasUIJuego.SetActive (true);
 	}
 
