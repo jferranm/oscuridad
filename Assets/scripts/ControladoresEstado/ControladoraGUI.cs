@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using Oscuridad.Interfaces;
@@ -254,6 +255,7 @@ public class ControladoraGUI
 
 		if (nuevaRespuesta != null) 
 		{
+			Blanquear_Texto_Lateral ("yellow", "white");
 			if (textoLateral.text != string.Empty) 
 			{
 				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
@@ -261,12 +263,13 @@ public class ControladoraGUI
 				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
 			} 
 			else 
-			{
-				Blanquear_Texto_Lateral ("yellow", "white");
 				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
-			}
+
+			if(nuevaRespuesta.SinRespuesta)
+				nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
 
 			listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
+
 		}
 		else 
 		{
@@ -345,6 +348,22 @@ public class ControladoraGUI
 	/// <return>Lista de PreguntaBase ordenadas</return>
 	private PreguntaBase[] Ordenar_Preguntas(PreguntaBase[] preguntas)
 	{
+		PreguntaBase ultimaPregunta = preguntas.ToList ().Find (x => x.IdRespuesta == 0);
+
+		if (ultimaPregunta != null) 
+		{
+			List<PreguntaBase> preguntasAux = new List<PreguntaBase>();
+			foreach (PreguntaBase pregunta in preguntas) 
+			{
+				if(!pregunta.Equals(ultimaPregunta))
+					preguntasAux.Add(pregunta);
+			}
+
+			preguntasAux.Add(ultimaPregunta);
+			preguntas = preguntasAux.ToArray();
+		}
+
+		return preguntas;
 	}
 
 	public void Boton_Pulsado(string textoPregunta, int idRespuesta)

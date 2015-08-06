@@ -670,7 +670,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Quienes son las gentes de los arrecifes?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>21</IdRespuesta>
               <IdPregunta>25</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
