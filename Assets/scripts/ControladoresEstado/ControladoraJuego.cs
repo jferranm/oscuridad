@@ -481,13 +481,18 @@ public class ControladoraJuego
 	public string Devolver_Descripcion_Localizacion_Segun_Enum(Localizaciones objeto)
 	{
 		string aux = "";
-		
-		foreach (char c in objeto.ToString()) 
+
+		for (byte cont = 0; cont < objeto.ToString().Length; cont++) 
 		{
-			if(Char.IsUpper(c))
-				aux += " "+c;
-			else
-				aux += c;
+				if(Char.IsUpper(objeto.ToString()[cont]))
+				{
+					if(cont!=0)
+						aux += " "+objeto.ToString()[cont];
+					else
+						aux += objeto.ToString()[cont];
+				}
+				else
+					aux += objeto.ToString()[cont];
 		}
 		
 		return aux;

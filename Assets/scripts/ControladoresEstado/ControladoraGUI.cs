@@ -253,24 +253,41 @@ public class ControladoraGUI
 	{
 		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
 
+		//Si existe respuesta
 		if (nuevaRespuesta != null) 
 		{
 			Blanquear_Texto_Lateral ("yellow", "white");
+			//Si el texto lateral esta vacio
 			if (textoLateral.text != string.Empty) 
 			{
 				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
 				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
 				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
 			} 
-			else 
+			//Si el texto lateral no esta vacio
+			else
 				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
 
+			//Comprobacion si la respuesta tiene un desbloqueo o accion asociada
+			if(nuevaRespuesta.Comprobacion)
+			{
+				//Desbloqueo de localizacion
+				if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
+				{
+					Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
+					//TODO: Desbloquear localizacion en mapa
+				}
+			}
+
+			//Comprobacion de que la respuesta no tiene pregunta asociada y vuelve a una pregunta anterior
 			if(nuevaRespuesta.SinRespuesta)
 				nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
 
+			//Generamos las preguntas asociadas a la respuesta
 			listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
 
 		}
+		//Sino existe respuesta
 		else 
 		{
 			Vaciar_Texto_Lateral();
@@ -366,12 +383,6 @@ public class ControladoraGUI
 		return preguntas;
 	}
 
-	public void Boton_Pulsado(string textoPregunta, int idRespuesta)
-	{
-		Insertar_Ventana_Lateral_Texto(textoPregunta, Color.green);
-		Reestructurar_Respuestas (idRespuesta);
-	}
-
 	public bool Comprobar_Pregunta(PreguntaBase pregunta)
 	{
 		if (pregunta.ComprobacionPregunta) 
@@ -444,6 +455,11 @@ public class ControladoraGUI
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
 		textoInferior.text = Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+	}
+
+	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
+	{
+		textoLateral.text = textoLateral.text + Environment.NewLine + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
 	}
 
 	private string ObtenerColor(Color color)
