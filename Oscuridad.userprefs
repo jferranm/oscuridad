@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraGUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="280" Column="5" />
-      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\ListaPreguntas.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs" Line="113" Column="23" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\CamaraEscenaBase.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -72,6 +72,7 @@ public class ControladoraJuego
 	public void Inicializar_Partida(Personaje personaje)
 	{
 		Inicializar_Jugador (personaje);
+		jugadorActual.AddLocalizacionDescubierta (Localizaciones.CasaFamiliarWard);
 		GrabarJugador ();
 	}
 

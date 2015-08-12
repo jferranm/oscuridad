@@ -24,6 +24,7 @@ namespace Oscuridad.Clases
 			get { return nombrePersonaje; }
 			set { nombrePersonaje = value; }
 		}
+
         private Personaje tipoPersonaje;
         /// <summary>
         /// Tipo de personaje jugador
@@ -87,6 +88,19 @@ namespace Oscuridad.Clases
 		{
 			get { return accionesRealizadas; }
 			set { accionesRealizadas = value; }
+		}
+
+		private List<Localizaciones> localizacionesDescubiertas;
+		/// <summary>
+		/// Lista de localizaciones Descubiertas por el personajeJugador
+		/// </summary>
+		/// <value>
+		/// Lista generica de tipo Localizaciones
+		/// </value>
+		public List<Localizaciones> LocalizacionesDescubiertas
+		{
+			get { return localizacionesDescubiertas; }
+			set { localizacionesDescubiertas = value; }
 		}
 
         private List<Objetos> inventario;
@@ -458,6 +472,7 @@ namespace Oscuridad.Clases
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
 			accionesRealizadas = new List<Acciones> ();
+			localizacionesDescubiertas = new List<Localizaciones> ();
 			CaracteristicasJugador = new caracteristicasJugador ();
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
@@ -475,6 +490,7 @@ namespace Oscuridad.Clases
             objetosVistos = new List<Objetos>();
             inventario = new List<Objetos>();
 			accionesRealizadas = new List<Acciones> ();
+			localizacionesDescubiertas = new List<Localizaciones> ();
 			CaracteristicasJugador = new caracteristicasJugador ();
 			DatosPersonalesJugador = new datosPersonalesJugador ();
 			ArmasJugador = new armasJugador ();
@@ -563,6 +579,15 @@ namespace Oscuridad.Clases
 		public bool AccionRealizada (Acciones accion)
 		{
 			return AccionesRealizadas.Contains(accion);
+		}
+
+		/// <summary>
+		/// Añade una localizacion a las localizaciones Descubiertas
+		/// </summary>
+		/// <param name="localizacion">objeto tipo Localizaciones</param>
+		public void AddLocalizacionDescubierta(Localizaciones localizacion)
+		{
+			LocalizacionesDescubiertas.Add (localizacion);
 		}
 
 		#endregion

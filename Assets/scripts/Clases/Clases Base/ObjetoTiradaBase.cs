@@ -10,6 +10,8 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class ObjetoTiradaBase
     {
+		#region VARIABLES
+
         private string textoDescriptivo;
         /// <summary>
         /// texto de la descripcion del Objeto
@@ -101,12 +103,30 @@ namespace Oscuridad.Clases
             set { localizacionAccion = value; }
         }
 
+		private List<Acciones> accionesAccion;
+		/// <summary>
+		/// Lista de acciones a realizar
+		/// </summary>
+		/// <value>
+		/// Lista generica de tipo enum Acciones
+		/// </value>
+		public List<Acciones> AccionesAccion
+		{
+			get { return accionesAccion; }
+			set { accionesAccion = value; }
+		}
+
+		#endregion
+
+		#region CONSTRUCTORES
+
         /// <summary>
         /// Constructor de la clase <see cref="ObjetoTiradaBase"/>.
         /// </summary>
         public ObjetoTiradaBase()
         {
             localizacionAccion = new List<Localizaciones>();
+			accionesAccion = new List<Acciones> ();
         }
 
         /// <summary>
@@ -116,6 +136,7 @@ namespace Oscuridad.Clases
         public ObjetoTiradaBase(string texto)
         {
             localizacionAccion = new List<Localizaciones>();
+			accionesAccion = new List<Acciones> ();
 
             textoDescriptivo = texto;
         }
@@ -127,6 +148,7 @@ namespace Oscuridad.Clases
         public ObjetoTiradaBase(Habilidades habilidad)
         {
             localizacionAccion = new List<Localizaciones>();
+			accionesAccion = new List<Acciones> ();
 
             habilidadTirada = habilidad;
         }
@@ -139,6 +161,7 @@ namespace Oscuridad.Clases
         public ObjetoTiradaBase(string texto, Habilidades habilidad)
         {
             localizacionAccion = new List<Localizaciones>();
+			accionesAccion = new List<Acciones> ();
 
             textoDescriptivo = texto;
             habilidadTirada = habilidad;
@@ -157,6 +180,7 @@ namespace Oscuridad.Clases
         public ObjetoTiradaBase(string texto, Habilidades habilidad, bool comp, Escenas escena, Objetos objeto, bool action, Localizaciones[] localizacion)
         {
             localizacionAccion = new List<Localizaciones>();
+			accionesAccion = new List<Acciones> ();
 
             textoDescriptivo = texto;
             habilidadTirada = habilidad;
@@ -166,5 +190,7 @@ namespace Oscuridad.Clases
             accion = action;
             localizacionAccion.AddRange(localizacion);
         }
+
+		#endregion
     }
 }

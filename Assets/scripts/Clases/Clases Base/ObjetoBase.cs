@@ -12,6 +12,7 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class ObjetoBase
     {
+		#region VARIABLES
         private string nombre;
         /// <summary>
         /// Nombre del objeto
@@ -142,6 +143,10 @@ namespace Oscuridad.Clases
 			set { objetoInspeccionado = value; }
 		}
 
+		#endregion
+
+		#region CONSTRUCTORES
+
         /// <summary>
         /// Contructor de la clase <see cref="ObjetoBase"/>.
         /// </summary>
@@ -217,6 +222,10 @@ namespace Oscuridad.Clases
 
             this.nombre = nombre;
         }
+
+		#endregion
+
+		#region METODOS
 
         /// <summary>
         /// Añade una opcion al objeto
@@ -371,5 +380,7 @@ namespace Oscuridad.Clases
 			
 			return false;
 		}
+
+		#endregion
     }
 }

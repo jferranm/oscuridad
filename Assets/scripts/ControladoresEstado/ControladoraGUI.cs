@@ -224,10 +224,10 @@ public class ControladoraGUI
 				//Ejecutamos Accion si la tuviese
 				if(tirada.Accion)
 				{
-					//TODO Añadir Localizacion
 					foreach(Localizaciones localizacion in tirada.LocalizacionAccion)
 					{
 						Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 					}
 				}
 
@@ -238,6 +238,16 @@ public class ControladoraGUI
 			{
 				Insertar_Ventana_Inferior_Texto(false, tirada.HabilidadTirada, resultado);
 				return false;
+			}
+		}
+
+		//Ejecutamos Accion si la tuviese
+		if(tirada.Accion)
+		{
+			//TODO Añadir Localizacion
+			foreach(Localizaciones localizacion in tirada.LocalizacionAccion)
+			{
+				Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
 			}
 		}
 
@@ -275,7 +285,7 @@ public class ControladoraGUI
 				if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
 				{
 					Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
-					//TODO: Desbloquear localizacion en mapa
+					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
 				}
 			}
 
@@ -454,7 +464,7 @@ public class ControladoraGUI
 	
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
-		textoInferior.text = Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		textoInferior.text = textoInferior.text + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
 	}
 
 	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
