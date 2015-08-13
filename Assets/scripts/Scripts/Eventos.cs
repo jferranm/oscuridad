@@ -313,4 +313,13 @@ public class Eventos : MonoBehaviour
 	}
 
 	#endregion
+
+	#region PANEL LIBRO
+
+	public void BotonLibro()
+	{
+		GameCenter.InstanceRef.controladoraGUI.panelLibro.SetActive (!GameCenter.InstanceRef.controladoraGUI.panelLibro.activeSelf);
+	}
+
+	#endregion
 }

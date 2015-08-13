@@ -6,12 +6,16 @@ using Oscuridad.Enumeraciones;
 [System.Serializable]
 public class ControladoraSonidos
 {
+	#region VARIABLES
+
 	//Sonidos------------------
 	public GameObject EmisorFX;
 	public AudioSource emisorFX;
 
 	public AudioClip sonidoFalloPulsar;
 	public AudioClip sonidoAcertarPulsar;
+	public AudioClip sonidoPasarPagina;
+	public AudioClip sonidoEscribir;
 	//-------------------------------
 
 	//B.S.O.-----------------------------
@@ -32,35 +36,30 @@ public class ControladoraSonidos
 		set{EmisorBSO.GetComponent<AudioSource>().volume = value;}
 	}
 
+	#endregion
+
+	#region CONSTRUCTORES
+
 	public ControladoraSonidos()
 	{
+
 	}
 	
-	private static ControladoraSonidos instanceRef;
-	
-	public static ControladoraSonidos InstanceRef()
-	{
-		if (instanceRef == null)
-		{
-			instanceRef = new ControladoraSonidos();
-			instanceRef.Inicializar();
-		}
-		
-		return instanceRef;
-	}
+	#endregion
 
-	public void Inicializar()
-	{
-		EmisorBSO = GameObject.Find ("EmisorBSO");
-		EmisorFX = GameObject.Find ("EmisorFX");
-	}
+	#region METODOS
 
-	public void Start()
+	public void Awake()
 	{
 		sonidoFalloPulsar = Resources.Load("Sonidos/pulsarFallo", typeof(AudioClip)) as AudioClip;
 		sonidoAcertarPulsar = Resources.Load("Sonidos/pulsarAcertar", typeof(AudioClip)) as AudioClip;
+		sonidoPasarPagina = Resources.Load("Sonidos/PasarPagina", typeof(AudioClip)) as AudioClip;
+		sonidoEscribir = Resources.Load("Sonidos/EscribirPapel", typeof(AudioClip)) as AudioClip;
 		bsoEscenarioWard = Resources.Load("Musica/EscenarioWard", typeof(AudioClip)) as AudioClip;
 		bsoMenuPrincipal = Resources.Load("Musica/MenuPrincipal", typeof(AudioClip)) as AudioClip;
+
+		EmisorBSO = GameObject.Find ("EmisorBSO");
+		EmisorFX = GameObject.Find ("EmisorFX");
 
 		emisorFX = EmisorFX.GetComponent<AudioSource> ();
 		emisorBSO = EmisorBSO.GetComponent<AudioSource> ();
@@ -88,5 +87,5 @@ public class ControladoraSonidos
 		EmisorFX.GetComponent<AudioSource>().PlayOneShot(fxSeleccionado);
 	}
 
-
+	#endregion
 }

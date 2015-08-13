@@ -9,23 +9,21 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 	public GameObject imagenCargando;
 	public GameObject panelLateral;
 	public GameObject panelInferior;
+	public GameObject libroDiario;
 
 	void Start()
 	{
-		GameCenter.InstanceRef.controladoraGUI.imagenCargando = imagenCargando;
-		GameCenter.InstanceRef.controladoraGUI.panelLateral = panelLateral;
-		GameCenter.InstanceRef.controladoraGUI.panelInferior = panelInferior;
-		GameCenter.InstanceRef.controladoraGUI.panelDirecciones = panelDirecciones;
-		GameCenter.InstanceRef.controladoraGUI.botonDiario = botonDiario;
-		GameCenter.InstanceRef.controladoraGUI.panelObjetos = panelObjetos;
-
 		Desactivar_Todo ();
 	}
 
-	void onEnable()
+	void Update()
 	{
+		if (libroDiario.activeSelf) 
+		{
+			if (Input.GetKeyDown (KeyCode.Escape)) 
+				libroDiario.SetActive(!libroDiario.activeSelf);
+		}
 	}
-
 	private void Desactivar_Todo()
 	{
 		panelObjetos.SetActive (false);
@@ -34,5 +32,6 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 		imagenCargando.SetActive (false);
 		panelLateral.SetActive (false);
 		panelInferior.SetActive (false);
+		libroDiario.SetActive (false);
 	}
 }

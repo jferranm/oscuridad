@@ -20,6 +20,7 @@ public class ControladoraGUI
 	public GameObject botonDiario;
 	public GameObject panelDirecciones;
 	public GameObject panelObjetos;
+	public GameObject panelLibro;
 
 	public Text textoLateral;
 	public TextoLateralOpciones textoLateralOpciones;
@@ -29,8 +30,6 @@ public class ControladoraGUI
 	public ListaPreguntas listaPreguntas;
 	public PanelObjetosOpciones panelObjetosOpciones;
 
-	public string textoDescriptivo;
-
 	#endregion
 
 	#region CONSTRUCTORES
@@ -38,17 +37,28 @@ public class ControladoraGUI
 	{
 
 	}
-	
-	private static ControladoraGUI instanceRef;
-	
-	public static ControladoraGUI InstanceRef()
+
+	#endregion
+
+	#region METODOS
+
+	public void Awake()
 	{
-		if (instanceRef == null)
-		{
-			instanceRef = new ControladoraGUI();
-		}
+		imagenCargando = GameObject.Find ("ImagenCargando");
+		panelLateral = GameObject.Find ("PanelLateral");
+		panelInferior = GameObject.Find ("PanelInferior");
+		botonDiario = GameObject.Find ("BotonDiario");
+		panelDirecciones = GameObject.Find ("PanelDirecciones");
+		panelObjetos = GameObject.Find ("PanelObjetos");
+		panelLibro = GameObject.Find ("Libro");
 		
-		return instanceRef;
+		textoLateral = panelLateral.GetComponentInChildren<Text>();
+		textoLateralOpciones = textoLateral.GetComponent<TextoLateralOpciones> ();
+		textoInferior = panelInferior.GetComponentInChildren<Text>();
+		textoInferiorOpciones = textoInferior.GetComponent<TextoInferiorOpciones> ();
+		panelPreguntasOpciones = GameObject.Find ("PanelPreguntas").GetComponent<PanelPreguntasOpciones> ();
+		listaPreguntas = panelInferior.GetComponentInChildren<ScrollRect> ().GetComponent<ListaPreguntas> ();
+		panelObjetosOpciones = panelObjetos.GetComponent<PanelObjetosOpciones> ();
 	}
 
 	#endregion

@@ -6,6 +6,8 @@ using Oscuridad.Enumeraciones;
 [System.Serializable]
 public class ControladoraJugador 
 {
+	#region VARIABLES
+
 	[HideInInspector]
 	public Vector3 posicionInicial;
 	[HideInInspector]
@@ -33,23 +35,19 @@ public class ControladoraJugador
 	}
 	private string nombreJugador;
 
+	#endregion
+
+	#region CONSTRUCTORES
+
 	public ControladoraJugador()
 	{
 	}
 
-	private static ControladoraJugador instanceRef;
-	public static ControladoraJugador InstanceRef()
-	{
-		if (instanceRef == null)
-		{
-			instanceRef = new ControladoraJugador();
-			instanceRef.Inicializar();
-		}
+	#endregion
 
-		return instanceRef;
-	}
+	#region METODOS
 
-	public void Inicializar()
+	public void Start()
 	{
 		EstadoJugador = EstadosJugador.enMenus;
 	}
@@ -145,4 +143,6 @@ public class ControladoraJugador
 			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
 		}
 	}
+
+	#endregion
 }

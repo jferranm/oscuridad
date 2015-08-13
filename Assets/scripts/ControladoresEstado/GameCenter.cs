@@ -35,7 +35,9 @@ public class GameCenter : MonoBehaviour
 		{
 			Destroy(this.gameObject);
 		}
-		
+
+		controladoraGUI.Awake ();
+		controladoraSonidos.Awake ();
 	}
 	
 	private void InicializarControladoras()
@@ -43,11 +45,19 @@ public class GameCenter : MonoBehaviour
 		USERPATH = Application.persistentDataPath;
 
 		//-------------- Inicializo los Handlers ----------------\\
-		controladoraJugador = ControladoraJugador.InstanceRef ();
-		controladoraEscenas = ControladoraEscenas.InstanceRef ();
-		controladoraSonidos = ControladoraSonidos.InstanceRef ();
-		controladoraGUI = ControladoraGUI.InstanceRef ();
-		controladoraJuego = ControladoraJuego.InstanceRef ();
+		controladoraJugador = new ControladoraJugador();
+		controladoraEscenas = new ControladoraEscenas();
+		controladoraSonidos = new ControladoraSonidos();
+		controladoraGUI = new ControladoraGUI();
+		controladoraJuego = new ControladoraJuego();
+	}
+
+	void Start()
+	{
+		controladoraJuego.Start ();
+		controladoraJugador.Start ();
+
+		controladoraEscenas.CambiarSceneSegunEnum (Escenas.MenuPrincipal);
 
 		//-------------- Opciones varias -------------------------\\
 		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
@@ -56,12 +66,8 @@ public class GameCenter : MonoBehaviour
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);
-	}
 
-	void Start()
-	{
-		controladoraSonidos.Start ();
-		controladoraEscenas.CambiarSceneSegunEnum (Escenas.MenuPrincipal);
+
 	}
 	
 	void Update()
