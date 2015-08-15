@@ -565,6 +565,19 @@
               <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
+			<PreguntaBase>
+              <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
+              <IdRespuesta>1</IdRespuesta>
+              <IdPregunta>14</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
           </PreguntaRespuesta>
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
@@ -585,7 +598,7 @@
           <IdRespuesta>15</IdRespuesta>
           <PreguntaRespuesta>
             <PreguntaBase>
-              <TextoPregunta>No se preocupe por nada, estoy aqui para ayudar y todo lo que me pueda decir me ayudara a solventar este desdichado asunto.</TextoPregunta>
+              <TextoPregunta>[Persuasion] No se preocupe por nada, estoy aqui para ayudar y todo lo que me pueda decir me ayudara a solventar este desdichado asunto.</TextoPregunta>
               <IdRespuesta>18</IdRespuesta>
               <IdPregunta>21</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
@@ -720,7 +733,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>1</IdRespuesta>
               <IdPregunta>28</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
