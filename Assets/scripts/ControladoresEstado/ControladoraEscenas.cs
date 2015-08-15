@@ -7,23 +7,21 @@ using Oscuridad.Estados;
 [System.Serializable]
 public class ControladoraEscenas
 {
+	#region VARIABLES
+
+	public IEscenario estadoActivo;
+
+	#endregion
+
+	#region CONSTRUCTORES
+
 	public ControladoraEscenas()
 	{
 	}
 
-	private static ControladoraEscenas instanceRef;
-	
-	public static ControladoraEscenas InstanceRef()
-	{
-		if (instanceRef == null)
-		{
-			instanceRef = new ControladoraEscenas();
-		}
-		
-		return instanceRef;
-	}
+	#endregion
 
-	public IEscenario estadoActivo;
+	#region METODOS
 
 	public void Update()
 	{
@@ -113,6 +111,7 @@ public class ControladoraEscenas
 					IrEscenaWardInteriorPlantaSuperior();
 					break;
 		}
-
 	}
+
+	#endregion
 }

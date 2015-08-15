@@ -203,8 +203,9 @@
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
+          <Accion>true</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion>AbrirPuertaDesvanFallo</AccionesAccion>
         </ObjetoTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>

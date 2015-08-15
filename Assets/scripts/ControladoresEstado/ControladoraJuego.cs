@@ -33,22 +33,10 @@ public class ControladoraJuego
 	public ObjetoBase objetoPulsado;
 	public PersonajeBase personajePulsado;
 
-	private static ControladoraJuego instanceRef;
-	public static ControladoraJuego InstanceRef()
-	{
-		if (instanceRef == null)
-		{
-			instanceRef = new ControladoraJuego();
-			instanceRef.Inicializar();
-		}
-		
-		return instanceRef;
-	}
-
 	#endregion
 
 	#region METODOS INICIALIZACION
-	public void Inicializar()
+	public void Start()
 	{
 		pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
 		pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
@@ -62,6 +50,7 @@ public class ControladoraJuego
 		
 		CopiarXML();
 		CargarConfiguracion ();
+		CargarTraduccion ();
 	}
 
 	public void InicializarEscena()

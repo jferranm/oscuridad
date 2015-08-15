@@ -1,45 +1,15 @@
 fileFormatVersion: 2
-guid: 635c325419fd8634fb4070aa03b6fe54
+guid: 119f15376719b6e4a861a9f9e7016dbc
+timeCreated: 1439616837
+licenseType: Free
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
-    100000: Barrotes
-    100002: Camera
-    100004: Colugnas
-    100006: //RootNode
-    100008: Escaleras
-    100010: Lamp
-    100012: Lamparas
-    100014: Paredes
-    100016: Pasamano
-    400000: Barrotes
-    400002: Camera
-    400004: Colugnas
-    400006: //RootNode
-    400008: Escaleras
-    400010: Lamp
-    400012: Lamparas
-    400014: Paredes
-    400016: Pasamano
-    2300000: Barrotes
-    2300002: Colugnas
-    2300004: Escaleras
-    2300006: Lamparas
-    2300008: Paredes
-    2300010: Pasamano
-    3300000: Barrotes
-    3300002: Colugnas
-    3300004: Escaleras
-    3300006: Lamparas
-    3300008: Paredes
-    3300010: Pasamano
-    4300000: Pasamano
-    4300002: Paredes
-    4300004: Colugnas
-    4300006: Lamparas
-    4300008: Barrotes
-    4300010: Escaleras
-    7400000: Default Take
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: valla:Mesh
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -50,6 +20,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -60,7 +34,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -68,11 +42,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -95,3 +71,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
