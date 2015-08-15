@@ -19,8 +19,8 @@
         Ninguna,
         AbrirPuertaDesvanFallo,
         AbrirPuertaDesvanAcierto,
-        TiradaCienciasOcultasFigura,
-        TiradaMitosCthulhuFigura
+        TiradaMitosCthulhuFigura,
+		TiradaCienciasOcultasFigura
     }
 
     /// <summary>

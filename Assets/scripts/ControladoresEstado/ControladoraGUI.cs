@@ -236,8 +236,11 @@ public class ControladoraGUI
 				{
 					foreach(Localizaciones localizacion in tirada.LocalizacionAccion)
 					{
-						Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
-						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
+						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
+						{
+							Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
+						}
 					}
 				}
 
@@ -254,10 +257,19 @@ public class ControladoraGUI
 		//Ejecutamos Accion si la tuviese
 		if(tirada.Accion)
 		{
-			//TODO Añadir Localizacion
 			foreach(Localizaciones localizacion in tirada.LocalizacionAccion)
 			{
-				Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+				if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
+				{
+					Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
+				}
+			}
+
+			foreach(Acciones accion in tirada.AccionesAccion)
+			{
+				if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
+					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
 			}
 		}
 
@@ -294,8 +306,11 @@ public class ControladoraGUI
 				//Desbloqueo de localizacion
 				if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
 				{
-					Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
-					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(nuevaRespuesta.LocalizacionSeleccionada))
+					{
+						Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
+						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
+					}
 				}
 			}
 
@@ -440,6 +455,10 @@ public class ControladoraGUI
 		return false;
 	}
 
+	#endregion
+
+	#region VENTANAS INTERACCION
+
 	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
 	{
 		textoInferior.text += Environment.NewLine + ObtenerColor(color) + Comillas() + textoDescriptivo + Comillas() + FinDeLineaColor ();
@@ -451,6 +470,8 @@ public class ControladoraGUI
 			textoLateral.text = ObtenerColor(Color.white) + textoDescriptivo + FinDeLineaColor ();
 		else
 			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
+
+		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)

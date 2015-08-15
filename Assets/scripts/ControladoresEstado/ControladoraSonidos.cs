@@ -28,12 +28,12 @@ public class ControladoraSonidos
 
 	public float volumenSonido
 	{
-		set{EmisorFX.GetComponent<AudioSource>().volume = value;}
+		set{emisorFX.volume = value;}
 	}
 
 	public float volumenMusica
 	{
-		set{EmisorBSO.GetComponent<AudioSource>().volume = value;}
+		set{emisorBSO.volume = value;}
 	}
 
 	#endregion
@@ -69,7 +69,7 @@ public class ControladoraSonidos
 	{
 		if(escenarioActual.Contains("EscenaWard"))
 		{
-			EmisorBSO.GetComponent<AudioSource>().clip = bsoEscenarioWard;
+			emisorBSO.clip = bsoEscenarioWard;
 			emisorBSO.Play ();
 			return;
 		}
@@ -84,7 +84,8 @@ public class ControladoraSonidos
 
 	public void Lanzar_Fx(AudioClip fxSeleccionado)
 	{
-		EmisorFX.GetComponent<AudioSource>().PlayOneShot(fxSeleccionado);
+		emisorFX.clip = fxSeleccionado;
+		emisorFX.Play ();
 	}
 
 	#endregion

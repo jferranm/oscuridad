@@ -590,6 +590,15 @@ namespace Oscuridad.Clases
 			LocalizacionesDescubiertas.Add (localizacion);
 		}
 
+		/// <summary>
+		/// Añade una accion a las Acciones Realizadas
+		/// </summary>
+		/// <param name="accion">objeto tipo Accion</param>
+		public void AddAccionRealizada(Acciones accion)
+		{
+			AccionesRealizadas.Add (accion);
+		}
+
 		#endregion
     }
 }

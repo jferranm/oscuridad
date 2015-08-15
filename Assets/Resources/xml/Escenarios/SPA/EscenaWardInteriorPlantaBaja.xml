@@ -128,8 +128,9 @@
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
+          <Accion>true</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion>TiradaMitosCthulhuFigura</AccionesAccion>
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
           <TextoDescriptivo>No sabrias identificar el material con el que esta hecho o lo que representa, pero tocarlo es desagradable al tacto, y su mera vision te pone nervioso.</TextoDescriptivo>
@@ -665,7 +666,7 @@
           <DireccionRespuesta>13</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
-          <TextoRespuesta>[El ama de llaves parace muy asustada] Esa estatuilla... es… es un regalo que la señora Waitte, la esposa del señor Charles, le hizo antes de su boda. Me asusta mucho ese pedazo de roca, ¿Lo ha tocado usted? es algo que no deberia estar aqui. Me recuerda a las viejas historias que me contaba mi abuela, sobre las gentes de los arrecifes, y sus aquelarres nocturnos a la luz de la luna. Son cosas de las que es mejor mantenerse alejado, yo al menos no quiero acercarme a esa estatuilla.</TextoRespuesta>
+          <TextoRespuesta>(El ama de llaves parace muy asustada) Esa estatuilla... es… es un regalo que la señora Waitte, la esposa del señor Charles, le hizo antes de su boda. Me asusta mucho ese pedazo de roca, ¿Lo ha tocado usted? es algo que no deberia estar aqui. Me recuerda a las viejas historias que me contaba mi abuela, sobre las gentes de los arrecifes, y sus aquelarres nocturnos a la luz de la luna. Son cosas de las que es mejor mantenerse alejado, yo al menos no quiero acercarme a esa estatuilla.</TextoRespuesta>
           <IdRespuesta>20</IdRespuesta>
           <PreguntaRespuesta>
             <PreguntaBase>
@@ -693,7 +694,7 @@
           <PreguntaRespuesta>
             <PreguntaBase>
               <TextoPregunta>¿Se refiere a los Profundos? ¿Conoce a esas criaturas?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>22</IdRespuesta>
               <IdPregunta>26</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -706,7 +707,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>¿Es una figura extraña? ¿reconoce lo que representa o el señor Charles o su exposa se lo explico?</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>23</IdRespuesta>
               <IdPregunta>27</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
