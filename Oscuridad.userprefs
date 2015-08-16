@@ -1,30 +1,18 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraSonidos.cs">
-    <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="474" Column="116" />
-      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="600" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="23" Column="30" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraSonidos.cs" Line="50" Column="2" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraGUI.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="223" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="600" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="170" Column="1" />
+      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="23" Column="30" />
       <File FileName="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraSonidos.cs" Line="50" Column="2" />
-      <File FileName="Assets\scripts\Clases\Clases Base\RespuestaBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\PreguntaBase.cs" Line="1" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets\scripts\Scripts\PanelLateralOpciones.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="223" />
+      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="268" />
+      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="246" />
+      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraGUI.cs" line="170" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

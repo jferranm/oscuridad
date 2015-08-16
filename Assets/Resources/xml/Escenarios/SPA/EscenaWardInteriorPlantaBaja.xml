@@ -115,12 +115,15 @@
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
           <TextoDescriptivo>La figura parece un humanoide con tentaculos en el rostro, una desagradable mezcla de cefalopodo y humano, con miembros gruesos y retorcidos, su aspecto es aterrador.</TextoDescriptivo>
-          <HabilidadTirada>Descubrir</HabilidadTirada>
+          <HabilidadTirada>CienciasOcultas</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>false</Accion>
+          <Accion>true</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion>
+			<Acciones>TiradaCienciasOcultasFigura</Acciones>
+		  </AccionesAccion>
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
           <TextoDescriptivo>La figura representa sin ninguna duda a un Profundo, un adorador de Cthulhu. El como ha llegado esa horrible figura a esta casa es un misterio aterrador.</TextoDescriptivo>
@@ -130,7 +133,9 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
-		  <AccionesAccion>TiradaMitosCthulhuFigura</AccionesAccion>
+		  <AccionesAccion>
+			<Acciones>TiradaMitosCthulhuFigura</Acciones>
+		  </AccionesAccion>
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
           <TextoDescriptivo>No sabrias identificar el material con el que esta hecho o lo que representa, pero tocarlo es desagradable al tacto, y su mera vision te pone nervioso.</TextoDescriptivo>
@@ -720,7 +725,7 @@
             </PreguntaBase>
             <PreguntaBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
-              <IdRespuesta>0</IdRespuesta>
+              <IdRespuesta>1</IdRespuesta>
               <IdPregunta>28</IdPregunta>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -744,7 +749,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>21</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>No, no, por dios. Jamas me atreveria a preguntar nada sobre esa… cosa. Y el señor Charles nunca nos hablo sobre ella.</TextoRespuesta>
@@ -753,7 +758,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>21</DireccionRespuesta>
         </RespuestaBase>
         <RespuestaBase>
           <TextoRespuesta>Lo siento muchisimo, pero el señor Charles no nos permitio disponer de una copia de la llave, y con su desaparicion tambien ha desaparecido la llave.</TextoRespuesta>

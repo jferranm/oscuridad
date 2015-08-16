@@ -194,7 +194,7 @@
 	  <Objeto>Puerta</Objeto>
       <DescripcionNombre>Cierre de Puerta</DescripcionNombre>
       <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
+        <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
         <ObjetoTiradaBase>
@@ -205,7 +205,33 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
-		  <AccionesAccion>AbrirPuertaDesvanFallo</AccionesAccion>
+		  <AccionesAccion>
+			<Acciones>AbrirPuertaDesvanFallo</Acciones>
+		  </AccionesAccion>
+        </ObjetoTiradaBase>
+		<ObjetoTiradaBase>
+          <TextoDescriptivo>Con tus dotes en Cerrajeria has conseguido desbloquear la puerta</TextoDescriptivo>
+          <HabilidadTirada>Cerrajeria</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>true</Accion>
+          <LocalizacionAccion />
+		  <AccionesAccion>
+			<Acciones>AbrirPuertaDesvanAcierto</Acciones>
+		  </AccionesAccion>
+        </ObjetoTiradaBase>
+		<ObjetoTiradaBase>
+          <TextoDescriptivo>No puedes abrir la puerta, esta cerrada con llave</TextoDescriptivo>
+          <HabilidadTirada>Fallo</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>true</Accion>
+          <LocalizacionAccion />
+		  <AccionesAccion>
+			<Acciones>AbrirPuertaDesvanFallo</Acciones>
+		  </AccionesAccion>
         </ObjetoTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>

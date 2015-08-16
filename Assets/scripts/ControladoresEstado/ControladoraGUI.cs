@@ -241,15 +241,16 @@ public class ControladoraGUI
 							Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 						}
-<<<<<<< HEAD
-=======
 					}
 
 					foreach(Acciones accion in tirada.AccionesAccion)
 					{
 						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
+						{
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
->>>>>>> origin/master
+							//TODO: crear metodo para tipo de acciones desencadenes acciones... (Ejem.Tirada de cerrajeria abre la puerta del desvan)
+						}
+	
 					}
 				}
 
@@ -278,7 +279,10 @@ public class ControladoraGUI
 			foreach(Acciones accion in tirada.AccionesAccion)
 			{
 				if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
+				{
 					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
+					//TODO: crear metodo para tipo de acciones desencadenes acciones... (Ejem.Tirada de cerrajeria abre la puerta del desvan)
+				}
 			}
 		}
 
@@ -439,10 +443,6 @@ public class ControladoraGUI
 
 		return preguntas;
 	}
-
-	#endregion
-
-	#region VENTANAS INTERACCION
 
 	#endregion
 
