@@ -241,6 +241,15 @@ public class ControladoraGUI
 							Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 						}
+<<<<<<< HEAD
+=======
+					}
+
+					foreach(Acciones accion in tirada.AccionesAccion)
+					{
+						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
+							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
+>>>>>>> origin/master
 					}
 				}
 
@@ -363,8 +372,21 @@ public class ControladoraGUI
 					{
 						if (preguntaNueva.ComprobacionHabilidad != Habilidades.Ninguna)
 						{
-							//Tirada de Habilidad
-							nuevasPreguntas.Add(preguntaNueva);
+							int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (preguntaNueva.ComprobacionHabilidad);
+							int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
+							
+							if (resultado < valorHabilidad)
+							{
+								//Tirada Conseguida
+								nuevasPreguntas.Add(preguntaNueva);
+								preguntaNueva.ComprobacionPregunta = false;
+								preguntaNueva.ComprobacionHabilidad = Habilidades.Ninguna;
+							}
+							else
+							{
+								//Tirada no Conseguida
+								nuevaRespuesta.BorrarPregunta(preguntaNueva);
+							}
 						}
 						else
 						{
@@ -418,42 +440,9 @@ public class ControladoraGUI
 		return preguntas;
 	}
 
-	public bool Comprobar_Pregunta(PreguntaBase pregunta)
-	{
-		if (pregunta.ComprobacionPregunta) 
-		{
-			//Comprobamos que haya visitado la escena antes
-			if (!pregunta.ComprobacionEscenas.Equals (Escenas.ninguna))
-					return GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenasVisitadas.Contains (pregunta.ComprobacionEscenas);
+	#endregion
 
-			//Comprobamos que haya alguna accion que active cierta pregunta
-			if (!pregunta.ComprobacionAccion.Equals (Acciones.Ninguna))
-					return GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionesRealizadas.Contains (pregunta.ComprobacionAccion);
-
-			//Comprobamos que haya visto el objeto antes de formular la pregunta
-			if (!pregunta.ComprobacionObjetos.Equals (Objetos.Ninguno))
-					return GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetosVistos.Contains (pregunta.ComprobacionObjetos);
-
-			//Comprobamos con tirada de dados antes de mostrar pregunta
-			if (!pregunta.ComprobacionHabilidad.Equals (Habilidades.Ninguna)) 
-			{
-				//Rescatamos el valor de la habilidad
-				int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (pregunta.ComprobacionHabilidad);
-
-				//Rescatamos valor de tirada de dados
-				int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
-
-				if (resultado < valorHabilidad) 
-					return true;
-			}
-		} 
-		else 
-		{
-			return true;
-		}
-
-		return false;
-	}
+	#region VENTANAS INTERACCION
 
 	#endregion
 
@@ -496,11 +485,13 @@ public class ControladoraGUI
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
 		textoInferior.text = textoInferior.text + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
 	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
 		textoLateral.text = textoLateral.text + Environment.NewLine + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
 	private string ObtenerColor(Color color)
