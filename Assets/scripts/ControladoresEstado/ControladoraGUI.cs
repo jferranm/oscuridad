@@ -162,75 +162,36 @@ public class ControladoraGUI
 
 	public void Lanzar_Inspeccionar()
 	{
-		bool tiradaConExito = false;
-
 		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradasInspeccionar()) 
 		{
+			if (tirada.Comprobacion) 
+			{
+				if(!tirada.EscenaComprobacion.Equals(Escenas.ninguna))
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenaVista(tirada.EscenaComprobacion))
+						return;
+
+				if(!tirada.ObjetoComprobacion.Equals(Objetos.Ninguno))
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(tirada.ObjetoComprobacion))
+						return;
+			}
+
 			//Rescatamos el valor de la habilidad
 			int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (tirada.HabilidadTirada);
-
+			
 			//Rescatamos valor de tirada de dados
 			int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
 
-			if(Lanzar_Inspeccionar_Resultado (resultado, valorHabilidad, tirada))
-			{
-				tiradaConExito = true;
-				break;
-			}
-		}
-
-		if (!tiradaConExito) 
-		{
-			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ExisteTirada(Habilidades.Fallo))
-			{
-				//Mostramos la descripcion anidada a la tirada de la habilidad
-				Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
-				
-				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
-			}
-		}
-
-		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
-		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
-	}
-
-	public bool Lanzar_Inspeccionar_Resultado(int resultado, int valorHabilidad, ObjetoTiradaBase tirada)
-	{
-		bool mostrarResultado = true;
-
-		if (tirada.Comprobacion) 
-		{
-			if(!tirada.EscenaComprobacion.Equals(Escenas.ninguna))
-			{
-				if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenaVista(tirada.EscenaComprobacion))
-					mostrarResultado = true;
-				else
-					mostrarResultado = false;
-			}
-
-			if(!tirada.ObjetoComprobacion.Equals(Objetos.Ninguno))
-			{
-				if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(tirada.ObjetoComprobacion))
-					mostrarResultado = true;
-				else
-					mostrarResultado = false;
-			}
-		}
-
-		if (mostrarResultado) 
-		{
 			if (resultado < valorHabilidad) 
 			{
 				//Mostramos cartel de que la tirada a sido exitosa
 				Insertar_Ventana_Inferior_Texto(true, tirada.HabilidadTirada, resultado);
-
+				
 				//Mostramos la descripcion anidada a la tirada de la habilidad
 				Insertar_Ventana_Lateral_Texto(tirada.TextoDescriptivo, Color.white);
-
+				
 				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
 				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto (tirada.TextoDescriptivo, Habilidades.Ninguna);
-
+				
 				//Ejecutamos Accion si la tuviese
 				if(tirada.Accion)
 				{
@@ -242,7 +203,7 @@ public class ControladoraGUI
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 						}
 					}
-
+					
 					foreach(Acciones accion in tirada.AccionesAccion)
 					{
 						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
@@ -250,43 +211,29 @@ public class ControladoraGUI
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
 							//TODO: crear metodo para tipo de acciones desencadenes acciones... (Ejem.Tirada de cerrajeria abre la puerta del desvan)
 						}
-	
+						
 					}
 				}
 
-				//Marcamos que a sido una tirada con exito para no mostrar la tirada de fallo
-				return true;
+				//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
+				GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
+
+				return;
 			} 
 			else 
-			{
 				Insertar_Ventana_Inferior_Texto(false, tirada.HabilidadTirada, resultado);
-				return false;
-			}
 		}
 
-		//Ejecutamos Accion si la tuviese
-		if(tirada.Accion)
+		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ExisteTirada(Habilidades.Fallo))
 		{
-			foreach(Localizaciones localizacion in tirada.LocalizacionAccion)
-			{
-				if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
-				{
-					Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
-					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
-				}
-			}
-
-			foreach(Acciones accion in tirada.AccionesAccion)
-			{
-				if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
-				{
-					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
-					//TODO: crear metodo para tipo de acciones desencadenes acciones... (Ejem.Tirada de cerrajeria abre la puerta del desvan)
-				}
-			}
+			//Mostramos la descripcion anidada a la tirada de la habilidad
+			Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
+			
+			//Añadimos a la descripcion minima, la descripcion nueva de la tirada
+			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
 		}
-
-		return false;
+		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
+		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
 	}
 
 	public void Lanzar_Hablar()

@@ -203,11 +203,9 @@
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
-          <Accion>true</Accion>
+          <Accion>false</Accion>
           <LocalizacionAccion />
-		  <AccionesAccion>
-			<Acciones>AbrirPuertaDesvanFallo</Acciones>
-		  </AccionesAccion>
+		  <AccionesAccion />
         </ObjetoTiradaBase>
 		<ObjetoTiradaBase>
           <TextoDescriptivo>Con tus dotes en Cerrajeria has conseguido desbloquear la puerta</TextoDescriptivo>
@@ -222,7 +220,7 @@
 		  </AccionesAccion>
         </ObjetoTiradaBase>
 		<ObjetoTiradaBase>
-          <TextoDescriptivo>No puedes abrir la puerta, esta cerrada con llave</TextoDescriptivo>
+          <TextoDescriptivo>No consigues abrir la puerta, esta cerrada con llave</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>

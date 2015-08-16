@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Oscuridad.Clases;
+using Oscuridad.Enumeraciones;
 
 public class TextoLateralOpciones : MonoBehaviour 
 {
@@ -31,7 +33,28 @@ public class TextoLateralOpciones : MonoBehaviour
 		if (GameCenter.InstanceRef != null) 
 		{
 			if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
+			{
 				textoCuerpo.text = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarDescripcionBasica();
+				ObjetoTiradaBase tiradaBasica = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Ninguna);
+				if(tiradaBasica.Accion)
+				{
+					foreach(Localizaciones localizacion in tiradaBasica.LocalizacionAccion)
+					{
+						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
+						{
+							GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
+						}
+					}
+					
+					foreach(Acciones accion in tiradaBasica.AccionesAccion)
+					{
+						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
+							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
+					}
+				}
+
+			}
 			else
 				textoCuerpo.text = "";
 

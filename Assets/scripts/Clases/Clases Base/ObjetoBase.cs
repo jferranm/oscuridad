@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Oscuridad.Enumeraciones;
 using Oscuridad.Clases;
 
@@ -329,17 +330,7 @@ namespace Oscuridad.Clases
 		/// <returns>Array de tipo ObjetoTiradaBase</returns>
 		public ObjetoTiradaBase[] MostrarTiradasInspeccionar()
 		{
-			List<ObjetoTiradaBase> aux = new List<ObjetoTiradaBase> ();
-
-			foreach (ObjetoTiradaBase objetoAux in tiradasObjeto) 
-			{
-				if(!objetoAux.HabilidadTirada.Equals(Habilidades.Ninguna) && !objetoAux.HabilidadTirada.Equals(Habilidades.Fallo))
-				{
-					aux.Add(objetoAux);
-				}
-			}
-
-			return aux.ToArray();
+			return tiradasObjeto.FindAll (x => (x.HabilidadTirada != Habilidades.Ninguna && x.HabilidadTirada != Habilidades.Fallo)).ToArray();
 		}
 
 		/// <summary>
@@ -348,37 +339,27 @@ namespace Oscuridad.Clases
 		/// <returns>string con la descripcion del objeto</returns>
 		public string MostrarDescripcionBasica()
 		{
-			foreach (ObjetoTiradaBase objeto in tiradasObjeto) 
-			{
-				if (objeto.HabilidadTirada.Equals(Habilidades.Ninguna))
-				{
-					return objeto.TextoDescriptivo;
-				}
-			}
-
-			return null;
+			return tiradasObjeto.Find (x => x.HabilidadTirada == Habilidades.Ninguna).TextoDescriptivo;
 		}
 
+		/// <summary>
+		/// Busca una tirada de habilidad especifica dentro de las tiradas del objeto
+		/// </summary>
+		/// <param name="habilidad">habilidad a buscar</param>
+		/// <returns>la tirada que trabajaria con esa habilidad</returns>
 		public ObjetoTiradaBase BuscarTirada(Habilidades habilidad)
 		{
-			foreach (ObjetoTiradaBase tirada in MostrarTiradas()) 
-			{
-				if(tirada.HabilidadTirada.Equals(habilidad))
-					return tirada;
-			}
-
-			return null;
+			return tiradasObjeto.Find (x => x.HabilidadTirada == habilidad);
 		}
 
+		/// <summary>
+		/// Busca la existencia de una tirada de habilidad especifica dentro de las tiradas del objeto
+		/// </summary>
+		/// <param name="habilidad">habilidad a buscar</param>
+		/// <returns>true si existe, false sino</returns>
 		public bool ExisteTirada(Habilidades habilidad)
 		{
-			foreach (ObjetoTiradaBase tirada in MostrarTiradas()) 
-			{
-				if(tirada.HabilidadTirada.Equals(habilidad))
-					return true;
-			}
-			
-			return false;
+			return !(tiradasObjeto.Find (x => x.HabilidadTirada == habilidad) == null);
 		}
 
 		#endregion
