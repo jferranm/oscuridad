@@ -20,7 +20,9 @@
         AbrirPuertaDesvanFallo,
         AbrirPuertaDesvanAcierto,
         TiradaMitosCthulhuFigura,
-		TiradaCienciasOcultasFigura
+		TiradaCienciasOcultasFigura,
+		ExaminarAltar,
+		EncontrarLlaveAltar
     }
 
     /// <summary>
@@ -67,7 +69,7 @@
         Equitacion,
         Esquivar,
         Fotografia,
-        HabilidadArtistica,
+        HabilidadArtisticaPintar,
         Historia,
         HistoriaNatural,
         LenguaPropia,

@@ -205,7 +205,7 @@ public class ControladoraJuego
 				jugadorActual.HabilidadesJugador.Discrecion = 40;
 				jugadorActual.HabilidadesJugador.Disfrazarse = 20;
 				jugadorActual.HabilidadesJugador.Escuchar = 25;
-				jugadorActual.HabilidadesJugador.HabilidadArtistica = 55;
+				jugadorActual.HabilidadesJugador.HabilidadArtisticaPintar = 55;
 				jugadorActual.HabilidadesJugador.Historia = 85;
 				jugadorActual.HabilidadesJugador.HistoriaNatural = 35;
 				jugadorActual.HabilidadesJugador.LenguaPropia = 85;
@@ -449,8 +449,7 @@ public class ControladoraJuego
 
 	public void Modificar_Tirada_Objeto(string nuevaDescripcion, Habilidades habilidad)
 	{
-		ObjetoTiradaBase aux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(habilidad);
-		aux.TextoDescriptivo +=  Environment.NewLine + Environment.NewLine + nuevaDescripcion;
+		Devolver_Buscar_Tirada(habilidad).TextoDescriptivo += Environment.NewLine + Environment.NewLine + nuevaDescripcion;
 	}
 
 	public string Devolver_Descripcion_Objeto_Segun_Enum(Objetos objeto)
@@ -493,6 +492,45 @@ public class ControladoraJuego
 		GUIStyle miEstilo = new GUIStyle ();
 		miEstilo.fontSize = sizeFuente;
 		return miEstilo.CalcSize(new GUIContent(texto)).x;
+	
+	}
+
+	public opcionObjeto[] Devolver_Opciones()
+	{
+		return objetoPulsado == null ? personajePulsado.PersonajeOpciones.ToArray () : objetoPulsado.ObjetoOpciones.ToArray ();
+	}
+
+	public ObjetoTiradaBase[] Devolver_Tiradas_Inspeccionar()
+	{
+		return objetoPulsado == null ? personajePulsado.MostrarTiradasInspeccionar() : objetoPulsado.MostrarTiradasInspeccionar();
+	}
+
+	public bool Devolver_ExisteTirada(Habilidades habilidad)
+	{
+		return objetoPulsado == null ? personajePulsado.ExisteTirada(habilidad) : objetoPulsado.ExisteTirada(habilidad);
+	}
+
+	public ObjetoTiradaBase Devolver_Buscar_Tirada(Habilidades habilidad)
+	{
+		return objetoPulsado == null ? personajePulsado.BuscarTirada(habilidad) : objetoPulsado.BuscarTirada(habilidad);
+	}
+
+	public string Devolver_DescripcionBasica()
+	{
+		return objetoPulsado == null ? personajePulsado.MostrarDescripcionBasica() : objetoPulsado.MostrarDescripcionBasica();
+	}
+
+	public bool Devolver_Inspeccionado()
+	{
+		return objetoPulsado == null ? personajePulsado.PersonajeInspeccionado : objetoPulsado.ObjetoInspeccionado;
+	}
+
+	public void ObjetoPersonaje_Inspeccionado(bool accion)
+	{
+		if (objetoPulsado == null)
+			personajePulsado.PersonajeInspeccionado = accion;
+		else
+			objetoPulsado.ObjetoInspeccionado = accion;
 	}
 
 	#endregion

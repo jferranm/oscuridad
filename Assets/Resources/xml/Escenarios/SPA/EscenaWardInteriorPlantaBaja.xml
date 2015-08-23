@@ -65,7 +65,7 @@
         </ObjetoTiradaBase>
         <ObjetoTiradaBase>
           <TextoDescriptivo>Por los restos que quedan a la vista, y la tonalidad de los colores y el estilo de las pinceladas dirias que el cuadro se pinto hace mas de 50 años. Distingues en los restos, lo que podria ser un paisaje.</TextoDescriptivo>
-          <HabilidadTirada>HabilidadArtistica</HabilidadTirada>
+          <HabilidadTirada>HabilidadArtisticaPintar</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
@@ -166,6 +166,32 @@
     <PersonajeBase>
       <Nombre>AmaDeLlaves</Nombre>
       <DescripcionNombre>Ama De Llaves</DescripcionNombre>
+	  <PersonajeOpciones>
+        <opcionObjeto>Observar</opcionObjeto>
+		<opcionObjeto>Hablar</opcionObjeto>
+      </PersonajeOpciones>
+	  <TiradasPersonaje>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Anne, como te comentaron los señores Ward en su carta, esta sustituyendo a su abuela, la antigua ama de llaves que esta enferma. </TextoDescriptivo>
+          <HabilidadTirada>Ninguna</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+		  <AccionesAccion />
+        </ObjetoTiradaBase>
+        <ObjetoTiradaBase>
+          <TextoDescriptivo>Parece nerviosa o asustada, y se nota que intenta disimularlo.</TextoDescriptivo>
+          <HabilidadTirada>Psicologia</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <Accion>false</Accion>
+          <LocalizacionAccion />
+		  <AccionesAccion />
+        </ObjetoTiradaBase>
+      </TiradasPersonaje>
       <ConversacionPersonaje>
         <RespuestaBase>
           <TextoRespuesta>Buenos días, soy la señora Hopkins, los señores Ward me avisaron de su llegada y me pidieron que le ayudara en todo lo que necesitara, por lo que quedo a su servicio mientras este en esta casa.</TextoRespuesta>
@@ -248,6 +274,19 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
               <ComprobacionAccion>AbrirPuertaDesvanFallo</ComprobacionAccion>
+            </PreguntaBase>
+			<PreguntaBase>
+              <TextoPregunta>He visto el viejo altar de piedra que hay en el jardín, con las velas y ese saquillo de tela, ¿Que puede contarme sobre ello?</TextoPregunta>
+              <IdRespuesta>28</IdRespuesta>
+              <IdPregunta>33</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>ExaminarAltar</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
           <Comprobacion>false</Comprobacion>
@@ -835,6 +874,73 @@
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
           <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+		<RespuestaBase>
+          <TextoRespuesta>Ah, si, eso trozo de roca fue colocado ahi por el señor Charles, comento algo en su momento sobre que lo encontraron el y su esposa. El saquillo… bueno, eso son supersticiones de mi abuela, la antigua ama de llaves, ella fue quien lo puso ahí, me dijo que ahuyentaba a los malos espíritus, y que de vez en cuando no olvidara encender alguna vela.</TextoRespuesta>
+          <IdRespuesta>28</IdRespuesta>
+          <PreguntaRespuesta>
+            <PreguntaBase>
+              <TextoPregunta>¿Por qué creía su abuela que había que ahuyentar a malos espíritus?</TextoPregunta>
+              <IdRespuesta>29</IdRespuesta>
+              <IdPregunta>34</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>¿El señor Chales no comento que significaba ese altar o donde lo había encontrado?</TextoPregunta>
+              <IdRespuesta>30</IdRespuesta>
+              <IdPregunta>35</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+            <PreguntaBase>
+              <TextoPregunta>Permita que le haga otra pregunta.</TextoPregunta>
+              <IdRespuesta>1</IdRespuesta>
+              <IdPregunta>32</IdPregunta>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaBase>
+          </PreguntaRespuesta>
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>false</SinRespuesta>
+          <DireccionRespuesta>0</DireccionRespuesta>
+        </RespuestaBase>
+		<RespuestaBase>
+          <TextoRespuesta>No lo se, ella creía que el extraño comportamiento del señor Charles atraía a malos espíritus a la casa, y mi abuela solo quería ayudar a que se marcharan lejos de esta buena familia.</TextoRespuesta>
+          <IdRespuesta>29</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>34</DireccionRespuesta>
+        </RespuestaBase>
+		<RespuestaBase>
+          <TextoRespuesta>No, el señor Charles era muy reservado cuando quería.</TextoRespuesta>
+          <IdRespuesta>30</IdRespuesta>
+          <PreguntaRespuesta />
+          <Comprobacion>false</Comprobacion>
+          <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
+          <SinRespuesta>true</SinRespuesta>
+          <DireccionRespuesta>34</DireccionRespuesta>
         </RespuestaBase>
       </ConversacionPersonaje>
       <InicioConversacion>1</InicioConversacion>

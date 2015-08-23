@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Oscuridad.Enumeraciones;
 
@@ -95,6 +96,45 @@ namespace Oscuridad.Clases
 		{
 			get { return smooth; }
 			set { smooth = value; }
+		}
+
+		private List<opcionObjeto> personajeOpciones;
+		/// <summary>
+		/// lista de opciones de interaccion con el personaje
+		/// </summary>
+		/// <value>
+		/// lista generica de tipo opcionObjeto
+		/// </value>
+		public List<opcionObjeto> PersonajeOpciones
+		{
+			get { return personajeOpciones; }
+			set { personajeOpciones = value; }
+		}
+		
+		private List<ObjetoTiradaBase> tiradasPersonaje;
+		/// <summary>
+		/// Lista de ObjetosTadaBase segun descripciones por tiradas
+		/// </summary>
+		/// <value>
+		/// Lista Generica de tipo ObjetoTiradaBase
+		/// </value>
+		public List<ObjetoTiradaBase> TiradasPersonaje
+		{
+			get { return tiradasPersonaje; }
+			set { tiradasPersonaje = value; }
+		}
+
+		private bool personajeInspeccionado;
+		/// <summary>
+		/// Determina si el personaje a sido inspeccionado
+		/// </summary>
+		/// <value>
+		/// valor tipo bool para determinar si el objeto a sido inspeccionado
+		/// </value>
+		public bool PersonajeInspeccionado
+		{
+			get { return personajeInspeccionado; }
+			set { personajeInspeccionado = value; }
 		}
 
 		#endregion
@@ -213,16 +253,149 @@ namespace Oscuridad.Clases
             return conversacionPersonaje.ToArray();
         }
 
+		/// <summary>
+		/// Devuelve una Respuesta a partir de su id de Respuesta
+		/// </summary>
+		/// <returns> objeto tipo RespuestaBase</returns>
 		public RespuestaBase Devolver_Respuesta(int numRespuesta)
 		{
-			foreach (RespuestaBase aux in MostrarRespuestas()) 
-			{
-				if (aux.IdRespuesta.Equals(numRespuesta))
-					return aux;
-			}
-
-			return null;
+			return  MostrarRespuestas().ToList().Find (x => x.IdRespuesta == numRespuesta);
 		}
+
+		/// <summary>
+		/// Añade una opcion al personaje
+		/// </summary>
+		/// <param name="opcion">enum de tipo opcionObjeto</param>
+		public void AddOpciones(opcionObjeto opcion)
+		{
+			personajeOpciones.Add(opcion);
+		}
+		
+		/// <summary>
+		/// Añadir varias opciones al personaje
+		/// </summary>
+		/// <param name="opciones">array de enum opcionObjeto</param>
+		public void AddOpciones(opcionObjeto[] opciones)
+		{
+			personajeOpciones.AddRange(opciones);
+		}
+		
+		/// <summary>
+		/// Borra una opcion del personaje
+		/// </summary>
+		/// <param name="opcion">enum de tipo opcionObjeto</param>
+		public void BorrarOpciones(opcionObjeto opcion)
+		{
+			personajeOpciones.Remove(opcion);
+		}
+		
+		/// <summary>
+		/// Borra varias opciones del personaje
+		/// </summary>
+		/// <param name="opciones">array de enum opcionObjeto</param>
+		public void BorrarOpciones(opcionObjeto[] opciones)
+		{
+			foreach (opcionObjeto opcion in opciones)
+			{
+				personajeOpciones.Remove(opcion);
+			}
+		}
+		
+		/// <summary>
+		/// Muesta la lista de opciones del personaje
+		/// </summary>
+		/// <returns>array de enum opcionObjeto</returns>
+		public opcionObjeto[] MostrarOpciones()
+		{
+			return personajeOpciones.ToArray();
+		}
+		
+		/// <summary>
+		/// Añade una descripcion con tirada al personaje
+		/// </summary>
+		/// <param name="tirada">objeto tipo ObjetoTiradaBase</param>
+		public void AddTiradas(ObjetoTiradaBase tirada)
+		{
+			tiradasPersonaje.Add(tirada);
+		}
+		
+		/// <summary>
+		/// Añade varias descripciones con tirada al personaje
+		/// </summary>
+		/// <param name="tiradas">array de objetos tipo ObjetoTiradaBase</param>
+		public void AddTiradas(ObjetoTiradaBase[] tiradas)
+		{
+			tiradasPersonaje.AddRange(tiradas);
+		}
+		
+		/// <summary>
+		/// Borra una descripcion con tirada en el personaje
+		/// </summary>
+		/// <param name="tirada">objeto tipo ObjetoTiradaBase</param>
+		public void BorrarTiradas(ObjetoTiradaBase tirada)
+		{
+			tiradasPersonaje.Remove(tirada);
+		}
+		
+		/// <summary>
+		/// Borrar varias descripciones con tirada del personaje
+		/// </summary>
+		/// <param name="tiradas">array de tipo ObjetoTiradaBase</param>
+		public void BorrarTiradas(ObjetoTiradaBase[] tiradas)
+		{
+			foreach (ObjetoTiradaBase opcion in tiradas)
+			{
+				tiradasPersonaje.Remove(opcion);
+			}
+		}
+		
+		/// <summary>
+		/// Mostrar lista de decripciones con tirada del personaje
+		/// </summary>
+		/// <returns>Array de tipo ObjetoTiradaBase</returns>
+		public ObjetoTiradaBase[] MostrarTiradas()
+		{
+			return tiradasPersonaje.ToArray();
+		}
+		
+		/// <summary>
+		/// Mostrar lista de decripciones con tirada del personaje que no sean ni Fallo ni Ninguno
+		/// </summary>
+		/// <returns>Array de tipo ObjetoTiradaBase</returns>
+		public ObjetoTiradaBase[] MostrarTiradasInspeccionar()
+		{
+			return tiradasPersonaje.FindAll (x => (x.HabilidadTirada != Habilidades.Ninguna && x.HabilidadTirada != Habilidades.Fallo)).ToArray();
+		}
+		
+		/// <summary>
+		/// Muestra la descripcion del personaje sin tiradas
+		/// </summary>
+		/// <returns>string con la descripcion del objeto</returns>
+		public string MostrarDescripcionBasica()
+		{
+			return tiradasPersonaje.Find (x => x.HabilidadTirada == Habilidades.Ninguna).TextoDescriptivo;
+		}
+		
+		/// <summary>
+		/// Busca una tirada de habilidad especifica dentro de las tiradas del personaje
+		/// </summary>
+		/// <param name="habilidad">habilidad a buscar</param>
+		/// <returns>la tirada que trabajaria con esa habilidad</returns>
+		public ObjetoTiradaBase BuscarTirada(Habilidades habilidad)
+		{
+			return tiradasPersonaje.Find (x => x.HabilidadTirada == habilidad);
+		}
+		
+		/// <summary>
+		/// Busca la existencia de una tirada de habilidad especifica dentro de las tiradas del personaje
+		/// </summary>
+		/// <param name="habilidad">habilidad a buscar</param>
+		/// <returns>true si existe, false sino</returns>
+		public bool ExisteTirada(Habilidades habilidad)
+		{
+			return !(tiradasPersonaje.Find (x => x.HabilidadTirada == habilidad) == null);
+		}
+
 
 		#endregion
     }

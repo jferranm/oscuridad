@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using Oscuridad.Enumeraciones;
 
 public class PanelObjetosOpciones : MonoBehaviour 
@@ -15,63 +16,40 @@ public class PanelObjetosOpciones : MonoBehaviour
 		if (GameCenter.InstanceRef != null) 
 			GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones = gameObject.GetComponent<PanelObjetosOpciones>();
 	}
+
 	void OnEnable()
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
 			Normalizar_Botones();
+			Desactivar(botonCoger);
+			Desactivar(botonHablar);
+			Desactivar(botonInspeccionar);
 			Reorganizar_Objetos ();
 		}
 	}
-	
-	private void Reorganizar_Objetos()
-	{
-		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
-		{
-			//Es un Personaje y Desactivamos las opciones de coger e inspeccionar
-			Desactivar(botonCoger);
-			Desactivar(botonInspeccionar);
-		}
-		else
-		{
-			//Es un Objeto
-			foreach (opcionObjeto opcion in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoOpciones) 
-			{
-				// Si no tiene ninguna opcion de objeto lo desconectamos todo
-				if (opcion.Equals(opcionObjeto.Ninguna))
-				{
-					//Si no tiene ninguna opcion ese objeto desactivamos todas las opciones
-					Desactivar(botonCoger);
-					Desactivar(botonHablar);
-					Desactivar(botonInspeccionar);
-					break;
-				}
-				
-				//Ponemos la textura al boton coger, activo o inactivo
-				if (!opcion.Equals(opcionObjeto.Coger))
-					Desactivar(botonCoger);
-				
-				//Ponemos la textura al boton hablar, activo o inactivo
-				if (!opcion.Equals(opcionObjeto.Hablar))
-					Desactivar(botonHablar);
-				
-				//Ponemos la textura al boton inspeccionar, activo o inactivo
-				if (opcion.Equals(opcionObjeto.Observar))
-				{
-					if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado)
-						Desactivar(botonInspeccionar);
-				}
-				else
-					Desactivar(botonInspeccionar);
-			}
-		}
-	}
-	
+
 	public void Normalizar_Botones()
 	{
 		botonCoger.GetComponent<Image> ().color = new Color (255, 255, 255);
 		botonHablar.GetComponent<Image> ().color = new Color (255, 255, 255);
 		botonInspeccionar.GetComponent<Image> ().color = new Color (255, 255, 255);
+	}
+
+	private void Reorganizar_Objetos()
+	{
+		foreach (opcionObjeto opcion in GameCenter.InstanceRef.controladoraJuego.Devolver_Opciones ()) 
+		{
+			if(opcion.Equals(opcionObjeto.Hablar))
+			   Activar(botonHablar);
+
+			if(opcion.Equals(opcionObjeto.Observar))
+				if(!GameCenter.InstanceRef.controladoraJuego.Devolver_Inspeccionado())
+					Activar(botonInspeccionar);
+
+			if(opcion.Equals(opcionObjeto.Coger))
+				Activar(botonCoger);
+		}
 	}
 	
 	private void Desactivar (GameObject objeto)

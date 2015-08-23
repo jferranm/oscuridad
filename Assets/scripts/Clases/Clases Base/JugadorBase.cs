@@ -135,7 +135,7 @@ namespace Oscuridad.Clases
 			public int Equitacion;
 			public int Esquivar;
 			public int Fotografia;
-			public int HabilidadArtistica;
+			public int HabilidadArtisticaPintar;
 			public int Historia;
 			public int HistoriaNatural;
 			public int LenguaPropia;
@@ -213,8 +213,8 @@ namespace Oscuridad.Clases
 					case Habilidades.Fotografia:
 						aux =  Fotografia;
 						break;
-					case Habilidades.HabilidadArtistica:
-						aux =  HabilidadArtistica;
+					case Habilidades.HabilidadArtisticaPintar:
+						aux =  HabilidadArtisticaPintar;
 						break;
 					case Habilidades.Historia:
 						aux =  Historia;
@@ -334,8 +334,8 @@ namespace Oscuridad.Clases
 				case Habilidades.Fotografia:
 					aux =  "Fotografia";
 					break;
-				case Habilidades.HabilidadArtistica:
-					aux =  "Habilidad Artistica";
+				case Habilidades.HabilidadArtisticaPintar:
+					aux =  "Habilidad Artistica (Pintar)";
 					break;
 				case Habilidades.Historia:
 					aux =  "Historia";

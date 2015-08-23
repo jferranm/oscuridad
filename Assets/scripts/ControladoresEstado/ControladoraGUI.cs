@@ -162,7 +162,7 @@ public class ControladoraGUI
 
 	public void Lanzar_Inspeccionar()
 	{
-		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradasInspeccionar()) 
+		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.Devolver_Tiradas_Inspeccionar()) 
 		{
 			if (tirada.Comprobacion) 
 			{
@@ -216,7 +216,7 @@ public class ControladoraGUI
 				}
 
 				//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
-				GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
+				GameCenter.InstanceRef.controladoraJuego.ObjetoPersonaje_Inspeccionado(true);
 
 				return;
 			} 
@@ -224,16 +224,16 @@ public class ControladoraGUI
 				Insertar_Ventana_Inferior_Texto(false, tirada.HabilidadTirada, resultado);
 		}
 
-		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ExisteTirada(Habilidades.Fallo))
+		if(GameCenter.InstanceRef.controladoraJuego.Devolver_ExisteTirada(Habilidades.Fallo))
 		{
 			//Mostramos la descripcion anidada a la tirada de la habilidad
-			Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
+			Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.Devolver_Buscar_Tirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
 			
 			//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
+			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.Devolver_Buscar_Tirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
 		}
 		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
-		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoInspeccionado = true;
+		GameCenter.InstanceRef.controladoraJuego.ObjetoPersonaje_Inspeccionado(true);
 	}
 
 	public void Lanzar_Hablar()

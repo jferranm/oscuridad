@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraGUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\PanelObjetosOpciones.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="161" Column="2" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoBase.cs" Line="312" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\ObjetoTiradaBase.cs" Line="193" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PanelObjetosOpciones.cs" Line="53" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="525" Column="109" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="219" Column="81" />
+      <File FileName="Assets\scripts\Scripts\TextoLateralOpciones.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
