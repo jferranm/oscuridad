@@ -10,7 +10,7 @@
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Es un ejemplar del Arkham Advertiser de hace unos dias. En primera plana se habla de los saqueos nocturnos que se estan produciendo en el viejo cementerio desde hace unos meses. Se han abierto las tumbas de antiguos ciudadanos de Arkham y se han robado sus restos sin que la policia haya podido averiguar nada sobre los asaltantes. El vigilante del Cementerio, el señor Eduard Smith, cuenta que no ha sido capaz de descubrir a los ladrones de tumbas durante sus fechorias. Lo extraño del ultimo caso ocurrido es que se han abierto varias fosas en lugares donde no habia lapidas, por lo que la policia sospecha que no tiene relacion con los casos de saqueo de tumbas, y se trata mas bien de escondrijos de contrabando.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -21,7 +21,7 @@
             <Localizaciones>ArkhamAdvertiser</Localizaciones>
             <Localizaciones>CementerioArkham</Localizaciones>
           </LocalizacionAccion>
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-1.63</x>
@@ -45,7 +45,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>El cuadro colgado encima de la chimenea es de gran tamaño, y su marco esta ricamente elaborado. Destaca del resto de cuadros de la casa como si no fuera este su lugar. Falta la pintura que parece arrancada.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -53,8 +53,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>El marco esta intacto, y parece antiguo. La pintura ha sido arrancada cortando los bordes con algo afilado, quedan trozos en las esquinas.</TextoDescriptivo>
           <HabilidadTirada>Examinar</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -62,8 +62,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Por los restos que quedan a la vista, y la tonalidad de los colores y el estilo de las pinceladas dirias que el cuadro se pinto hace mas de 50 años. Distingues en los restos, lo que podria ser un paisaje.</TextoDescriptivo>
           <HabilidadTirada>HabilidadArtistica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -71,8 +71,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Observando detenidamente los restos de lienzo en el cuadro, parece que habia representado algun tipo de bosque o lugar arbolado, pero los arboles tienen una forma poco comun, con sus ramas en posiciones extrañas.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -80,7 +80,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-3</x>
@@ -104,7 +104,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>En esta estanteria hay libros muy comunes, historia y biografias de personajes famosos. El busto que hace de soporte de algunos de estos libros es extraño y produce una sensacion de desasosiego con solo mirarlo.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -112,8 +112,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>La figura parece un humanoide con tentaculos en el rostro, una desagradable mezcla de cefalopodo y humano, con miembros gruesos y retorcidos, su aspecto es aterrador.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -121,8 +121,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>La figura representa sin ninguna duda a un Profundo, un adorador de Cthulhu. El como ha llegado esa horrible figura a esta casa es un misterio aterrador.</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -130,8 +130,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>No sabrias identificar el material con el que esta hecho o lo que representa, pero tocarlo es desagradable al tacto, y su mera vision te pone nervioso.</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -139,7 +139,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>0.62</x>

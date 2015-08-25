@@ -32,8 +32,8 @@ public class TextoLateralOpciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef != null) 
 		{
-			textoCuerpo.text = GameCenter.InstanceRef.controladoraJuego.Devolver_DescripcionBasica();
-			ObjetoTiradaBase tiradaBasica = GameCenter.InstanceRef.controladoraJuego.Devolver_Buscar_Tirada(Habilidades.Ninguna);
+			textoCuerpo.text = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.MostrarDescripcionBasica();
+			InteractuableTiradaBase tiradaBasica = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Ninguna);
 			if(tiradaBasica.Accion)
 			{
 				foreach(Localizaciones localizacion in tiradaBasica.LocalizacionAccion)

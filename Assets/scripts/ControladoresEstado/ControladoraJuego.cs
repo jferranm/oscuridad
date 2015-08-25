@@ -30,8 +30,7 @@ public class ControladoraJuego
 		}
 	}
 
-	public ObjetoBase objetoPulsado;
-	public PersonajeBase personajePulsado;
+	public InteractuableGenerico interactuablePulsado;
 
 	#endregion
 
@@ -229,13 +228,13 @@ public class ControladoraJuego
 		}
 	}
 
-	public void Inicializar_Objetos()
+	public void Inicializar_Interactuables()
 	{
-		foreach (ObjetoBase objeto in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
+		foreach (InteractuableGenerico interactuable in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
 		{
 			try 
 			{
-				GameObject.FindGameObjectWithTag(objeto.Nombre).SetActive(objeto.ObjetoActivo);
+				GameObject.FindGameObjectWithTag(interactuable.Nombre).SetActive(interactuable.InteractuableActivo);
 			}
 			catch {}
 		}
@@ -412,7 +411,7 @@ public class ControladoraJuego
 			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
 			{
 				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
-				Inicializar_Objetos();
+				Inicializar_Interactuables();
 			}
 		}
 
@@ -449,10 +448,10 @@ public class ControladoraJuego
 
 	public void Modificar_Tirada_Objeto(string nuevaDescripcion, Habilidades habilidad)
 	{
-		Devolver_Buscar_Tirada(habilidad).TextoDescriptivo += Environment.NewLine + Environment.NewLine + nuevaDescripcion;
+		interactuablePulsado.BuscarTirada(habilidad).TextoDescriptivo += Environment.NewLine + Environment.NewLine + nuevaDescripcion;
 	}
 
-	public string Devolver_Descripcion_Objeto_Segun_Enum(Objetos objeto)
+	public string Devolver_Descripcion_Objeto_Segun_Enum(Interactuables objeto)
 	{
 		string aux = "";
 
@@ -493,44 +492,6 @@ public class ControladoraJuego
 		miEstilo.fontSize = sizeFuente;
 		return miEstilo.CalcSize(new GUIContent(texto)).x;
 	
-	}
-
-	public opcionObjeto[] Devolver_Opciones()
-	{
-		return objetoPulsado == null ? personajePulsado.PersonajeOpciones.ToArray () : objetoPulsado.ObjetoOpciones.ToArray ();
-	}
-
-	public ObjetoTiradaBase[] Devolver_Tiradas_Inspeccionar()
-	{
-		return objetoPulsado == null ? personajePulsado.MostrarTiradasInspeccionar() : objetoPulsado.MostrarTiradasInspeccionar();
-	}
-
-	public bool Devolver_ExisteTirada(Habilidades habilidad)
-	{
-		return objetoPulsado == null ? personajePulsado.ExisteTirada(habilidad) : objetoPulsado.ExisteTirada(habilidad);
-	}
-
-	public ObjetoTiradaBase Devolver_Buscar_Tirada(Habilidades habilidad)
-	{
-		return objetoPulsado == null ? personajePulsado.BuscarTirada(habilidad) : objetoPulsado.BuscarTirada(habilidad);
-	}
-
-	public string Devolver_DescripcionBasica()
-	{
-		return objetoPulsado == null ? personajePulsado.MostrarDescripcionBasica() : objetoPulsado.MostrarDescripcionBasica();
-	}
-
-	public bool Devolver_Inspeccionado()
-	{
-		return objetoPulsado == null ? personajePulsado.PersonajeInspeccionado : objetoPulsado.ObjetoInspeccionado;
-	}
-
-	public void ObjetoPersonaje_Inspeccionado(bool accion)
-	{
-		if (objetoPulsado == null)
-			personajePulsado.PersonajeInspeccionado = accion;
-		else
-			objetoPulsado.ObjetoInspeccionado = accion;
 	}
 
 	#endregion

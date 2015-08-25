@@ -33,21 +33,18 @@ public class PanelPreguntasOpciones : MonoBehaviour
 	{
 		if (GameCenter.InstanceRef.controladoraJugador.EstadoJugador.Equals (EstadosJugador.enEspera) || GameCenter.InstanceRef.controladoraJugador.EstadoJugador.Equals (EstadosJugador.enZoomEspera)) 
 		{
-			if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
+			if (rectPanelPreguntas.rect.height > scrollRectTransform.rect.height) 
 			{
-				if (rectPanelPreguntas.rect.height > scrollRectTransform.rect.height) 
-				{
-					scrollRectTransform.GetComponent<ScrollRect> ().vertical = true;
-					
-					if (rectPanelPreguntas.localPosition.y < y) 
-						Posicion_Inicial_Caja ();
+				scrollRectTransform.GetComponent<ScrollRect> ().vertical = true;
+				
+				if (rectPanelPreguntas.localPosition.y < y) 
+					Posicion_Inicial_Caja ();
 
-					if (rectPanelPreguntas.localPosition.y > (y * -1)) 
-						rectPanelPreguntas.localPosition = new Vector2 (0, (y * -1));
-				} 
-				else 
-					scrollRectTransform.GetComponent<ScrollRect> ().vertical = false;
+				if (rectPanelPreguntas.localPosition.y > (y * -1)) 
+					rectPanelPreguntas.localPosition = new Vector2 (0, (y * -1));
 			} 
+			else 
+				scrollRectTransform.GetComponent<ScrollRect> ().vertical = false;
 		}
 	}
 	

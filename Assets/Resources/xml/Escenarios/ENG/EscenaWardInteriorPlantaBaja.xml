@@ -10,7 +10,7 @@
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>This is a copy of Arkham Advertiser days ago. On the cover speak of night plundering was taking place in the old cemetery for some months. The tombs of ancient Arkham citizens have been opened, and all their remains stolen without police being able to find out anything about the robbers. The cemetery keeper, Mr.Edward Smith, says he hasn't been able to discover the tomb robbers during their misdeeds. The strange thing on the most recent case is that some graves were digged on places where there were no tombstones, and that's why police suspect this is not connected to tomb robberies, and it's more about smugglers hiding places.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -21,7 +21,7 @@
             <Localizaciones>ArkhamAdvertiser</Localizaciones>
             <Localizaciones>CementerioArkham</Localizaciones>
           </LocalizacionAccion>
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-1.63</x>
@@ -45,7 +45,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Paint hanging up over the chemeny has a big size, and its frame is richly elaborated. It highlights from the rest of paints on the house, as it didn't belong to this place. The paint that seems to be teared out is missing.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -53,8 +53,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>The frame is intact, and looks ancient. Paint has been teared by cutting boders with something sharp, some parts remain on the corners.</TextoDescriptivo>
           <HabilidadTirada>Examinar</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -62,8 +62,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>For the traces that remain visible, colour hue, and brushstrokes you would say it was painted more than 50 years ago. You can see on traces, what could be a landscape.</TextoDescriptivo>
           <HabilidadTirada>HabilidadArtistica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -71,8 +71,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Looking turgher along the traces of paint, seems it represented some kind of wood or wooded site, but trees shape is uncommon, with their limbs in strange positions.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -80,7 +80,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-3</x>
@@ -104,7 +104,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>On this shelf there are very common books, histories and biographies of celebrities. The bust that bears some of those books is weird, and produces a feel of uneasiness just looking at it.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -112,8 +112,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Figure seems a humanoid with tentacles on its face, an unpleasant mixture of cephalopod and human, with thick and twisted limbs, its look was terrifying.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -121,8 +121,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Figure represents with no doubt a Deep One, a Cthulhu worshiper. How such a terrifying figure arrived to this house is a scary mystery.</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -130,8 +130,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>You can't get to identify the material it's made with or what is represents, but touching it is unpleasant on touch, and its mere vision makes you nervous.</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -139,7 +139,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>0.62</x>

@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Escena>EscenaWardExterior</Escena>
-  <ObjetosEscena>
-    <ObjetoBase>
+  <InteractuablesEscena>
+    <InteractuableGenerico>
       <Nombre>Altar</Nombre>
-      <Objeto>Altar</Objeto>
-      <DescripcionNombre>Altar Jardin</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
-          <TextoDescriptivo>Es un Altar en el jardin</TextoDescriptivo>
+	  <DescripcionNombre>Altar Jardin</DescripcionNombre>
+      <Interactuable>Altar</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
+        <InteractuableTiradaBase>
+          <TextoDescriptivo>Este altar de piedra parece un pequeño altar, tenia grabados figuras y algun tipo de texto que ahora es irreconocible. En la parte superior hay un pequeño saquillo de piel con restos de pequeños huesos de aves, plumas, piedras de colores y tierra.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
+		  <AccionesAccion>
+			<Acciones>ExaminarAltar</Acciones>
+		  </AccionesAccion>
+        </InteractuableTiradaBase>
+		<InteractuableTiradaBase>
+          <TextoDescriptivo>Entre el monton de tierra y objetos encuentas una vieja llave de cobre. </TextoDescriptivo>
+          <HabilidadTirada>Fallo</HabilidadTirada>
+          <Comprobacion>false</Comprobacion>
+          <EscenaComprobacion>ninguna</EscenaComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
+          <Accion>true</Accion>
+          <LocalizacionAccion />
+		  <AccionesAccion>
+			<Acciones>EncontrarLlaveAltar</Acciones>
+		  </AccionesAccion>
+        </InteractuableTiradaBase>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>16.99</x>
         <y>4.9</y>
@@ -31,10 +48,10 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-  </ObjetosEscena>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+  </InteractuablesEscena>
   <PersonajesEscena />
   <ListaCamaras>
     <CamaraEscenaBase>
@@ -52,7 +69,7 @@
       <Nombre>CamaraJardin</Nombre>
       <Escena>WardJardin</Escena>
       <NombreEscena>Jardin</NombreEscena>
-      <Descripcion>El jardin parece poco cuidado, en el centro hay una especie de pequeño altar de piedra cubierto de moho, en el centro esta hueco y lleno de tierra recientemente removida. Desde aqui se ven las ventanas del desvan, una de ellas esta tapiada con maderos, la otra lo estaba, pero ahora esta abierta. </Descripcion>
+      <Descripcion>El jardin parece poco cuidado, el cesped ha crecido alto cubriendolo todo, a un lado, junto a las rocas hay un pequeño altar de piedra con alguna velas a su alrededor. Desde aqui se puede ver un lado de la fachada de la casa y las ventanas del desvan, que parecen tapiadas con maderos.</Descripcion>
       <EscenaNorte>ninguna</EscenaNorte>
       <EscenaSur>ninguna</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>

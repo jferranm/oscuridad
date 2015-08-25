@@ -38,16 +38,16 @@ public class PanelObjetosOpciones : MonoBehaviour
 
 	private void Reorganizar_Objetos()
 	{
-		foreach (opcionObjeto opcion in GameCenter.InstanceRef.controladoraJuego.Devolver_Opciones ()) 
+		foreach (OpcionInteractuable opcion in GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.MostrarOpciones()) 
 		{
-			if(opcion.Equals(opcionObjeto.Hablar))
+			if(opcion.Equals(OpcionInteractuable.Hablar))
 			   Activar(botonHablar);
 
-			if(opcion.Equals(opcionObjeto.Observar))
-				if(!GameCenter.InstanceRef.controladoraJuego.Devolver_Inspeccionado())
+			if(opcion.Equals(OpcionInteractuable.Observar))
+				if(!GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableInspeccionado)
 					Activar(botonInspeccionar);
 
-			if(opcion.Equals(opcionObjeto.Coger))
+			if(opcion.Equals(OpcionInteractuable.Coger))
 				Activar(botonCoger);
 		}
 	}

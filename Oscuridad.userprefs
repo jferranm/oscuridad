@@ -1,15 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\PanelObjetosOpciones.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\PanelObjetosOpciones.cs" Line="53" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="525" Column="109" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="219" Column="81" />
-      <File FileName="Assets\scripts\Scripts\TextoLateralOpciones.cs" Line="35" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\InteractuableGenerico.cs" Line="211" Column="69" />
+      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="141" Column="1" />
+      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="25" Column="22" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="43" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="414" Column="31" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="113" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" Line="38" Column="17" />
+      <File FileName="Assets\scripts\Interfaces\IEscenario.cs" Line="9" Column="8" />
+      <File FileName="Assets\Escenarios\CasaFamiliarWard\EscenaWardExterior\EscenaWardExterior.cs" Line="42" Column="1" />
+      <File FileName="Assets\Escenarios\CasaFamiliarWard\EscenaWardInteriorPlantaBaja\EscenaWardInteriorPlantaBaja.cs" Line="42" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="92" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Hopesend\Documents\Oscuridad5.0\oscuridad\Assets\scripts\Clases\Clases Base\EscenaBase.cs" line="141" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

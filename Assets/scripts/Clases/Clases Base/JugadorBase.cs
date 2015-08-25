@@ -64,17 +64,17 @@ namespace Oscuridad.Clases
             set { escenasVisitadas = value; }
         }
 
-        private List<Objetos> objetosVistos;
+        private List<Interactuables> interactuablesVistos;
         /// <summary>
-        /// Lista de objetos vistos por el personaje jugador
+        /// Lista de interactuables vistos por el personaje jugador
         /// </summary>
         /// <value>
-        /// Lista generica de tipo Objetos
+        /// Lista generica de tipo Interactuables
         /// </value>
-        public List<Objetos> ObjetosVistos
+        public List<Interactuables> InteractuablesVistos
         {
-            get { return objetosVistos; }
-            set { objetosVistos = value; }
+            get { return interactuablesVistos; }
+            set { interactuablesVistos = value; }
         }
 
 		private List<Acciones> accionesRealizadas;
@@ -103,14 +103,14 @@ namespace Oscuridad.Clases
 			set { localizacionesDescubiertas = value; }
 		}
 
-        private List<Objetos> inventario;
+        private List<Interactuables> inventario;
         /// <summary>
-        /// Lista de objetos en el inventario del personaje jugador
+        /// Lista de interactuables en el inventario del personaje jugador
         /// </summary>
         /// <value>
-        /// lista generica de tipo Objetos
+        /// lista generica de tipo Interactuables
         /// </value>
-        public List<Objetos> Inventario
+        public List<Interactuables> Inventario
         {
             get { return inventario; }
             set { inventario = value; }
@@ -468,14 +468,7 @@ namespace Oscuridad.Clases
         /// </summary>
         public JugadorBase()
         {
-            escenasVisitadas = new List<Escenas>();
-            objetosVistos = new List<Objetos>();
-            inventario = new List<Objetos>();
-			accionesRealizadas = new List<Acciones> ();
-			localizacionesDescubiertas = new List<Localizaciones> ();
-			CaracteristicasJugador = new caracteristicasJugador ();
-			DatosPersonalesJugador = new datosPersonalesJugador ();
-			ArmasJugador = new armasJugador ();
+			Inicializar_Listas ();
 
             estadoJugador = EstadosJugador.enMenus;
         }
@@ -486,14 +479,7 @@ namespace Oscuridad.Clases
         /// <param name="nuevoPersonaje">objeto tipo enum Personaje</param>
         public JugadorBase(Personaje nuevoPersonaje)
         {
-            escenasVisitadas = new List<Escenas>();
-            objetosVistos = new List<Objetos>();
-            inventario = new List<Objetos>();
-			accionesRealizadas = new List<Acciones> ();
-			localizacionesDescubiertas = new List<Localizaciones> ();
-			CaracteristicasJugador = new caracteristicasJugador ();
-			DatosPersonalesJugador = new datosPersonalesJugador ();
-			ArmasJugador = new armasJugador ();
+			Inicializar_Listas ();
 
             estadoJugador = EstadosJugador.enMenus;
             tipoPersonaje = nuevoPersonaje;
@@ -502,6 +488,21 @@ namespace Oscuridad.Clases
 		#endregion
 
 		#region METODOS
+
+		/// <summary>
+		/// Inicializa las listas de la clase
+		/// </summary>
+		public void Inicializar_Listas()
+		{
+			escenasVisitadas = new List<Escenas>();
+			interactuablesVistos = new List<Interactuables>();
+			inventario = new List<Interactuables>();
+			accionesRealizadas = new List<Acciones> ();
+			localizacionesDescubiertas = new List<Localizaciones> ();
+			CaracteristicasJugador = new caracteristicasJugador ();
+			DatosPersonalesJugador = new datosPersonalesJugador ();
+			ArmasJugador = new armasJugador ();
+		}
 
         /// <summary>
         /// Añade una escena visitada
@@ -514,13 +515,13 @@ namespace Oscuridad.Clases
         }
 
         /// <summary>
-        /// Añade un objeto visto
+        /// Añade un interactuable visto
         /// </summary>
-        /// <param name="objetoVisto">objeto tipo Objetos</param>
-        public void AddObjetoVisto(Objetos objetoVisto)
+        /// <param name="objetoVisto">objeto tipo Interactuables</param>
+        public void AddObjetoVisto(Interactuables objetoVisto)
         {
-			if(!objetosVistos.Contains(objetoVisto))
-            	objetosVistos.Add(objetoVisto);
+			if(!interactuablesVistos.Contains(objetoVisto))
+            	interactuablesVistos.Add(objetoVisto);
         }
 
 		/// <summary>
@@ -534,19 +535,19 @@ namespace Oscuridad.Clases
 		}
 
         /// <summary>
-        /// Añade un objeto al inventario
+        /// Añade un interactuable al inventario
         /// </summary>
-        /// <param name="objeto">objeto tipo Objetos</param>
-        public void AddInventario(Objetos objeto)
+        /// <param name="objeto">objeto tipo Interactuables</param>
+        public void AddInventario(Interactuables objeto)
         {
             inventario.Add(objeto);
         }
 
         /// <summary>
-        /// Borra un objeto del invetario
+        /// Borra un interactuable del invetario
         /// </summary>
-        /// <param name="objeto">objeto tipo Objetos</param>
-        public void BorrarInventario(Objetos objeto)
+        /// <param name="objeto">objeto tipo Interactuables</param>
+        public void BorrarInventario(Interactuables objeto)
         {
             inventario.Remove(objeto);
         }
@@ -562,13 +563,13 @@ namespace Oscuridad.Clases
 		}
 
 		/// <summary>
-		/// Checkea que se haya interactuado con un objeto
+		/// Checkea que se haya interactuado con un interactuable
 		/// </summary>
-		/// <param name="objeto">objeto tipo Objetos</param>
-		/// <returns> true si se a interactuado con el objeto, false sino</returns>
-		public bool ObjetoVisto (Objetos objeto)
+		/// <param name="objeto">objeto tipo Interactuables</param>
+		/// <returns> true si se a interactuado con el interactuable, false sino</returns>
+		public bool ObjetoVisto (Interactuables objeto)
 		{
-			return ObjetosVistos.Contains (objeto);
+			return interactuablesVistos.Contains (objeto);
 		}
 
 		/// <summary>

@@ -40,8 +40,7 @@ public class ZoomCamara : MonoBehaviour
 					Ray rayo = this.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
 					if(Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
 					{
-						GameCenter.InstanceRef.controladoraJuego.objetoPulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Objeto(hit.collider.tag.ToString());
-						GameCenter.InstanceRef.controladoraJuego.personajePulsado = GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Personaje(hit.collider.tag.ToString());
+						GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
 
 						try
 						{

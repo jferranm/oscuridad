@@ -129,17 +129,17 @@ namespace Oscuridad.Clases
             set { comprobacionEscenas = value; }
         }
 
-        private Objetos comprobacionObjetos;
+        private Interactuables comprobacionInteractuables;
         /// <summary>
-        /// Si tiene valor null no tendra tirada de objetos vistos
+        /// Si tiene valor null no tendra tirada de interactuables vistos
         /// </summary>
         /// <value>
-        /// valor tipo enum Objetos
+		/// valor tipo enum Interactuables
         /// </value>
-        public Objetos ComprobacionObjetos
+		public Interactuables ComprobacionInteractuables
         {
-            get { return comprobacionObjetos; }
-            set { comprobacionObjetos = value; }
+			get { return comprobacionInteractuables; }
+			set { comprobacionInteractuables = value; }
         }
 
         private Acciones comprobacionAccion;
@@ -204,15 +204,15 @@ namespace Oscuridad.Clases
         /// <param name="comprobacion">Si tiene tirada de comprobacion <c>true</c> sino</param>
         /// <param name="habilidad">valor tipo enum Habilidad</param>
         /// <param name="escena">valor tipo enum Escenas</param>
-        /// <param name="objeto">valor tipo enum Objetos</param>
+		/// <param name="objeto">valor tipo enum Interactuables</param>
         /// <param name="accion">valor tipo enum Acciones</param>
-        public PreguntaBase(string texto, int id, bool comprobacion, Habilidades habilidad, Escenas escena, Objetos objeto, Acciones accion)
+		public PreguntaBase(string texto, int id, bool comprobacion, Habilidades habilidad, Escenas escena, Interactuables objeto, Acciones accion)
         {
             textoPregunta = texto;
             idPregunta = id;
             comprobacionPregunta = comprobacion;
             comprobacionHabilidad = habilidad;
-            comprobacionObjetos = objeto;
+			comprobacionInteractuables = objeto;
             comprobacionEscenas = escena;
             comprobacionAccion = accion;
         }

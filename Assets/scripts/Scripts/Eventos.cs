@@ -263,7 +263,7 @@ public class Eventos : MonoBehaviour
 	private void Coger_Objeto()
 	{
 		//Desactivamos el objeto
-		GameObject.FindGameObjectWithTag(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre).SetActive(false);
+		GameObject.FindGameObjectWithTag(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre).SetActive(false);
 		
 		//Deshabilitamos los botones
 		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Coger");
@@ -271,13 +271,13 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Inspeccionar");
 
 		//Insertar objeto en el inventario del jugador
-		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario ((Objetos)Enum.Parse(typeof(Objetos), GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Nombre));
+		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario ((Interactuables)Enum.Parse(typeof(Interactuables), GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre));
 		
 		//Cambiamos a false el valor de objetoActivo a false
-		GameCenter.InstanceRef.controladoraJuego.objetoPulsado.ObjetoActivo = false;
+		GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableActivo = false;
 		
 		//Le indicamos a la caja de texto que esta en el inventario
-		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.Traduccion_Coger_Objeto(GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre), Color.yellow);
+		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.Traduccion_Coger_Objeto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.DescripcionNombre), Color.yellow);
 	}
 
 	private void Inspeccionar_Objeto()

@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Escena>EscenaWardInteriorPlantaBaja</Escena>
-  <ObjetosEscena>
-    <ObjetoBase>
+  <InteractuablesEscena>
+    <InteractuableGenerico>
       <Nombre>PeriodicoSalon</Nombre>
-      <Objeto>PeriodicoSalon</Objeto>
-      <DescripcionNombre>Periodico Salon</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
+	  <DescripcionNombre>Periodico Salon</DescripcionNombre>
+      <Interactuable>PeriodicoSalon</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Ninguna</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Es un ejemplar del Arkham Advertiser de hace unos dias. En primera plana se habla de los saqueos nocturnos que se estan produciendo en el viejo cementerio desde hace unos meses. Se han abierto las tumbas de antiguos ciudadanos de Arkham y se han robado sus restos sin que la policia haya podido averiguar nada sobre los asaltantes. El vigilante del Cementerio, el señor Eduard Smith, cuenta que no ha sido capaz de descubrir a los ladrones de tumbas durante sus fechorias. Lo extraño del ultimo caso ocurrido es que se han abierto varias fosas en lugares donde no habia lapidas, por lo que la policia sospecha que no tiene relacion con los casos de saqueo de tumbas, y se trata mas bien de escondrijos de contrabando.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion>
             <Localizaciones>ArkhamAdvertiser</Localizaciones>
             <Localizaciones>CementerioArkham</Localizaciones>
           </LocalizacionAccion>
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-1.63</x>
         <y>296.06</y>
@@ -34,54 +37,60 @@
         <z>5.508896</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>CuadroSalon</Nombre>
-      <Objeto>CuadroSalon</Objeto>
-      <DescripcionNombre>Cuadro Salon</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
+	  <DescripcionNombre>Cuadro Salon</DescripcionNombre>
+      <Interactuable>CuadroSalon</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>El cuadro colgado encima de la chimenea es de gran tamaño, y su marco esta ricamente elaborado. Destaca del resto de cuadros de la casa como si no fuera este su lugar. Falta la pintura que parece arrancada.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>El marco esta intacto, y parece antiguo. La pintura ha sido arrancada cortando los bordes con algo afilado, quedan trozos en las esquinas.</TextoDescriptivo>
           <HabilidadTirada>Examinar</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Por los restos que quedan a la vista, y la tonalidad de los colores y el estilo de las pinceladas dirias que el cuadro se pinto hace mas de 50 años. Distingues en los restos, lo que podria ser un paisaje.</TextoDescriptivo>
           <HabilidadTirada>HabilidadArtisticaPintar</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Observando detenidamente los restos de lienzo en el cuadro, parece que habia representado algun tipo de bosque o lugar arbolado, pero los arboles tienen una forma poco comun, con sus ramas en posiciones extrañas.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-3</x>
         <y>298.07</y>
@@ -93,60 +102,64 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>Figura</Nombre>
-      <Objeto>Figura</Objeto>
-      <DescripcionNombre>Figura</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
-        <ObjetoTiradaBase>
+	  <DescripcionNombre>Figura</DescripcionNombre>
+      <Interactuable>Figura</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>En esta estanteria hay libros muy comunes, historia y biografias de personajes famosos. El busto que hace de soporte de algunos de estos libros es extraño y produce una sensacion de desasosiego con solo mirarlo.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>La figura parece un humanoide con tentaculos en el rostro, una desagradable mezcla de cefalopodo y humano, con miembros gruesos y retorcidos, su aspecto es aterrador.</TextoDescriptivo>
           <HabilidadTirada>CienciasOcultas</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion>
 			<Acciones>TiradaCienciasOcultasFigura</Acciones>
 		  </AccionesAccion>
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>La figura representa sin ninguna duda a un Profundo, un adorador de Cthulhu. El como ha llegado esa horrible figura a esta casa es un misterio aterrador.</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion>
 			<Acciones>TiradaMitosCthulhuFigura</Acciones>
 		  </AccionesAccion>
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>No sabrias identificar el material con el que esta hecho o lo que representa, pero tocarlo es desagradable al tacto, y su mera vision te pone nervioso.</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-      </TiradasObjeto>
+		  <AccionesAccion />
+        </InteractuableTiradaBase>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>0.62</x>
         <y>296.45</y>
@@ -158,41 +171,39 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-  </ObjetosEscena>
-  <PersonajesEscena>
-    <PersonajeBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+	<InteractuableGenerico>
       <Nombre>AmaDeLlaves</Nombre>
       <DescripcionNombre>Ama De Llaves</DescripcionNombre>
-	  <PersonajeOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-		<opcionObjeto>Hablar</opcionObjeto>
-      </PersonajeOpciones>
-	  <TiradasPersonaje>
-        <ObjetoTiradaBase>
+	  <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+		<OpcionInteractuable>Hablar</OpcionInteractuable>
+      </InteractuableOpciones>
+	  <TiradasInteractuable>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Anne, como te comentaron los señores Ward en su carta, esta sustituyendo a su abuela, la antigua ama de llaves que esta enferma. </TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Parece nerviosa o asustada, y se nota que intenta disimularlo.</TextoDescriptivo>
           <HabilidadTirada>Psicologia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion />
-        </ObjetoTiradaBase>
-      </TiradasPersonaje>
-      <ConversacionPersonaje>
+        </InteractuableTiradaBase>
+      </TiradasInteractuable>
+      <ConversacionInteractuable>
         <RespuestaBase>
           <TextoRespuesta>Buenos días, soy la señora Hopkins, los señores Ward me avisaron de su llegada y me pidieron que le ayudara en todo lo que necesitara, por lo que quedo a su servicio mientras este en esta casa.</TextoRespuesta>
           <IdRespuesta>1</IdRespuesta>
@@ -207,7 +218,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -220,7 +231,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -233,7 +244,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -246,7 +257,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>CuadroSalon</ComprobacionObjetos>
+              <ComprobacionInteractuables>CuadroSalon</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -259,7 +270,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Figura</ComprobacionObjetos>
+              <ComprobacionInteractuables>Figura</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -272,7 +283,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>AbrirPuertaDesvanFallo</ComprobacionAccion>
             </PreguntaBase>
 			<PreguntaBase>
@@ -285,7 +296,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>ExaminarAltar</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -308,7 +319,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -331,7 +342,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -344,7 +355,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -357,7 +368,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -370,7 +381,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -383,7 +394,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -396,7 +407,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -409,7 +420,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -468,7 +479,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -481,7 +492,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -494,7 +505,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -544,7 +555,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -567,7 +578,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -580,7 +591,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -593,7 +604,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -606,7 +617,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -638,7 +649,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Persuasion</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -651,7 +662,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -664,7 +675,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -723,7 +734,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -746,7 +757,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>TiradaMitosCthulhuFigura</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -759,7 +770,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>TiradaCienciasOcultasFigura</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -772,7 +783,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -813,7 +824,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -826,7 +837,7 @@
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Persuasion</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -839,7 +850,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -889,7 +900,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -902,7 +913,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
             <PreguntaBase>
@@ -915,7 +926,7 @@
               <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
-              <ComprobacionObjetos>Ninguno</ComprobacionObjetos>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaBase>
           </PreguntaRespuesta>
@@ -942,7 +953,7 @@
           <SinRespuesta>true</SinRespuesta>
           <DireccionRespuesta>34</DireccionRespuesta>
         </RespuestaBase>
-      </ConversacionPersonaje>
+      </ConversacionInteractuable>
       <InicioConversacion>1</InicioConversacion>
       <PosicionNueva>
         <x>0.4</x>
@@ -955,8 +966,10 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-    </PersonajeBase>
-  </PersonajesEscena>
+	  <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+  </InteractuablesEscena>
   <ListaCamaras>
     <CamaraEscenaBase>
       <Nombre>CamaraRecibidor</Nombre>

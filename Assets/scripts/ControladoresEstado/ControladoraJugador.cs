@@ -89,24 +89,9 @@ public class ControladoraJugador
 	
 	private void JugadorEnZoomIn()
 	{
-		Vector3 vectorAuxiliarPosicion = new Vector3 ();
-		Vector3 vectorAuxiliarRotacion = new Vector3 ();
-		float smoothAuxiliar;
-
-		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
-		//Es un Personaje
-		{
-			vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.personajePulsado.PosicionNueva;
-			vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.personajePulsado.RotacionNueva;
-			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Smooth;
-		}
-		else
-		//Es un objeto
-		{
-			vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.PosicionNueva;
-			vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.RotacionNueva;
-			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth;
-		}
+		Vector3 vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PosicionNueva;
+		Vector3 vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.RotacionNueva;
+		float smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Smooth;
 
 		//Ruta de la camara hacia el objeto seleccionado
 		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position = Vector3.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position, vectorAuxiliarPosicion, Time.deltaTime*smoothAuxiliar);
@@ -121,14 +106,7 @@ public class ControladoraJugador
 
 	private void JugadorEnZoomOut()
 	{
-		float smoothAuxiliar;
-		
-		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null) 
-		//Es un Personaje
-			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Smooth;
-		else
-		//Es un objeto
-			smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Smooth;
+		float smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Smooth;
 
 		//Ruta del objeto a la posicion inicial de la camara
 		GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position = Vector3.Lerp(GameCenter.InstanceRef.controladoraJuego.cameraActiva.transform.position, zoomCamaraRef.posicionInicial, Time.deltaTime*smoothAuxiliar);
@@ -139,8 +117,6 @@ public class ControladoraJugador
 			EstadoJugador = EstadosJugador.enEspera;
 			estadoCambiado = false;
 			objetoInteractuableRef = null;
-			GameCenter.InstanceRef.controladoraJuego.objetoPulsado = null;
-			GameCenter.InstanceRef.controladoraJuego.personajePulsado = null;
 		}
 	}
 

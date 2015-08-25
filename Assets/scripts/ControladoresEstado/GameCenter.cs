@@ -82,7 +82,7 @@ public class GameCenter : MonoBehaviour
 
 	public void Inicializar_Escenario()
 	{
-		controladoraJuego.Inicializar_Objetos ();
+		controladoraJuego.Inicializar_Interactuables ();
 
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();

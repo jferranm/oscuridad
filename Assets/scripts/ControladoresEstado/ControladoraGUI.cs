@@ -122,8 +122,8 @@ public class ControladoraGUI
 		panelDirecciones.SetActive (false);
 
 		//Añadimos el objeto a objetos vistos del personaje
-		if(GameCenter.InstanceRef.controladoraJuego.objetoPulsado != null)
-			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.objetoPulsado.Objeto);
+		if(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado != null)
+			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Interactuable);
 	}
 
 	public void Activar_Opciones_Basicas ()
@@ -162,7 +162,7 @@ public class ControladoraGUI
 
 	public void Lanzar_Inspeccionar()
 	{
-		foreach (ObjetoTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.Devolver_Tiradas_Inspeccionar()) 
+		foreach (InteractuableTiradaBase tirada in GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.MostrarTiradasInspeccionar()) 
 		{
 			if (tirada.Comprobacion) 
 			{
@@ -170,8 +170,8 @@ public class ControladoraGUI
 					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.EscenaVista(tirada.EscenaComprobacion))
 						return;
 
-				if(!tirada.ObjetoComprobacion.Equals(Objetos.Ninguno))
-					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(tirada.ObjetoComprobacion))
+				if(!tirada.InteractuableComprobacion.Equals(Interactuables.Ninguno))
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(tirada.InteractuableComprobacion))
 						return;
 			}
 
@@ -216,7 +216,7 @@ public class ControladoraGUI
 				}
 
 				//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
-				GameCenter.InstanceRef.controladoraJuego.ObjetoPersonaje_Inspeccionado(true);
+				GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableInspeccionado = true;
 
 				return;
 			} 
@@ -224,26 +224,26 @@ public class ControladoraGUI
 				Insertar_Ventana_Inferior_Texto(false, tirada.HabilidadTirada, resultado);
 		}
 
-		if(GameCenter.InstanceRef.controladoraJuego.Devolver_ExisteTirada(Habilidades.Fallo))
+		if(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.ExisteTirada(Habilidades.Fallo))
 		{
 			//Mostramos la descripcion anidada a la tirada de la habilidad
-			Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.Devolver_Buscar_Tirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
+			Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
 			
 			//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.Devolver_Buscar_Tirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
+			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
 		}
 		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
-		GameCenter.InstanceRef.controladoraJuego.ObjetoPersonaje_Inspeccionado(true);
+		GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableInspeccionado = true;
 	}
 
 	public void Lanzar_Hablar()
 	{
-		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.personajePulsado.InicioConversacion);
+		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InicioConversacion);
 	}
 
 	public void Reestructurar_Respuestas(int numeroPregunta)
 	{
-		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (numeroPregunta);
+		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
 
 		//Si existe respuesta
 		if (nuevaRespuesta != null) 
@@ -276,7 +276,7 @@ public class ControladoraGUI
 
 			//Comprobacion de que la respuesta no tiene pregunta asociada y vuelve a una pregunta anterior
 			if(nuevaRespuesta.SinRespuesta)
-				nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.personajePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
+				nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
 
 			//Generamos las preguntas asociadas a la respuesta
 			listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
@@ -341,9 +341,9 @@ public class ControladoraGUI
 						}
 						else
 						{
-							if (preguntaNueva.ComprobacionObjetos != Objetos.Ninguno)
+							if (preguntaNueva.ComprobacionInteractuables != Interactuables.Ninguno)
 							{
-								if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(preguntaNueva.ComprobacionObjetos))
+								if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(preguntaNueva.ComprobacionInteractuables))
 									nuevasPreguntas.Add(preguntaNueva);
 							}
 							else

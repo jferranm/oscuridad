@@ -25,30 +25,17 @@ namespace Oscuridad.Clases
 			set { escena = value; }
 		}
 
-        private List<ObjetoBase> objetosEscena;
+        private List<InteractuableGenerico> interactuablesEscena;
         /// <summary>
-        /// Lista de objetos en la escena
+        /// Lista de interactuables en la escena
         /// </summary>
         /// <value>
-        /// lista generica de tipo ObjetoBase
+        /// lista generica de tipo InteractuableGenerico
         /// </value>
-        public List<ObjetoBase> ObjetosEscena
+		public List<InteractuableGenerico> InteractuablesEscena
         {
-            get { return objetosEscena; }
-            set { objetosEscena = value; }
-        }
-
-        private List<PersonajeBase> personajesEscena;
-        /// <summary>
-        /// Lista de personajes en la escena
-        /// </summary>
-        /// <value>
-        /// lista generica de tipo PersonajeBase
-        /// </value>
-        public List<PersonajeBase> PersonajesEscena
-        {
-            get { return personajesEscena; }
-            set { personajesEscena = value; }
+			get { return interactuablesEscena; }
+			set { interactuablesEscena = value; }
         }
 
 		private List<CamaraEscenaBase> listaCamaras;
@@ -85,164 +72,83 @@ namespace Oscuridad.Clases
         /// <summary>
         /// Constructor de la clase <see cref="EscenaBase"/> class.
         /// </summary>
-        /// <param name="objetos">array de tipo ObjetoBase</param>
-        public EscenaBase(ObjetoBase[] objetos)
+        /// <param name="objetos">array de tipo InteractuableGenerico</param>
+		public EscenaBase(InteractuableGenerico[] objetos)
         {
 			Inicializar ();
 
             AddObjeto(objetos);
         }
 
-        /// <summary>
-        /// Constructor de la clase <see cref="EscenaBase"/> class.
-        /// </summary>
-        /// <param name="personajes">array de tipo PersonajeBase</param>
-        public EscenaBase(PersonajeBase[] personajes)
-        {
-			Inicializar ();
-
-            AddPersonaje(personajes);
-        }
 		#endregion
 
 		#region METODOS
         /// <summary>
-        /// Añade un objeto a la escena
+        /// Añade un interactuable a la escena
         /// </summary>
-        /// <param name="objeto">objeto tipo ObjetoBase</param>
-        public void AddObjeto(ObjetoBase objeto)
+		/// <param name="objeto">objeto tipo InteractuableGenerico</param>
+        public void AddObjeto(InteractuableGenerico objeto)
         {
-            objetosEscena.Add(objeto);
+            interactuablesEscena.Add(objeto);
         }
 
         /// <summary>
-        /// Añade varios objetos a la escena
+        /// Añade varios interactuables a la escena
         /// </summary>
-        /// <param name="objetos">array de tipo ObjetoBase</param>
-        public void AddObjeto(ObjetoBase[] objetos)
+		/// <param name="objetos">array de tipo InteractuableGenerico</param>
+		public void AddObjeto(InteractuableGenerico[] objetos)
         {
-            objetosEscena.AddRange(objetos);
+            interactuablesEscena.AddRange(objetos);
         }
 
         /// <summary>
-        /// Borra el objeto de la escena
+        /// Borra el interactuable de la escena
         /// </summary>
-        /// <param name="objeto">objeto tipo ObjetoBase</param>
-        public void BorrarObjeto(ObjetoBase objeto)
+		/// <param name="objeto">objeto tipo InteractuableGenerico</param>
+		public void BorrarObjeto(InteractuableGenerico objeto)
         {
-            objetosEscena.Remove(objeto);
+            interactuablesEscena.Remove(objeto);
         }
 
         /// <summary>
-        /// Borra varios objetos de la escena
+        /// Borra varios interactuables de la escena
         /// </summary>
-        /// <param name="objetos">array de tipo ObjetoBase</param>
-        public void BorrarObjeto(ObjetoBase[] objetos)
+		/// <param name="objetos">array de tipo InteractuableGenerico</param>
+		public void BorrarObjeto(InteractuableGenerico[] objetos)
         {
-            foreach (ObjetoBase objeto in objetos)
+			foreach (InteractuableGenerico objeto in objetos)
             {
-                objetosEscena.Remove(objeto);
+                interactuablesEscena.Remove(objeto);
             }
         }
 
         /// <summary>
-        /// Mostrar lista de objetos
+        /// Mostrar lista de interactuables
         /// </summary>
-        /// <returns>array de tipo ObjetoBase</returns>
-        public ObjetoBase[] MostrarObjeto()
+		/// <returns>array de tipo InteractuableGenerico</returns>
+		public InteractuableGenerico[] MostrarObjeto()
         {
-            return objetosEscena.ToArray();
-        }
-
-        /// <summary>
-        /// Añade un personaje a la escena
-        /// </summary>
-        /// <param name="personaje">objeto tipo PersonajeBase</param>
-        public void AddPersonaje(PersonajeBase personaje)
-        {
-            personajesEscena.Add(personaje);
-        }
-
-        /// <summary>
-        /// Añade varios personajes a la escena
-        /// </summary>
-        /// <param name="personajes">array de tipo PersonajeBase</param>
-        public void AddPersonaje(PersonajeBase[] personajes)
-        {
-            personajesEscena.AddRange(personajes);
-        }
-
-        /// <summary>
-        /// Borra un personaje de la escena
-        /// </summary>
-        /// <param name="personaje">objeto tipo PersonajeBase</param>
-        public void BorrarPersonaje(PersonajeBase personaje)
-        {
-            personajesEscena.Remove(personaje);
-        }
-
-        /// <summary>
-        /// Borra varios personajes de la escena
-        /// </summary>
-        /// <param name="personajes">array de tipo PersonajeBase</param>
-        public void BorrarPersonaje(PersonajeBase[] personajes)
-        {
-            foreach (PersonajeBase personaje in personajes)
-            {
-                personajesEscena.Remove(personaje);
-            }
-        }
-
-        /// <summary>
-        /// Lista de personajes en la escena
-        /// </summary>
-        /// <returns>array de tipo PersonajeBase</returns>
-        public PersonajeBase[] MostrarPersonaje()
-        {
-            return personajesEscena.ToArray();
+            return interactuablesEscena.ToArray();
         }
 
 		/// <summary>
-		/// Devuelve un objeto segun su nombre
+		/// Devuelve un interactuable segun su nombre
 		/// </summary>
-		/// <param name="nombreObjeto">string de nombre de objeto</param>
-		/// <returns>objeto tipo ObjetoBase</returns>
-		public ObjetoBase Buscar_Objeto(string nombreObjeto)
+		/// <param name="nombreInteractuable">string de nombre de interactuable</param>
+		/// <returns>objeto tipo InteractuableGenerico</returns>
+		public InteractuableGenerico Buscar_Interactuable(string nombreInteractuable)
 		{
-			foreach (ObjetoBase objeto in objetosEscena) 
-			{
-				if(objeto.Nombre.Contains(nombreObjeto))
-				   return objeto;
-			}
-
-			return null;
+			return interactuablesEscena.Find (x => x.Nombre == nombreInteractuable);
 		}
 
 		/// <summary>
-		/// Devuelve un personaje segun su nombre
+		/// Devuelve una camara segun su nombre
 		/// </summary>
-		/// <param name="nombrePersonaje">string de nombre de personaje</param>
-		/// <returns>objeto tipo ObjetoBase</returns>
-		public PersonajeBase Buscar_Personaje(string nombrePersonaje)
-		{
-			foreach (PersonajeBase personaje in personajesEscena) 
-			{
-				if(personaje.Nombre.Contains(nombrePersonaje))
-					return personaje;
-			}
-			
-			return null;
-		}
-
+		/// <param name="nombreCamara">string de nombre de camara</param>
+		/// <returns>objeto tipo CamaraEscenaBase</returns>
 		public CamaraEscenaBase Buscar_Camara(string nombreCamara)
 		{
-			foreach (CamaraEscenaBase camara in ListaCamaras) 
-			{
-				if(camara.Nombre.Contains(nombreCamara))
-					return camara;
-			}
-			
-			return null;
+			return listaCamaras.Find (x => x.Nombre == nombreCamara);
 		}
 
 		/// <summary>
@@ -250,8 +156,7 @@ namespace Oscuridad.Clases
 		/// </summary>
 		public void Inicializar()
 		{
-			objetosEscena = new List<ObjetoBase>();
-			personajesEscena = new List<PersonajeBase>();
+			interactuablesEscena = new List<InteractuableGenerico>();
 			listaCamaras = new List<CamaraEscenaBase> ();
 			escenasDeshabilitar = new List<string> ();
 		}

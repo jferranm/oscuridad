@@ -1,9 +1,9 @@
 ﻿namespace Oscuridad.Enumeraciones
 {
-    /// <summary>
-    /// tipo de interaccion con el objeto
+	/// <summary>
+    /// tipo de interaccion con el interactuable
     /// </summary>
-    public enum opcionObjeto
+    public enum OpcionInteractuable
     {
         Coger,
         Hablar,
@@ -115,11 +115,11 @@
 		EscenaWardInteriorPlantaBaja,
 		EscenaWardInteriorPlantaSuperior
     }
-
-    /// <summary>
-    /// Nombre de los objetos
+	
+	/// <summary>
+    /// Nombre de los Interactuables
     /// </summary>
-    public enum Objetos
+    public enum Interactuables
     {
         Ninguno,
         PeriodicoSalon,
@@ -138,7 +138,8 @@
         CirculoInvocacion,
         ObjetosAlquimia,
         HojasPared,
-		Altar
+		Altar,
+		AmaDeLlaves
     }
 
     /// <summary>

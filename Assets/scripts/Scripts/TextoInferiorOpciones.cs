@@ -42,29 +42,25 @@ public class TextoInferiorOpciones : MonoBehaviour
 	
 	private void JugadorEnZoomEspera()
 	{
-		if (GameCenter.InstanceRef.controladoraJuego.objetoPulsado == null)
-			textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.personajePulsado.DescripcionNombre + "\"";
-		else 
-		{
-			textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.objetoPulsado.DescripcionNombre + "\"";
-			ObjetoTiradaBase tiradaAux = GameCenter.InstanceRef.controladoraJuego.objetoPulsado.MostrarTiradas().ToList().Find(x => x.Accion);
+		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.DescripcionNombre + "\"";
+		InteractuableTiradaBase tiradaAux = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.MostrarTiradas().ToList().Find(x => x.Accion);
 
-			if(tiradaAux != null)
+		if(tiradaAux != null)
+		{
+			if(tiradaAux.LocalizacionAccion != null)
 			{
-				if(tiradaAux.LocalizacionAccion != null)
+				//Si el objeto tiene apertura de localizaciones lo mostramos
+				foreach(Localizaciones localizacionAbierta in tiradaAux.LocalizacionAccion)
 				{
-					//Si el objeto tiene apertura de localizaciones lo mostramos
-					foreach(Localizaciones localizacionAbierta in tiradaAux.LocalizacionAccion)
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacionAbierta))
 					{
-						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacionAbierta))
-						{
-							GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacionAbierta, Color.yellow);
-							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacionAbierta);
-						}
+						GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacionAbierta, Color.yellow);
+						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacionAbierta);
 					}
 				}
 			}
 		}
+
 		rectCajaTexto.gameObject.SetActive(true);
 	}
 

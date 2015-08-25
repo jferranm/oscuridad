@@ -10,7 +10,7 @@
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -18,7 +18,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-7.1</x>
@@ -42,7 +42,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Mas pinturas de la familia, reunidos en el exterior de la casa, en lo que parece el jardin.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -50,8 +50,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>true</Comprobacion>
@@ -59,7 +59,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-13.97</x>
@@ -83,7 +83,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Son un monton de periodicos de hace varias semanas, de varios dias de la semana.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -91,8 +91,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -100,7 +100,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-16.97</x>
@@ -124,7 +124,7 @@
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -132,7 +132,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-17.0</x>
@@ -156,7 +156,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Sobre una mesita hay unas cuantas fotos enmarcadas. Son fotos de los padres de Charles, otra de Charles de joven y la ultima es una foto de bodas, donde aparece Charles y su esposa, con el velo puesto.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -164,8 +164,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>En la foto de boda se ve a Charles algo desmejorado, la figura de su esposa, aunque cubierta por el velo, te transmite una sensacion de temor, como si sus ojos te devolvieran la mirada desde debajo del velo.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -173,7 +173,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>0</x>
@@ -197,7 +197,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>La puerta esta cerrada con llave</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -206,8 +206,8 @@
           <Accion>false</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion />
-        </ObjetoTiradaBase>
-		<ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+		<InteractuableTiradaBase>
           <TextoDescriptivo>Con tus dotes en Cerrajeria has conseguido desbloquear la puerta</TextoDescriptivo>
           <HabilidadTirada>Cerrajeria</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -218,8 +218,8 @@
 		  <AccionesAccion>
 			<Acciones>AbrirPuertaDesvanAcierto</Acciones>
 		  </AccionesAccion>
-        </ObjetoTiradaBase>
-		<ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+		<InteractuableTiradaBase>
           <TextoDescriptivo>No consigues abrir la puerta, esta cerrada con llave</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -230,7 +230,7 @@
 		  <AccionesAccion>
 			<Acciones>AbrirPuertaDesvanFallo</Acciones>
 		  </AccionesAccion>
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-15.38</x>
@@ -254,7 +254,7 @@
         <opcionObjeto>Coger</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Esta vieja pala ha sido usada recientemente, aun quedan rastro de tierra en ella.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -262,7 +262,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>0</x>
@@ -286,7 +286,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Aparece la figura de un hombre de pie, elegantemente vestido, de fondo se puede ver un paisaje extraño, un rio, y arboles de formas retorcidas, con un cielo de color para nada normal, casi de otro mundo, cubierto de estrellas. Han quemado el trozo del cuadro donde iria su rostro. En la parte de atras del lienzo aparece escrito a mano: "Joseph Curwen, 1713".</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -294,8 +294,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Joseph Curwen fue un importante hombre de negocios de Arkham, comerciaba con exoticas mercancias que traian sus barcos desde muchos puntos del planeta. Murio en extrañas circustancias. Tal vez en el Arkham Advertiser puedas encontrar mas datos sobre el.</TextoDescriptivo>
           <HabilidadTirada>Historia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -303,8 +303,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>No reconoces la disposicion de las estrellas pintadas en el lienzo, o el autor se invento su colocacion o representa un cielo que no puede ser visto desde la tierra.</TextoDescriptivo>
           <HabilidadTirada>Astronomia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -312,7 +312,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>0</x>
@@ -335,7 +335,7 @@
         <opcionObjeto>Ninguna</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>todas las estanterias estan vacias, aunque por las marcas de polvo estuvieron repletas de libros no hace mucho. Los que quedan tratan sobre Quimica, Fisica e Historia, todos muy recientes.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -343,7 +343,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-14.1</x>
@@ -366,7 +366,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Parece un libro antiguo, con las tapas gastadas, y hojas amarillentas. Esta escrito en ingles antiguo, y te cuesta mucho entender de que trata. Tiene una tarjeta que se usaba para marcar pagina con el nombre de una librería en Arkham </TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -376,8 +376,8 @@
           <LocalizacionAccion>
             <Localizaciones>LibreriaArkham</Localizaciones>
           </LocalizacionAccion>
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Es una antigua copia del trabajo de Borellus, esta centrado en la Alquimia desde un punto de vista mas sobrenatural. Y en sus paginas se cuenta la posibilidad de revivir cadaveres mediante ciertos procesos alquimicos.</TextoDescriptivo>
           <HabilidadTirada>CienciasOcultas</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -385,8 +385,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Entre el galimatias de texto, y dibujos casi irreconocibles, te parece entender que trata sobre formulas quimicas, mezcladas con ideas religiosas un tanto extrañas.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -394,7 +394,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-8.85</x>
@@ -418,7 +418,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Es una especie de simbolo de invocacion arañado en la madera con un cuchillo, esta repleto de simbolos extraños que no consigues identificar, hay resto de tierra por todo el circulo y de un extraño polvo negro que no consigues identificar</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -426,8 +426,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>¡Es Polvo de Ibn Ghazi!, este blasfemo polvo es usado para dislumbrar espiritus convocados, y esta mezclado con cenizas y tierra. </TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -435,8 +435,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Hay una mezcla de cenizas, y tierra. El extraño polvo negro presenta unos brillos hipnoticos y que para nada considerarias  normales en este mundo. Jamas habias visto algo parecido y dudas que pertenezca a algun elemente conocido de la tierra.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -444,7 +444,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-14.08</x>
@@ -467,7 +467,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Ves un monton de recipientes y alambiques de cobre y cristal grueso. En algunos quedan restos de liquidos de colores malsanos y todo huele muy mal.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -475,8 +475,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Son accesorios para experimentos quimicos, que por lo que parece se han utilizado asiduamente sin preocuparse por su limpieza. Los restos de los recipientes son extraños y no consigues identificarlos.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -484,8 +484,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Reconoces claramente restos del repugnante polvo de Ibn Ghazi, un polvo usado en blasfemos rituales para vislumbrar espiritus convocados. Por la cantidad de restos ha sido usado en grandes cantidades, lo que te hace imaginar lo horrible de los actos ocurridos entre estas cuatro paredes…</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -493,7 +493,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-9.25</x>
@@ -516,7 +516,7 @@
         <opcionObjeto>Observar</opcionObjeto>
       </ObjetoOpciones>
       <TiradasObjeto>
-        <ObjetoTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Un monton de hojas cuelgan de los tableros de la ventana y de algunas partes de la pared, hay hojas con texto en varios idiomas, consigues identificar el latin, el Frances y el ingles. Algunas son graficos de alambiques y accesorios de quimica.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -524,8 +524,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Las hojas en frances son partes de un libro sobre anatomia, donde se detallan los puntos donde segun el autor reside el alma humana.</TextoDescriptivo>
           <HabilidadTirada>OtraLenguaFrances</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -533,8 +533,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>Las paginas en latin cuentan como organizar e instalar una mesa de trabajo para realizar experimentos alquimicos. Por su aspecto pertecian a un libro muy antiguo.</TextoDescriptivo>
           <HabilidadTirada>OtraLenguaLatin</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -542,8 +542,8 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
-        <ObjetoTiradaBase>
+        </InteractuableTiradaBase>
+        <InteractuableTiradaBase>
           <TextoDescriptivo>El resto de paginas y hojas estan repletas de anotaciones, marcas o guias sobre anatomia y quimica, pero desde un punto de vista mas espiritual que fisico.</TextoDescriptivo>
           <HabilidadTirada>LenguaPropia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
@@ -551,7 +551,7 @@
           <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-        </ObjetoTiradaBase>
+        </InteractuableTiradaBase>
       </TiradasObjeto>
       <PosicionNueva>
         <x>-6.89</x>
