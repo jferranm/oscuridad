@@ -17,6 +17,7 @@
     public enum Acciones
     {
         Ninguna,
+		PerdidaCordura,
         AbrirPuertaDesvanFallo,
         AbrirPuertaDesvanAcierto,
         TiradaMitosCthulhuFigura,
@@ -136,7 +137,7 @@
         LibrosDesvan,
         LibroMesa,
         CirculoInvocacion,
-        ObjetosAlquimia,
+        RecipientesAlquimia,
         HojasPared,
 		Altar,
 		AmaDeLlaves

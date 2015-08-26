@@ -471,7 +471,7 @@ namespace Oscuridad.Clases
 				conversacionInteractuable.Remove(respuesta);
 			}
 		}
-		
+
 		/// <summary>
 		/// Muestra la conversacion del interactuable
 		/// </summary>
@@ -489,7 +489,23 @@ namespace Oscuridad.Clases
 		{
 			return  MostrarRespuestas().ToList().Find (x => x.IdRespuesta == numRespuesta);
 		}
-		
+	
+		public bool PreguntaConTirada(int numeroPregunta)
+		{
+			foreach (RespuestaBase respuesta in MostrarRespuestas()) 
+			{
+				foreach(PreguntaBase pregunta in respuesta.MostrarPreguntas())
+				{
+					if (pregunta.IdPregunta.Equals(numeroPregunta))
+					{
+						return pregunta.PreguntaTirada;
+					}
+				}
+			}
+
+			return false;
+		}
+
 		#endregion
 	}
 }

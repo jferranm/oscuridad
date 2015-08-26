@@ -243,55 +243,61 @@ public class ControladoraGUI
 
 	public void Reestructurar_Respuestas(int numeroPregunta)
 	{
-		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
-
-		//Si existe respuesta
-		if (nuevaRespuesta != null) 
+		if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
 		{
-			Blanquear_Texto_Lateral ("yellow", "white");
-			//Si el texto lateral esta vacio
-			if (textoLateral.text != string.Empty) 
-			{
-				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
-				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
-				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
-			} 
-			//Si el texto lateral no esta vacio
-			else
-				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+			//PreguntaBase prueba = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+		}
+		else
+		{
+			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
 
-			//Comprobacion si la respuesta tiene un desbloqueo o accion asociada
-			if(nuevaRespuesta.Comprobacion)
+			//Si existe respuesta
+			if (nuevaRespuesta != null) 
 			{
-				//Desbloqueo de localizacion
-				if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
+				Blanquear_Texto_Lateral ("yellow", "white");
+				//Si el texto lateral esta vacio
+				if (textoLateral.text != string.Empty) 
 				{
-					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(nuevaRespuesta.LocalizacionSeleccionada))
+					float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
+					Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+					Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
+				} 
+				//Si el texto lateral no esta vacio
+				else
+					Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+
+				//Comprobacion si la respuesta tiene un desbloqueo o accion asociada
+				if(nuevaRespuesta.Comprobacion)
+				{
+					//Desbloqueo de localizacion
+					if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
 					{
-						Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
-						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
+						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(nuevaRespuesta.LocalizacionSeleccionada))
+						{
+							Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
+							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
+						}
 					}
 				}
+
+				//Comprobacion de que la respuesta no tiene pregunta asociada y vuelve a una pregunta anterior
+				if(nuevaRespuesta.SinRespuesta)
+					nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
+
+				//Generamos las preguntas asociadas a la respuesta
+				listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
+
 			}
-
-			//Comprobacion de que la respuesta no tiene pregunta asociada y vuelve a una pregunta anterior
-			if(nuevaRespuesta.SinRespuesta)
-				nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
-
-			//Generamos las preguntas asociadas a la respuesta
-			listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
-
+			//Sino existe respuesta
+			else 
+			{
+				Vaciar_Texto_Lateral();
+				Vaciar_Panel_Preguntas();
+				textoInferiorOpciones.gameObject.SetActive (true);
+				panelPreguntasOpciones.gameObject.SetActive (false);
+				panelObjetosOpciones.Activar ("Hablar");
+			}
 		}
-		//Sino existe respuesta
-		else 
-		{
-			Vaciar_Texto_Lateral();
-			Vaciar_Panel_Preguntas();
-			textoInferiorOpciones.gameObject.SetActive (true);
-			panelPreguntasOpciones.gameObject.SetActive (false);
-			panelObjetosOpciones.Activar ("Hablar");
-		}
-
 	}
 
 	/// <summary>

@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Escena>EscenaWardInteriorPlantaSuperior</Escena>
-  <ObjetosEscena>
-    <ObjetoBase>
+  <InteractuablesEscena>
+    <InteractuableGenerico>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
-      <Objeto>CuadrosPrimeraPlanta1</Objeto>
-      <DescripcionNombre>Cuadros</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Cuadros</DescripcionNombre>
+      <Interactuable>CuadrosPrimeraPlanta1</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Ninguna</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>En los cuadros reconoces a los miembros de la familia Ward, el señor y la señora Ward y el joven Charles.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-7.1</x>
         <y>311.6</y>
@@ -31,36 +34,40 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>CuadrosPrimeraPlanta2</Nombre>
-	  <Objeto>CuadrosPrimeraPlanta2</Objeto>
-      <DescripcionNombre>Cuadro</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Cuadro</DescripcionNombre>
+	  <Interactuable>CuadrosPrimeraPlanta2</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Mas pinturas de la familia, reunidos en el exterior de la casa, en lo que parece el jardin.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>true</Comprobacion>
           <EscenaComprobacion>WardJardin</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-13.97</x>
         <y>311.459</y>
@@ -72,36 +79,40 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>PeriodicosHabitacionCharles</Nombre>
-	  <Objeto>PeriodicosHabitacionCharles</Objeto>
-      <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
+	  <Interactuable>PeriodicosHabitacionCharles</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Son un monton de periodicos de hace varias semanas, de varios dias de la semana.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos.</TextoDescriptivo>
+          <TextoDescriptivo>Todos los periodicos estan abiertos por la seccion de sucesos. En la mayoria se trata los desenterramientos en el cementerio, y los pocos avances que la policia ha realizado con el caso.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-16.97</x>
         <y>307.92</y>
@@ -113,27 +124,30 @@
         <z>-360</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>LibrosHabitacionCharles</Nombre>
-	  <Objeto>LibrosHabitacionCharles</Objeto>
-      <DescripcionNombre>Libros</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Libros</DescripcionNombre>
+	  <Interactuable>LibrosHabitacionCharles</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Ninguna</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes.</TextoDescriptivo>
+          <TextoDescriptivo>Los libros que descansan sobre el sillon tratan de historia de Providence, todos muy recientes. Entre los libros hay una foto, en la que aparece Charles junto a una joven, muy sonrientes, acaban de desenterrar lo que parece ser un pequeño altar de piedra. No reconoces el lugar de la imagen. En el reverso de la foto hay escrito “monticulo junto a la vieja granja”.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-17.0</x>
         <y>309.57</y>
@@ -145,36 +159,40 @@
         <z>6.678711</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>Mesita</Nombre>
-	  <Objeto>Mesita</Objeto>
-      <DescripcionNombre>Mesita</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Mesita</DescripcionNombre>
+	  <Interactuable>Mesita</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Sobre una mesita hay unas cuantas fotos enmarcadas. Son fotos de los padres de Charles, otra de Charles de joven y la ultima es una foto de bodas, donde aparece Charles y su esposa, con el velo puesto.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>En la foto de boda se ve a Charles algo desmejorado, la figura de su esposa, aunque cubierta por el velo, te transmite una sensacion de temor, como si sus ojos te devolvieran la mirada desde debajo del velo.</TextoDescriptivo>
           <HabilidadTirada>Descubrir</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	   <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>0</x>
         <y>0</y>
@@ -185,34 +203,34 @@
         <y>0</y>
         <z>0</z>
       </RotacionNueva>
-      <Smooth>0</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <Smooth>2.5</Smooth>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>Puerta</Nombre>
-	  <Objeto>Puerta</Objeto>
+	  <Interactuable>Puerta</Interactuable>
       <DescripcionNombre>Cierre de Puerta</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>La puerta esta cerrada con llave</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion />
         </InteractuableTiradaBase>
 		<InteractuableTiradaBase>
-          <TextoDescriptivo>Con tus dotes en Cerrajeria has conseguido desbloquear la puerta</TextoDescriptivo>
+          <TextoDescriptivo>Manipulas la cerradura con cuidado, usando tu kit de herramientas para estos casos, y oyes el chasquido del cerrojo abriendose. La puerta se abre.</TextoDescriptivo>
           <HabilidadTirada>Cerrajeria</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion>
@@ -220,18 +238,20 @@
 		  </AccionesAccion>
         </InteractuableTiradaBase>
 		<InteractuableTiradaBase>
-          <TextoDescriptivo>No consigues abrir la puerta, esta cerrada con llave</TextoDescriptivo>
+          <TextoDescriptivo>No consigues forzar la cerradura de la puerta, el mecanismo parece gastado y no responde bien a tus manipulaciones. La puerta no se abre.</TextoDescriptivo>
           <HabilidadTirada>Fallo</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion />
 		  <AccionesAccion>
 			<Acciones>AbrirPuertaDesvanFallo</Acciones>
 		  </AccionesAccion>
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
+      </TiradasInteractuable>
       <PosicionNueva>
         <x>-15.38</x>
         <y>309.88</y>
@@ -243,27 +263,30 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-      <ObjetoInspeccionado>false</ObjetoInspeccionado>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+      <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>Pala</Nombre>
-	  <Objeto>Pala</Objeto>
-      <DescripcionNombre>Pala</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Coger</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Pala</DescripcionNombre>
+	  <Interactuable>Pala</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Coger</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Esta vieja pala ha sido usada recientemente, aun quedan rastro de tierra en ella.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>0</x>
         <y>0</y>
@@ -275,45 +298,51 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>0</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>CuadroDesvan</Nombre>
-	  <Objeto>CuadroDesvan</Objeto>
-      <DescripcionNombre>Cuadro</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Coger</opcionObjeto>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <DescripcionNombre>Cuadro</DescripcionNombre>
+	  <Interactuable>CuadroDesvan</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Coger</OpcionInteractuable>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Aparece la figura de un hombre de pie, elegantemente vestido, de fondo se puede ver un paisaje extraño, un rio, y arboles de formas retorcidas, con un cielo de color para nada normal, casi de otro mundo, cubierto de estrellas. Han quemado el trozo del cuadro donde iria su rostro. En la parte de atras del lienzo aparece escrito a mano: "Joseph Curwen, 1713".</TextoDescriptivo>
+          <TextoDescriptivo>Aparece la figura de un hombre de pie, elegantemente vestido, de fondo se puede ver un paisaje extraño, un rio, y arboles de formas retorcidas, con un cielo de color para nada normal, casi de otro mundo, cubierto de estrellas. Han quemado el trozo del cuadro donde estaria su rostro. En la parte de atras del lienzo aparece escrito a mano: "Joseph Curwen, 1713".</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Joseph Curwen fue un importante hombre de negocios de Arkham, comerciaba con exoticas mercancias que traian sus barcos desde muchos puntos del planeta. Murio en extrañas circustancias. Tal vez en el Arkham Advertiser puedas encontrar mas datos sobre el.</TextoDescriptivo>
           <HabilidadTirada>Historia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>No reconoces la disposicion de las estrellas pintadas en el lienzo, o el autor se invento su colocacion o representa un cielo que no puede ser visto desde la tierra.</TextoDescriptivo>
           <HabilidadTirada>Astronomia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>0</x>
         <y>0</y>
@@ -325,26 +354,30 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>LibrosDesvan</Nombre>
-	  <Objeto>LibrosDesvan</Objeto>
+	  <Interactuable>LibrosDesvan</Interactuable>
       <DescripcionNombre>Libros</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Ninguna</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Ninguna</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>todas las estanterias estan vacias, aunque por las marcas de polvo estuvieron repletas de libros no hace mucho. Los que quedan tratan sobre Quimica, Fisica e Historia, todos muy recientes.</TextoDescriptivo>
+          <TextoDescriptivo>Casi todas las estanterias estan vacias, aunque por las marcas de polvo estuvieron repletas de libros no hace mucho. Los que quedan tratan sobre Quimica, Fisica e Historia, todos muy recientes.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-14.1</x>
         <y>307.62</y>
@@ -356,46 +389,52 @@
         <z>-0.08934021</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>LibroMesa</Nombre>
-	  <Objeto>LibroMesa</Objeto>
       <DescripcionNombre>Libro sobre la mesa</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <Interactuable>LibroMesa</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Parece un libro antiguo, con las tapas gastadas, y hojas amarillentas. Esta escrito en ingles antiguo, y te cuesta mucho entender de que trata. Tiene una tarjeta que se usaba para marcar pagina con el nombre de una librería en Arkham </TextoDescriptivo>
+          <TextoDescriptivo>Parece un libro antiguo, con las tapas gastadas, y hojas amarillentas. Esta escrito en ingles antiguo, y te cuesta mucho entender de que trata. Tiene una tarjeta que se usaba para marcar pagina con el nombre de una librería en Arkham.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>true</Accion>
           <LocalizacionAccion>
             <Localizaciones>LibreriaArkham</Localizaciones>
           </LocalizacionAccion>
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Es una antigua copia del trabajo de Borellus, esta centrado en la Alquimia desde un punto de vista mas sobrenatural. Y en sus paginas se cuenta la posibilidad de revivir cadaveres mediante ciertos procesos alquimicos.</TextoDescriptivo>
+          <TextoDescriptivo>Es una antigua copia del trabajo de Borellus, esta centrado en la Alquimia desde un punto de vista mas sobrenatural. Y en sus paginas se cuenta la posibilidad de revivir cadaveres mediante ciertos procesos alquimicos, explicados muy detalladamente.</TextoDescriptivo>
           <HabilidadTirada>CienciasOcultas</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Entre el galimatias de texto, y dibujos casi irreconocibles, te parece entender que trata sobre formulas quimicas, mezcladas con ideas religiosas un tanto extrañas.</TextoDescriptivo>
+          <TextoDescriptivo>Entre el galimatias de texto, y dibujos casi irreconocibles, te parece entender que trata sobre formulas quimicas, mezcladas con ideas religiosas un tanto extrañas, utilizadas para devolver la vida a fallecidos.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-8.85</x>
         <y>309.42</y>
@@ -407,45 +446,51 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>CirculoInvocacion</Nombre>
-	  <Objeto>CirculoInvocacion</Objeto>
       <DescripcionNombre>Circulo de Invocacion</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Coger</opcionObjeto>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+	  <Interactuable>CirculoInvocacion</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Coger</OpcionInteractuable>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Es una especie de simbolo de invocacion arañado en la madera con un cuchillo, esta repleto de simbolos extraños que no consigues identificar, hay resto de tierra por todo el circulo y de un extraño polvo negro que no consigues identificar</TextoDescriptivo>
+          <TextoDescriptivo>Es una especie de simbolo de invocacion arañado en la madera con un cuchillo, esta repleto de simbolos extraños que no reconoces, hay resto de tierra por todo el circulo y de un extraño polvo negro que no sabrias identificar.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>¡Es Polvo de Ibn Ghazi!, este blasfemo polvo es usado para dislumbrar espiritus convocados, y esta mezclado con cenizas y tierra. </TextoDescriptivo>
+          <TextoDescriptivo>¡Es Polvo de Ibn Ghazi!, este blasfemo polvo es usado para dislumbrar espiritus convocados, y esta mezclado con cenizas y tierra.</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>Hay una mezcla de cenizas, y tierra. El extraño polvo negro presenta unos brillos hipnoticos y que para nada considerarias  normales en este mundo. Jamas habias visto algo parecido y dudas que pertenezca a algun elemente conocido de la tierra.</TextoDescriptivo>
+          <TextoDescriptivo>Hay una mezcla de cenizas, y tierra. El extraño polvo negro presenta unos brillos hipnoticos. Jamas habias visto algo parecido y dudas que pertenezca a algun elemente conocido de la tierra.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-14.08</x>
         <y>310.68</y>
@@ -457,44 +502,50 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-    <ObjetoBase>
-      <Nombre>ObjetosAlquimia</Nombre>
-	  <Objeto>ObjetosAlquimia</Objeto>
-      <DescripcionNombre>Objetos de Alquimia</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
+      <Nombre>RecipientesAlquimia</Nombre>
+	  <DescripcionNombre>Recipientes de Alquimia</DescripcionNombre>
+	  <Interactuable>RecipientesAlquimia</Interactuable>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Ves un monton de recipientes y alambiques de cobre y cristal grueso. En algunos quedan restos de liquidos de colores malsanos y todo huele muy mal.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Son accesorios para experimentos quimicos, que por lo que parece se han utilizado asiduamente sin preocuparse por su limpieza. Los restos de los recipientes son extraños y no consigues identificarlos.</TextoDescriptivo>
           <HabilidadTirada>Quimica</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Reconoces claramente restos del repugnante polvo de Ibn Ghazi, un polvo usado en blasfemos rituales para vislumbrar espiritus convocados. Por la cantidad de restos ha sido usado en grandes cantidades, lo que te hace imaginar lo horrible de los actos ocurridos entre estas cuatro paredes…</TextoDescriptivo>
           <HabilidadTirada>MitosDeCthulhu</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-9.25</x>
         <y>310.02</y>
@@ -506,53 +557,60 @@
         <z>0.008621216</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-    <ObjetoBase>
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+    <InteractuableGenerico>
       <Nombre>HojasPared</Nombre>
-	  <Objeto>HojasPared</Objeto>
+	  <Interactuable>HojasPared</Interactuable>
       <DescripcionNombre>Hojas en la pared</DescripcionNombre>
-      <ObjetoOpciones>
-        <opcionObjeto>Observar</opcionObjeto>
-      </ObjetoOpciones>
-      <TiradasObjeto>
+      <InteractuableOpciones>
+        <OpcionInteractuable>Observar</OpcionInteractuable>
+      </InteractuableOpciones>
+      <TiradasInteractuable>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Un monton de hojas cuelgan de los tableros de la ventana y de algunas partes de la pared, hay hojas con texto en varios idiomas, consigues identificar el latin, el Frances y el ingles. Algunas son graficos de alambiques y accesorios de quimica.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Las hojas en frances son partes de un libro sobre anatomia, donde se detallan los puntos donde segun el autor reside el alma humana.</TextoDescriptivo>
           <HabilidadTirada>OtraLenguaFrances</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Las paginas en latin cuentan como organizar e instalar una mesa de trabajo para realizar experimentos alquimicos. Por su aspecto pertecian a un libro muy antiguo.</TextoDescriptivo>
           <HabilidadTirada>OtraLenguaLatin</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>El resto de paginas y hojas estan repletas de anotaciones, marcas o guias sobre anatomia y quimica, pero desde un punto de vista mas espiritual que fisico.</TextoDescriptivo>
           <HabilidadTirada>LenguaPropia</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <ObjetoComprobacion>Ninguno</ObjetoComprobacion>
+          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
+		  <AccionesAccion />
         </InteractuableTiradaBase>
-      </TiradasObjeto>
+      </TiradasInteractuable>
+	  <ConversacionInteractuable />
+	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
         <x>-6.89</x>
         <y>310.56</y>
@@ -564,10 +622,10 @@
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
-      <ObjetoActivo>true</ObjetoActivo>
-    </ObjetoBase>
-  </ObjetosEscena>
-  <PersonajesEscena />
+      <InteractuableActivo>true</InteractuableActivo>
+	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
+    </InteractuableGenerico>
+  </InteractuablesEscena>
   <ListaCamaras>
     <CamaraEscenaBase>
       <Nombre>CamaraPasillo</Nombre>
