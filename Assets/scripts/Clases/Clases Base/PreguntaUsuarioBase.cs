@@ -5,10 +5,10 @@ using Oscuridad.Enumeraciones;
 namespace Oscuridad.Clases
 {
     /// <summary>
-    /// Clase Base de Preguntas asociadas a una RespuestaBase del NPC
+    /// Clase Base de Preguntas asociadas a una RespuestaNPCBase del NPC
     /// </summary>
 	[System.Serializable]
-    public class PreguntaBase
+    public class PreguntaUsuarioBase
     {
 		#region VARIABLES
 
@@ -25,30 +25,30 @@ namespace Oscuridad.Clases
             set { textoPregunta = value; }
         }
 
-        private int idRespuesta;
+        private int idRespuestaNPC;
         /// <summary>
         /// Identificador de la Respuesta donde va dirigida la pregunta tras ser seleccionada
         /// </summary>
         /// <value>
         /// valor entero de identificador
         /// </value>
-        public int IdRespuesta
+        public int IdRespuestaNPC
         {
-            get { return idRespuesta; }
-            set { idRespuesta = value; }
+            get { return idRespuestaNPC; }
+            set { idRespuestaNPC = value; }
         }
 
-        private int idPregunta;
+        private int idPreguntaUsuario;
         /// <summary>
         /// Identificador de pregunta sobre otras preguntas
         /// </summary>
         /// <value>
         /// Valor entero de identificador
         /// </value>
-        public int IdPregunta
+        public int IdPreguntaUsuario
         {
-            get { return idPregunta; }
-            set { idPregunta = value; }
+            get { return idPreguntaUsuario; }
+            set { idPreguntaUsuario = value; }
         }
 
         private bool preguntaTirada;
@@ -160,44 +160,44 @@ namespace Oscuridad.Clases
 		#region CONSTRUCTORES
 
         /// <summary>
-        /// Constructor de la Clase <see cref="PreguntaBase"/>
+        /// Constructor de la Clase <see cref="PreguntaUsuarioBase"/>
         /// </summary>
-        public PreguntaBase()
+        public PreguntaUsuarioBase()
         {
         }
 
         /// <summary>
-        /// Constructor de la Clase <see cref="PreguntaBase"/>
+        /// Constructor de la Clase <see cref="PreguntaUsuarioBase"/>
         /// </summary>
         /// <param name="texto">cadena de texto del enunciado de la pregunta</param>
-        public PreguntaBase(string texto)
+		public PreguntaUsuarioBase(string texto)
         {
             textoPregunta = texto;
         }
 
         /// <summary>
-        /// Constructor de la Clase <see cref="PreguntaBase"/>
+        /// Constructor de la Clase <see cref="PreguntaUsuarioBase"/>
         /// </summary>
         /// <param name="id">identificador de la pregunta</param>
-        public PreguntaBase(int id)
+		public PreguntaUsuarioBase(int id)
         {
-            idPregunta = id;
+            idPreguntaUsuario = id;
         }
 
         /// <summary>
-        /// Constructor de la Clase <see cref="PreguntaBase"/>
+        /// Constructor de la Clase <see cref="PreguntaUsuarioBase"/>
         /// </summary>
         /// <param name="texto">cadena de texto con el enunciado de la respuesta</param>
         /// <param name="id">identificador de la respuesta</param>
         /// <param name="habilidad">valor tipo enum Habilidad</param>
-        public PreguntaBase(string texto, int id)
+		public PreguntaUsuarioBase(string texto, int id)
         {
             textoPregunta = texto;
-            idPregunta = id;
+            idPreguntaUsuario = id;
         }
 
         /// <summary>
-        /// Constructor de la Clase <see cref="PreguntaBase" />
+        /// Constructor de la Clase <see cref="PreguntaUsuarioBase" />
         /// </summary>
         /// <param name="texto">cadena de texto con el enunciado de la respuesta</param>
         /// <param name="id">identificador de la respuesta</param>
@@ -206,10 +206,10 @@ namespace Oscuridad.Clases
         /// <param name="escena">valor tipo enum Escenas</param>
 		/// <param name="objeto">valor tipo enum Interactuables</param>
         /// <param name="accion">valor tipo enum Acciones</param>
-		public PreguntaBase(string texto, int id, bool comprobacion, Habilidades habilidad, Escenas escena, Interactuables objeto, Acciones accion)
+		public PreguntaUsuarioBase(string texto, int id, bool comprobacion, Habilidades habilidad, Escenas escena, Interactuables objeto, Acciones accion)
         {
             textoPregunta = texto;
-            idPregunta = id;
+            idPreguntaUsuario = id;
             comprobacionPregunta = comprobacion;
             comprobacionHabilidad = habilidad;
 			comprobacionInteractuables = objeto;

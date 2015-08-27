@@ -8,7 +8,7 @@ namespace Oscuridad.Clases
     /// Clase Base para Respuesta del NPC en una conversacion
     /// </summary>
 	[System.Serializable]
-    public class RespuestaBase
+    public class RespuestaNPCBase
     {
 		#region VARIABLES
         private string textoRespuesta;
@@ -24,30 +24,30 @@ namespace Oscuridad.Clases
             set { textoRespuesta = value; }
         }
 
-        private int idRespuesta;
+        private int idRespuestaNPC;
         /// <summary>
         /// Id de la respuesta del NPC
         /// </summary>
         /// <value>
         /// valor entero para diferenciar respuestas
         /// </value>
-        public int IdRespuesta
+        public int IdRespuestaNPC
         {
-            get { return idRespuesta; }
-            set { idRespuesta = value; }
+            get { return idRespuestaNPC; }
+            set { idRespuestaNPC = value; }
         }
 
-        private List<PreguntaBase> preguntasRespuesta;
+        private List<PreguntaUsuarioBase> listaPreguntasUsuario;
         /// <summary>
         /// Lista de preguntas generadas por la respuesta del NPC
         /// </summary>
         /// <value>
-        /// Lista generica de tipo PreguntaBase
+        /// Lista generica de tipo PreguntaUsuarioBase
         /// </value>
-        public List<PreguntaBase> PreguntaRespuesta
+        public List<PreguntaUsuarioBase> ListaPreguntasUsuario
         {
-            get { return preguntasRespuesta; }
-            set { preguntasRespuesta = value; }
+			get { return listaPreguntasUsuario; }
+			set { listaPreguntasUsuario = value; }
         }
 
         private bool comprobacion;
@@ -106,92 +106,85 @@ namespace Oscuridad.Clases
 
 		#region CONSTRUCTORES
         /// <summary>
-        /// Constructor de la clase <see cref="RespuestaBase"/>
+        /// Constructor de la clase <see cref="RespuestaNPCBase"/>
         /// </summary>
-        public RespuestaBase()
+        public RespuestaNPCBase()
         {
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+			Inicializar_Listas ();
         }
 
         /// <summary>
-        /// Constructor de la Clase <see cref="RespuestaBase"/>
+        /// Constructor de la Clase <see cref="RespuestaNPCBase"/>
         /// </summary>
         /// <param name="texto">texto de respuesta del NPC</param>
-        public RespuestaBase(string texto)
+        public RespuestaNPCBase(string texto)
         {
             textoRespuesta = texto;
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+			Inicializar_Listas ();
         }
 
         /// <summary>
-        /// Constructor de la clase <see cref="RespuestaBase"/>
+        /// Constructor de la clase <see cref="RespuestaNPCBase"/>
         /// </summary>
         /// <param name="id">id de la Respuesta</param>
-        public RespuestaBase(int id)
+        public RespuestaNPCBase(int id)
         {
-            idRespuesta = id;
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+            idRespuestaNPC = id;
+			Inicializar_Listas();
         }
 
         /// <summary>
-        /// Constructor de la clase <see cref="RespuestaBase"/>
+        /// Constructor de la clase <see cref="RespuestaNPCBase"/>
         /// </summary>
         /// <param name="preguntas">array de tipo Preguntas Base con respuestas a la pregunta</param>
-        public RespuestaBase(PreguntaBase[] preguntas)
+        public RespuestaNPCBase(PreguntaUsuarioBase[] preguntas)
         {
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+			Inicializar_Listas ();
 
             AddPregunta(preguntas);
         }
 
         /// <summary>
-        /// Constructor de la Clase<see cref="RespuestaBase"/>
+        /// Constructor de la Clase<see cref="RespuestaNPCBase"/>
         /// </summary>
         /// <param name="texto">Texto de la respuesta del NPC</param>
         /// <param name="id">Id de la respuesta</param>
-        /// <param name="preguntas">Array de tipo PreguntaBase con respuesta a la pregunta del NPC</param>
-        public RespuestaBase(string texto, int id, PreguntaBase[] preguntas)
+        /// <param name="preguntas">Array de tipo PreguntaUsuarioBase con respuesta a la pregunta del NPC</param>
+        public RespuestaNPCBase(string texto, int id, PreguntaUsuarioBase[] preguntas)
         {
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+			Inicializar_Listas();
 
             textoRespuesta = texto;
-            idRespuesta = id;
+            idRespuestaNPC = id;
             AddPregunta(preguntas);
         }
 
         /// <summary>
-        /// Constructor de la Clase<see cref="RespuestaBase"/>
+        /// Constructor de la Clase<see cref="RespuestaNPCBase"/>
         /// </summary>
         /// <param name="texto">Texto de la respuesta del NPC</param>
         /// <param name="id">Id de la respuesta</param>
-        /// <param name="preguntas">Array de tipo PreguntaBase con respuesta a la pregunta del NPC</param>
+        /// <param name="preguntas">Array de tipo PreguntaUsuarioBase con respuesta a la pregunta del NPC</param>
         /// <param name="comp">Valor booleano para la comprobacion si la respuesta tiene una accion posterior a su visualizacion</param>
         /// <param name="localizacion">valor tipo enum localizacion para desbloquear una Localizacion</param>
-        public RespuestaBase(string texto, int id, PreguntaBase[] preguntas, bool comp, Localizaciones localizacion)
+        public RespuestaNPCBase(string texto, int id, PreguntaUsuarioBase[] preguntas, bool comp, Localizaciones localizacion)
         {
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+			Inicializar_Listas ();
 
             textoRespuesta = texto;
-            idRespuesta = id;
+            idRespuestaNPC = id;
             AddPregunta(preguntas);
             comprobacion = comp;
             localizacionSeleccionada = localizacion;
 
         }
 
-        public RespuestaBase(string texto, int id, PreguntaBase[] preguntas, bool comp, Localizaciones localizacion, bool ciega, int direccion)
+        public RespuestaNPCBase(string texto, int id, PreguntaUsuarioBase[] preguntas, bool comp, Localizaciones localizacion, bool ciega, int direccion)
         {
-            preguntasRespuesta = new List<PreguntaBase>();
-            PreguntaRespuesta = new List<PreguntaBase>();
+			Inicializar_Listas ();
 
             textoRespuesta = texto;
-            idRespuesta = id;
+            idRespuestaNPC = id;
             AddPregunta(preguntas);
             comprobacion = comp;
             localizacionSeleccionada = localizacion;
@@ -203,52 +196,60 @@ namespace Oscuridad.Clases
 
 		#region METODOS
 
+		/// <summary>
+		/// Inicializa las Listas
+		/// </summary>
+		private void Inicializar_Listas()
+		{
+			listaPreguntasUsuario = new List<PreguntaUsuarioBase>();
+		}
+
         /// <summary>
         /// Añade una pregunta a la respuesta del NPC
         /// </summary>
-        /// <param name="pregunta">objeto tipo PreguntaBase</param>
-        public void AddPregunta(PreguntaBase pregunta)
+        /// <param name="pregunta">objeto tipo PreguntaUsuarioBase</param>
+        public void AddPregunta(PreguntaUsuarioBase pregunta)
         {
-            preguntasRespuesta.Add(pregunta);
+            listaPreguntasUsuario.Add(pregunta);
         }
 
         /// <summary>
         /// Añade varias preguntas a la respuesta
         /// </summary>
-        /// <param name="preguntas">Array de tipo PreguntaBase</param>
-        public void AddPregunta(PreguntaBase[] preguntas)
+        /// <param name="preguntas">Array de tipo PreguntaUsuarioBase</param>
+        public void AddPregunta(PreguntaUsuarioBase[] preguntas)
         {
-            preguntasRespuesta.AddRange(preguntas);
+			listaPreguntasUsuario.AddRange(preguntas);
         }
 
         /// <summary>
         /// Borrar una pregunta
         /// </summary>
-        /// <param name="pregunta">objeto tipo PreguntaBase</param>
-        public void BorrarPregunta(PreguntaBase pregunta)
+        /// <param name="pregunta">objeto tipo PreguntaUsuarioBase</param>
+        public void BorrarPregunta(PreguntaUsuarioBase pregunta)
         {
-            preguntasRespuesta.Remove(pregunta);
+			listaPreguntasUsuario.Remove(pregunta);
         }
 
         /// <summary>
         /// Borrar varias preguntas
         /// </summary>
-        /// <param name="preguntas">Array de tipo PreguntaBase</param>
-        public void BorrarPregunta(PreguntaBase[] preguntas)
+        /// <param name="preguntas">Array de tipo PreguntaUsuarioBase</param>
+        public void BorrarPregunta(PreguntaUsuarioBase[] preguntas)
         {
-            foreach (PreguntaBase pregunta in preguntas)
+            foreach (PreguntaUsuarioBase pregunta in preguntas)
             {
-                preguntasRespuesta.Remove(pregunta);
+				listaPreguntasUsuario.Remove(pregunta);
             }
         }
 
         /// <summary>
         /// Mostrar lista de preguntas a la respuesta del NPC
         /// </summary>
-        /// <returns>Array de tipo PreguntaBase</returns>
-        public PreguntaBase[] MostrarPreguntas()
+        /// <returns>Array de tipo PreguntaUsuarioBase</returns>
+        public PreguntaUsuarioBase[] MostrarPreguntas()
         {
-            return preguntasRespuesta.ToArray();
+			return listaPreguntasUsuario.ToArray();
         }
 
 		#endregion

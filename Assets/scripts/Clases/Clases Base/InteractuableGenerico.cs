@@ -79,14 +79,14 @@ namespace Oscuridad.Clases
             set { tiradasInteractuable = value; }
         }
 
-		private List<RespuestaBase> conversacionInteractuable;
+		private List<RespuestaNPCBase> conversacionInteractuable;
 		/// <summary>
 		/// Lista de Frases del NPC a mostrar
 		/// </summary>
 		/// <value>
-		/// lista generica de RespuestaBase
+		/// lista generica de RespuestaNPCBase
 		/// </value>
-		public List<RespuestaBase> ConversacionInteractuable
+		public List<RespuestaNPCBase> ConversacionInteractuable
 		{
 			get { return conversacionInteractuable; }
 			set { conversacionInteractuable = value; }
@@ -248,8 +248,8 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Constructor sobrecargado de la Clase
 		/// </summary>
-		/// <param name="respuestas">array de tipo RespuestaBase de respuestas a mostrar del interactuable</param>
-		public InteractuableGenerico(RespuestaBase[] respuestas)
+		/// <param name="respuestas">array de tipo RespuestaNPCBase de respuestas a mostrar del interactuable</param>
+		public InteractuableGenerico(RespuestaNPCBase[] respuestas)
 		{
 			Inicializar_Listas ();
 			
@@ -260,8 +260,8 @@ namespace Oscuridad.Clases
 		/// Constructor sobrecargado de la Clase
 		/// </summary>
 		/// <param name="nombre">nombre del interactuable</param>
-		/// <param name="respuestas">array de tipo RespuestaBase de respuestas a mostrar del personaje</param>
-		public InteractuableGenerico(string nombre, RespuestaBase[] respuestas)
+		/// <param name="respuestas">array de tipo RespuestaNPCBase de respuestas a mostrar del personaje</param>
+		public InteractuableGenerico(string nombre, RespuestaNPCBase[] respuestas)
 		{
 			Inicializar_Listas ();
 			
@@ -273,9 +273,9 @@ namespace Oscuridad.Clases
 		/// Constructor sobrecargado de la Clase
 		/// </summary>
 		/// <param name="nombre">nombre del interactuable</param>
-		/// <param name="respuestas">array de tipo RespuestaBase de respuestas a mostrar del interactuable</param>
-		/// <param name="idComienzo">valor entero que marca cual sera la RespuestaBase donde comenzara la conversacion</param>
-		public InteractuableGenerico(string nombre, RespuestaBase[] respuestas, int idComienzo)
+		/// <param name="respuestas">array de tipo RespuestaNPCBase de respuestas a mostrar del interactuable</param>
+		/// <param name="idComienzo">valor entero que marca cual sera la RespuestaNPCBase donde comenzara la conversacion</param>
+		public InteractuableGenerico(string nombre, RespuestaNPCBase[] respuestas, int idComienzo)
 		{
 			Inicializar_Listas ();
 			
@@ -296,7 +296,7 @@ namespace Oscuridad.Clases
 		{
 			interactuableOpciones = new List<OpcionInteractuable> ();
 			tiradasInteractuable = new List<InteractuableTiradaBase> ();
-			conversacionInteractuable = new List<RespuestaBase> ();
+			conversacionInteractuable = new List<RespuestaNPCBase> ();
 		}
 
         /// <summary>
@@ -436,8 +436,8 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Añade una respuesta a la conversacion
 		/// </summary>
-		/// <param name="respuesta">respuesta tipo RespuestaBase</param>
-		public void AddRespuesta(RespuestaBase respuesta)
+		/// <param name="respuesta">respuesta tipo RespuestaNPCBase</param>
+		public void AddRespuesta(RespuestaNPCBase respuesta)
 		{
 			conversacionInteractuable.Add(respuesta);
 		}
@@ -445,8 +445,8 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Añade varias respuestas a la conversacion
 		/// </summary>
-		/// <param name="respuestas">array de tipo RespuestaBase</param>
-		public void AddRespuesta(RespuestaBase[] respuestas)
+		/// <param name="respuestas">array de tipo RespuestaNPCBase</param>
+		public void AddRespuesta(RespuestaNPCBase[] respuestas)
 		{
 			conversacionInteractuable.AddRange(respuestas);
 		}
@@ -454,8 +454,8 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Borra una respuesta
 		/// </summary>
-		/// <param name="respuesta">respuesta tipo RespuestaBase</param>
-		public void BorrarRespuesta(RespuestaBase respuesta)
+		/// <param name="respuesta">respuesta tipo RespuestaNPCBase</param>
+		public void BorrarRespuesta(RespuestaNPCBase respuesta)
 		{
 			conversacionInteractuable.Remove(respuesta);
 		}
@@ -463,10 +463,10 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Borra varias respuestas
 		/// </summary>
-		/// <param name="respuestas">array de tipo RespuestaBase</param>
-		public void BorrarRespuesta(RespuestaBase[] respuestas)
+		/// <param name="respuestas">array de tipo RespuestaNPCBase</param>
+		public void BorrarRespuesta(RespuestaNPCBase[] respuestas)
 		{
-			foreach (RespuestaBase respuesta in respuestas)
+			foreach (RespuestaNPCBase respuesta in respuestas)
 			{
 				conversacionInteractuable.Remove(respuesta);
 			}
@@ -475,8 +475,8 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Muestra la conversacion del interactuable
 		/// </summary>
-		/// <returns> array de tipo RespuestaBase</returns>
-		public RespuestaBase[] MostrarRespuestas()
+		/// <returns> array de tipo RespuestaNPCBase</returns>
+		public RespuestaNPCBase[] MostrarRespuestas()
 		{
 			return conversacionInteractuable.ToArray();
 		}
@@ -484,19 +484,19 @@ namespace Oscuridad.Clases
 		/// <summary>
 		/// Devuelve una Respuesta a partir de su id de Respuesta
 		/// </summary>
-		/// <returns> objeto tipo RespuestaBase</returns>
-		public RespuestaBase Devolver_Respuesta(int numRespuesta)
+		/// <returns> objeto tipo RespuestaNPCBase</returns>
+		public RespuestaNPCBase Devolver_Respuesta(int numRespuesta)
 		{
-			return  MostrarRespuestas().ToList().Find (x => x.IdRespuesta == numRespuesta);
+			return  MostrarRespuestas().ToList().Find (x => x.IdRespuestaNPC == numRespuesta);
 		}
 	
 		public bool PreguntaConTirada(int numeroPregunta)
 		{
-			foreach (RespuestaBase respuesta in MostrarRespuestas()) 
+			foreach (RespuestaNPCBase respuesta in MostrarRespuestas()) 
 			{
-				foreach(PreguntaBase pregunta in respuesta.MostrarPreguntas())
+				foreach(PreguntaUsuarioBase pregunta in respuesta.MostrarPreguntas())
 				{
-					if (pregunta.IdPregunta.Equals(numeroPregunta))
+					if (pregunta.IdPreguntaUsuario.Equals(numeroPregunta))
 					{
 						return pregunta.PreguntaTirada;
 					}

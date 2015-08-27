@@ -12,7 +12,7 @@ using Oscuridad.Clases;
 public class ControladoraGUI
 {
 	#region VARIABLES PUBLICAS
-	public RespuestaBase nuevaRespuesta = new RespuestaBase();
+	public RespuestaNPCBase nuevaRespuesta = new RespuestaNPCBase();
 
 	public GameObject imagenCargando;
 	public GameObject panelLateral;
@@ -245,7 +245,7 @@ public class ControladoraGUI
 	{
 		if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
 		{
-			//PreguntaBase prueba = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+			//PreguntaUsuarioBase prueba = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
 		}
 		else
 		{
@@ -303,13 +303,13 @@ public class ControladoraGUI
 	/// <summary>
 	/// Filtra las respuestas a la pregunta segun haya avanzado el personaje o tirada
 	/// </summary>
-	/// <param name="lista">Lista de PreguntaBase a evaluar</param>
-	/// <return>Lista de PreguntaBase evaluadas y filtradas</return>
-	private PreguntaBase[] Filtrar_Preguntas(PreguntaBase[] lista)
+	/// <param name="lista">Lista de PreguntaUsuarioBase a evaluar</param>
+	/// <return>Lista de PreguntaUsuarioBase evaluadas y filtradas</return>
+	private PreguntaUsuarioBase[] Filtrar_Preguntas(PreguntaUsuarioBase[] lista)
 	{
-		List<PreguntaBase> nuevasPreguntas = new List<PreguntaBase> ();
+		List<PreguntaUsuarioBase> nuevasPreguntas = new List<PreguntaUsuarioBase> ();
 
-		foreach (PreguntaBase preguntaNueva in lista) 
+		foreach (PreguntaUsuarioBase preguntaNueva in lista) 
 		{
 			if (preguntaNueva.ComprobacionPregunta)
 			{
@@ -375,16 +375,16 @@ public class ControladoraGUI
 	/// <summary>
 	/// Ordena las preguntas para que la ultima de ellas sea la de volver al menu, salir o volver a la pregunta anterior
 	/// </summary>
-	/// <param name="lista">Lista de PreguntaBase a ordenar</param>
-	/// <return>Lista de PreguntaBase ordenadas</return>
-	private PreguntaBase[] Ordenar_Preguntas(PreguntaBase[] preguntas)
+	/// <param name="lista">Lista de PreguntaUsuarioBase a ordenar</param>
+	/// <return>Lista de PreguntaUsuarioBase ordenadas</return>
+	private PreguntaUsuarioBase[] Ordenar_Preguntas(PreguntaUsuarioBase[] preguntas)
 	{
-		PreguntaBase ultimaPregunta = preguntas.ToList ().Find (x => x.IdRespuesta == 0);
+		PreguntaUsuarioBase ultimaPregunta = preguntas.ToList ().Find (x => x.IdRespuestaNPC == 0);
 
 		if (ultimaPregunta != null) 
 		{
-			List<PreguntaBase> preguntasAux = new List<PreguntaBase>();
-			foreach (PreguntaBase pregunta in preguntas) 
+			List<PreguntaUsuarioBase> preguntasAux = new List<PreguntaUsuarioBase>();
+			foreach (PreguntaUsuarioBase pregunta in preguntas) 
 			{
 				if(!pregunta.Equals(ultimaPregunta))
 					preguntasAux.Add(pregunta);

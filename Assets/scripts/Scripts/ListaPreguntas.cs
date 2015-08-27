@@ -21,7 +21,7 @@ public class ListaPreguntas: MonoBehaviour
 		}
 	}
 
-	public void Generar_Preguntas(PreguntaBase[] preguntas)
+	public void Generar_Preguntas(PreguntaUsuarioBase[] preguntas)
 	{
 		GameCenter.InstanceRef.controladoraGUI.textoInferiorOpciones.gameObject.SetActive (false);
 		GameCenter.InstanceRef.controladoraGUI.panelPreguntasOpciones.gameObject.SetActive (true);
@@ -50,7 +50,7 @@ public class ListaPreguntas: MonoBehaviour
 				j++;
 
 			GameObject newItem = Instantiate(itemPrefab) as GameObject;
-			newItem.name = preguntas[i].IdRespuesta.ToString();
+			newItem.name = preguntas[i].IdRespuestaNPC.ToString();
 			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
 			contendorTexto.text = "- " + preguntas[i].TextoPregunta;
