@@ -439,11 +439,11 @@ public class ControladoraJuego
 	#region METODOS VARIOS
 	public int Lanzar_Dados(string expresion)
 	{
-		//LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
+		LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
 
-		//return nuevoLanzamiento.Lanzar(expresion);
+		return nuevoLanzamiento.Lanzar(expresion);
 
-		return UnityEngine.Random.Range (0, 101);
+		//return UnityEngine.Random.Range (0, 101);
 	}
 
 	public void Modificar_Tirada_Objeto(string nuevaDescripcion, Habilidades habilidad)

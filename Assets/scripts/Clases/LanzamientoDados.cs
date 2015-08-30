@@ -142,7 +142,7 @@ public class tirada
             }
         }
 
-		/*int result = 0;
+		int result = 0;
 		try
 		{
 			result = Evaluate (expaux); 
@@ -153,16 +153,19 @@ public class tirada
    			result = 0;
 		}
 
-        return result;*/
-		return int.Parse (expaux);
+        return result;
+		//return int.Parse (expaux);
 	}
 
 	public int Evaluate(string expression)  
 	{  
-		return (int)new System.Xml.XPath.XPathDocument  
-			(new System.IO.StringReader("<r/>")).CreateNavigator().Evaluate  
-				(string.Format("number({0})", new  
-				               System.Text.RegularExpressions.Regex(@"([\+\-\*])").Replace(expression, " ${1} ").Replace("/", " div ").Replace("%", " mod ")));  
+		var doc = new System.Xml.XPath.XPathDocument(new System.IO.StringReader("<r/>"));
+		var nav = doc.CreateNavigator();
+		var newString = expression;
+		newString = (new System.Text.RegularExpressions.Regex(@"([\+\-\*])")).Replace(newString, " ${1} ");
+		newString = newString.Replace("/", " div ").Replace("%", " mod ");
+		var result = nav.Evaluate("number(" + newString + ")");
+		return Convert.ToInt32(result);
 	} 
 
 
