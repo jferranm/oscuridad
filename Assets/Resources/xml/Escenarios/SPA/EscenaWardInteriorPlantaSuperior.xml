@@ -216,7 +216,7 @@
       </InteractuableOpciones>
       <TiradasInteractuable>
         <InteractuableTiradaBase>
-          <TextoDescriptivo>La puerta esta cerrada con llave</TextoDescriptivo>
+          <TextoDescriptivo>La puerta esta cerrada con llave.</TextoDescriptivo>
           <HabilidadTirada>Ninguna</HabilidadTirada>
           <Comprobacion>false</Comprobacion>
           <EscenaComprobacion>ninguna</EscenaComprobacion>
@@ -288,16 +288,16 @@
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-18.33</x>
+        <y>308.868</y>
+        <z>-18.806</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>33.52344</x>
+        <y>183.0002</y>
+        <z>2.171661</z>
       </RotacionNueva>
-      <Smooth>0</Smooth>
+      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
@@ -344,14 +344,14 @@
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-13.2</x>
+        <y>309.5</y>
+        <z>-20.98</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>33.2</x>
+        <y>-222.1</y>
+        <z>2.6</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
@@ -665,7 +665,7 @@
       <Escena>WardPuertaDesvan</Escena>
       <NombreEscena>Puerta del Desvan</NombreEscena>
       <Descripcion>Esta puerta esta cerrada</Descripcion>
-      <EscenaNorte>ninguna</EscenaNorte>
+      <EscenaNorte>CamaraDesvan</EscenaNorte>
       <EscenaSur>CamaraPasillo</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>

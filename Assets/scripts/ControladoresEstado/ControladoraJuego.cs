@@ -13,6 +13,7 @@ public class ControladoraJuego
 	private string pathConfig;
 	private string pathJugador;
 	private string pathIdioma;
+	private LanzamientoDados lanzamientoDados;
 
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
@@ -50,6 +51,8 @@ public class ControladoraJuego
 		CopiarXML();
 		CargarConfiguracion ();
 		CargarTraduccion ();
+
+		lanzamientoDados = new LanzamientoDados ();
 	}
 
 	public void InicializarEscena()
@@ -439,11 +442,7 @@ public class ControladoraJuego
 	#region METODOS VARIOS
 	public int Lanzar_Dados(string expresion)
 	{
-		LanzamientoDados nuevoLanzamiento = new LanzamientoDados();
-
-		return nuevoLanzamiento.Lanzar(expresion);
-
-		//return UnityEngine.Random.Range (0, 101);
+		return lanzamientoDados.Lanzar(expresion);
 	}
 
 	public void Modificar_Tirada_Objeto(string nuevaDescripcion, Habilidades habilidad)

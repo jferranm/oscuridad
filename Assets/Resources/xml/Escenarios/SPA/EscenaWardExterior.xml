@@ -38,13 +38,13 @@
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
-        <x>16.99</x>
-        <y>4.9</y>
-        <z>-7.6</z>
+        <x>20.742</x>
+        <y>5.753</y>
+        <z>-4.006</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>42.65001</x>
-        <y>134.7</y>
+        <x>37.61282</x>
+        <y>140.4929</y>
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
