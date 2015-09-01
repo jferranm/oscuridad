@@ -365,6 +365,34 @@ public class ControladoraJuego
 		nuevoXML.Guardar_Clase_Serializable<JugadorBase> (pathJugador, jugadorActual);
 		nuevoXML.Cerrar ();
 	}
+
+	public void EjecutarAccion(Acciones accion)
+	{
+		switch (accion) 
+		{
+			//Se Intenta abrir la puerta del desvan y se consigue
+			case Acciones.AbrirPuertaDesvanAcierto: 
+				{
+					GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoCerrajeria);
+					EjecutarAccion(Acciones.AbrirDesvan);
+					break;
+				}
+
+			//Se Intenta abrir la puerta del desvan pero la tirada de Cerrajeria Falla
+			case Acciones.AbrirPuertaDesvanFallo: 
+				{
+					GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoCerrajeriaFallo);
+					break;
+				}
+
+			//Se Abre la puerta del Desvan
+			case Acciones.AbrirDesvan:
+			{
+				GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Camara("CamaraPuertaDesvan").EscenaNorte = "CamaraDesvan";
+				break;
+			}
+		}
+	}
 	#endregion
 
 	#region METODOS ESCENA

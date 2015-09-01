@@ -20,6 +20,7 @@
 		PerdidaCordura,
         AbrirPuertaDesvanFallo,
         AbrirPuertaDesvanAcierto,
+		AbrirDesvan,
         TiradaMitosCthulhuFigura,
 		TiradaCienciasOcultasFigura,
 		ExaminarAltar,

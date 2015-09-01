@@ -16,6 +16,8 @@ public class ControladoraSonidos
 	public AudioClip sonidoAcertarPulsar;
 	public AudioClip sonidoPasarPagina;
 	public AudioClip sonidoEscribir;
+	public AudioClip sonidoCerrajeria;
+	public AudioClip sonidoCerrajeriaFallo;
 	//-------------------------------
 
 	//B.S.O.-----------------------------
@@ -55,6 +57,8 @@ public class ControladoraSonidos
 		sonidoAcertarPulsar = Resources.Load("Sonidos/pulsarAcertar", typeof(AudioClip)) as AudioClip;
 		sonidoPasarPagina = Resources.Load("Sonidos/PasarPagina", typeof(AudioClip)) as AudioClip;
 		sonidoEscribir = Resources.Load("Sonidos/EscribirPapel", typeof(AudioClip)) as AudioClip;
+		sonidoCerrajeria = Resources.Load("Sonidos/Cerrajeria", typeof(AudioClip)) as AudioClip;
+		sonidoCerrajeriaFallo = Resources.Load("Sonidos/CerrajeriaFallo", typeof(AudioClip)) as AudioClip;
 		bsoEscenarioWard = Resources.Load("Musica/EscenarioWard", typeof(AudioClip)) as AudioClip;
 		bsoMenuPrincipal = Resources.Load("Musica/MenuPrincipal", typeof(AudioClip)) as AudioClip;
 

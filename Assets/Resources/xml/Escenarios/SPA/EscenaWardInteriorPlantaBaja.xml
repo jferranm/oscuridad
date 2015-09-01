@@ -816,7 +816,7 @@
           <ListaPreguntasUsuario>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿No tienen llave maestra en la casa?</TextoPregunta>
-              <IdRespuestaNPC>0</IdRespuestaNPC>
+              <IdRespuestaNPC>25</IdRespuestaNPC>
               <IdPreguntaUsuario>30</IdPreguntaUsuario>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -828,12 +828,12 @@
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
-              <TextoPregunta>¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
+              <TextoPregunta>[Persuasion]¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
               <IdRespuestaNPC>0</IdRespuestaNPC>
               <IdPreguntaUsuario>31</IdPreguntaUsuario>
-              <PreguntaTirada>false</PreguntaTirada>
-              <IdRespuestaAcierto>0</IdRespuestaAcierto>
-              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <PreguntaTirada>true</PreguntaTirada>
+              <IdRespuestaAcierto>26</IdRespuestaAcierto>
+              <IdRespuestaFallo>27</IdRespuestaFallo>
               <ComprobacionPregunta>true</ComprobacionPregunta>
               <ComprobacionHabilidad>Persuasion</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
@@ -842,7 +842,7 @@
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Permita que le haga otra pregunta.</TextoPregunta>
-              <IdRespuestaNPC>0</IdRespuestaNPC>
+              <IdRespuestaNPC>1</IdRespuestaNPC>
               <IdPreguntaUsuario>32</IdPreguntaUsuario>
               <PreguntaTirada>false</PreguntaTirada>
               <IdRespuestaAcierto>0</IdRespuestaAcierto>
@@ -866,7 +866,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>24</DireccionRespuesta>
         </RespuestaNPCBase>
         <RespuestaNPCBase>
           <TextoRespuesta>Bueno… a decir verdad… Si habia una llave, pero mi abuela paso por aqui un dia, poco despues de la desaparicion del señor Charles y se la di para que hiciera uno de sus rituales de purificacion con la llave, !Se puso muy insistente¡ y no pense que hiciera daño a nadie con eso. La ultima vez que la vi con ella estaba en el jardin de la casa.</TextoRespuesta>
@@ -875,7 +875,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>24</DireccionRespuesta>
         </RespuestaNPCBase>
         <RespuestaNPCBase>
           <TextoRespuesta>Yo… bueno… si hubiera algo se lo diria, pero lo siento, no sabria como abrir esa puerta..</TextoRespuesta>
@@ -884,7 +884,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>0</DireccionRespuesta>
+          <DireccionRespuesta>24</DireccionRespuesta>
         </RespuestaNPCBase>
 		<RespuestaNPCBase>
           <TextoRespuesta>Ah, si, eso trozo de roca fue colocado ahi por el señor Charles, comento algo en su momento sobre que lo encontraron el y su esposa. El saquillo… bueno, eso son supersticiones de mi abuela, la antigua ama de llaves, ella fue quien lo puso ahí, me dijo que ahuyentaba a los malos espíritus, y que de vez en cuando no olvidara encender alguna vela.</TextoRespuesta>

@@ -209,7 +209,7 @@ public class ControladoraGUI
 						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
 						{
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
-							//TODO: crear metodo para tipo de acciones desencadenes acciones... (Ejem.Tirada de cerrajeria abre la puerta del desvan)
+							GameCenter.InstanceRef.controladoraJuego.EjecutarAccion(accion);
 						}
 						
 					}
@@ -226,11 +226,35 @@ public class ControladoraGUI
 
 		if(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.ExisteTirada(Habilidades.Fallo))
 		{
+			InteractuableTiradaBase tiradaFallo = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Fallo);
 			//Mostramos la descripcion anidada a la tirada de la habilidad
-			Insertar_Ventana_Lateral_Texto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Color.white);
+			Insertar_Ventana_Lateral_Texto(tiradaFallo.TextoDescriptivo, Color.white);
 			
 			//Añadimos a la descripcion minima, la descripcion nueva de la tirada
-			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Fallo).TextoDescriptivo, Habilidades.Ninguna);
+			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(tiradaFallo.TextoDescriptivo, Habilidades.Ninguna);
+
+			//Ejecutamos Accion si la tuviese
+			if(tiradaFallo.Accion)
+			{
+				foreach(Localizaciones localizacion in tiradaFallo.LocalizacionAccion)
+				{
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
+					{
+						Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
+					}
+				}
+				
+				foreach(Acciones accion in tiradaFallo.AccionesAccion)
+				{
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.AccionRealizada(accion))
+					{
+						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(accion);
+						GameCenter.InstanceRef.controladoraJuego.EjecutarAccion(accion);
+					}
+					
+				}
+			}
 		}
 		//Desconectamos la opcion de inspeccionar la opcion de inspeccionar
 		GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableInspeccionado = true;
@@ -245,58 +269,61 @@ public class ControladoraGUI
 	{
 		if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
 		{
-			//PreguntaUsuarioBase prueba = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+			PreguntaUsuarioBase preguntaTirada = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+
+			int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (preguntaTirada.ComprobacionHabilidad);
+			int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
+
+			preguntaTirada.IdRespuestaNPC = (resultado < valorHabilidad) ? preguntaTirada.IdRespuestaAcierto : preguntaTirada.IdRespuestaFallo;
 		}
-		else
+
+		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
+
+		//Si existe respuesta
+		if (nuevaRespuesta != null) 
 		{
-			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
-
-			//Si existe respuesta
-			if (nuevaRespuesta != null) 
+			Blanquear_Texto_Lateral ("yellow", "white");
+			//Si el texto lateral esta vacio
+			if (textoLateral.text != string.Empty) 
 			{
-				Blanquear_Texto_Lateral ("yellow", "white");
-				//Si el texto lateral esta vacio
-				if (textoLateral.text != string.Empty) 
-				{
-					float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
-					Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
-					Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
-				} 
-				//Si el texto lateral no esta vacio
-				else
-					Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
+				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
+			} 
+			//Si el texto lateral no esta vacio
+			else
+				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
 
-				//Comprobacion si la respuesta tiene un desbloqueo o accion asociada
-				if(nuevaRespuesta.Comprobacion)
+			//Comprobacion si la respuesta tiene un desbloqueo o accion asociada
+			if(nuevaRespuesta.Comprobacion)
+			{
+				//Desbloqueo de localizacion
+				if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
 				{
-					//Desbloqueo de localizacion
-					if(nuevaRespuesta.LocalizacionSeleccionada != Localizaciones.Ninguna)
+					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(nuevaRespuesta.LocalizacionSeleccionada))
 					{
-						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(nuevaRespuesta.LocalizacionSeleccionada))
-						{
-							Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
-							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
-						}
+						Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
+						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
 					}
 				}
-
-				//Comprobacion de que la respuesta no tiene pregunta asociada y vuelve a una pregunta anterior
-				if(nuevaRespuesta.SinRespuesta)
-					nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
-
-				//Generamos las preguntas asociadas a la respuesta
-				listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
-
 			}
-			//Sino existe respuesta
-			else 
-			{
-				Vaciar_Texto_Lateral();
-				Vaciar_Panel_Preguntas();
-				textoInferiorOpciones.gameObject.SetActive (true);
-				panelPreguntasOpciones.gameObject.SetActive (false);
-				panelObjetosOpciones.Activar ("Hablar");
-			}
+
+			//Comprobacion de que la respuesta no tiene pregunta asociada y vuelve a una pregunta anterior
+			if(nuevaRespuesta.SinRespuesta)
+				nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (nuevaRespuesta.DireccionRespuesta);
+
+			//Generamos las preguntas asociadas a la respuesta
+			listaPreguntas.Generar_Preguntas (Filtrar_Preguntas (nuevaRespuesta.MostrarPreguntas ()));
+
+		}
+		//Sino existe respuesta
+		else 
+		{
+			Vaciar_Texto_Lateral();
+			Vaciar_Panel_Preguntas();
+			textoInferiorOpciones.gameObject.SetActive (true);
+			panelPreguntasOpciones.gameObject.SetActive (false);
+			panelObjetosOpciones.Activar ("Hablar");
 		}
 	}
 

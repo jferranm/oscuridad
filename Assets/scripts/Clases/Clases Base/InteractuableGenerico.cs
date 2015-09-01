@@ -506,6 +506,22 @@ namespace Oscuridad.Clases
 			return false;
 		}
 
+		public PreguntaUsuarioBase Devolver_Pregunta(int numeroPregunta)
+		{
+			foreach (RespuestaNPCBase respuesta in MostrarRespuestas()) 
+			{
+				foreach(PreguntaUsuarioBase pregunta in respuesta.MostrarPreguntas())
+				{
+					if (pregunta.IdPreguntaUsuario.Equals(numeroPregunta))
+					{
+						return pregunta;
+					}
+				}
+			}
+
+			return null;
+		}
+
 		#endregion
 	}
 }

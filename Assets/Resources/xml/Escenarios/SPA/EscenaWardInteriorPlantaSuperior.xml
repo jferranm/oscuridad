@@ -665,7 +665,7 @@
       <Escena>WardPuertaDesvan</Escena>
       <NombreEscena>Puerta del Desvan</NombreEscena>
       <Descripcion>Esta puerta esta cerrada</Descripcion>
-      <EscenaNorte>CamaraDesvan</EscenaNorte>
+      <EscenaNorte>ninguna</EscenaNorte>
       <EscenaSur>CamaraPasillo</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
