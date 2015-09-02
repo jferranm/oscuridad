@@ -131,7 +131,7 @@
         CuadrosPrimeraPlanta2,
         PeriodicosHabitacionCharles,
         LibrosHabitacionCharles,
-        Mesita,
+        FotosFamiliares,
         Puerta,
         Pala,
         CuadroDesvan,
