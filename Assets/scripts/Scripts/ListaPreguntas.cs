@@ -50,7 +50,7 @@ public class ListaPreguntas: MonoBehaviour
 				j++;
 
 			GameObject newItem = Instantiate(itemPrefab) as GameObject;
-			newItem.name = preguntas[i].IdRespuestaNPC.ToString();
+			newItem.name = preguntas[i].IdPreguntaUsuario.ToString();
 			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
 			contendorTexto.text = "- " + preguntas[i].TextoPregunta;

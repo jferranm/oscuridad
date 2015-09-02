@@ -102,6 +102,13 @@ namespace Oscuridad.Clases
 			set { inspeccionando = value; }
 		}
 
+		private string objetoInventario;
+		public string ObjetoInventario
+		{
+			get { return objetoInventario;	}
+			set { objetoInventario = value; }
+		}
+
 		/// <summary>
 		/// Constructor de la clase <see cref="TextosMenus"/>.
 		/// </summary>

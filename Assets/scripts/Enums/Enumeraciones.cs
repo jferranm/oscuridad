@@ -141,7 +141,8 @@
         RecipientesAlquimia,
         HojasPared,
 		Altar,
-		AmaDeLlaves
+		AmaDeLlaves,
+		Llave
     }
 
     /// <summary>

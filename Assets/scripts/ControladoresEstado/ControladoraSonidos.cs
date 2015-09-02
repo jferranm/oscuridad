@@ -18,6 +18,8 @@ public class ControladoraSonidos
 	public AudioClip sonidoEscribir;
 	public AudioClip sonidoCerrajeria;
 	public AudioClip sonidoCerrajeriaFallo;
+	public AudioClip sonidoCerrarCremallera;
+	public AudioClip sonidoBuscarMochila;
 	//-------------------------------
 
 	//B.S.O.-----------------------------
@@ -59,6 +61,8 @@ public class ControladoraSonidos
 		sonidoEscribir = Resources.Load("Sonidos/EscribirPapel", typeof(AudioClip)) as AudioClip;
 		sonidoCerrajeria = Resources.Load("Sonidos/Cerrajeria", typeof(AudioClip)) as AudioClip;
 		sonidoCerrajeriaFallo = Resources.Load("Sonidos/CerrajeriaFallo", typeof(AudioClip)) as AudioClip;
+		sonidoCerrarCremallera = Resources.Load("Sonidos/CerrarCremallera", typeof(AudioClip)) as AudioClip;
+		sonidoBuscarMochila = Resources.Load("Sonidos/BuscarMochila", typeof(AudioClip)) as AudioClip;
 		bsoEscenarioWard = Resources.Load("Musica/EscenarioWard", typeof(AudioClip)) as AudioClip;
 		bsoMenuPrincipal = Resources.Load("Musica/MenuPrincipal", typeof(AudioClip)) as AudioClip;
 
@@ -90,6 +94,12 @@ public class ControladoraSonidos
 	{
 		emisorFX.clip = fxSeleccionado;
 		emisorFX.Play ();
+	}
+
+	public void Lanzar_Fx(AudioClip fxSeleccionado, float retardo)
+	{
+		emisorFX.clip = fxSeleccionado;
+		emisorFX.PlayDelayed(retardo);
 	}
 
 	#endregion

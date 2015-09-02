@@ -107,6 +107,7 @@ public class GameCenter : MonoBehaviour
 		controladoraJuego.configuracionJuego.VolumenMusica = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value;
 
 		controladoraJuego.GrabarConfiguracion ();
+		controladoraJuego.GrabarJugador ();
 		Application.Quit ();
 	}
 }

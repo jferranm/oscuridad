@@ -223,6 +223,8 @@ public class Eventos : MonoBehaviour
 			{
 				GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
 				GameCenter.InstanceRef.controladoraJuego.Guardar_Escena ((Escenas)Enum.Parse (typeof(Escenas), Application.loadedLevelName));
+				GameCenter.InstanceRef.controladoraJuego.GrabarConfiguracion();
+				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);
 			}
 			else
@@ -277,7 +279,7 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableActivo = false;
 		
 		//Le indicamos a la caja de texto que esta en el inventario
-		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.Traduccion_Coger_Objeto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.DescripcionNombre), Color.yellow);
+		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre, Color.yellow);
 	}
 
 	private void Inspeccionar_Objeto()
@@ -309,7 +311,7 @@ public class Eventos : MonoBehaviour
 
 	public void BotonPregunta(GameObject respuesta)
 	{
-		GameCenter.InstanceRef.controladoraGUI.Reestructurar_Respuestas(int.Parse (respuesta.name));
+		GameCenter.InstanceRef.controladoraGUI.Reestructurar_Respuestas(int.Parse (respuesta.name), false);
 	}
 
 	#endregion

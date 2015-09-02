@@ -344,11 +344,6 @@ public class ControladoraJuego
 		textosMenusTraduccion = nuevoXML.Cargar_Clase_Serializable<TextosMenus> (pathTextos, textosMenusTraduccion);
 		nuevoXML.Cerrar ();
 	}
-
-	public string Traduccion_Coger_Objeto(string nombreObjeto)
-	{
-		return nombreObjeto + "Ahora esta en el Inventario";
-	}
 	#endregion
 
 	#region METODOS JUGADOR
@@ -374,6 +369,8 @@ public class ControladoraJuego
 			case Acciones.AbrirPuertaDesvanAcierto: 
 				{
 					GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoCerrajeria);
+					GameCenter.InstanceRef.controladoraJuego.jugadorActual.BorrarAccionRealizada(Acciones.AbrirPuertaDesvanFallo);
+					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddAccionRealizada(Acciones.AbrirPuertaDesvanAcierto);
 					EjecutarAccion(Acciones.AbrirDesvan);
 					break;
 				}
@@ -387,10 +384,18 @@ public class ControladoraJuego
 
 			//Se Abre la puerta del Desvan
 			case Acciones.AbrirDesvan:
-			{
-				GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Camara("CamaraPuertaDesvan").EscenaNorte = "CamaraDesvan";
-				break;
-			}
+				{
+					GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Camara("CamaraPuertaDesvan").EscenaNorte = "CamaraDesvan";
+					break;
+				}
+
+			//Encontramos la llave en el Altar
+			case Acciones.EncontrarLlaveAltar:
+				{
+					GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(Interactuables.Llave, Color.yellow);
+					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario(Interactuables.Llave);
+					break;
+				}
 		}
 	}
 	#endregion
@@ -481,15 +486,20 @@ public class ControladoraJuego
 	public string Devolver_Descripcion_Objeto_Segun_Enum(Interactuables objeto)
 	{
 		string aux = "";
-
-		foreach (char c in objeto.ToString()) 
+		
+		for (byte cont = 0; cont < objeto.ToString().Length; cont++) 
 		{
-			if(Char.IsUpper(c))
-				aux += " "+c;
+			if(Char.IsUpper(objeto.ToString()[cont]))
+			{
+				if(cont!=0)
+					aux += " "+objeto.ToString()[cont];
+				else
+					aux += objeto.ToString()[cont];
+			}
 			else
-				aux += c;
+				aux += objeto.ToString()[cont];
 		}
-
+		
 		return aux;
 	}
 

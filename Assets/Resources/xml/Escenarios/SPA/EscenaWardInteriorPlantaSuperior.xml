@@ -163,9 +163,9 @@
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
-      <Nombre>Mesita</Nombre>
-	  <DescripcionNombre>Mesita</DescripcionNombre>
-	  <Interactuable>Mesita</Interactuable>
+      <Nombre>FotosFamiliares</Nombre>
+	  <DescripcionNombre>Fotos Familiares</DescripcionNombre>
+	  <Interactuable>FotosFamiliares</Interactuable>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -194,13 +194,13 @@
 	   <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-2.936</x>
+        <y>312.148</y>
+        <z>-3.397</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
+        <x>16.34427</x>
+        <y>274.2568</y>
         <z>0</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>

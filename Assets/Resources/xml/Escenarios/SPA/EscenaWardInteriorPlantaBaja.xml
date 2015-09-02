@@ -828,13 +828,13 @@
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
-              <TextoPregunta>[Persuasion]¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
+              <TextoPregunta>[Persuasion] ¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
               <IdRespuestaNPC>0</IdRespuestaNPC>
               <IdPreguntaUsuario>31</IdPreguntaUsuario>
               <PreguntaTirada>true</PreguntaTirada>
               <IdRespuestaAcierto>26</IdRespuestaAcierto>
               <IdRespuestaFallo>27</IdRespuestaFallo>
-              <ComprobacionPregunta>true</ComprobacionPregunta>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
               <ComprobacionHabilidad>Persuasion</ComprobacionHabilidad>
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>

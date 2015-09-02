@@ -600,6 +600,11 @@ namespace Oscuridad.Clases
 			AccionesRealizadas.Add (accion);
 		}
 
+		public void BorrarAccionRealizada(Acciones accion)
+		{
+			AccionesRealizadas.Remove (accion);
+		}
+
 		#endregion
     }
 }

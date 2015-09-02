@@ -262,22 +262,27 @@ public class ControladoraGUI
 
 	public void Lanzar_Hablar()
 	{
-		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InicioConversacion);
+		Reestructurar_Respuestas (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InicioConversacion, true);
 	}
 
-	public void Reestructurar_Respuestas(int numeroPregunta)
+	public void Reestructurar_Respuestas(int numeroPregunta, bool inicio)
 	{
-		if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
+		if (inicio)
+			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
+		else 
 		{
-			PreguntaUsuarioBase preguntaTirada = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+			PreguntaUsuarioBase pregunta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
 
-			int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (preguntaTirada.ComprobacionHabilidad);
-			int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
+			if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
+			{
+				int valorHabilidad = GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum (pregunta.ComprobacionHabilidad);
+				int resultado = GameCenter.InstanceRef.controladoraJuego.Lanzar_Dados ("1D100");
 
-			preguntaTirada.IdRespuestaNPC = (resultado < valorHabilidad) ? preguntaTirada.IdRespuestaAcierto : preguntaTirada.IdRespuestaFallo;
+				pregunta.IdRespuestaNPC = (resultado < valorHabilidad) ? pregunta.IdRespuestaAcierto : pregunta.IdRespuestaFallo;
+			}
+
+			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (pregunta.IdRespuestaNPC);
 		}
-
-		nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
 
 		//Si existe respuesta
 		if (nuevaRespuesta != null) 
@@ -379,14 +384,6 @@ public class ControladoraGUI
 								if(GameCenter.InstanceRef.controladoraJuego.jugadorActual.ObjetoVisto(preguntaNueva.ComprobacionInteractuables))
 									nuevasPreguntas.Add(preguntaNueva);
 							}
-							else
-							{
-								if(preguntaNueva.PreguntaTirada)
-								{
-									//Tirada de pregunta
-									nuevasPreguntas.Add(preguntaNueva);
-								}
-							}
 						}
 					}
 				}
@@ -465,6 +462,12 @@ public class ControladoraGUI
 	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
 	{
 		textoInferior.text = textoInferior.text + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
+	}
+
+	public void Insertar_Ventana_Inferior_Texto(Interactuables interactuable, Color color)
+	{
+		textoInferior.text = textoInferior.text + Environment.NewLine + ObtenerColor(color) + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Objeto_Segun_Enum(interactuable) + Comillas() + " " + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.ObjetoInventario + FinDeLineaColor ();
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
