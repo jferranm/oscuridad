@@ -46,6 +46,10 @@ public class ControladoraJuego
 
 		escenaActual = new EscenaBase ();
 		configuracionJuego = new Config(Application.systemLanguage);
+		configuracionJuego.MusicaActivada = true;
+		configuracionJuego.SonidoActivado = true;
+		configuracionJuego.VolumenMusica = 0.5f;
+		configuracionJuego.VolumenSonido = 0.5f;
 		textosMenusTraduccion = new TextosMenus ();
 		
 		CopiarXML();

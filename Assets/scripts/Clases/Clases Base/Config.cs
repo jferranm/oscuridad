@@ -12,6 +12,8 @@ namespace Oscuridad.Clases
 	[System.Serializable]
 	public class Config
 	{
+		#region VARIABLES
+
 		private Idioma idiomaJuego;
 		/// <summary>
 		/// Idioma del juego
@@ -48,7 +50,11 @@ namespace Oscuridad.Clases
 		public float VolumenSonido 
 		{
 			get { return volumenSonido; }
-			set { volumenSonido = value; }
+			set 
+			{ 
+				volumenSonido = value; 
+				//TODO: cambiar el valor del slider del toggle de sonido
+			}
 		}
 
 		private bool musicaActivada;
@@ -61,7 +67,11 @@ namespace Oscuridad.Clases
 		public bool MusicaActivada 
 		{
 			get { return musicaActivada; }
-			set { musicaActivada = value; }
+			set 
+			{ 
+				musicaActivada = value; 
+				//TODO: cambiar el valor del slider del toggle de musica
+			}
 		}
 
 		private float volumenMusica;
@@ -76,6 +86,10 @@ namespace Oscuridad.Clases
 			get { return volumenMusica;	}
 			set { volumenMusica = value; }
 		}
+
+		#endregion
+
+		#region CONSTRUCTORES
 
 		/// <summary>
 		/// Constructor de la clase <see cref="Config"/>.
@@ -92,6 +106,10 @@ namespace Oscuridad.Clases
 		{
 			IdiomaJuego = CapturarIdioma (idiomaCapturado);
 		}
+
+		#endregion
+
+		#region METODOS
 		
 		/// <summary>
 		/// Captura el idioma del dispositivo
@@ -107,5 +125,7 @@ namespace Oscuridad.Clases
 				default: return Idioma.eng;
 			}
 		}
+
+		#endregion
 	}
 }

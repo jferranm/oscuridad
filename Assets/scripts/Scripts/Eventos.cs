@@ -293,7 +293,8 @@ public class Eventos : MonoBehaviour
 	private void Hablar_Personaje()
 	{
 		//Deshabilitamos el boton Hablar para no poder pulsar mas veces sobre el mientras se esta hablando
-		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Hablar");
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Desactivar ("Hablar");
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Desactivar ("Inspeccionar");
 
 		GameCenter.InstanceRef.controladoraGUI.Lanzar_Hablar ();
 	}

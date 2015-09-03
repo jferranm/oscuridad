@@ -620,6 +620,19 @@
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaUsuarioBase>
+			<PreguntaUsuarioBase>
+              <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
+              <IdRespuestaNPC>8</IdRespuestaNPC>
+              <IdPreguntaUsuario>14</IdPreguntaUsuario>
+              <PreguntaTirada>false</PreguntaTirada>
+              <IdRespuestaAcierto>0</IdRespuestaAcierto>
+              <IdRespuestaFallo>0</IdRespuestaFallo>
+              <ComprobacionPregunta>false</ComprobacionPregunta>
+              <ComprobacionHabilidad>Ninguna</ComprobacionHabilidad>
+              <ComprobacionEscenas>ninguna</ComprobacionEscenas>
+              <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
+              <ComprobacionAccion>Ninguna</ComprobacionAccion>
+            </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
@@ -709,7 +722,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>13</DireccionRespuesta>
+          <DireccionRespuesta>15</DireccionRespuesta>
         </RespuestaNPCBase>
         <RespuestaNPCBase>
           <TextoRespuesta>Lo siento, pero de verdad que no se donde podria estar.</TextoRespuesta>
@@ -718,7 +731,7 @@
           <Comprobacion>false</Comprobacion>
           <LocalizacionSeleccionada>Ninguna</LocalizacionSeleccionada>
           <SinRespuesta>true</SinRespuesta>
-          <DireccionRespuesta>13</DireccionRespuesta>
+          <DireccionRespuesta>15</DireccionRespuesta>
         </RespuestaNPCBase>
         <RespuestaNPCBase>
           <TextoRespuesta>(El ama de llaves parace muy asustada) Esa estatuilla... es… es un regalo que la señora Waitte, la esposa del señor Charles, le hizo antes de su boda. Me asusta mucho ese pedazo de roca, ¿Lo ha tocado usted? es algo que no deberia estar aqui. Me recuerda a las viejas historias que me contaba mi abuela, sobre las gentes de los arrecifes, y sus aquelarres nocturnos a la luz de la luna. Son cosas de las que es mejor mantenerse alejado, yo al menos no quiero acercarme a esa estatuilla.</TextoRespuesta>
@@ -828,7 +841,7 @@
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
-              <TextoPregunta>[Persuasion] ¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
+              <TextoPregunta>¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
               <IdRespuestaNPC>0</IdRespuestaNPC>
               <IdPreguntaUsuario>31</IdPreguntaUsuario>
               <PreguntaTirada>true</PreguntaTirada>
