@@ -1,87 +1,31 @@
 fileFormatVersion: 2
-guid: db30814405a2c1441841de5e63b09d26
+guid: 6f58c887969f6164c89f4d26108aceb6
+timeCreated: 1441436249
+licenseType: Free
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
-    100002: _____
-    100004: _________
-    100006: fitil02
-    100008: fitil03
-    100010: fitil04
-    100012: RFMeshLoad
-    100014: sub01
-    100016: sub01_MeshPart0
-    100018: sub01_MeshPart1
-    100020: sub02
-    100022: sub02_MeshPart0
-    100024: sub02_MeshPart1
-    100026: sub03
-    100028: sub03_MeshPart0
-    100030: sub03_MeshPart1
-    100032: sub04
+    100002: Cube.001
+    100004: Cube.003
     400000: //RootNode
-    400002: _____
-    400004: _________
-    400006: fitil02
-    400008: fitil03
-    400010: fitil04
-    400012: RFMeshLoad
-    400014: sub01
-    400016: sub01_MeshPart0
-    400018: sub01_MeshPart1
-    400020: sub02
-    400022: sub02_MeshPart0
-    400024: sub02_MeshPart1
-    400026: sub03
-    400028: sub03_MeshPart0
-    400030: sub03_MeshPart1
-    400032: sub04
-    2300000: _____
-    2300002: _________
-    2300004: fitil02
-    2300006: fitil03
-    2300008: fitil04
-    2300010: sub01_MeshPart0
-    2300012: sub01_MeshPart1
-    2300014: sub02_MeshPart0
-    2300016: sub02_MeshPart1
-    2300018: sub03_MeshPart0
-    2300020: sub03_MeshPart1
-    2300022: sub04
-    3300000: _____
-    3300002: _________
-    3300004: fitil02
-    3300006: fitil03
-    3300008: fitil04
-    3300010: sub01_MeshPart0
-    3300012: sub01_MeshPart1
-    3300014: sub02_MeshPart0
-    3300016: sub02_MeshPart1
-    3300018: sub03_MeshPart0
-    3300020: sub03_MeshPart1
-    3300022: sub04
-    4300000: _________
-    4300002: fitil04
-    4300004: fitil03
-    4300006: fitil02
-    4300008: _____
-    4300010: sub01_MeshPart0
-    4300012: sub01_MeshPart1
-    4300014: sub02_MeshPart0
-    4300016: sub02_MeshPart1
-    4300018: sub03_MeshPart0
-    4300020: sub03_MeshPart1
-    4300022: sub04
-    9500000: //RootNode
+    400002: Cube.001
+    400004: Cube.003
+    2300000: Cube.001
+    2300002: Cube.003
+    3300000: Cube.001
+    3300002: Cube.003
+    4300000: Cube.003
+    4300002: Cube.001
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -92,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -100,11 +44,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -124,6 +70,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: db30814405a2c1441841de5e63b09d26
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: _____
+    100004: _________
+    100006: fitil02
+    100008: fitil03
+    100010: fitil04
+    100012: RFMeshLoad
+    100014: sub01
+    100016: sub01_MeshPart0
+    100018: sub01_MeshPart1
+    100020: sub02
+    100022: sub02_MeshPart0
+    100024: sub02_MeshPart1
+    100026: sub03
+    100028: sub03_MeshPart0
+    100030: sub03_MeshPart1
+    100032: sub04
+    400000: //RootNode
+    400002: _____
+    400004: _________
+    400006: fitil02
+    400008: fitil03
+    400010: fitil04
+    400012: RFMeshLoad
+    400014: sub01
+    400016: sub01_MeshPart0
+    400018: sub01_MeshPart1
+    400020: sub02
+    400022: sub02_MeshPart0
+    400024: sub02_MeshPart1
+    400026: sub03
+    400028: sub03_MeshPart0
+    400030: sub03_MeshPart1
+    400032: sub04
+    2300000: _____
+    2300002: _________
+    2300004: fitil02
+    2300006: fitil03
+    2300008: fitil04
+    2300010: sub01_MeshPart0
+    2300012: sub01_MeshPart1
+    2300014: sub02_MeshPart0
+    2300016: sub02_MeshPart1
+    2300018: sub03_MeshPart0
+    2300020: sub03_MeshPart1
+    2300022: sub04
+    3300000: _____
+    3300002: _________
+    3300004: fitil02
+    3300006: fitil03
+    3300008: fitil04
+    3300010: sub01_MeshPart0
+    3300012: sub01_MeshPart1
+    3300014: sub02_MeshPart0
+    3300016: sub02_MeshPart1
+    3300018: sub03_MeshPart0
+    3300020: sub03_MeshPart1
+    3300022: sub04
+    4300000: _________
+    4300002: fitil04
+    4300004: fitil03
+    4300006: fitil02
+    4300008: _____
+    4300010: sub01_MeshPart0
+    4300012: sub01_MeshPart1
+    4300014: sub02_MeshPart0
+    4300016: sub02_MeshPart1
+    4300018: sub03_MeshPart0
+    4300020: sub03_MeshPart1
+    4300022: sub04
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
