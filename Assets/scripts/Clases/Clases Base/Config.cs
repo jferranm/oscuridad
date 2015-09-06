@@ -87,6 +87,33 @@ namespace Oscuridad.Clases
 			set { volumenMusica = value; }
 		}
 
+		private Escenas ultimaEscenaVisitada;
+		/// <summary>
+		/// Variable para el control de la escena para posterior carga de escenas
+		/// </summary>
+		/// <value>
+		/// valor tipo Escenas
+		/// </value>
+		public Escenas UltimaEscenaVisitada 
+		{
+			get { return ultimaEscenaVisitada;	}
+			set { ultimaEscenaVisitada = value; }
+		}
+
+     	private string ultimaCamaraVisitada;
+		/// <summary>
+		/// Variable para el control de la ultima camara activa para posterior carga de datos en escena
+		/// </summary>
+		/// <value>
+		/// valor float con el volumen de la musica
+		/// </value>
+		public string UltimaCamaraVisitada
+		{
+			get { return ultimaCamaraVisitada;	}
+			set { ultimaCamaraVisitada = value; }
+		}
+
+
 		#endregion
 
 		#region CONSTRUCTORES
