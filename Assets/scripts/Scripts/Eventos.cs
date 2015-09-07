@@ -237,6 +237,11 @@ public class Eventos : MonoBehaviour
 		}
 	}
 
+	public void BotonOpcionesDireccion()
+	{
+		GameCenter.InstanceRef.CanvasMenuOpciones.SetActive (true);
+	}
+
 	#endregion
 
 	#region PANEL OBJETOS

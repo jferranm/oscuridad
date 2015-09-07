@@ -5,6 +5,8 @@ using Oscuridad.Clases;
 
 public class GameCenter : MonoBehaviour 
 {
+	#region VARIABLES
+
 	//Controladoras
 	public ControladoraJugador controladoraJugador;
 	public ControladoraEscenas controladoraEscenas;
@@ -13,6 +15,7 @@ public class GameCenter : MonoBehaviour
 	public ControladoraJuego controladoraJuego;
 	public GameObject CanvasUIJuego;
 	public GameObject CanvasMenuPrincipal;
+	public GameObject CanvasMenuOpciones;
 
 	public string USERPATH;
 
@@ -22,6 +25,10 @@ public class GameCenter : MonoBehaviour
 	{
 		get { return instanceRef; }
 	}
+
+	#endregion
+
+	#region METODOS UNITY
 
 	void Awake()
 	{
@@ -39,6 +46,34 @@ public class GameCenter : MonoBehaviour
 		controladoraGUI.Awake ();
 		controladoraSonidos.Awake ();
 	}
+
+	void Start()
+	{
+		controladoraJuego.Start ();
+		controladoraJugador.Start ();
+		
+		controladoraEscenas.CambiarSceneSegunEnum (Escenas.MenuPrincipal);
+		
+		//-------------- Opciones varias -------------------------\\
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().TraduccionMenu ();
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
+		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);
+	}
+	
+	void Update()
+	{
+		controladoraJugador.Update ();
+	}
+	
+	void OnLevelWasLoaded(int level)
+	{
+		controladoraEscenas.OnLevelWasLoaded(level);
+	}
+
+	#endregion
+
+	#region METODOS PROPIOS
 	
 	private void InicializarControladoras()
 	{
@@ -51,35 +86,7 @@ public class GameCenter : MonoBehaviour
 		controladoraGUI = new ControladoraGUI();
 		controladoraJuego = new ControladoraJuego();
 	}
-
-	void Start()
-	{
-		controladoraJuego.Start ();
-		controladoraJugador.Start ();
-
-		controladoraEscenas.CambiarSceneSegunEnum (Escenas.MenuPrincipal);
-
-		//-------------- Opciones varias -------------------------\\
-		CanvasUIJuego = GameObject.Find ("CanvasUIJuego");
-		CanvasMenuPrincipal = GameObject.Find ("CanvasMenuPrincipal");
-		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().TraduccionMenu ();
-		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena0.SetActive (true);
-		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena1.SetActive (false);
-		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);
-
-
-	}
 	
-	void Update()
-	{
-		controladoraJugador.Update ();
-	}
-
-	void OnLevelWasLoaded(int level)
-	{
-		controladoraEscenas.OnLevelWasLoaded(level);
-	}
-
 	public void Inicializar_Escenario()
 	{
 		controladoraJuego.Inicializar_Interactuables ();
@@ -103,13 +110,15 @@ public class GameCenter : MonoBehaviour
 
 	public void Salir()
 	{
-		controladoraJuego.configuracionJuego.SonidoActivado = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleSonido.isOn;
-		controladoraJuego.configuracionJuego.MusicaActivada = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleMusica.isOn;
-		controladoraJuego.configuracionJuego.VolumenSonido = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value;
-		controladoraJuego.configuracionJuego.VolumenMusica = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value;
+		//controladoraJuego.configuracionJuego.SonidoActivado = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleSonido.isOn;
+		//controladoraJuego.configuracionJuego.MusicaActivada = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleMusica.isOn;
+		//controladoraJuego.configuracionJuego.VolumenSonido = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value;
+		//controladoraJuego.configuracionJuego.VolumenMusica = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value;
 
 		controladoraJuego.GrabarConfiguracion ();
 		controladoraJuego.GrabarJugador ();
 		Application.Quit ();
 	}
+
+	#endregion
 }

@@ -24,6 +24,7 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 				libroDiario.SetActive(!libroDiario.activeSelf);
 		}
 	}
+
 	private void Desactivar_Todo()
 	{
 		panelObjetos.SetActive (false);
