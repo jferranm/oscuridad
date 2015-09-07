@@ -36,9 +36,8 @@ public class Eventos : MonoBehaviour
 
 		if (File.Exists (archivoJugador)) 
 		{
-			//TODO: empezar por la ultima pantalla
 			GameCenter.InstanceRef.controladoraJuego.CargarJugador ();
-			GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
+			GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaEscenaVisitada);
 		} 
 		else 
 		{
@@ -231,6 +230,7 @@ public class Eventos : MonoBehaviour
 			{
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddEscenaVisitada (GameCenter.InstanceRef.controladoraJuego.camaraActiva.Escena);
 				GameCenter.InstanceRef.controladoraJuego.Cambiar_Camara(camaraSeleccionada);
+				GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaCamaraVisitada = GameCenter.InstanceRef.controladoraJuego.camaraActiva.Nombre;
 				GameCenter.InstanceRef.controladoraGUI.panelDirecciones.GetComponent<PanelDireccionesOpciones>().Reiniciar_Direcciones();
 				GameCenter.InstanceRef.controladoraGUI.textoInferior.GetComponent<TextoInferiorOpciones>().Reiniciar_Texto();
 			}

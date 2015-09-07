@@ -87,11 +87,13 @@ public class GameCenter : MonoBehaviour
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();
 
+		controladoraJuego.configuracionJuego.UltimaEscenaVisitada = controladoraJuego.escenaActual.Escena;
+		controladoraJuego.configuracionJuego.UltimaCamaraVisitada = controladoraJuego.escenaActual.CamaraInicio.Nombre;
+
 		//Activamos Camara
 		controladoraJuego.camaraActiva = null;
-		controladoraJuego.cameraActiva = null;
 		controladoraJuego.Desactivar_Camaras ();
-		controladoraJuego.Cambiar_Camara (controladoraJuego.escenaActual.CamaraInicio.Nombre);
+		controladoraJuego.Cambiar_Camara (controladoraJuego.configuracionJuego.UltimaCamaraVisitada == null ? controladoraJuego.escenaActual.CamaraInicio.Nombre : controladoraJuego.configuracionJuego.UltimaCamaraVisitada);
 
 		//Comenzamos BSO
 		controladoraSonidos.Lanzar_Bso (Application.loadedLevelName);
