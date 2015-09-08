@@ -155,6 +155,19 @@ namespace Oscuridad.Clases
             set { comprobacionAccion = value; }
         }
 
+		private bool preguntaEjecutada;
+		/// <summary>
+		/// Comprueba si la pregunta a sido usada ya
+		/// </summary>
+		/// <value>
+		/// valor tipo bool
+		/// </value>
+		public bool PreguntaEjecutada
+		{
+			get { return preguntaEjecutada; }
+			set { preguntaEjecutada = value; }
+		}
+
 		#endregion
 
 		#region CONSTRUCTORES

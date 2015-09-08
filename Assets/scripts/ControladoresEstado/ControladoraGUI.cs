@@ -272,6 +272,7 @@ public class ControladoraGUI
 		else 
 		{
 			PreguntaUsuarioBase pregunta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+			pregunta.PreguntaEjecutada = true;
 
 			if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
 			{

@@ -51,21 +51,23 @@ public class ListaPreguntas: MonoBehaviour
 
 			GameObject newItem = Instantiate(itemPrefab) as GameObject;
 			newItem.name = preguntas[i].IdPreguntaUsuario.ToString();
-			Text contendorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
+			Text contenedorTexto = newItem.GetComponent<Button>().GetComponentInChildren<Text>();
 
-			contendorTexto.text = "- " + preguntas[i].TextoPregunta;
+			contenedorTexto.text = preguntas[i].PreguntaEjecutada ? "<color=white>- " + preguntas[i].TextoPregunta + "</color>" : "<color=yellow>- " + preguntas[i].TextoPregunta + "</color>";
+			//contenedorTexto.text = "- " + preguntas[i].TextoPregunta;
+			//contenedorTexto.color = preguntas[i].PreguntaEjecutada ? new Color(186,179,18) : new Color(244,234,4);
 			newItem.transform.SetParent(cuerpo.transform);
 			
 			RectTransform rectTransform = newItem.GetComponent<RectTransform>();
 
 			float x = -containerRectTransform.rect.width / 2 + width * (i % columnCount);
- 			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contendorTexto.text, 16) > containerRectTransform.rect.width)
+ 			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contenedorTexto.text, 16) > containerRectTransform.rect.width)
 				j++;
 			float y = containerRectTransform.rect.height / 2 - height * j;
 			rectTransform.offsetMin = new Vector2(x, y);
 
 			x = rectTransform.offsetMin.x + width;
-			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contendorTexto.text, 16) > containerRectTransform.rect.width)
+			if(GameCenter.InstanceRef.controladoraJuego.Devolver_Tamanyo_Cadena(contenedorTexto.text, 16) > containerRectTransform.rect.width)
 				y = rectTransform.offsetMin.y + (height * 2) ;
 			else
 				y = rectTransform.offsetMin.y + height;

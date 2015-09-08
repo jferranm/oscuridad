@@ -240,6 +240,7 @@ public class Eventos : MonoBehaviour
 	public void BotonOpcionesDireccion()
 	{
 		GameCenter.InstanceRef.CanvasMenuOpciones.SetActive (true);
+		GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 	}
 
 	#endregion
@@ -327,6 +328,15 @@ public class Eventos : MonoBehaviour
 	public void BotonLibro()
 	{
 		GameCenter.InstanceRef.controladoraGUI.panelLibro.SetActive (!GameCenter.InstanceRef.controladoraGUI.panelLibro.activeSelf);
+	}
+
+	#endregion
+
+	#region PANEL MENU OPCIONES
+
+	public void OpcionesSalir()
+	{
+		GameCenter.InstanceRef.Salir ();
 	}
 
 	#endregion

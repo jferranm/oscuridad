@@ -220,6 +220,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Qué puede contarme del joven señor Charles?</TextoPregunta>
@@ -233,6 +234,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Me marcho, buenos dias.</TextoPregunta>
@@ -246,6 +248,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Que le ha pasado al cuadro del salon?</TextoPregunta>
@@ -259,6 +262,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>CuadroSalon</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>No he podido evitar fijarme en la figura que hay sobre una de las estanterias del salon. ¿De donde ha salido?</TextoPregunta>
@@ -272,6 +276,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Figura</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>La habitacion del desvan esta cerrada con llave, ¿Puede usted abrirme, por favor?</TextoPregunta>
@@ -285,6 +290,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>AbrirPuertaDesvanFallo</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
 			<PreguntaUsuarioBase>
               <TextoPregunta>He visto el viejo altar de piedra que hay en el jardín, con las velas y ese saquillo de tela, ¿Que puede contarme sobre ello?</TextoPregunta>
@@ -298,6 +304,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>ExaminarAltar</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -321,6 +328,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -344,6 +352,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Se rumoreaba que es lo que hacia por las noches o que lugares frecuentaba?</TextoPregunta>
@@ -357,6 +366,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Que quiere decir con que estaba muy raro?</TextoPregunta>
@@ -370,6 +380,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Que hacia tanto tiempo en la habitacion del desvan?</TextoPregunta>
@@ -383,6 +394,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Volvio solo a esta casa, sin su mujer?</TextoPregunta>
@@ -396,6 +408,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Donde se marcharon a vivir tras la boda?</TextoPregunta>
@@ -409,6 +422,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa</TextoPregunta>
@@ -422,6 +436,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -481,6 +496,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Reconocia a algunas de esas visitas?</TextoPregunta>
@@ -494,6 +510,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
@@ -507,6 +524,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -557,6 +575,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -580,6 +599,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Y sabe donde esta ahora esa pintura?</TextoPregunta>
@@ -593,6 +613,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Y no saben a que se debia su mal humor la noche que arranco el cuadro?</TextoPregunta>
@@ -606,6 +627,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿La granja Pawxutet, que lugar es ese?</TextoPregunta>
@@ -619,6 +641,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
 			<PreguntaUsuarioBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
@@ -632,6 +655,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -664,6 +688,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Por favor, no tenga miedo y digame donde podria estar esa pintura.</TextoPregunta>
@@ -677,6 +702,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Dejeme preguntarle por otra cosa...</TextoPregunta>
@@ -690,6 +716,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -749,6 +776,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -772,6 +800,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>TiradaMitosCthulhuFigura</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Es una figura extraña? ¿reconoce lo que representa o el señor Charles o su exposa se lo explico?</TextoPregunta>
@@ -785,6 +814,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>TiradaCienciasOcultasFigura</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Me gustaria preguntarle sobre otra cosa.</TextoPregunta>
@@ -798,6 +828,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -839,6 +870,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿Seguro que hay alguna forma de abrir esa puerta, o disponen de otra llave para poder entrar, verdad? Podriamos encontrar pistas del paradero del señor Charles en ese habitacion.</TextoPregunta>
@@ -852,6 +884,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Permita que le haga otra pregunta.</TextoPregunta>
@@ -865,6 +898,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>
@@ -915,6 +949,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>¿El señor Chales no comento que significaba ese altar o donde lo había encontrado?</TextoPregunta>
@@ -928,6 +963,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
             <PreguntaUsuarioBase>
               <TextoPregunta>Permita que le haga otra pregunta.</TextoPregunta>
@@ -941,6 +977,7 @@
               <ComprobacionEscenas>ninguna</ComprobacionEscenas>
               <ComprobacionInteractuables>Ninguno</ComprobacionInteractuables>
               <ComprobacionAccion>Ninguna</ComprobacionAccion>
+			  <PreguntaEjecutada>false</PreguntaEjecutada>
             </PreguntaUsuarioBase>
           </ListaPreguntasUsuario>
           <Comprobacion>false</Comprobacion>

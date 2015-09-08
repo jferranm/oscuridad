@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\GameCenter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Clases Base\PreguntaUsuarioBase.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="116" Column="5" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="112" Column="3" />
       <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="334" Column="1" />
       <File FileName="Assets\scripts\Scripts\OpcionesCanvasMenuOpciones.cs" Line="16" Column="47" />
-      <File FileName="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" Line="39" Column="2" />
+      <File FileName="Assets\scripts\Clases\Clases Base\PreguntaUsuarioBase.cs" Line="165" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
