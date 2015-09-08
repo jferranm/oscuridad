@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .95588237, g: .918497741, b: .0140571073, a: 1}
+  m_Color: {r: 1, g: .917647064, b: .0156862754, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 72943f22e12cc78469c3fef733f811c3, type: 3}
     m_FontSize: 16
@@ -5790,7 +5790,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 959865093}
-        m_MethodName: BotonSalir
+        m_MethodName: OpcionesSalir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

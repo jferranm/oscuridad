@@ -1,17 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Clases Base\PreguntaUsuarioBase.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\GameCenter.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="112" Column="3" />
-      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="334" Column="1" />
-      <File FileName="Assets\scripts\Scripts\OpcionesCanvasMenuOpciones.cs" Line="16" Column="47" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="120" Column="97" />
+      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="243" Column="1" />
+      <File FileName="Assets\scripts\Scripts\OpcionesCanvasMenuOpciones.cs" Line="19" Column="88" />
       <File FileName="Assets\scripts\Clases\Clases Base\PreguntaUsuarioBase.cs" Line="165" Column="32" />
+      <File FileName="Assets\scripts\Scripts\ListaPreguntas.cs" Line="56" Column="136" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="275" Column="38" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="65" Column="3" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="353" Column="2" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="23" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\JugadorBase.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\Scripts\Eventos.cs" line="234" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

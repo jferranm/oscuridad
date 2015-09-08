@@ -117,6 +117,7 @@ public class GameCenter : MonoBehaviour
 
 		controladoraJuego.GrabarConfiguracion ();
 		controladoraJuego.GrabarJugador ();
+		controladoraJuego.Guardar_Escena (GameCenter.instanceRef.controladoraJuego.escenaActual.Escena);
 		Application.Quit ();
 	}
 
