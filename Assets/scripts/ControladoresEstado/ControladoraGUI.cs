@@ -267,11 +267,13 @@ public class ControladoraGUI
 
 	public void Reestructurar_Respuestas(int numeroPregunta, bool inicio)
 	{
+		PreguntaUsuarioBase pregunta = new PreguntaUsuarioBase();
+
 		if (inicio)
 			nuevaRespuesta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Respuesta (numeroPregunta);
 		else 
 		{
-			PreguntaUsuarioBase pregunta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
+			pregunta = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Devolver_Pregunta (numeroPregunta);
 			pregunta.PreguntaEjecutada = true;
 
 			if (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PreguntaConTirada (numeroPregunta)) 
@@ -293,6 +295,8 @@ public class ControladoraGUI
 			if (textoLateral.text != string.Empty) 
 			{
 				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
+				if(pregunta.TextoPregunta != null)
+					Insertar_Ventana_Lateral_Texto (pregunta.TextoPregunta.ToUpper(), "#00FF00");
 				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
 				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
 			} 
@@ -441,6 +445,16 @@ public class ControladoraGUI
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
+	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, string hex)
+	{
+		if(textoLateral.text.Equals(string.Empty))
+			textoLateral.text = ObtenerColor(Color.white) + textoDescriptivo + FinDeLineaColor ();
+		else
+			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(hex) + textoDescriptivo + FinDeLineaColor ();
+		
+		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
+	}
+
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
 		string aux = "";
@@ -488,8 +502,13 @@ public class ControladoraGUI
 			return "<color=white>";
 		if (color.Equals (Color.yellow))
 			return "<color=yellow>";
-		
+
 		return null;
+	}
+
+	private string ObtenerColor(string hex)
+	{
+		return "<color=" + hex + ">";
 	}
 	
 	private string FinDeLineaColor()
