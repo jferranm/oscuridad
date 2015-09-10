@@ -89,6 +89,10 @@ public class GameCenter : MonoBehaviour
 	
 	public void Inicializar_Escenario()
 	{
+		if (controladoraJuego.jugadorActual.EstadoJugador.Equals (EstadosJugador.enMenus) && controladoraJuego.jugadorActual.EscenasVisitadas.Count > 0) 
+			if (controladoraJuego.camaraActiva == null)
+				controladoraJuego.escenaActual.CamaraInicio = controladoraJuego.escenaActual.Buscar_Camara (controladoraJuego.configuracionJuego.UltimaCamaraVisitada);
+
 		controladoraJuego.Inicializar_Interactuables ();
 
 		//Desactivamos todas las ventanas

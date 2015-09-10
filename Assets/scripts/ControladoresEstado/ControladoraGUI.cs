@@ -296,7 +296,7 @@ public class ControladoraGUI
 			{
 				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
 				if(pregunta.TextoPregunta != null)
-					Insertar_Ventana_Lateral_Texto (pregunta.TextoPregunta.ToUpper(), "#00FF00");
+					Insertar_Ventana_Lateral_Texto (ObtenerEstilo("negrita") + pregunta.TextoPregunta + ObtenerEstiloFinal("negrita"), "#00FF00");
 				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
 				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
 			} 
@@ -503,6 +503,22 @@ public class ControladoraGUI
 		if (color.Equals (Color.yellow))
 			return "<color=yellow>";
 
+		return null;
+	}
+
+	private string ObtenerEstilo(string estilo)
+	{
+		if (estilo.Equals("negrita"))
+		    return "<b>";
+
+		return null;
+	}
+
+	private string ObtenerEstiloFinal(string estilo)
+	{
+		if (estilo.Equals("negrita"))
+			return "</b>";
+		
 		return null;
 	}
 

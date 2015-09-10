@@ -38,7 +38,6 @@ public class Eventos : MonoBehaviour
 		{
 			GameCenter.InstanceRef.controladoraJuego.CargarJugador ();
 			GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaEscenaVisitada);
-			//GameCenter.InstanceRef.controladoraJuego.escenaActual.CamaraInicio = GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Camara(GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaCamaraVisitada);
 		} 
 		else 
 		{

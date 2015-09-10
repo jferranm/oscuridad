@@ -457,7 +457,7 @@ public class ControladoraJuego
 
 		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddEscenaVisitada(cameraActiva.GetComponent<ZoomCamara>().escenaVistaCamara);
 		configuracionJuego.UltimaCamaraVisitada = camara;
-		configuracionJuego.UltimaEscenaVisitada = cameraActiva.GetComponent<ZoomCamara> ().escenaVistaCamara;
+		configuracionJuego.UltimaEscenaVisitada = escenaActual.Escena;
 	}
 	
 	public void Desactivar_Camaras()
