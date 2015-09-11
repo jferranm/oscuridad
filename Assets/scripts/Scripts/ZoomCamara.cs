@@ -13,11 +13,6 @@ public class ZoomCamara : MonoBehaviour
 
 	private RaycastHit hit;
 
-	void OnEnabled()
-	{
-
-	}
-
 	void Start() 
 	{
 		posicionInicial.x = transform.position.x;
@@ -29,35 +24,54 @@ public class ZoomCamara : MonoBehaviour
 
 	void Update()
 	{
+		if (Input.GetKeyDown (KeyCode.Escape)) 
+		{
+			GameCenter.InstanceRef.CanvasMenuOpciones.SetActive (true);
+			GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
+		}
+
 		if (GameCenter.InstanceRef.controladoraJugador.EstadoJugador.Equals(EstadosJugador.enEspera))
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				try
+				//int layerMask = 1 << 8;
+
+				Ray rayo = this.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+				//if(Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
+				if(Physics.Raycast(rayo, out hit, Mathf.Infinity))
 				{
-					int layerMask = 1 << 8;
-
-					Ray rayo = this.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-					if(Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
+					switch(hit.collider.gameObject.layer)
 					{
-						GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
-
-						try
+						//Objeto Interactuable
+						case 8: 
 						{
+							GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
 							GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
 							GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
+							break;
 						}
-						catch
+
+						//Objeto Interactuable Sin Zoom
+						case 9:
+						{
+							break;
+						}
+
+						//UI
+						case 5:
+						{
+							break;
+						}
+
+						//Objeto no Interactuable
+						default: 
 						{
 							GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
+							GameCenter.InstanceRef.controladoraJuego.interactuablePulsado = null;
+							break;
 						}
 					}
-					else
-					{
-						GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
-					}
-				} catch {}
-			
+				}
 			}
 		}
 	}

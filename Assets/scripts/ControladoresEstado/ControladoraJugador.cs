@@ -17,8 +17,6 @@ public class ControladoraJugador
 	[HideInInspector]
 	public bool estadoCambiado;
 	[HideInInspector]
-	public ObjetoInteractuablev2 objetoInteractuableRef;
-	[HideInInspector]
 	public GameObject objetoPulsado;
 
 	private EstadosJugador estadoJugador;
@@ -116,7 +114,6 @@ public class ControladoraJugador
 		{
 			EstadoJugador = EstadosJugador.enEspera;
 			estadoCambiado = false;
-			objetoInteractuableRef = null;
 		}
 	}
 
