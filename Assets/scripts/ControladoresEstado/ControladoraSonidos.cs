@@ -20,6 +20,8 @@ public class ControladoraSonidos
 	public AudioClip sonidoCerrajeriaFallo;
 	public AudioClip sonidoCerrarCremallera;
 	public AudioClip sonidoBuscarMochila;
+	public AudioClip sonidoApagarVela;
+	public AudioClip sonidoEncenderVela;
 	//-------------------------------
 
 	//B.S.O.-----------------------------
@@ -63,6 +65,9 @@ public class ControladoraSonidos
 		sonidoCerrajeriaFallo = Resources.Load("Sonidos/CerrajeriaFallo", typeof(AudioClip)) as AudioClip;
 		sonidoCerrarCremallera = Resources.Load("Sonidos/CerrarCremallera", typeof(AudioClip)) as AudioClip;
 		sonidoBuscarMochila = Resources.Load("Sonidos/BuscarMochila", typeof(AudioClip)) as AudioClip;
+		sonidoApagarVela = Resources.Load("Sonidos/ApagarVela", typeof(AudioClip)) as AudioClip;
+		sonidoEncenderVela = Resources.Load("Sonidos/EncenderVela", typeof(AudioClip)) as AudioClip;
+
 		bsoEscenarioWard = Resources.Load("Musica/EscenarioWard", typeof(AudioClip)) as AudioClip;
 		bsoMenuPrincipal = Resources.Load("Musica/MenuPrincipal", typeof(AudioClip)) as AudioClip;
 

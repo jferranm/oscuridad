@@ -34,41 +34,58 @@ public class ZoomCamara : MonoBehaviour
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				//int layerMask = 1 << 8;
-
 				Ray rayo = this.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-				//if(Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
-				if(Physics.Raycast(rayo, out hit, Mathf.Infinity))
+				if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
 				{
-					switch(hit.collider.gameObject.layer)
+					if(Physics.Raycast(rayo, out hit, Mathf.Infinity))
 					{
-						//Objeto Interactuable
-						case 8: 
+						switch(hit.collider.gameObject.layer)
 						{
-							GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
-							GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
-							GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
-							break;
-						}
+							//Objeto Interactuable
+							case 8: 
+							{
+								GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
+								GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
+								GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
+								break;
+							}
 
-						//Objeto Interactuable Sin Zoom
-						case 9:
-						{
-							break;
-						}
+							//Objeto Interactuable Sin Zoom
+							case 9:
+							{
+								GameCenter.InstanceRef.controladoraJuego.EjecutarAccion(hit.collider.gameObject);
+								break;
+							}
 
-						//UI
-						case 5:
-						{
-							break;
-						}
+							//UI
+							case 5:
+							{
+								break;
+							}
 
-						//Objeto no Interactuable
-						default: 
-						{
-							GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
-							GameCenter.InstanceRef.controladoraJuego.interactuablePulsado = null;
-							break;
+							//Objeto no Interactuable
+							default: 
+							{
+								GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
+								GameCenter.InstanceRef.controladoraJuego.interactuablePulsado = null;
+								if(GameCenter.InstanceRef.controladoraJuego.humoTapClone == null)
+								{	
+									//GameCenter.InstanceRef.controladoraJuego.humoTapClone = (GameObject)Instantiate(GameCenter.InstanceRef.controladoraJuego.humoTap, hit.point, Quaternion.identity);
+									//GameCenter.InstanceRef.controladoraJuego.humoTapParticle = GameCenter.InstanceRef.controladoraJuego.humoTapClone.GetComponent<ParticleSystem>();
+									//GameCenter.InstanceRef.controladoraJuego.humoTapParticle.Play();
+								}
+								else
+								{
+									if(GameCenter.InstanceRef.controladoraJuego.humoTapParticle.isStopped)
+									{
+										//Destroy(GameCenter.InstanceRef.controladoraJuego.humoTapClone);
+										//GameCenter.InstanceRef.controladoraJuego.humoTapClone = (GameObject)Instantiate(GameCenter.InstanceRef.controladoraJuego.humoTap, hit.point, Quaternion.identity);
+										//GameCenter.InstanceRef.controladoraJuego.humoTapParticle = GameCenter.InstanceRef.controladoraJuego.humoTapClone.GetComponent<ParticleSystem>();
+										// GameCenter.InstanceRef.controladoraJuego.humoTapParticle.Play();
+									}
+								}
+								break;
+							}
 						}
 					}
 				}

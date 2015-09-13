@@ -187,7 +187,7 @@ public class ControladoraGUI
 				Insertar_Ventana_Inferior_Texto(true, tirada.HabilidadTirada, resultado);
 				
 				//Mostramos la descripcion anidada a la tirada de la habilidad
-				Insertar_Ventana_Lateral_Texto(tirada.TextoDescriptivo, Color.white);
+				Insertar_Ventana_Lateral_Texto(tirada.TextoDescriptivo, colorTexto.blanco);
 				
 				//Añadimos a la descripcion minima, la descripcion nueva de la tirada
 				GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto (tirada.TextoDescriptivo, Habilidades.Ninguna);
@@ -199,7 +199,7 @@ public class ControladoraGUI
 					{
 						if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
 						{
-							Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+							Insertar_Ventana_Inferior_Texto(localizacion, colorTexto.amarillo);
 							GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 						}
 					}
@@ -228,7 +228,7 @@ public class ControladoraGUI
 		{
 			InteractuableTiradaBase tiradaFallo = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.BuscarTirada(Habilidades.Fallo);
 			//Mostramos la descripcion anidada a la tirada de la habilidad
-			Insertar_Ventana_Lateral_Texto(tiradaFallo.TextoDescriptivo, Color.white);
+			Insertar_Ventana_Lateral_Texto(tiradaFallo.TextoDescriptivo, colorTexto.blanco);
 			
 			//Añadimos a la descripcion minima, la descripcion nueva de la tirada
 			GameCenter.InstanceRef.controladoraJuego.Modificar_Tirada_Objeto(tiradaFallo.TextoDescriptivo, Habilidades.Ninguna);
@@ -240,7 +240,7 @@ public class ControladoraGUI
 				{
 					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
 					{
-						Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+						Insertar_Ventana_Inferior_Texto(localizacion, colorTexto.amarillo);
 						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 					}
 				}
@@ -296,13 +296,13 @@ public class ControladoraGUI
 			{
 				float anteriorSizeCajaTexto = textoLateralOpciones.rectCajaTexto.rect.height;
 				if(pregunta.TextoPregunta != null)
-					Insertar_Ventana_Lateral_Texto (ObtenerEstilo("negrita") + pregunta.TextoPregunta + ObtenerEstiloFinal("negrita"), "#00FF00");
-				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+					Insertar_Ventana_Lateral_Texto (pregunta.TextoPregunta, colorTexto.verde, tipoTexto.negrita);
+				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, colorTexto.amarillo);
 				Deslizar_Ventana_Lateral (anteriorSizeCajaTexto);
 			} 
 			//Si el texto lateral no esta vacio
 			else
-				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, Color.yellow);
+				Insertar_Ventana_Lateral_Texto (nuevaRespuesta.TextoRespuesta, colorTexto.amarillo);
 
 			//Comprobacion si la respuesta tiene un desbloqueo o accion asociada
 			if(nuevaRespuesta.Comprobacion)
@@ -312,7 +312,7 @@ public class ControladoraGUI
 				{
 					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(nuevaRespuesta.LocalizacionSeleccionada))
 					{
-						Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, Color.green);
+						Insertar_Ventana_Lateral_Texto(nuevaRespuesta.LocalizacionSeleccionada, colorTexto.verde);
 						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(nuevaRespuesta.LocalizacionSeleccionada);
 					}
 				}
@@ -430,27 +430,27 @@ public class ControladoraGUI
 
 	#region VENTANAS INTERACCION
 
-	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, Color color)
+	public void Insertar_Ventana_Inferior_Texto(string textoDescriptivo, colorTexto color)
 	{
-		textoInferior.text += Environment.NewLine + ObtenerColor(color) + Comillas() + textoDescriptivo + Comillas() + FinDeLineaColor ();
+		textoInferior.text += Environment.NewLine + "\"" + FormatearTexto(textoDescriptivo, optionalColorTexto: color) + "\"";
 	}
 	
-	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, Color color)
+	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, colorTexto color)
 	{
 		if(textoLateral.text.Equals(string.Empty))
-			textoLateral.text = ObtenerColor(Color.white) + textoDescriptivo + FinDeLineaColor ();
+			textoLateral.text = FormatearTexto(textoDescriptivo, optionalColorTexto: color);
 		else
-			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(color) + textoDescriptivo + FinDeLineaColor ();
+			textoLateral.text += Environment.NewLine + Environment.NewLine + FormatearTexto(textoDescriptivo, optionalColorTexto: color);
 
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
-	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, string hex)
+	public void Insertar_Ventana_Lateral_Texto(string textoDescriptivo, colorTexto color, tipoTexto tipo)
 	{
 		if(textoLateral.text.Equals(string.Empty))
-			textoLateral.text = ObtenerColor(Color.white) + textoDescriptivo + FinDeLineaColor ();
+			textoLateral.text = FormatearTexto(textoDescriptivo, optionalColorTexto: color, optionalTipoTexto: tipo);
 		else
-			textoLateral.text += Environment.NewLine + Environment.NewLine + ObtenerColor(hex) + textoDescriptivo + FinDeLineaColor ();
+			textoLateral.text += Environment.NewLine + Environment.NewLine + FormatearTexto(textoDescriptivo, optionalColorTexto: color, optionalTipoTexto: tipo);
 		
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
@@ -458,83 +458,109 @@ public class ControladoraGUI
 	public void Insertar_Ventana_Inferior_Texto(bool tirada, Habilidades habilidad, int resultado)
 	{
 		string aux = "";
-		Color colorTirada;
+		colorTexto color;
 		
 		if (tirada) 
 		{
 			aux = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Exito;
-			colorTirada = Color.green;
+			color = colorTexto.verde;
 		} 
 		else 
 		{
 			aux = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Fracaso;
-			colorTirada = Color.red;
+			color = colorTexto.rojo;
 		}
 		
-		textoInferior.text += Environment.NewLine + ObtenerColor(Color.white) + "- " + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Tirada + " " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + "." + FinDeLineaColor() + ObtenerColor(colorTirada) + aux + FinDeLineaColor();
+		textoInferior.text += Environment.NewLine + FormatearTexto("- " + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Tirada + " " + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Descripcion_Segun_Enum(habilidad) + "(" + GameCenter.InstanceRef.controladoraJuego.jugadorActual.HabilidadesJugador.Devolver_Valor_Segun_Enum(habilidad) + "%): " + resultado.ToString () + ".", optionalColorTexto: colorTexto.blanco) + FormatearTexto(aux, optionalColorTexto: color);
 	}
 	
-	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, Color color)
+	public void Insertar_Ventana_Inferior_Texto(Localizaciones nombreLocalizacion, colorTexto color)
 	{
-		textoInferior.text = textoInferior.text + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		textoInferior.text += Environment.NewLine + FormatearTexto(GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " \"" + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + "\"", optionalColorTexto: color);
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
-	public void Insertar_Ventana_Inferior_Texto(Interactuables interactuable, Color color)
+	public void Insertar_Ventana_Inferior_Texto(Interactuables interactuable, colorTexto color)
 	{
-		textoInferior.text = textoInferior.text + Environment.NewLine + ObtenerColor(color) + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Objeto_Segun_Enum(interactuable) + Comillas() + " " + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.ObjetoInventario + FinDeLineaColor ();
+		textoInferior.text += Environment.NewLine + FormatearTexto("\"" + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Objeto_Segun_Enum(interactuable) + "\" " + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.ObjetoInventario, optionalColorTexto: color);
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
-	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, Color color)
+	public void Insertar_Ventana_Lateral_Texto(Localizaciones nombreLocalizacion, colorTexto color)
 	{
-		textoLateral.text = textoLateral.text + Environment.NewLine + Environment.NewLine + ObtenerColor(color) + GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " " + Comillas() + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + Comillas() + FinDeLineaColor ();
+		textoLateral.text += Environment.NewLine + Environment.NewLine + FormatearTexto(GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.LocalizacionDescubierta + " \"" + GameCenter.InstanceRef.controladoraJuego.Devolver_Descripcion_Localizacion_Segun_Enum(nombreLocalizacion) + "\"", optionalColorTexto: color);
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx (GameCenter.InstanceRef.controladoraSonidos.sonidoEscribir);
 	}
 
-	private string ObtenerColor(Color color)
+	private string FormatearTexto(string texto, opcionTexto optionalOpcionTexto = opcionTexto.minusculas, tipoTexto optionalTipoTexto = tipoTexto.normal, colorTexto optionalColorTexto = colorTexto.blanco)
 	{
-		if (color.Equals(Color.red))
-			return "<color=red>";
-		if (color.Equals(Color.green))
-			return "<color=green>";	
-		if (color.Equals(Color.white))
-			return "<color=white>";
-		if (color.Equals (Color.yellow))
-			return "<color=yellow>";
+		const string COLOR = "<color=";
+		const string COLORFIN = "</color>";
+		const string NEGRITA = "<b>";
+		const string NEGRITAFIN = "</b>";
+		const string CURSIVA = "<i>";
+		const string CURSIVAFIN = "</i>";
+		const string SUBRAYADO = "<u>";
+		const string SUBRAYADOFIN = "</u>";
 
-		return null;
-	}
+		switch (optionalOpcionTexto) 
+		{
+			case opcionTexto.mayusculas:
+			{
+				texto = texto.ToUpper();
+				break;
+			}
+		}
 
-	private string ObtenerEstilo(string estilo)
-	{
-		if (estilo.Equals("negrita"))
-		    return "<b>";
+		switch(optionalColorTexto)
+		{
+			case colorTexto.blanco:
+			{
+				texto = COLOR + "white>" + texto + COLORFIN;
+				break;
+			}
 
-		return null;
-	}
+			case colorTexto.amarillo:
+			{
+				texto = COLOR + "yellow>" + texto + COLORFIN;
+				break;
+			}
 
-	private string ObtenerEstiloFinal(string estilo)
-	{
-		if (estilo.Equals("negrita"))
-			return "</b>";
-		
-		return null;
-	}
+			case colorTexto.rojo:
+			{
+				texto = COLOR + "red>" + texto + COLORFIN;
+				break;
+			}
 
-	private string ObtenerColor(string hex)
-	{
-		return "<color=" + hex + ">";
-	}
-	
-	private string FinDeLineaColor()
-	{
-		return "</color>";
-	}
-	
-	private string Comillas()
-	{
-		return "\"";
+			case colorTexto.verde:
+			{
+				texto = COLOR + "green>" + texto + COLORFIN;
+				break;
+			}
+		}
+
+		switch(optionalTipoTexto)
+		{
+			case tipoTexto.negrita:
+			{
+				texto = NEGRITA + texto + NEGRITAFIN;
+				break;
+			}
+				
+			case tipoTexto.cursiva:
+			{
+				texto = CURSIVA + texto + CURSIVAFIN;
+				break;
+			}
+
+			case tipoTexto.subrayado:
+			{
+				texto = SUBRAYADO + texto + SUBRAYADOFIN;
+				break;
+			}
+		}
+
+		return texto;
 	}
 
 	private void Deslizar_Ventana_Lateral(float anteriorSizeCajaTexto)

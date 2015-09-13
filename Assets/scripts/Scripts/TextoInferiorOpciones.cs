@@ -54,7 +54,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 				{
 					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacionAbierta))
 					{
-						GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacionAbierta, Color.yellow);
+						GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacionAbierta, colorTexto.amarillo);
 						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacionAbierta);
 					}
 				}

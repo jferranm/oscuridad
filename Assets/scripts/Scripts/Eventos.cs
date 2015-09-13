@@ -285,7 +285,7 @@ public class Eventos : MonoBehaviour
 		GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.InteractuableActivo = false;
 		
 		//Le indicamos a la caja de texto que esta en el inventario
-		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre, Color.yellow);
+		GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre, colorTexto.amarillo);
 	}
 
 	private void Inspeccionar_Objeto()

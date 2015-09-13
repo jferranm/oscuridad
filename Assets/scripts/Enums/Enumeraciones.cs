@@ -237,4 +237,26 @@
 		enOpciones,
 		enJuego
 	};
+
+	public enum tipoTexto
+	{
+		normal,
+		cursiva,
+		negrita,
+		subrayado
+	};
+
+	public enum colorTexto
+	{
+		rojo,
+		verde,
+		amarillo,
+		blanco
+	}
+
+	public enum opcionTexto
+	{
+		mayusculas,
+		minusculas
+	}
 }

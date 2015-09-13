@@ -32,6 +32,9 @@ public class ControladoraJuego
 	}
 
 	public InteractuableGenerico interactuablePulsado;
+	public GameObject humoTap;
+	public GameObject humoTapClone;
+	public ParticleSystem humoTapParticle;
 
 	#endregion
 
@@ -396,7 +399,7 @@ public class ControladoraJuego
 			//Encontramos la llave en el Altar
 			case Acciones.EncontrarLlaveAltar:
 				{
-					GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(Interactuables.Llave, Color.yellow);
+					GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(Interactuables.Llave, colorTexto.amarillo);
 					GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario(Interactuables.Llave);
 					break;
 				}
@@ -476,6 +479,51 @@ public class ControladoraJuego
 			DesactivarHijos(child.gameObject, a);
 		}
 	}
+	#endregion
+
+	#region METODOS INTERACTUABLES SIN ZOOM
+
+	public void EjecutarAccion(GameObject objetoSinZoom)
+	{
+		if (objetoSinZoom.name.Contains ("Candle")) 
+		{
+			ParticleSystem flame = objetoSinZoom.GetComponentInChildren<ParticleSystem>();
+			if(flame.isPlaying)
+			{
+				GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoApagarVela);
+				flame.Stop();
+			}
+			else
+			{
+				flame.Play();
+				GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoEncenderVela);
+			}
+
+			Light luz = objetoSinZoom.GetComponentInChildren<Light>();
+			luz.intensity = luz.intensity < 1 ? 1f : 0f;
+		}
+
+		if (objetoSinZoom.name.Contains ("Fuego")) 
+		{
+			ParticleSystem flame = objetoSinZoom.GetComponentInChildren<ParticleSystem>();
+			AudioSource audio = objetoSinZoom.GetComponentInChildren<AudioSource>();
+			if(flame.isPlaying)
+			{
+				flame.Stop();
+				audio.Pause();
+			}
+			else
+			{
+				flame.Play();
+				GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoEncenderVela);
+				audio.Play();
+			}
+
+			Light luz = objetoSinZoom.GetComponentInChildren<Light>();
+			luz.intensity = luz.intensity < 1.5 ? 1.5f : 0f;
+		}
+	}
+
 	#endregion
 
 	#region METODOS VARIOS

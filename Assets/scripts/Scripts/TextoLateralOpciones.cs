@@ -40,7 +40,7 @@ public class TextoLateralOpciones : MonoBehaviour
 				{
 					if(!GameCenter.InstanceRef.controladoraJuego.jugadorActual.LocalizacionesDescubiertas.Contains(localizacion))
 					{
-						GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacion, Color.yellow);
+						GameCenter.InstanceRef.controladoraGUI.Insertar_Ventana_Inferior_Texto(localizacion, colorTexto.amarillo);
 						GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddLocalizacionDescubierta(localizacion);
 					}
 				}

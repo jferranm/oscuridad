@@ -49,6 +49,7 @@ public class GameCenter : MonoBehaviour
 
 	void Start()
 	{
+
 		controladoraJuego.Start ();
 		controladoraJugador.Start ();
 		
