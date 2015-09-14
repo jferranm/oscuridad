@@ -41,6 +41,8 @@ public class ControladoraJuego
 	#region METODOS INICIALIZACION
 	public void Start()
 	{
+		humoTap = Resources.Load("Prefabs/Smoke_01", typeof(GameObject)) as GameObject;
+
 		pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
 		pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
 
