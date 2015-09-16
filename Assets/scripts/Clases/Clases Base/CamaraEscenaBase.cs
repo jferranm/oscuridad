@@ -11,6 +11,7 @@ namespace Oscuridad.Clases
 	[System.Serializable]
     public class CamaraEscenaBase
     {
+		#region VARIABLES
         private string nombre;
         /// <summary>
         /// Nombre de la Escena
@@ -25,6 +26,12 @@ namespace Oscuridad.Clases
         }
 
 		private Escenas escena;
+		/// <summary>
+		/// Tipo de Escena
+		/// </summary>
+		/// <value>
+		/// valor tipo enum Escenas con el tipo de escena
+		/// </value>
 		public Escenas Escena
 		{
 			get { return escena; }
@@ -110,11 +117,34 @@ namespace Oscuridad.Clases
 		}
 
 		private string escenaHabilitar;
+		/// <summary>
+		/// Nombre de la escena a habilitar
+		/// </summary>
+		/// <value>
+		/// valor string con el nombre de la escena a habilitar cuando se active la camara
+		/// </value>
 		public string EscenaHabilitar
 		{
 			get { return escenaHabilitar; }
 			set { escenaHabilitar = value; }
 		}
+
+		private List<Interactuables> interactuablesCamara;
+		/// <summary>
+		/// Lista de interactuables
+		/// </summary>
+		/// <value>
+		/// Lista de interactuables visibles por la camara
+		/// </value>
+		public List<Interactuables> InteractuablesCamara
+		{
+			get { return interactuablesCamara; }
+			set { interactuablesCamara = value; }
+		}
+
+		#endregion
+
+		#region CONSTRUCTORES
 
         /// <summary>
         /// Constructor de la clase <see cref="EscenaBase"/> class.
@@ -135,6 +165,10 @@ namespace Oscuridad.Clases
             this.nombre = nombre;
         }
 
+		#endregion
+
+		#region METODOS
+
 		/// <summary>
 		/// Metodo de inicializacion en constructores
 		/// </summary>
@@ -145,6 +179,29 @@ namespace Oscuridad.Clases
 			escenaEste = "ninguna";
 			escenaOeste = "ninguna";
 			Escena = Escenas.ninguna;
+			interactuablesCamara = new List<Interactuables> ();
 		}
+
+		/// <summary>
+		/// Checkea si existe el Interactuable en la vision de la camara
+		/// </summary>
+		/// <param name="interactuableABuscar">Enumeracion de Interactuables</param>
+		/// <returns>true si existe, false sino</returns>
+		public bool ExisteInteractuable(Interactuables interactuableABuscar)
+		{
+			return InteractuablesCamara.Contains(interactuableABuscar);
+		}
+
+		/// <summary>
+		/// Checkea si existe el Interactuable en la vision de la camara
+		/// </summary>
+		/// <param name="interactuableABuscar">valor tipo String con el nombre del Interactuable</param>
+		/// <returns>true si existe, false sino</returns>
+		public bool ExisteInteractuable(string interactuableABuscar)
+		{
+			return InteractuablesCamara.Contains((Interactuables)Enum.Parse(typeof(Interactuables),interactuableABuscar));
+		}
+
+		#endregion
     }
 }

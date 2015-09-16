@@ -32,17 +32,12 @@ public class ControladoraJuego
 	}
 
 	public InteractuableGenerico interactuablePulsado;
-	public GameObject humoTap;
-	public GameObject humoTapClone;
-	public ParticleSystem humoTapParticle;
 
 	#endregion
 
 	#region METODOS INICIALIZACION
 	public void Start()
 	{
-		humoTap = Resources.Load("Prefabs/Smoke_01", typeof(GameObject)) as GameObject;
-
 		pathConfig = Path.Combine(GameCenter.InstanceRef.USERPATH, "Config.xml");
 		pathJugador = Path.Combine(GameCenter.InstanceRef.USERPATH, "Jugador.xml");
 

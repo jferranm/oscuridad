@@ -1031,6 +1031,9 @@
       <EscenaEste>CamaraSalon</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
       <EscenaHabilitar>Escena12</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>AmaDeLlaves</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
     <CamaraEscenaBase>
       <Nombre>CamaraSalon</Nombre>
@@ -1042,6 +1045,11 @@
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>CamaraRecibidor</EscenaOeste>
       <EscenaHabilitar>Escena13</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>PeriodicoSalon</Interactuables>
+		<Interactuables>CuadroSalon</Interactuables>
+		<Interactuables>Figura</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
   </ListaCamaras>
   <CamaraInicio>
@@ -1054,6 +1062,9 @@
       <EscenaEste>CamaraSalon</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
       <EscenaHabilitar>Escena12</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>AmaDeLlaves</Interactuables>
+	  </InteractuablesCamara>
   </CamaraInicio>
   <EscenasDeshabilitar>
     <string>Escena12</string>

@@ -637,6 +637,10 @@
       <EscenaEste>CamaraHabPadres</EscenaEste>
       <EscenaOeste>CamaraHabCharles</EscenaOeste>
       <EscenaHabilitar>Escena14</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>CuadrosPrimeraPlanta1</Interactuables>
+		<Interactuables>CuadrosPrimeraPlanta2</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
     <CamaraEscenaBase>
       <Nombre>CamaraHabCharles</Nombre>
@@ -648,6 +652,10 @@
       <EscenaEste>CamaraPasillo</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
       <EscenaHabilitar>Escena15</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>PeriodicosHabitacionCharles</Interactuables>
+		<Interactuables>LibrosHabitacionCharles</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
     <CamaraEscenaBase>
       <Nombre>CamaraHabPadres</Nombre>
@@ -659,6 +667,9 @@
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>CamaraPasillo</EscenaOeste>
       <EscenaHabilitar>Escena16</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>FotosFamiliares</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
     <CamaraEscenaBase>
       <Nombre>CamaraPuertaDesvan</Nombre>
@@ -670,6 +681,9 @@
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
       <EscenaHabilitar>Escena18</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>Puerta</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
     <CamaraEscenaBase>
       <Nombre>CamaraDesvan</Nombre>
@@ -681,6 +695,15 @@
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
       <EscenaHabilitar>Escena19</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>Pala</Interactuables>
+        <Interactuables>CuadroDesvan</Interactuables>
+        <Interactuables>LibrosDesvan</Interactuables>
+        <Interactuables>LibroMesa</Interactuables>
+        <Interactuables>CirculoInvocacion</Interactuables>
+        <Interactuables>RecipientesAlquimia</Interactuables>
+        <Interactuables>HojasPared</Interactuables>
+	  </InteractuablesCamara>
     </CamaraEscenaBase>
   </ListaCamaras>
   <CamaraInicio>
@@ -693,6 +716,10 @@
       <EscenaEste>CamaraHabPadres</EscenaEste>
       <EscenaOeste>CamaraHabCharles</EscenaOeste>
       <EscenaHabilitar>Escena14</EscenaHabilitar>
+	  <InteractuablesCamara>
+		<Interactuables>CuadrosPrimeraPlanta1</Interactuables>
+		<Interactuables>CuadrosPrimeraPlanta2</Interactuables>
+	  </InteractuablesCamara>
   </CamaraInicio>
   <EscenasDeshabilitar>
     <string>Escena14</string>

@@ -44,9 +44,12 @@ public class ZoomCamara : MonoBehaviour
 							//Objeto Interactuable
 							case 8: 
 							{
-								GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
-								GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
-								GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
+								if(GameCenter.InstanceRef.controladoraJuego.camaraActiva.ExisteInteractuable(hit.collider.tag.ToString()))
+							   	{
+									GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
+									GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
+									GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
+								}
 								break;
 							}
 
@@ -69,22 +72,6 @@ public class ZoomCamara : MonoBehaviour
 								GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoFalloPulsar);
 								GameCenter.InstanceRef.controladoraJuego.interactuablePulsado = null;
 
-								if(GameCenter.InstanceRef.controladoraJuego.humoTapClone == null)
-								{	
-									GameCenter.InstanceRef.controladoraJuego.humoTapClone = (GameObject)Instantiate(GameCenter.InstanceRef.controladoraJuego.humoTap, rayo.GetPoint(15f), Quaternion.identity);
-									GameCenter.InstanceRef.controladoraJuego.humoTapParticle = GameCenter.InstanceRef.controladoraJuego.humoTapClone.GetComponent<ParticleSystem>();
-									GameCenter.InstanceRef.controladoraJuego.humoTapParticle.Play();
-								}
-								else
-								{
-									if(GameCenter.InstanceRef.controladoraJuego.humoTapParticle.isStopped)
-									{
-										Destroy(GameCenter.InstanceRef.controladoraJuego.humoTapClone);
-										GameCenter.InstanceRef.controladoraJuego.humoTapClone = (GameObject)Instantiate(GameCenter.InstanceRef.controladoraJuego.humoTap, rayo.GetPoint(15f), Quaternion.identity);
-										GameCenter.InstanceRef.controladoraJuego.humoTapParticle = GameCenter.InstanceRef.controladoraJuego.humoTapClone.GetComponent<ParticleSystem>();
-										GameCenter.InstanceRef.controladoraJuego.humoTapParticle.Play();
-									}
-								}
 								break;
 							}
 						}

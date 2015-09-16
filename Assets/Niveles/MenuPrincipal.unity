@@ -6423,7 +6423,7 @@ MonoBehaviour:
     panelObjetosOpciones: {fileID: 0}
   controladoraJuego:
     cameraActiva: {fileID: 0}
-    humoTap: {fileID: 100012, guid: f6822846528a1844692cf83e52647b22, type: 2}
+    humoTap: {fileID: 195404, guid: 4c6973915fd37c24685a479a9fa8f3c0, type: 2}
     humoTapClone: {fileID: 0}
     humoTapParticle: {fileID: 0}
   CanvasUIJuego: {fileID: 1789124314}
