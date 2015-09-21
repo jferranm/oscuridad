@@ -498,6 +498,8 @@ public class ControladoraJuego
 
 			Light luz = objetoSinZoom.GetComponentInChildren<Light>();
 			luz.intensity = luz.intensity < 1 ? 1f : 0f;
+
+			return;
 		}
 
 		if (objetoSinZoom.name.Contains ("Fuego")) 
@@ -518,6 +520,21 @@ public class ControladoraJuego
 
 			Light luz = objetoSinZoom.GetComponentInChildren<Light>();
 			luz.intensity = luz.intensity < 1.5 ? 1.5f : 0f;
+
+			return;
+		}
+
+		if (objetoSinZoom.name.Contains ("BotellaSalon")) 
+		{
+
+			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion();
+			GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoBotellaChocando);
+		}
+
+		if (objetoSinZoom.name.Contains ("LibroSalon")) 
+		{
+			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion();
+			GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoLibroCaer);
 		}
 	}
 

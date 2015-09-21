@@ -623,31 +623,69 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1e7f017b18b4b85468c13a03ed4e7992, type: 2}
+    - target: {fileID: 100000, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
+      propertyPath: m_Name
+      value: BotellaSalon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &33207867 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 05186e7e5bc68fa4d832e3c5db25f3ea, type: 3}
+  m_PrefabInternal: {fileID: 33207866}
+--- !u!65 &33207868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33207867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -21.0499992, y: 38.2999992, z: -23.6599998}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &33207869 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: 05186e7e5bc68fa4d832e3c5db25f3ea,
+    type: 3}
+  m_PrefabInternal: {fileID: 33207866}
+--- !u!114 &33207870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33207867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd0c75f9911847a618209d8a35d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animacion: {fileID: 33207869}
+  nombreAnimacion: BotellaSalon
 --- !u!4 &39912722 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 888ce82c0af2ab0499d39c93fb0f4ce4, type: 2}
@@ -1525,7 +1563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &136713628
 Transform:
   m_ObjectHideFlags: 0
@@ -15506,6 +15544,31 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 9f804422f1a3e144182cbfca98822386, type: 2}
   m_PrefabInternal: {fileID: 2040788650}
+--- !u!65 &1834307663
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1834307662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .330000013, y: .379999995, z: .150000006}
+  m_Center: {x: .0500000007, y: .0299999993, z: -4.76836732e-07}
+--- !u!114 &1834307664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1834307662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd0c75f9911847a618209d8a35d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animacion: {fileID: 1834307665}
+  nombreAnimacion: book_0002b
 --- !u!95 &1834307665
 Animator:
   serializedVersion: 3
@@ -17154,7 +17217,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9f804422f1a3e144182cbfca98822386, type: 2}
       propertyPath: m_Layer
-      value: 2
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f804422f1a3e144182cbfca98822386, type: 2}
+      propertyPath: m_Name
+      value: LibroSalon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f804422f1a3e144182cbfca98822386, type: 2}
