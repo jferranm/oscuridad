@@ -6402,6 +6402,8 @@ MonoBehaviour:
     sonidoBuscarMochila: {fileID: 0}
     sonidoApagarVela: {fileID: 0}
     sonidoEncenderVela: {fileID: 0}
+    sonidoBotellaChocando: {fileID: 0}
+    sonidoLibroCaer: {fileID: 0}
     EmisorBSO: {fileID: 769363976}
     emisorBSO: {fileID: 0}
     bsoEscenarioWard: {fileID: 0}
@@ -6423,9 +6425,6 @@ MonoBehaviour:
     panelObjetosOpciones: {fileID: 0}
   controladoraJuego:
     cameraActiva: {fileID: 0}
-    humoTap: {fileID: 195404, guid: 4c6973915fd37c24685a479a9fa8f3c0, type: 2}
-    humoTapClone: {fileID: 0}
-    humoTapParticle: {fileID: 0}
   CanvasUIJuego: {fileID: 1789124314}
   CanvasMenuPrincipal: {fileID: 716343330}
   CanvasMenuOpciones: {fileID: 556920118}
