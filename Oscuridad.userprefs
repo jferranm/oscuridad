@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\ObjetoAnimacion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\ObjetoAnimacion.cs" Line="17" Column="1" />
-      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="33" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="529" Column="4" />
+      <File FileName="Assets\scripts\Scripts\ObjetoAnimacion.cs" Line="23" Column="44" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="59" Column="57" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="529" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -27,14 +27,14 @@
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
       <PosicionNueva>
-        <x>-1.63</x>
-        <y>296.06</y>
-        <z>25.67</z>
+        <x>-1.39</x>
+        <y>295.73</y>
+        <z>23.99</z>
       </PosicionNueva>
       <RotacionNueva>
-        <x>75.78896</x>
-        <y>-48.02185</y>
-        <z>5.508896</z>
+        <x>58.1</x>
+        <y>-43.7</y>
+        <z>-2.356033</z>
       </RotacionNueva>
       <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>

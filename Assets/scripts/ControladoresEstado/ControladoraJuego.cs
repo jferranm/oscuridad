@@ -526,15 +526,14 @@ public class ControladoraJuego
 
 		if (objetoSinZoom.name.Contains ("BotellaSalon")) 
 		{
-
-			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion();
-			GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoBotellaChocando);
+			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion_Con_Sonido();
+			return;
 		}
 
 		if (objetoSinZoom.name.Contains ("LibroSalon")) 
 		{
-			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion();
-			GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoLibroCaer);
+			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion_Con_Sonido();
+			return;
 		}
 	}
 
