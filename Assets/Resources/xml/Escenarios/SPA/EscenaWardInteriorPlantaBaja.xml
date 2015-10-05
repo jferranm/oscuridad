@@ -1020,6 +1020,20 @@
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
   </InteractuablesEscena>
+  <InteractuablesSinZoomEscena>
+	<InteractuableSinZoomGenerico>
+		<Nombre>Fuego</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+	<InteractuableSinZoomGenerico>
+		<Nombre>BotellaSalon</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+	<InteractuableSinZoomGenerico>
+		<Nombre>LibroSalon</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+  </InteractuablesSinZoomEscena>
   <ListaCamaras>
     <CamaraEscenaBase>
       <Nombre>CamaraRecibidor</Nombre>

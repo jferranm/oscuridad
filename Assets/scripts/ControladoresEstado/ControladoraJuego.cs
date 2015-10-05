@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.IO;
 using System;
@@ -237,13 +237,21 @@ public class ControladoraJuego
 
 	public void Inicializar_Interactuables()
 	{
-		foreach (InteractuableGenerico interactuable in GameCenter.InstanceRef.controladoraJuego.escenaActual.MostrarObjeto()) 
+		foreach (InteractuableGenerico interactuable in escenaActual.MostrarObjeto()) 
 		{
 			try 
 			{
 				GameObject.FindGameObjectWithTag(interactuable.Nombre).SetActive(interactuable.InteractuableActivo);
 			}
 			catch {}
+		}
+	}
+
+	public void Inicializar_Interactuables_SinZoom()
+	{
+		foreach (InteractuableSinZoomGenerico interactuable in escenaActual.MostrarObjetoSinZoomFiltrado()) 
+		{
+			GameObject.Find(interactuable.Nombre).GetComponent<ObjetoAnimacion>().Ejecutar_Animacion();
 		}
 	}
 	#endregion
@@ -530,9 +538,10 @@ public class ControladoraJuego
 			return;
 		}
 
-		if (objetoSinZoom.name.Contains ("LibroSalon")) 
+		if (objetoSinZoom.name.Contains ("LibroSalon") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
 		{
 			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion_Con_Sonido();
+			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
 			return;
 		}
 	}

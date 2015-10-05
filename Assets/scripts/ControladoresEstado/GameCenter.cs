@@ -95,6 +95,7 @@ public class GameCenter : MonoBehaviour
 				controladoraJuego.escenaActual.CamaraInicio = controladoraJuego.escenaActual.Buscar_Camara (controladoraJuego.configuracionJuego.UltimaCamaraVisitada);
 
 		controladoraJuego.Inicializar_Interactuables ();
+		controladoraJuego.Inicializar_Interactuables_SinZoom ();
 
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();

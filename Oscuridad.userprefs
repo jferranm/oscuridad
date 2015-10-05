@@ -1,14 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJuego.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\ObjetoAnimacion.cs" Line="23" Column="44" />
-      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="59" Column="57" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="529" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="257" Column="12" />
+      <File FileName="Assets\scripts\Clases\Clases Base\InteractuableSinZoomGenerico.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Hopesend\Documents\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="254" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

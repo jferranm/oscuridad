@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 using Oscuridad.Enumeraciones;
 
@@ -37,6 +39,19 @@ namespace Oscuridad.Clases
 			get { return interactuablesEscena; }
 			set { interactuablesEscena = value; }
         }
+
+		private List<InteractuableSinZoomGenerico> interactuablesSinZoomEscena;
+		/// <summary>
+		/// Lista de interactuables sin zoom en la escena
+		/// </summary>
+		/// <value>
+		/// lista generica de tipo InteractuableSinZoomGenerico
+		/// </value>
+		public List<InteractuableSinZoomGenerico> InteractuablesSinZoomEscena
+		{
+			get { return interactuablesSinZoomEscena; }
+			set { interactuablesSinZoomEscena = value; }
+		}
 
 		private List<CamaraEscenaBase> listaCamaras;
 		public List<CamaraEscenaBase> ListaCamaras
@@ -140,6 +155,74 @@ namespace Oscuridad.Clases
 		{
 			return interactuablesEscena.Find (x => x.Nombre == nombreInteractuable);
 		}
+
+		/// <summary>
+		/// Añade un interactuable sin zoom a la escena
+		/// </summary>
+		/// <param name="objeto">objeto tipo InteractuableSinZoomGenerico</param>
+		public void AddObjeto(InteractuableSinZoomGenerico objeto)
+		{
+			interactuablesSinZoomEscena.Add(objeto);
+		}
+		
+		/// <summary>
+		/// Añade varios interactuables sin zoom a la escena
+		/// </summary>
+		/// <param name="objetos">array de tipo InteractuableGenerico</param>
+		public void AddObjeto(InteractuableSinZoomGenerico[] objetos)
+		{
+			interactuablesSinZoomEscena.AddRange(objetos);
+		}
+		
+		/// <summary>
+		/// Borra el interactuable sin zoom de la escena
+		/// </summary>
+		/// <param name="objeto">objeto tipo InteractuableSinZoomGenerico</param>
+		public void BorrarObjeto(InteractuableSinZoomGenerico objeto)
+		{
+			interactuablesSinZoomEscena.Remove(objeto);
+		}
+		
+		/// <summary>
+		/// Borra varios interactuables sin zoom de la escena
+		/// </summary>
+		/// <param name="objetos">array de tipo InteractuableSinZoomGenerico</param>
+		public void BorrarObjeto(InteractuableSinZoomGenerico[] objetos)
+		{
+			foreach (InteractuableSinZoomGenerico objeto in objetos)
+			{
+				interactuablesSinZoomEscena.Remove(objeto);
+			}
+		}
+		
+		/// <summary>
+		/// Mostrar lista de interactuables sin zoom
+		/// </summary>
+		/// <returns>array de tipo InteractuableSinZoomGenerico</returns>
+		public InteractuableSinZoomGenerico[] MostrarObjetoSinZoom()
+		{
+			return interactuablesSinZoomEscena.ToArray();
+		}
+
+		/// <summary>
+		/// Mostrar lista de interactuables sin zoom de un solo uso
+		/// </summary>
+		/// <returns>array de tipo InteractuableSinZoomGenerico</returns>
+		public InteractuableSinZoomGenerico[] MostrarObjetoSinZoomFiltrado()
+		{
+			return interactuablesSinZoomEscena.FindAll (x => x.EjecutarAnimacion == false).ToArray();
+		}
+		
+		/// <summary>
+		/// Devuelve un interactuable sin zoom segun su nombre
+		/// </summary>
+		/// <param name="nombreInteractuable">string de nombre de interactuable sin Zoom</param>
+		/// <returns>objeto tipo InteractuableSinZoomGenerico</returns>
+		public InteractuableSinZoomGenerico Buscar_InteractuableSinZoom(string nombreInteractuablesinZoom)
+		{
+			return interactuablesSinZoomEscena.Find (x => x.Nombre == nombreInteractuablesinZoom);
+		}
+
 
 		/// <summary>
 		/// Devuelve una camara segun su nombre
