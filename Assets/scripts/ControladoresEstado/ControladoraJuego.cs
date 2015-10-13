@@ -32,6 +32,7 @@ public class ControladoraJuego
 	}
 
 	public InteractuableGenerico interactuablePulsado;
+	public string camaraActivar;
 
 	#endregion
 
@@ -433,39 +434,16 @@ public class ControladoraJuego
 	#region METODOS CAMARAS
 	public void Cambiar_Camara(string camara)
 	{
-		float sourceBSOTime = 0;
-		AudioClip sourceBSOAudio = null;
-		
-		if(this.camaraActiva != null)
-		{
-			sourceBSOTime = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time;
-			sourceBSOAudio = GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip;
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Stop();
+		if(camaraActiva != null)
+			DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), false);
+		camaraActiva = this.escenaActual.Buscar_Camara (camara);
+		DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
+
+		if(cameraActiva != null)
 			cameraActiva.enabled = false;
-			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
-				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar), false);
-		}
-		
 		cameraActiva = GameObject.Find (camara).GetComponent<Camera>();
 		cameraActiva.enabled = true;
 		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();
-		camaraActiva = this.escenaActual.Buscar_Camara (camara);
-		
-		if (sourceBSOAudio != null) 
-		{
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.clip = sourceBSOAudio;
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.time = sourceBSOTime;
-			GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Play();
-			if(!string.IsNullOrEmpty(camaraActiva.EscenaHabilitar))
-			{
-				DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
-				Inicializar_Interactuables();
-			}
-		}
-
-		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddEscenaVisitada(cameraActiva.GetComponent<ZoomCamara>().escenaVistaCamara);
-		configuracionJuego.UltimaCamaraVisitada = camara;
-		configuracionJuego.UltimaEscenaVisitada = escenaActual.Escena;
 	}
 	
 	public void Desactivar_Camaras()
@@ -473,17 +451,19 @@ public class ControladoraJuego
 		foreach (CamaraEscenaBase nueva in this.escenaActual.ListaCamaras) 
 		{
 			GameObject.Find(nueva.Nombre).GetComponent<Camera>().enabled = false;
+			if(nueva.EscenaHabilitar != string.Empty)
+				try {DesactivarHijos(GameObject.Find(nueva.EscenaHabilitar+"Padre"), false);} catch {}
 		}
 	}
 	
 	public void DesactivarHijos(GameObject g, bool a) 
 	{
-		g.SetActive (a);
-		
-		foreach (Transform child in g.transform) {
-			DesactivarHijos(child.gameObject, a);
+		foreach (Transform child in g.transform) 
+		{
+			child.gameObject.SetActive(a);
 		}
 	}
+	
 	#endregion
 
 	#region METODOS INTERACTUABLES SIN ZOOM

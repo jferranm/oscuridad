@@ -37,6 +37,7 @@ public class Eventos : MonoBehaviour
 		if (File.Exists (archivoJugador)) 
 		{
 			GameCenter.InstanceRef.controladoraJuego.CargarJugador ();
+			GameCenter.InstanceRef.controladoraJuego.camaraActivar = GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaCamaraVisitada;
 			GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaEscenaVisitada);
 		} 
 		else 
@@ -225,6 +226,9 @@ public class Eventos : MonoBehaviour
 				GameCenter.InstanceRef.controladoraJuego.GrabarConfiguracion();
 				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);
+				GameCenter.InstanceRef.controladoraJuego.camaraActiva = null;
+				GameCenter.InstanceRef.controladoraJuego.cameraActiva = null;
+				GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Pause();
 			}
 			else
 			{

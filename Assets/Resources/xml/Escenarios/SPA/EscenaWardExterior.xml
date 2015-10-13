@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Escena>EscenaWardExterior</Escena>
   <InteractuablesEscena>
@@ -62,8 +62,8 @@
       <EscenaSur>ninguna</EscenaSur>
       <EscenaEste>CamaraJardin</EscenaEste>
       <EscenaOeste>ninguna</EscenaOeste>
-      <EscenaHabilitar />
-	  <InteractuablesCamara />
+      <EscenaHabilitar>Escena10</EscenaHabilitar>
+      <InteractuablesCamara />
     </CamaraEscenaBase>
     <CamaraEscenaBase>
       <Nombre>CamaraJardin</Nombre>
@@ -74,7 +74,7 @@
       <EscenaSur>ninguna</EscenaSur>
       <EscenaEste>ninguna</EscenaEste>
       <EscenaOeste>CamaraCasa</EscenaOeste>
-      <EscenaHabilitar />
+      <EscenaHabilitar>Escena10</EscenaHabilitar>
 	  <InteractuablesCamara>
 		<Interactuables>Altar</Interactuables>
 	  </InteractuablesCamara>
