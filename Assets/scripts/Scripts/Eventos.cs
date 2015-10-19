@@ -226,8 +226,8 @@ public class Eventos : MonoBehaviour
 				GameCenter.InstanceRef.controladoraJuego.GrabarConfiguracion();
 				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);
-				GameCenter.InstanceRef.controladoraJuego.camaraActiva = null;
-				GameCenter.InstanceRef.controladoraJuego.cameraActiva = null;
+				//GameCenter.InstanceRef.controladoraJuego.camaraActiva = null;
+				//GameCenter.InstanceRef.controladoraJuego.cameraActiva = null;
 				GameCenter.InstanceRef.controladoraSonidos.emisorBSO.Pause();
 			}
 			else

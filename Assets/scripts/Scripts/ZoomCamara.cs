@@ -9,9 +9,19 @@ public class ZoomCamara : MonoBehaviour
 	public Vector3 posicionInicial;
 	[HideInInspector]
 	public Quaternion rotacionInicial;
-	public Escenas escenaVistaCamara;
+	public GameObject escenaVistaCamara;
 
 	private RaycastHit hit;
+
+	void OnEnable()
+	{
+		ActivarHijos (escenaVistaCamara);
+	}
+
+	void OnDisable()
+	{
+		DesactivarHijos (escenaVistaCamara);
+	}
 
 	void Start() 
 	{
@@ -77,6 +87,28 @@ public class ZoomCamara : MonoBehaviour
 						}
 					}
 				}
+			}
+		}
+	}
+
+	private void DesactivarHijos(GameObject g) 
+	{
+		if (g != null) 
+		{
+			foreach (Transform child in g.transform) 
+			{
+				child.gameObject.SetActive (false);
+			}
+		}
+	}
+	
+	private void ActivarHijos(GameObject g) 
+	{
+		if (g != null) 
+		{
+			foreach (Transform child in g.transform) 
+			{
+				child.gameObject.SetActive (true);
 			}
 		}
 	}

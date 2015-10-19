@@ -722,10 +722,10 @@
 	  </InteractuablesCamara>
   </CamaraInicio>
   <EscenasDeshabilitar>
-    <string>Escena14</string>
-    <string>Escena15</string>
-    <string>Escena16</string>
-    <string>Escena18</string>
-    <string>Escena19</string>
+    <string>Escena14Padre</string>
+    <string>Escena15Padre</string>
+    <string>Escena16Padre</string>
+    <string>Escena18Padre</string>
+    <string>Escena19Padre</string>
   </EscenasDeshabilitar>
 </EscenaBase>

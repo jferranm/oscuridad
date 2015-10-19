@@ -90,14 +90,16 @@ public class GameCenter : MonoBehaviour
 	
 	public void Inicializar_Escenario()
 	{
+		controladoraJuego.Inicializar_Referencias ();
 		controladoraJuego.Inicializar_Interactuables ();
 		controladoraJuego.Inicializar_Interactuables_SinZoom ();
+		//Deshabilitamos todos los escenarios tras Inicializar Interactuables
+		controladoraJuego.Desactivar_Camaras ();
 
 		//Desactivamos todas las ventanas
 		controladoraGUI.DesactivarGUI ();
 
 		//Activamos Camara
-		controladoraJuego.Desactivar_Camaras ();
 		if (controladoraJuego.camaraActivar != null) 
 		{
 			controladoraJuego.Cambiar_Camara (controladoraJuego.camaraActivar);

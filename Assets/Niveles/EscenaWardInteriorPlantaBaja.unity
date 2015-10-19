@@ -693,12 +693,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 33207867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4fd0c75f9911847a618209d8a35d52, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animation: {fileID: 33207870}
   clip: {fileID: 7400000, guid: 998260224f1032245803fa8958aea6ec, type: 2}
   clipSonido: {fileID: 8300000, guid: acfb783ec84f3f349a1a2c43b2f40aa7, type: 3}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
 --- !u!111 &33207870
 Animation:
   m_ObjectHideFlags: 0
@@ -1522,7 +1524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &136713628
 Transform:
   m_ObjectHideFlags: 0
@@ -2175,7 +2177,6 @@ GameObject:
   - 124: {fileID: 242375063}
   - 92: {fileID: 242375062}
   - 114: {fileID: 242375061}
-  - 114: {fileID: 242375060}
   m_Layer: 0
   m_Name: CamaraRecibidor
   m_TagString: CamaraRecibidor
@@ -2195,23 +2196,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &242375060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242375058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f69a2040671c747bb6f98d9914b946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  makeRaysVisible: 0
-  defaultFarPlane: 100
-  minDistance: 20
-  maxDistance: 200
-  farPlaneBuffer: 10
-  rateOfReceding: 16
 --- !u!114 &242375061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2225,7 +2209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posicionInicial: {x: 0, y: 0, z: 0}
   rotacionInicial: {x: 0, y: 0, z: 0, w: 0}
-  escenaVistaCamara: 7
+  escenaVistaCamara: {fileID: 1716905707}
 --- !u!92 &242375062
 Behaviour:
   m_ObjectHideFlags: 0
@@ -13270,7 +13254,6 @@ GameObject:
   - 124: {fileID: 1750839824}
   - 92: {fileID: 1750839823}
   - 114: {fileID: 1750839822}
-  - 114: {fileID: 1750839821}
   m_Layer: 0
   m_Name: CamaraSalon
   m_TagString: CamaraSalon
@@ -13290,23 +13273,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &1750839821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1750839819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f69a2040671c747bb6f98d9914b946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  makeRaysVisible: 0
-  defaultFarPlane: 100
-  minDistance: 20
-  maxDistance: 200
-  farPlaneBuffer: 10
-  rateOfReceding: 16
 --- !u!114 &1750839822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13320,7 +13286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posicionInicial: {x: 0, y: 0, z: 0}
   rotacionInicial: {x: 0, y: 0, z: 0, w: 0}
-  escenaVistaCamara: 8
+  escenaVistaCamara: {fileID: 762833028}
 --- !u!92 &1750839823
 Behaviour:
   m_ObjectHideFlags: 0
@@ -14120,12 +14086,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834307662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4fd0c75f9911847a618209d8a35d52, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animation: {fileID: 1834307665}
   clip: {fileID: 7400000, guid: 215780a3a4ab60a4c9347432e16a0740, type: 2}
   clipSonido: {fileID: 0}
+  posicion: {x: 1.41999996, y: .277999997, z: 5.22700024}
+  rotacion: {x: .386571407, y: 180.025406, z: 90.1362228}
 --- !u!111 &1834307665
 Animation:
   m_ObjectHideFlags: 0
@@ -14137,7 +14105,7 @@ Animation:
   m_Animation: {fileID: 0}
   m_Animations: []
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!4 &1837487553 stripped

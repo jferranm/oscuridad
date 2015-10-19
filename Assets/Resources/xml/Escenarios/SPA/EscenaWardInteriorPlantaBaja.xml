@@ -1081,7 +1081,7 @@
 	  </InteractuablesCamara>
   </CamaraInicio>
   <EscenasDeshabilitar>
-    <string>Escena12</string>
-    <string>Escena13</string>
+    <string>Escena12Padre</string>
+    <string>Escena13Padre</string>
   </EscenasDeshabilitar>
 </EscenaBase>

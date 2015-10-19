@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System;
 using Oscuridad.Interfaces;
@@ -14,6 +15,7 @@ public class ControladoraJuego
 	private string pathJugador;
 	private string pathIdioma;
 	private LanzamientoDados lanzamientoDados;
+	private List<Camera> listaCamaras;
 
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
@@ -21,6 +23,7 @@ public class ControladoraJuego
 	public Camera cameraActiva;
 	public Config configuracionJuego;
 	public TextosMenus textosMenusTraduccion;
+
 	public Idioma idiomaJuego
 	{
 		set 
@@ -58,6 +61,7 @@ public class ControladoraJuego
 		CargarTraduccion ();
 
 		lanzamientoDados = new LanzamientoDados ();
+		listaCamaras = new List<Camera> ();
 	}
 
 	public void InicializarEscena()
@@ -236,15 +240,20 @@ public class ControladoraJuego
 		}
 	}
 
+	public void Inicializar_Referencias()
+	{
+		listaCamaras.Clear ();
+		foreach (CamaraEscenaBase camara in escenaActual.ListaCamaras) 
+		{
+			listaCamaras.Add(GameObject.Find (camara.Nombre).GetComponent<Camera>());
+		}
+	}
+
 	public void Inicializar_Interactuables()
 	{
 		foreach (InteractuableGenerico interactuable in escenaActual.MostrarObjeto()) 
 		{
-			try 
-			{
-				GameObject.FindGameObjectWithTag(interactuable.Nombre).SetActive(interactuable.InteractuableActivo);
-			}
-			catch {}
+			GameObject.FindGameObjectWithTag(interactuable.Nombre).SetActive(interactuable.InteractuableActivo);
 		}
 	}
 
@@ -252,7 +261,7 @@ public class ControladoraJuego
 	{
 		foreach (InteractuableSinZoomGenerico interactuable in escenaActual.MostrarObjetoSinZoomFiltrado()) 
 		{
-			GameObject.Find(interactuable.Nombre).GetComponent<ObjetoAnimacion>().Ejecutar_Animacion();
+			GameObject.Find(interactuable.Nombre).GetComponent<ObjetoInteractuableSinZoom>().Mover_Objeto();
 		}
 	}
 	#endregion
@@ -434,33 +443,25 @@ public class ControladoraJuego
 	#region METODOS CAMARAS
 	public void Cambiar_Camara(string camara)
 	{
-		if(camaraActiva != null)
-			DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), false);
 		camaraActiva = this.escenaActual.Buscar_Camara (camara);
-		DesactivarHijos(GameObject.Find(camaraActiva.EscenaHabilitar+"Padre"), true);
 
-		if(cameraActiva != null)
+		if (cameraActiva != null) 
+		{
 			cameraActiva.enabled = false;
-		cameraActiva = GameObject.Find (camara).GetComponent<Camera>();
+			cameraActiva.GetComponent<ZoomCamara> ().enabled = false;
+		}
+		cameraActiva = listaCamaras.Find(x => x.name == camara);
 		cameraActiva.enabled = true;
+		cameraActiva.GetComponent<ZoomCamara> ().enabled = true;
 		GameCenter.InstanceRef.controladoraJugador.zoomCamaraRef = cameraActiva.GetComponent<ZoomCamara> ();
 	}
 	
 	public void Desactivar_Camaras()
 	{
-		foreach (CamaraEscenaBase nueva in this.escenaActual.ListaCamaras) 
+		foreach (Camera nueva in listaCamaras) 
 		{
-			GameObject.Find(nueva.Nombre).GetComponent<Camera>().enabled = false;
-			if(nueva.EscenaHabilitar != string.Empty)
-				try {DesactivarHijos(GameObject.Find(nueva.EscenaHabilitar+"Padre"), false);} catch {}
-		}
-	}
-	
-	public void DesactivarHijos(GameObject g, bool a) 
-	{
-		foreach (Transform child in g.transform) 
-		{
-			child.gameObject.SetActive(a);
+			nueva.enabled = false;
+			nueva.GetComponent<ZoomCamara> ().enabled = false;
 		}
 	}
 	
@@ -514,13 +515,13 @@ public class ControladoraJuego
 
 		if (objetoSinZoom.name.Contains ("BotellaSalon")) 
 		{
-			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion_Con_Sonido();
+			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
 			return;
 		}
 
 		if (objetoSinZoom.name.Contains ("LibroSalon") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
 		{
-			objetoSinZoom.GetComponent<ObjetoAnimacion>().Ejecutar_Animacion_Con_Sonido();
+			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
 			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
 			return;
 		}
@@ -584,7 +585,6 @@ public class ControladoraJuego
 		GUIStyle miEstilo = new GUIStyle ();
 		miEstilo.fontSize = sizeFuente;
 		return miEstilo.CalcSize(new GUIContent(texto)).x;
-	
 	}
 
 	#endregion
