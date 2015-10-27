@@ -626,6 +626,20 @@
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
   </InteractuablesEscena>
+  <InteractuablesSinZoomEscena>
+	<InteractuableSinZoomGenerico>
+		<Nombre>Maceta</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+	<InteractuableSinZoomGenerico>
+		<Nombre>CuadroPasillo</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+	<InteractuableSinZoomGenerico>
+		<Nombre>FotoHabitacionPadres</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+  </InteractuablesSinZoomEscena>
   <ListaCamaras>
     <CamaraEscenaBase>
       <Nombre>CamaraPasillo</Nombre>

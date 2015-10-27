@@ -525,6 +525,26 @@ public class ControladoraJuego
 			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
 			return;
 		}
+
+		if (objetoSinZoom.name.Contains ("Maceta") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
+		{
+			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
+			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
+			return;
+		}
+
+		if (objetoSinZoom.name.Contains ("CuadroPasillo")) 
+		{
+			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
+			return;
+		}
+
+		if (objetoSinZoom.name.Contains ("FotoHabitacionPadres") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
+		{
+			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
+			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
+			return;
+		}
 	}
 
 	#endregion

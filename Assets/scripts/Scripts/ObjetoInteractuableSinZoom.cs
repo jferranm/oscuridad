@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Oscuridad.Clases;
 
 public class ObjetoInteractuableSinZoom : MonoBehaviour 
 {
 	public Animation animation;
     public AnimationClip clip;
 	public AudioClip clipSonido;
+
 	public Vector3 posicion;
 	public Vector3 rotacion;
 
@@ -25,7 +27,7 @@ public class ObjetoInteractuableSinZoom : MonoBehaviour
 
 	public void Mover_Objeto()
 	{
-		this.gameObject.transform.Translate(posicion);
-		this.gameObject.transform.Rotate(rotacion);
+		this.gameObject.transform.localPosition = new Vector3 (posicion.x, posicion.y, posicion.z);
+		this.gameObject.transform.localEulerAngles = new Vector3(rotacion.x, rotacion.y, rotacion.z);
 	}
 }
