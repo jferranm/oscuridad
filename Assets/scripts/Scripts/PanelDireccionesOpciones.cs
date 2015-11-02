@@ -5,10 +5,10 @@ using Oscuridad.Enumeraciones;
 
 public class PanelDireccionesOpciones : MonoBehaviour 
 {
-	public GameObject botonNorte;
-	public GameObject botonSur;
-	public GameObject botonEste;
-	public GameObject botonOeste;
+	public Image botonNorte;
+	public Image botonSur;
+	public Image botonEste;
+	public Image botonOeste;
 
 	void OnEnable()
 	{
@@ -35,17 +35,15 @@ public class PanelDireccionesOpciones : MonoBehaviour
 
 	private void Normalizar_Botones()
 	{
-		botonNorte.GetComponent<Image> ().color = new Color (255, 255, 255);
-		botonSur.GetComponent<Image> ().color = new Color (255, 255, 255);
-		botonEste.GetComponent<Image> ().color = new Color (255, 255, 255);
-		botonOeste.GetComponent<Image> ().color = new Color (255, 255, 255);
+		botonNorte.color = new Color (255, 0, 0);
+		botonSur.color = new Color (255, 0, 0);
+		botonEste.color = new Color (255, 0, 0);
+		botonOeste.color = new Color (255, 0, 0);
 	}
 
-	private void Desactivar (GameObject objeto)
+	private void Desactivar (Image imagenObjeto)
 	{
-		Image imagenBoton = objeto.GetComponent<Image> ();
-
-		imagenBoton.color = new Color (255,0,0);
+		imagenObjeto.color = new Color (255,255,255);
 	}
 
 	public void Reiniciar_Direcciones()

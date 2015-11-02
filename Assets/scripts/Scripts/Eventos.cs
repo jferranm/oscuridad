@@ -161,7 +161,7 @@ public class Eventos : MonoBehaviour
 		Escenas escenaSeleccionada = Escenas.ninguna;
 		string camaraSeleccionada = "";
 		
-		if (!imagenBoton.color.Equals (rojo)) 
+		if (imagenBoton.color.Equals (rojo)) 
 		{
 			if(botonDireccion.name.Contains("Arriba"))
 			{
