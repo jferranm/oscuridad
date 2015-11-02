@@ -545,6 +545,12 @@ public class ControladoraJuego
 			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
 			return;
 		}
+
+		if (objetoSinZoom.name.Contains ("RelojRecibidor")) 
+		{
+			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Lanzar_Sonido();
+			return;
+		}
 	}
 
 	#endregion

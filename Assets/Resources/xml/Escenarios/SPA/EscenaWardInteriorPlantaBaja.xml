@@ -1033,6 +1033,10 @@
 		<Nombre>LibroSalon</Nombre>
 		<EjecutarAnimacion>true</EjecutarAnimacion>
 	</InteractuableSinZoomGenerico>
+	<InteractuableSinZoomGenerico>
+		<Nombre>RelojRecepcion</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
   </InteractuablesSinZoomEscena>
   <ListaCamaras>
     <CamaraEscenaBase>

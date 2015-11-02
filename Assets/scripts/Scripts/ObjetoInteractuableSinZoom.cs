@@ -30,4 +30,9 @@ public class ObjetoInteractuableSinZoom : MonoBehaviour
 		this.gameObject.transform.localPosition = new Vector3 (posicion.x, posicion.y, posicion.z);
 		this.gameObject.transform.localEulerAngles = new Vector3(rotacion.x, rotacion.y, rotacion.z);
 	}
+
+	public void Lanzar_Sonido()
+	{
+		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(clipSonido);
+	}
 }

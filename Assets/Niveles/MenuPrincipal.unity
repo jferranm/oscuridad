@@ -1117,8 +1117,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .659867287, y: .376238376}
   m_AnchorMax: {x: 1, y: .641238391}
-  m_AnchoredPosition: {x: .0999999046, y: -.199999809}
-  m_SizeDelta: {x: -.150000572, y: -.100000381}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &389447027
 MonoBehaviour:
@@ -1499,8 +1499,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .371336132, y: .36500001}
   m_AnchorMax: {x: .659867287, y: .652476728}
-  m_AnchoredPosition: {x: -.300000012, y: -.300000012}
-  m_SizeDelta: {x: .339996338, y: -.199998856}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &504360096
 MonoBehaviour:
@@ -4687,8 +4687,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .371336132, y: 0}
   m_AnchorMax: {x: .630203485, y: .342476755}
-  m_AnchoredPosition: {x: -.5, y: .300000012}
-  m_SizeDelta: {x: .260000229, y: -.300000191}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1499814878
 MonoBehaviour:
@@ -5134,8 +5134,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: .36500001}
   m_AnchorMax: {x: .3416017, y: .630000055}
-  m_AnchoredPosition: {x: -.800000012, y: .699999988}
-  m_SizeDelta: {x: -.679999828, y: -.149997711}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1612154276
 MonoBehaviour:
@@ -5259,8 +5259,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .853000045, y: .0670000017}
   m_AnchorMax: {x: .944637656, y: .260357291}
-  m_AnchoredPosition: {x: .0999984741, y: -.385009766}
-  m_SizeDelta: {x: 0, y: .229980469}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1613681314
 MonoBehaviour:
@@ -5273,10 +5273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4112c097b4dc89148a7201ba77528187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonNorte: {fileID: 1925710741}
-  botonSur: {fileID: 1499814876}
-  botonEste: {fileID: 1612154274}
-  botonOeste: {fileID: 389447025}
+  botonNorte: {fileID: 1925710744}
+  botonSur: {fileID: 1499814879}
+  botonEste: {fileID: 1612154277}
+  botonOeste: {fileID: 389447028}
 --- !u!114 &1613681315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5290,7 +5290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6436,8 +6436,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .371336132, y: .675000012}
   m_AnchorMax: {x: .630203485, y: 1}
-  m_AnchoredPosition: {x: -.0999999046, y: .299999952}
-  m_SizeDelta: {x: .150000572, y: .377497196}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1925710743
 MonoBehaviour:

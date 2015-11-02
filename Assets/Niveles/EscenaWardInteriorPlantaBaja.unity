@@ -519,7 +519,8 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 2e8028178a7866f4f8275801ff67e8a0, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 2e8028178a7866f4f8275801ff67e8a0, type: 3}
   m_IsPrefabParent: 0
 --- !u!1001 &33207866
@@ -994,9 +995,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 70269939}
-  - 95: {fileID: 70269943}
-  - 82: {fileID: 70269942}
   - 65: {fileID: 70269941}
+  - 114: {fileID: 70269940}
   m_Layer: 8
   m_Name: PeriodicoSalon
   m_TagString: PeriodicoSalon
@@ -1017,6 +1017,23 @@ Transform:
   - {fileID: 4289763}
   m_Father: {fileID: 225180147}
   m_RootOrder: 2
+--- !u!114 &70269940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70269938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cce899201c037c4daba991c699fca06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: PeriodicoSalon
+  descripcion: Periodico Salon
+  interactuable: 1
+  posicion: {x: -1.38999999, y: 295.730011, z: 23.9899998}
+  rotacion: {x: 58.0999985, y: -43.7000008, z: -2.35603309}
+  suavizado: 2.5
 --- !u!65 &70269941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1029,94 +1046,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: .200000003, z: 1.60000002}
   m_Center: {x: 1.20000005, y: -1.39999998, z: .800000012}
---- !u!82 &70269942
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 70269938}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
---- !u!95 &70269943
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 39b7753a8cb201a4785c8dd3df956537,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 70269938}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 39b7753a8cb201a4785c8dd3df956537, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &71674094 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 888ce82c0af2ab0499d39c93fb0f4ce4, type: 2}
@@ -1710,6 +1639,23 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: eff40c990f113194683e27f6127980a0, type: 3}
   m_PrefabInternal: {fileID: 465967966}
+--- !u!114 &165117013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165117012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cce899201c037c4daba991c699fca06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: Figura
+  descripcion: Figura
+  interactuable: 3
+  posicion: {x: .620000005, y: 296.450012, z: 30.6800003}
+  rotacion: {x: 0, y: 18.9548798, z: 0}
+  suavizado: 2.5
 --- !u!65 &165117014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3657,6 +3603,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 581eec85027517d4da06acc2bb4054e6, type: 2}
+    - target: {fileID: 100000, guid: a1372ec781f2f8b4aa3b22f22892481c, type: 3}
+      propertyPath: m_Name
+      value: RelojRecepcion
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1372ec781f2f8b4aa3b22f22892481c, type: 3}
   m_IsPrefabParent: 0
@@ -3664,6 +3614,39 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a1372ec781f2f8b4aa3b22f22892481c, type: 3}
   m_PrefabInternal: {fileID: 415310747}
+--- !u!1 &415310749 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: a1372ec781f2f8b4aa3b22f22892481c, type: 3}
+  m_PrefabInternal: {fileID: 415310747}
+--- !u!136 &415310750
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415310749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00169992505
+  m_Height: .0136988284
+  m_Direction: 1
+  m_Center: {x: 4.91014216e-05, y: .00699906284, z: -.000310048839}
+--- !u!114 &415310751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415310749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 0}
+  clip: {fileID: 0}
+  clipSonido: {fileID: 0}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
 --- !u!4 &415824778 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 92311040a008fae40a2c0b974308abaa, type: 2}
@@ -3817,7 +3800,8 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: eff40c990f113194683e27f6127980a0, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: eff40c990f113194683e27f6127980a0, type: 3}
   m_IsPrefabParent: 0
 --- !u!4 &466962555 stripped
@@ -7249,6 +7233,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0219999999, y: -.100000001, z: .0212698057}
   m_Center: {x: .000256420695, y: .00369094568, z: 9.53621623e-07}
+--- !u!114 &843232735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843232733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cce899201c037c4daba991c699fca06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: CuadroSalon
+  descripcion: Cuadro Salon
+  interactuable: 2
+  posicion: {x: -3, y: 298.070007, z: 29.4300003}
+  rotacion: {x: 0, y: .606506288, z: 0}
+  suavizado: 2.5
 --- !u!1001 &843723396
 Prefab:
   m_ObjectHideFlags: 0
@@ -7319,7 +7320,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 851993754}
-  - 95: {fileID: 851993755}
   m_Layer: 2
   m_Name: cenefa
   m_TagString: Untagged
@@ -7341,24 +7341,6 @@ Transform:
   - {fileID: 1824604764}
   m_Father: {fileID: 136713628}
   m_RootOrder: 3
---- !u!95 &851993755
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 17a630b85775c0a4aaff2d2cd1703f3c,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851993753}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 17a630b85775c0a4aaff2d2cd1703f3c, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &857512071
 GameObject:
   m_ObjectHideFlags: 0
@@ -7831,7 +7813,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 922682677}
-  - 95: {fileID: 922682678}
   m_Layer: 2
   m_Name: Estanteria1
   m_TagString: Untagged
@@ -7851,24 +7832,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 136713628}
   m_RootOrder: 5
---- !u!95 &922682678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7c8d6ad0ae9f7f7478e1c5206ee3b61e,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 922682676}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7c8d6ad0ae9f7f7478e1c5206ee3b61e, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &935435498
 Prefab:
   m_ObjectHideFlags: 0
@@ -8359,7 +8322,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1020335014}
-  - 95: {fileID: 1020335015}
   m_Layer: 2
   m_Name: Estanteria2
   m_TagString: Untagged
@@ -8379,24 +8341,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 136713628}
   m_RootOrder: 6
---- !u!95 &1020335015
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7c8d6ad0ae9f7f7478e1c5206ee3b61e,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1020335013}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7c8d6ad0ae9f7f7478e1c5206ee3b61e, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1029843711
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,7 +9514,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1272570559}
   - 33: {fileID: 1272570562}
-  - 65: {fileID: 1272570561}
   - 23: {fileID: 1272570560}
   m_Layer: 2
   m_Name: Pared
@@ -9615,18 +9558,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1272570561
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1272570558}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1272570562
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10494,7 +10425,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1364919334}
-  - 95: {fileID: 1364919335}
   m_Layer: 2
   m_Name: mesita
   m_TagString: Untagged
@@ -10515,24 +10445,6 @@ Transform:
   - {fileID: 753482753}
   m_Father: {fileID: 136713628}
   m_RootOrder: 9
---- !u!95 &1364919335
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: d1f11332bac9df249a8bc82e3d7f2bb9,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1364919333}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d1f11332bac9df249a8bc82e3d7f2bb9, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1366075948 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4b28d044293a2e7448b43d77a59d9cf1, type: 2}
@@ -12162,6 +12074,23 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 2e8028178a7866f4f8275801ff67e8a0, type: 3}
   m_PrefabInternal: {fileID: 22611515}
+--- !u!114 &1587172726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1587172724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cce899201c037c4daba991c699fca06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: AmaDeLlaves
+  descripcion: Ama De Llaves
+  interactuable: 18
+  posicion: {x: .400000006, y: 298.799988, z: 5.86000013}
+  rotacion: {x: 0, y: 51.8500214, z: 0}
+  suavizado: 2.5
 --- !u!136 &1587172727
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14087,7 +14016,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: b4e5d918ab52c194b82bf83bc94cdeb0, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: b4e5d918ab52c194b82bf83bc94cdeb0, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &1834307662 stripped
@@ -14555,7 +14485,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1881270950}
-  - 95: {fileID: 1881270951}
   m_Layer: 2
   m_Name: cenefa
   m_TagString: Untagged
@@ -14577,24 +14506,6 @@ Transform:
   - {fileID: 1527461171}
   m_Father: {fileID: 136713628}
   m_RootOrder: 4
---- !u!95 &1881270951
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 17a630b85775c0a4aaff2d2cd1703f3c,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1881270949}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 17a630b85775c0a4aaff2d2cd1703f3c, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1882540405 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f99df1970d4b71441a320ce6acc52709, type: 2}
@@ -15164,7 +15075,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1986600721}
   - 33: {fileID: 1986600724}
-  - 65: {fileID: 1986600723}
   - 23: {fileID: 1986600722}
   m_Layer: 2
   m_Name: Pared
@@ -15209,18 +15119,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1986600723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1986600720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1986600724
 MeshFilter:
   m_ObjectHideFlags: 0
