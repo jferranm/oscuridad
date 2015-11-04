@@ -123,7 +123,7 @@ public class ControladoraGUI
 
 		//Añadimos el objeto a objetos vistos del personaje
 		if(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado != null)
-			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Interactuable);
+			GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddObjetoVisto (GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoOpciones.interactuable);
 	}
 
 	public void Activar_Opciones_Basicas ()

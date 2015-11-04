@@ -35,6 +35,9 @@ public class ControladoraJuego
 	}
 
 	public InteractuableGenerico interactuablePulsado;
+	public ObjetoInteractuableConZoom interactuablePulsadoOpciones;
+	public GameObject interactuablePulsadoGameObject;
+
 	public string camaraActivar;
 
 	#endregion

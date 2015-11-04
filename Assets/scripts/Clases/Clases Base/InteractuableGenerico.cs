@@ -27,30 +27,17 @@ namespace Oscuridad.Clases
             set { nombre = value; }
         }
 
-		private string descripcionNombre;
+		private string descripcion;
 		/// <summary>
-		/// Descripcion del nombre del Interactuable
+		/// Descripcion del Interactuable
 		/// </summary>
 		/// <value>
-		/// string de descripcion del nombre de Interactuable
+		/// string de Descripcion de Interactuable
 		/// </value>
-		public string DescripcionNombre
+		public string Descripcion
 		{
-			get { return descripcionNombre; }
-			set { descripcionNombre = value; }
-		}
-		
-		private Interactuables interactuable;
-		/// <summary>
-		/// Objeto en enumeracion
-		/// </summary>
-		/// <value>
-		/// valor de tipo enumeracion Interactuables
-		/// </value>
-		public Interactuables Interactuable
-		{
-			get { return interactuable; }
-			set { interactuable = value; }
+			get { return descripcion; }
+			set { descripcion = value; }
 		}
 
         private List<OpcionInteractuable> interactuableOpciones;
@@ -103,46 +90,6 @@ namespace Oscuridad.Clases
 		{
 			get { return inicioConversacion; }
 			set { inicioConversacion = value; }
-		}
-
-
-		private Vector3 posicionNueva;
-		/// <summary>
-		/// Posicion de la camara para el zoom
-		/// </summary>
-		/// <value>
-		/// valor tipo Vector3 para posicion en mundo del objeto en zoom
-		/// </value>
-		public Vector3 PosicionNueva
-		{
-			get { return posicionNueva; }
-			set { posicionNueva = value; }
-		}
-
-		private Vector3 rotacionNueva;
-		/// <summary>
-		/// Posicion de rotacion de la camara para el zoom
-		/// </summary>
-		/// <value>
-		/// valor tipo Vector3 para el valor de rotacion de la camara en mundo del objeto en zoom
-		/// </value>
-		public Vector3 RotacionNueva
-		{
-			get { return rotacionNueva; }
-			set { rotacionNueva = value; }
-		}
-
-		private float smooth;
-		/// <summary>
-		/// Suavidad de frenado del zoom
-		/// </summary>
-		/// <value>
-		/// valor tipo float para el calculo del frenado del zoom
-		/// </value>
-		public float Smooth
-		{
-			get { return smooth; }
-			set { smooth = value; }
 		}
 
 		private bool interactuableActivo;

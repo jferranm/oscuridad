@@ -42,7 +42,7 @@ public class TextoInferiorOpciones : MonoBehaviour
 	
 	private void JugadorEnZoomEspera()
 	{
-		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.DescripcionNombre + "\"";
+		textoVentana.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.Inspeccionando + " \"" + GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoOpciones.descripcion + "\"";
 		InteractuableTiradaBase tiradaAux = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.MostrarTiradas().ToList().Find(x => x.Accion);
 
 		if(tiradaAux != null)

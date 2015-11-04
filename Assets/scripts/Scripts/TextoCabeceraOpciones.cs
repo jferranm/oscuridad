@@ -9,6 +9,6 @@ public class TextoCabeceraOpciones : MonoBehaviour
 	void OnEnable()
 	{
 		if (GameCenter.InstanceRef != null) 
-			textoCabecera.text = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.DescripcionNombre.ToUpper();
+			textoCabecera.text = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Descripcion.ToUpper();
 	}
 }

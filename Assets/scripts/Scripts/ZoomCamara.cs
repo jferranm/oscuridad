@@ -57,6 +57,8 @@ public class ZoomCamara : MonoBehaviour
 								if(GameCenter.InstanceRef.controladoraJuego.camaraActiva.ExisteInteractuable(hit.collider.tag.ToString()))
 							   	{
 									GameCenter.InstanceRef.controladoraJuego.interactuablePulsado =  GameCenter.InstanceRef.controladoraJuego.escenaActual.Buscar_Interactuable(hit.collider.tag.ToString());
+									GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoOpciones = hit.collider.gameObject.GetComponent<ObjetoInteractuableConZoom>();
+									GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoGameObject = hit.collider.gameObject;
 									GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoAcertarPulsar);
 									GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enZoomIn;
 								}

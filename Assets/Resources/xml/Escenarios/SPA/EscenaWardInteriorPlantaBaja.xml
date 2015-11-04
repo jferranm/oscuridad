@@ -4,8 +4,7 @@
   <InteractuablesEscena>
     <InteractuableGenerico>
       <Nombre>PeriodicoSalon</Nombre>
-	  <DescripcionNombre>Periodico Salon</DescripcionNombre>
-      <Interactuable>PeriodicoSalon</Interactuable>
+      <Descripcion>Periodico Salon</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Ninguna</OpcionInteractuable>
       </InteractuableOpciones>
@@ -26,24 +25,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-1.39</x>
-        <y>295.73</y>
-        <z>23.99</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>58.1</x>
-        <y>-43.7</y>
-        <z>-2.356033</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>CuadroSalon</Nombre>
-	  <DescripcionNombre>Cuadro Salon</DescripcionNombre>
-      <Interactuable>CuadroSalon</Interactuable>
+      <Descripcion>Cuadro Salon</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -91,24 +78,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-3</x>
-        <y>298.07</y>
-        <z>29.43</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>0.6065063</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>Figura</Nombre>
-	  <DescripcionNombre>Figura</DescripcionNombre>
-      <Interactuable>Figura</Interactuable>
+      <Descripcion>Figura Antigua</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -160,23 +135,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>0.62</x>
-        <y>296.45</y>
-        <z>30.68</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>18.95488</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
 	<InteractuableGenerico>
       <Nombre>AmaDeLlaves</Nombre>
-      <DescripcionNombre>Ama De Llaves</DescripcionNombre>
+      <Descripcion>Ama De Llaves</Descripcion>
 	  <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
 		<OpcionInteractuable>Hablar</OpcionInteractuable>
@@ -1005,17 +969,6 @@
         </RespuestaNPCBase>
       </ConversacionInteractuable>
       <InicioConversacion>1</InicioConversacion>
-      <PosicionNueva>
-        <x>0.4</x>
-        <y>298.8</y>
-        <z>5.86</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>51.85002</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
 	  <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>

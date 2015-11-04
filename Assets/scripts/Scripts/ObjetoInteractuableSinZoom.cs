@@ -13,7 +13,8 @@ public class ObjetoInteractuableSinZoom : MonoBehaviour
 
 	void Start()
 	{
-		clip.legacy = true;
+		if(clip != null)
+			clip.legacy = true;
 	}
 
 	public void Ejecutar_Animacion()
