@@ -1,84 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EscenaBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Escena>EscenaWardExterior</Escena>
-  <InteractuablesEscena>
-    <InteractuableGenerico>
-      <Nombre>Altar</Nombre>
-      <Descripcion>Altar Jardin</Descripcion>
-      <InteractuableOpciones>
-        <OpcionInteractuable>Observar</OpcionInteractuable>
-      </InteractuableOpciones>
-      <TiradasInteractuable>
-        <InteractuableTiradaBase>
-          <TextoDescriptivo>Este altar de piedra parece un pequeño altar, tenia grabados figuras y algun tipo de texto que ahora es irreconocible. En la parte superior hay un pequeño saquillo de piel con restos de pequeños huesos de aves, plumas, piedras de colores y tierra.</TextoDescriptivo>
-          <HabilidadTirada>Ninguna</HabilidadTirada>
-          <Comprobacion>false</Comprobacion>
-          <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
-          <Accion>true</Accion>
-          <LocalizacionAccion />
-		  <AccionesAccion>
-			<Acciones>ExaminarAltar</Acciones>
-		  </AccionesAccion>
-        </InteractuableTiradaBase>
-		<InteractuableTiradaBase>
-          <TextoDescriptivo>Entre el monton de tierra y objetos encuentas una vieja llave de cobre. </TextoDescriptivo>
-          <HabilidadTirada>Fallo</HabilidadTirada>
-          <Comprobacion>false</Comprobacion>
-          <EscenaComprobacion>ninguna</EscenaComprobacion>
-          <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
-          <Accion>true</Accion>
-          <LocalizacionAccion />
-		  <AccionesAccion>
-			<Acciones>EncontrarLlaveAltar</Acciones>
-		  </AccionesAccion>
-        </InteractuableTiradaBase>
-      </TiradasInteractuable>
-	  <ConversacionInteractuable />
-	  <InicionConversacion>-1</InicionConversacion>
-      <InteractuableActivo>true</InteractuableActivo>
-      <InteractuableInspeccionado>false</InteractuableInspeccionado>
-    </InteractuableGenerico>
-  </InteractuablesEscena>
-  <ListaCamaras>
-    <CamaraEscenaBase>
-      <Nombre>CamaraCasa</Nombre>
-      <Escena>WardCasa</Escena>
-      <NombreEscena>Exterior De La Casa</NombreEscena>
-      <Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
-      <EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
-      <EscenaSur>ninguna</EscenaSur>
-      <EscenaEste>CamaraJardin</EscenaEste>
-      <EscenaOeste>ninguna</EscenaOeste>
-      <EscenaHabilitar>Escena10</EscenaHabilitar>
-      <InteractuablesCamara />
-    </CamaraEscenaBase>
-    <CamaraEscenaBase>
-      <Nombre>CamaraJardin</Nombre>
-      <Escena>WardJardin</Escena>
-      <NombreEscena>Jardin</NombreEscena>
-      <Descripcion>El jardin parece poco cuidado, el cesped ha crecido alto cubriendolo todo, a un lado, junto a las rocas hay un pequeño altar de piedra con alguna velas a su alrededor. Desde aqui se puede ver un lado de la fachada de la casa y las ventanas del desvan, que parecen tapiadas con maderos.</Descripcion>
-      <EscenaNorte>ninguna</EscenaNorte>
-      <EscenaSur>ninguna</EscenaSur>
-      <EscenaEste>ninguna</EscenaEste>
-      <EscenaOeste>CamaraCasa</EscenaOeste>
-      <EscenaHabilitar>Escena10</EscenaHabilitar>
-	  <InteractuablesCamara>
-		<Interactuables>Altar</Interactuables>
-	  </InteractuablesCamara>
-    </CamaraEscenaBase>
-  </ListaCamaras>
-  <CamaraInicio>
-    <Nombre>CamaraCasa</Nombre>
-    <Escena>WardCasa</Escena>
-    <NombreEscena>Exterior De La Casa</NombreEscena>
-    <Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
-    <EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
-    <EscenaSur>ninguna</EscenaSur>
-    <EscenaEste>CamaraJardin</EscenaEste>
-    <EscenaOeste>ninguna</EscenaOeste>
-    <EscenaHabilitar />
-	<InteractuablesCamara />
-  </CamaraInicio>
-  <EscenasDeshabilitar />
+	<Escena>EscenaWardExterior</Escena>
+	<InteractuablesEscena>
+		<InteractuableGenerico>
+			<Nombre>Altar</Nombre>
+			<Descripcion>Altar Jardin</Descripcion>
+			<InteractuableOpciones>
+				<OpcionInteractuable>Observar</OpcionInteractuable>
+			</InteractuableOpciones>
+			<TiradasInteractuable>
+				<InteractuableTiradaBase>
+					<TextoDescriptivo>Este altar de piedra parece un pequeño altar, tenia grabados figuras y algun tipo de texto que ahora es irreconocible. En la parte superior hay un pequeño saquillo de piel con restos de pequeños huesos de aves, plumas, piedras de colores y tierra.</TextoDescriptivo>
+					<HabilidadTirada>Ninguna</HabilidadTirada>
+					<Comprobacion>false</Comprobacion>
+					<EscenaComprobacion>ninguna</EscenaComprobacion>
+					<InteractuableComprobacion>Ninguno</InteractuableComprobacion>
+					<Accion>true</Accion>
+					<LocalizacionAccion />
+					<AccionesAccion>
+						<Acciones>ExaminarAltar</Acciones>
+					</AccionesAccion>
+				</InteractuableTiradaBase>
+				<InteractuableTiradaBase>
+					<TextoDescriptivo>Entre el monton de tierra y objetos encuentas una vieja llave de cobre. </TextoDescriptivo>
+					<HabilidadTirada>Fallo</HabilidadTirada>
+					<Comprobacion>false</Comprobacion>
+					<EscenaComprobacion>ninguna</EscenaComprobacion>
+					<InteractuableComprobacion>Ninguno</InteractuableComprobacion>
+					<Accion>true</Accion>
+					<LocalizacionAccion />
+					<AccionesAccion>
+						<Acciones>EncontrarLlaveAltar</Acciones>
+					</AccionesAccion>
+				</InteractuableTiradaBase>
+			</TiradasInteractuable>
+			<ConversacionInteractuable />
+			<InicionConversacion>-1</InicionConversacion>
+			<InteractuableActivo>true</InteractuableActivo>
+			<InteractuableInspeccionado>false</InteractuableInspeccionado>
+		</InteractuableGenerico>
+	</InteractuablesEscena>
+	<ListaCamaras>
+		<CamaraEscenaBase>
+			<Nombre>CamaraCasa</Nombre>
+			<Escena>WardCasa</Escena>
+			<NombreEscena>Exterior De La Casa</NombreEscena>
+			<Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
+			<EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
+			<EscenaSur>ninguna</EscenaSur>
+			<EscenaEste>CamaraJardin</EscenaEste>
+			<EscenaOeste>ninguna</EscenaOeste>
+			<EscenaHabilitar>Escena10</EscenaHabilitar>
+			<InteractuablesCamara />
+		</CamaraEscenaBase>
+		<CamaraEscenaBase>
+			<Nombre>CamaraJardin</Nombre>
+			<Escena>WardJardin</Escena>
+			<NombreEscena>Jardin</NombreEscena>
+			<Descripcion>El jardin parece poco cuidado, el cesped ha crecido alto cubriendolo todo, a un lado, junto a las rocas hay un pequeño altar de piedra con alguna velas a su alrededor. Desde aqui se puede ver un lado de la fachada de la casa y las ventanas del desvan, que parecen tapiadas con maderos.</Descripcion>
+			<EscenaNorte>ninguna</EscenaNorte>
+			<EscenaSur>ninguna</EscenaSur>
+			<EscenaEste>ninguna</EscenaEste>
+			<EscenaOeste>CamaraCasa</EscenaOeste>
+			<EscenaHabilitar>Escena10</EscenaHabilitar>
+			<InteractuablesCamara>
+				<Interactuables>Altar</Interactuables>
+			</InteractuablesCamara>
+		</CamaraEscenaBase>
+	</ListaCamaras>
+	<CamaraInicio>
+		<Nombre>CamaraCasa</Nombre>
+		<Escena>WardCasa</Escena>
+		<NombreEscena>Exterior De La Casa</NombreEscena>
+		<Descripcion>Es una casa grande y elegante de dos pisos mas el desván. A la izquierda hay una pequeña entrada al jardin privado de la casa.</Descripcion>
+		<EscenaNorte>EscenaWardInteriorPlantaBaja</EscenaNorte>
+		<EscenaSur>ninguna</EscenaSur>
+		<EscenaEste>CamaraJardin</EscenaEste>
+		<EscenaOeste>ninguna</EscenaOeste>
+		<EscenaHabilitar />
+		<InteractuablesCamara />
+	</CamaraInicio>
+	<EscenasDeshabilitar />
 </EscenaBase>

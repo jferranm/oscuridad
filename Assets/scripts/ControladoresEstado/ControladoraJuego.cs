@@ -474,85 +474,79 @@ public class ControladoraJuego
 
 	public void EjecutarAccion(GameObject objetoSinZoom)
 	{
-		if (objetoSinZoom.name.Contains ("Candle")) 
+		switch (objetoSinZoom.name) 
 		{
-			ParticleSystem flame = objetoSinZoom.GetComponentInChildren<ParticleSystem>();
-			if(flame.isPlaying)
+			//Objetos con animacion
+			case "BotellaSalon":
+			case "CuadroPasillo":
 			{
-				GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoApagarVela);
-				flame.Stop();
-			}
-			else
-			{
-				flame.Play();
-				GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoEncenderVela);
+				objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
+				break;
 			}
 
-			Light luz = objetoSinZoom.GetComponentInChildren<Light>();
-			luz.intensity = luz.intensity < 1 ? 1f : 0f;
-
-			return;
-		}
-
-		if (objetoSinZoom.name.Contains ("Fuego")) 
-		{
-			ParticleSystem flame = objetoSinZoom.GetComponentInChildren<ParticleSystem>();
-			AudioSource audio = objetoSinZoom.GetComponentInChildren<AudioSource>();
-			if(flame.isPlaying)
+			//Objetos con animacion y posicionamiento final
+			case "LibroSalon":
+			case "Maceta":
+			case "FotoHabitacionPadres":
+			case "CajaDesvan":
 			{
-				flame.Stop();
-				audio.Pause();
-			}
-			else
-			{
-				flame.Play();
-				GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoEncenderVela);
-				audio.Play();
+				if(escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion)
+				{
+					objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
+					escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
+				}
+				break;
 			}
 
-			Light luz = objetoSinZoom.GetComponentInChildren<Light>();
-			luz.intensity = luz.intensity < 1.5 ? 1.5f : 0f;
+			//Objetos con sonido
+			case "RelojRecepcion":
+			{
+				objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Lanzar_Sonido();
+				break;
+			}
 
-			return;
-		}
+			//Objetos con opciones varias
+			case "Vela":
+			{
+				ParticleSystem flame = objetoSinZoom.GetComponentInChildren<ParticleSystem>();
+				if(flame.isPlaying)
+				{
+					GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoApagarVela);
+					flame.Stop();
+				}
+				else
+				{
+					flame.Play();
+					GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoEncenderVela);
+				}
+				
+				Light luz = objetoSinZoom.GetComponentInChildren<Light>();
+				luz.intensity = luz.intensity < 1 ? 1f : 0f;
+				
+				break;
+			}
 
-		if (objetoSinZoom.name.Contains ("BotellaSalon")) 
-		{
-			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
-			return;
-		}
-
-		if (objetoSinZoom.name.Contains ("LibroSalon") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
-		{
-			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
-			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
-			return;
-		}
-
-		if (objetoSinZoom.name.Contains ("Maceta") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
-		{
-			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
-			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
-			return;
-		}
-
-		if (objetoSinZoom.name.Contains ("CuadroPasillo")) 
-		{
-			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
-			return;
-		}
-
-		if (objetoSinZoom.name.Contains ("FotoHabitacionPadres") && escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion) 
-		{
-			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Ejecutar_Animacion();
-			escenaActual.Buscar_InteractuableSinZoom(objetoSinZoom.name).EjecutarAnimacion = false;
-			return;
-		}
-
-		if (objetoSinZoom.name.Contains ("RelojRecibidor")) 
-		{
-			objetoSinZoom.GetComponent<ObjetoInteractuableSinZoom>().Lanzar_Sonido();
-			return;
+			case "Fuego":
+			{
+				ParticleSystem flame = objetoSinZoom.GetComponentInChildren<ParticleSystem>();
+				AudioSource audio = objetoSinZoom.GetComponentInChildren<AudioSource>();
+				if(flame.isPlaying)
+				{
+					flame.Stop();
+					audio.Pause();
+				}
+				else
+				{
+					flame.Play();
+					GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(GameCenter.InstanceRef.controladoraSonidos.sonidoEncenderVela);
+					audio.Play();
+				}
+				
+				Light luz = objetoSinZoom.GetComponentInChildren<Light>();
+				luz.intensity = luz.intensity < 1.5 ? 1.5f : 0f;
+				
+				break;
+			}
 		}
 	}
 

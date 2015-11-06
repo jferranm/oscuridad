@@ -330,13 +330,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Name
-      value: Candle_8
+      value: Vela
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &229258343
@@ -508,13 +509,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Name
-      value: Candle_6
+      value: Vela
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &350207314
@@ -711,6 +713,38 @@ Transform:
   - {fileID: 1644194339}
   m_Father: {fileID: 116566647}
   m_RootOrder: 0
+--- !u!1 &412591920 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+  m_PrefabInternal: {fileID: 961272701}
+--- !u!65 &412591921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412591920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00568414, y: 1.24815655, z: .870963156}
+  m_Center: {x: 0, y: 0, z: 3.81469727e-06}
+--- !u!114 &412591922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412591920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 0}
+  clip: {fileID: 0}
+  clipSonido: {fileID: 8300000, guid: cc1d665ee8be1c4438d03089eea5c4b1, type: 3}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
 --- !u!1001 &489266353
 Prefab:
   m_ObjectHideFlags: 0
@@ -1135,6 +1169,38 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 43202a31bd1113061100b7a844295342, type: 3}
   m_PrefabInternal: {fileID: 2070150820}
+--- !u!1 &840490866 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+  m_PrefabInternal: {fileID: 342372746}
+--- !u!65 &840490867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840490866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00568402, y: 1.24815655, z: .870962977}
+  m_Center: {x: 0, y: 0, z: 3.81469727e-06}
+--- !u!114 &840490868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840490866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 0}
+  clip: {fileID: 0}
+  clipSonido: {fileID: 8300000, guid: cc1d665ee8be1c4438d03089eea5c4b1, type: 3}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
 --- !u!4 &840897603 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
@@ -1411,13 +1477,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Name
-      value: Candle_7
+      value: Vela
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &963033947 stripped
@@ -1570,10 +1637,74 @@ Light:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 8d302a31bd1113061100b7a844295342, type: 3}
   m_PrefabInternal: {fileID: 1937779421}
+--- !u!1 &1017677365 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+  m_PrefabInternal: {fileID: 211168764}
+--- !u!65 &1017677366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017677365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00568426, y: 1.24815655, z: .870963275}
+  m_Center: {x: 3.81469727e-06, y: -3.57627869e-07, z: 0}
+--- !u!114 &1017677367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017677365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 0}
+  clip: {fileID: 0}
+  clipSonido: {fileID: 8300000, guid: cc1d665ee8be1c4438d03089eea5c4b1, type: 3}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
 --- !u!4 &1082271889 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 43202a31bd1113061100b7a844295342, type: 3}
   m_PrefabInternal: {fileID: 164095447}
+--- !u!1 &1146693595 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+  m_PrefabInternal: {fileID: 1655406174}
+--- !u!114 &1146693596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1146693595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 0}
+  clip: {fileID: 0}
+  clipSonido: {fileID: 8300000, guid: cc1d665ee8be1c4438d03089eea5c4b1, type: 3}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
+--- !u!65 &1146693597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1146693595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0056839, y: 1.24815655, z: .870962858}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1152900725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,7 +2406,16 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+      propertyPath: m_Name
+      value: Vela
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1658538041
@@ -2717,11 +2857,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Altar
-  descripcion: Altar Jardin
   interactuable: 17
   posicion: {x: 20.7420006, y: 5.75299978, z: -4.00600004}
   rotacion: {x: 37.6128197, y: 140.492905, z: 0}
   suavizado: 2.5
+--- !u!1 &1875117803 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
+  m_PrefabInternal: {fileID: 2061380698}
+--- !u!65 &1875117804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875117803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00568402, y: 1.24815655, z: .870962858}
+  m_Center: {x: 0, y: 2.38418579e-07, z: 0}
+--- !u!114 &1875117805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875117803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 0}
+  clip: {fileID: 0}
+  clipSonido: {fileID: 8300000, guid: cc1d665ee8be1c4438d03089eea5c4b1, type: 3}
+  posicion: {x: 0, y: 0, z: 0}
+  rotacion: {x: 0, y: 0, z: 0}
 --- !u!4 &1925688358 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7471a6814a9ff2248a880231d7167249, type: 3}
@@ -3068,13 +3239,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Name
-      value: Candle_3
+      value: Vela
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9b38e515bf58e384e983386ff62f647b, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2067098257 stripped

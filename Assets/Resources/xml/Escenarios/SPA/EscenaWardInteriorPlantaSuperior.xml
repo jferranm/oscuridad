@@ -4,8 +4,7 @@
   <InteractuablesEscena>
     <InteractuableGenerico>
       <Nombre>CuadrosPrimeraPlanta1</Nombre>
-	  <DescripcionNombre>Cuadros</DescripcionNombre>
-      <Interactuable>CuadrosPrimeraPlanta1</Interactuable>
+      <Descripcion>Cuadros</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Ninguna</OpcionInteractuable>
       </InteractuableOpciones>
@@ -23,24 +22,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-7.1</x>
-        <y>311.6</y>
-        <z>8.77</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>CuadrosPrimeraPlanta2</Nombre>
-	  <DescripcionNombre>Cuadro</DescripcionNombre>
-	  <Interactuable>CuadrosPrimeraPlanta2</Interactuable>
+      <Descripcion>Cuadro</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -53,7 +40,7 @@
           <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-		  <AccionesAccion />
+	  <AccionesAccion />
         </InteractuableTiradaBase>
         <InteractuableTiradaBase>
           <TextoDescriptivo>Reconoces el jardin de la casa en uno de los cuadros, pero no aparece el extraño monticulo de piedra que has visto hace un rato alli.</TextoDescriptivo>
@@ -63,29 +50,17 @@
           <InteractuableComprobacion>Ninguno</InteractuableComprobacion>
           <Accion>false</Accion>
           <LocalizacionAccion />
-		  <AccionesAccion />
+	  <AccionesAccion />
         </InteractuableTiradaBase>
       </TiradasInteractuable>
-	  <ConversacionInteractuable />
-	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-13.97</x>
-        <y>311.459</y>
-        <z>9.073</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
+      <ConversacionInteractuable />
+      <InicionConversacion>-1</InicionConversacion>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>PeriodicosHabitacionCharles</Nombre>
-	  <DescripcionNombre>Pila de Periodicos</DescripcionNombre>
-	  <Interactuable>PeriodicosHabitacionCharles</Interactuable>
+      <Descripcion>Pila de Periodicos</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -113,24 +88,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-16.97</x>
-        <y>307.92</y>
-        <z>18.01</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>57.44051</x>
-        <y>-180</y>
-        <z>-360</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>LibrosHabitacionCharles</Nombre>
-	  <DescripcionNombre>Libros</DescripcionNombre>
-	  <Interactuable>LibrosHabitacionCharles</Interactuable>
+      <Descripcion>Libros</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Ninguna</OpcionInteractuable>
       </InteractuableOpciones>
@@ -148,24 +111,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-17.0</x>
-        <y>309.57</y>
-        <z>20.4</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>20.58954</x>
-        <y>-120.1132</y>
-        <z>6.678711</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>FotosFamiliares</Nombre>
-	  <DescripcionNombre>Fotos Familiares</DescripcionNombre>
-	  <Interactuable>FotosFamiliares</Interactuable>
+      <Descripcion>Fotos Familiares</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -193,24 +144,12 @@
       </TiradasInteractuable>
 	   <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-2.936</x>
-        <y>312.148</y>
-        <z>-3.397</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>16.34427</x>
-        <y>274.2568</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>Puerta</Nombre>
-	  <Interactuable>Puerta</Interactuable>
-      <DescripcionNombre>Cierre de Puerta</DescripcionNombre>
+      <Descripcion>Cierre de Puerta</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -252,24 +191,12 @@
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
       </TiradasInteractuable>
-      <PosicionNueva>
-        <x>-15.38</x>
-        <y>309.88</y>
-        <z>-10.54</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>-180</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
       <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>Pala</Nombre>
-	  <DescripcionNombre>Pala</DescripcionNombre>
-	  <Interactuable>Pala</Interactuable>
+      <Descripcion>Pala</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Coger</OpcionInteractuable>
       </InteractuableOpciones>
@@ -287,24 +214,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-18.33</x>
-        <y>308.868</y>
-        <z>-18.806</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>33.52344</x>
-        <y>183.0002</y>
-        <z>2.171661</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>CuadroDesvan</Nombre>
-	  <DescripcionNombre>Cuadro</DescripcionNombre>
-	  <Interactuable>CuadroDesvan</Interactuable>
+      <Descripcion>Cuadro</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Coger</OpcionInteractuable>
         <OpcionInteractuable>Observar</OpcionInteractuable>
@@ -343,24 +258,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-13.2</x>
-        <y>309.5</y>
-        <z>-20.98</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>33.2</x>
-        <y>-222.1</y>
-        <z>2.6</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>LibrosDesvan</Nombre>
-	  <Interactuable>LibrosDesvan</Interactuable>
-      <DescripcionNombre>Libros</DescripcionNombre>
+      <Descripcion>Libros</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Ninguna</OpcionInteractuable>
       </InteractuableOpciones>
@@ -378,24 +281,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-14.1</x>
-        <y>307.62</y>
-        <z>-21.2</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>26.36841</x>
-        <y>-179.5187</y>
-        <z>-0.08934021</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>LibroMesa</Nombre>
-      <DescripcionNombre>Libro sobre la mesa</DescripcionNombre>
-	  <Interactuable>LibroMesa</Interactuable>
+      <Descripcion>Libro sobre la mesa</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -435,26 +326,13 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-8.85</x>
-        <y>309.42</y>
-        <z>-18.9</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>52.06859</x>
-        <y>-180</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>CirculoInvocacion</Nombre>
-      <DescripcionNombre>Circulo de Invocacion</DescripcionNombre>
-	  <Interactuable>CirculoInvocacion</Interactuable>
+      <Descripcion>Circulo de Invocacion</Descripcion>
       <InteractuableOpciones>
-        <OpcionInteractuable>Coger</OpcionInteractuable>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
       <TiradasInteractuable>
@@ -491,24 +369,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-14.08</x>
-        <y>310.68</y>
-        <z>-15.339</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>59.4</x>
-        <y>-180</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>RecipientesAlquimia</Nombre>
-	  <DescripcionNombre>Recipientes de Alquimia</DescripcionNombre>
-	  <Interactuable>RecipientesAlquimia</Interactuable>
+      <Descripcion>Recipientes de Alquimia</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -546,24 +412,12 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-9.25</x>
-        <y>310.02</y>
-        <z>-19.46</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>30.36632</x>
-        <y>-250.2294</y>
-        <z>0.008621216</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
     <InteractuableGenerico>
       <Nombre>HojasPared</Nombre>
-	  <Interactuable>HojasPared</Interactuable>
-      <DescripcionNombre>Hojas en la pared</DescripcionNombre>
+      <Descripcion>Hojas en la pared</Descripcion>
       <InteractuableOpciones>
         <OpcionInteractuable>Observar</OpcionInteractuable>
       </InteractuableOpciones>
@@ -611,17 +465,6 @@
       </TiradasInteractuable>
 	  <ConversacionInteractuable />
 	  <InicionConversacion>-1</InicionConversacion>
-      <PosicionNueva>
-        <x>-6.89</x>
-        <y>310.56</y>
-        <z>-18.38</z>
-      </PosicionNueva>
-      <RotacionNueva>
-        <x>0</x>
-        <y>-180</y>
-        <z>0</z>
-      </RotacionNueva>
-      <Smooth>2.5</Smooth>
       <InteractuableActivo>true</InteractuableActivo>
 	  <InteractuableInspeccionado>false</InteractuableInspeccionado>
     </InteractuableGenerico>
@@ -637,6 +480,10 @@
 	</InteractuableSinZoomGenerico>
 	<InteractuableSinZoomGenerico>
 		<Nombre>FotoHabitacionPadres</Nombre>
+		<EjecutarAnimacion>true</EjecutarAnimacion>
+	</InteractuableSinZoomGenerico>
+	<InteractuableSinZoomGenerico>
+		<Nombre>CajaDesvan</Nombre>
 		<EjecutarAnimacion>true</EjecutarAnimacion>
 	</InteractuableSinZoomGenerico>
   </InteractuablesSinZoomEscena>
