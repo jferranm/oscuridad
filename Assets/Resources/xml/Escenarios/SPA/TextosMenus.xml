@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextosMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Titulo>Solo Contra La Oscuridad</Titulo>
   <BtComenzar>Comenzar</BtComenzar>
   <BtContinuar>Continuar</BtContinuar>
   <BtOpciones>Opciones</BtOpciones>
@@ -14,4 +15,10 @@
   <LocalizacionDescubierta>Nueva localizacion descubierta:</LocalizacionDescubierta>
   <Inspeccionando>Inspeccionando</Inspeccionando>
   <ObjetoInventario>Ahora esta en el Inventario</ObjetoInventario>
+  <BtMarlaWibbs>Marla es una periodista que trabaja para el Arkham Advertiser, el periódico local de Arkham. Empezó escribiendo pequeños artículos sobre sociedad en las ultimas paginas del periódico, pero pronto su ímpetu por la aventura, la búsqueda de la noticia mas extraña y sus ganas de recorrer la ciudad la llevaron a encargarse de la columna de sucesos del periódico. ha trabajado en alguno de los casos mas raros ocurridos en la ciudad y sus alrededores, y ha podido ver cosas que pondrían a prueba la cordura de cualquiera, aún así no cambiaría su trabajo por nada.
+  Ahora la familia Ward, viejos conocidos desde hace años, le han pedido ayuda para investigar la desaparición de Charles Dexter Ward, y por supuesto ha aceptado sin pensárselo, quien sabe, tal vez consiga una buena historia para publicar.</BtMarlaWibbs>
+  <BtRobertDuncan>Robert trabajo durante muchos años en la policía de Boston, realizando una excelente labor reconocida por sus superiores, pero decidió dar un cambio a su vida cuando desde la Agencia de Detectives Pinkerton le propusieron formar parte del equipo. Entro como detective, lo que le dio la oportunidad de viajar a lo largo y ancho del país realizando su trabajo, y se ha encargado de resolver con éxito todos los trabajos a los que se ha enfrentado. 
+  Su caso actual es un petición de búsqueda de Charles Dexter Ward, el hijo de una familia acomodada de Arkham, desaparecido recientemente.</BtRobertDuncan>
+  <BtWarrenBedford>Warren ha trabajado durante prácticamente toda su vida como profesor de Historia en la Universidad de Arkham, aficionado desde muy pequeño a la historia una vez finalizado sus estudios en la Universidad fue contratado como profesor en la misma. Ha añadido a su curriculum varios libros sobre la historia americana, y algunos estudios sobre Arqueología, lo que le ha llevado a ser ligeramente conocido en los círculos más eruditos.
+  Fue profesor de Historia de Charles Dexter Ward durante algún año. Cuando se entero de su desaparición se ofreció a intentar averiguar que le había ocurrido, ya que las pesquisas de la policía no estaban llegando a ningún lado y le unía un lazo de amistad con los padres de Charles.</BtWarrenBedford>
 </TextosMenus>

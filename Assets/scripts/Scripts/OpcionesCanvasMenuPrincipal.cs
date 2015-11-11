@@ -13,6 +13,7 @@ public class OpcionesCanvasMenuPrincipal : MonoBehaviour
 	public Text botonMusica;
 	public Text botonSonido;
 	public Text botonIdioma;
+	public Text descripcionPersonaje;
 
 	public GameObject escena0;
 	public GameObject escena1;

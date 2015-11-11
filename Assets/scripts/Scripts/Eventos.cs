@@ -7,6 +7,13 @@ using Oscuridad.Enumeraciones;
 
 public class Eventos : MonoBehaviour 
 {
+	private OpcionesCanvasMenuPrincipal opciones;
+
+	void Start()
+	{
+		opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
+	}
+
 	#region MENU PRINCIPAL
 
 	public bool toggleMusica
@@ -29,10 +36,11 @@ public class Eventos : MonoBehaviour
 		set { AjustarVolumenSonido(value); }
 	}
 
+	public Text descripcionPersonaje;
+
 	public void BotonComenzar()
 	{
 		string archivoJugador = Path.Combine (GameCenter.InstanceRef.USERPATH, "Jugador.xml");
-		OpcionesCanvasMenuPrincipal opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
 
 		if (File.Exists (archivoJugador)) 
 		{
@@ -66,9 +74,12 @@ public class Eventos : MonoBehaviour
 		opciones.escena2.SetActive (false);
 	}
 
-	public void BotonPersonaje(string nombrePersonaje)
+	public void BotonPersonaje(Button boton)
 	{
-		switch (nombrePersonaje) 
+		boton.transform.parent.GetComponent<OpcionesEscena1> ().SeleccionarPersonaje (boton.name);
+		opciones.descripcionPersonaje.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(boton.name);
+
+		/*switch (botonSeleccionado.name) 
 		{
 			case "Marla":
 				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.MarlaGibbs);
@@ -83,7 +94,7 @@ public class Eventos : MonoBehaviour
 				break;
 		}
 
-		GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
+		GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();*/
 	}
 
 	public void BotonSalir()

@@ -109,6 +109,27 @@ namespace Oscuridad.Clases
 			set { objetoInventario = value; }
 		}
 
+		private string btMarlaWibbs;
+		public string BtMarlaWibbs
+		{
+			get { return btMarlaWibbs;	}
+			set { btMarlaWibbs = value; }
+		}
+
+		private string btRobertDuncan;
+		public string BtRobertDuncan
+		{
+			get { return btRobertDuncan;	}
+			set { btRobertDuncan = value; }
+		}
+
+		private string btWarrenBedford;
+		public string BtWarrenBedford
+		{
+			get { return btWarrenBedford;	}
+			set { btWarrenBedford = value; }
+		}
+
 		/// <summary>
 		/// Constructor de la clase <see cref="TextosMenus"/>.
 		/// </summary>
@@ -122,6 +143,9 @@ namespace Oscuridad.Clases
 			ToggleSonido = string.Empty;
 			ToggleMusica = string.Empty;
 			BtIdioma = string.Empty;
+			BtMarlaWibbs = string.Empty;
+			BtRobertDuncan = string.Empty;
+			BtWarrenBedford = string.Empty;
 		}
 
 		public string DevolverTexto(string nombreControl)
@@ -145,6 +169,12 @@ namespace Oscuridad.Clases
 			case "toggleMusica": 	textoReturn = ToggleMusica.ToUpper();
 									break;
 			case "btIdioma": 		textoReturn = BtIdioma.ToUpper();
+									break;
+			case "btMarlaWibbs":    textoReturn = BtMarlaWibbs;
+									break;
+			case "btRobertDuncan":  textoReturn = BtRobertDuncan;
+									break;
+			case "btWarrenBedford": textoReturn = BtWarrenBedford;
 									break;
 			}
 			

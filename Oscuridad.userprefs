@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Clases\Clases Base\EscenaBase.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\OpcionesTextoPersonaje.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\ObjetoInteractuableConZoom.cs" Line="8" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="433" Column="1" />
-      <File FileName="Assets\Resources\xml\Escenarios\SPA\EscenaWardInteriorPlantaSuperior.xml" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Clases\Clases Base\EscenaBase.cs" Line="146" Column="1" />
+      <File FileName="Assets\Resources\xml\Escenarios\SPA\TextosMenus.xml" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Clases\Clases Base\TextosMenus.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PanelPreguntasOpciones.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\OpcionesEscena1.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\OpcionesTextoPersonaje.cs" Line="28" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
