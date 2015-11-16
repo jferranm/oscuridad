@@ -5,8 +5,7 @@ public class OpcionesTextoPersonaje : MonoBehaviour
 {
 	public RectTransform scrollRectTransform;
 	public RectTransform rectPanel;
-	public float y;
-	
+
 	void OnEnable()
 	{
 		Posicion_Inicial_Caja ();
