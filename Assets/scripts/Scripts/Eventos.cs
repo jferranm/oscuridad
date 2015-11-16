@@ -76,25 +76,8 @@ public class Eventos : MonoBehaviour
 
 	public void BotonPersonaje(Button boton)
 	{
-		boton.transform.parent.GetComponent<OpcionesEscena1> ().SeleccionarPersonaje (boton.name);
-		opciones.descripcionPersonaje.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto(boton.name);
-
-		/*switch (botonSeleccionado.name) 
-		{
-			case "Marla":
-				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.MarlaGibbs);
-				break;
-
-			case "Robert":
-				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.RobertDuncan);
-				break;
-
-			case "Warren":
-				GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.WarrenBedford);
-				break;
-		}
-
-		GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();*/
+		boton.transform.parent.GetComponent<OpcionesEscena1> ().SeleccionarPersonaje (boton);
+		opciones.descripcionPersonaje.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("bt" + boton.name);
 	}
 
 	public void BotonSalir()

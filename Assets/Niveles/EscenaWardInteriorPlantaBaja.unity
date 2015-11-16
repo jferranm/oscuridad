@@ -1029,7 +1029,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: PeriodicoSalon
-  descripcion: Periodico Salon
   interactuable: 1
   posicion: {x: -1.38999999, y: 295.730011, z: 23.9899998}
   rotacion: {x: 58.0999985, y: -43.7000008, z: -2.35603309}
@@ -1651,7 +1650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Figura
-  descripcion: Figura
   interactuable: 3
   posicion: {x: .620000005, y: 296.450012, z: 30.6800003}
   rotacion: {x: 0, y: 18.9548798, z: 0}
@@ -1701,7 +1699,7 @@ Transform:
   m_LocalScale: {x: 4.53665257, y: 15.1400738, z: 4.5366497}
   m_Children: []
   m_Father: {fileID: 943449258}
-  m_RootOrder: 17
+  m_RootOrder: 15
 --- !u!23 &168509718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2197,7 +2195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &242375061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3047,7 +3045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 943449258}
-  m_RootOrder: 25
+  m_RootOrder: 23
 --- !u!108 &371842335
 Light:
   m_ObjectHideFlags: 0
@@ -3745,6 +3743,60 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9f804422f1a3e144182cbfca98822386, type: 2}
   m_PrefabInternal: {fileID: 14674881}
+--- !u!1001 &444451574
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.21000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 292.859985
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.68000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -.821592152
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: .57007581
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.07950687
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.0795064
+      objectReference: {fileID: 0}
+    - target: {fileID: 400128, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.0795064
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4f820a6524bf7844cb273ae2f52b987e, type: 3}
+  m_IsPrefabParent: 0
 --- !u!4 &452893165 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c3980d04b8cb7814689ba1bd2b661b86, type: 3}
@@ -6436,7 +6488,7 @@ Transform:
   m_Children:
   - {fileID: 136713628}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &774059243
 Prefab:
   m_ObjectHideFlags: 0
@@ -7273,7 +7325,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: CuadroSalon
-  descripcion: Cuadro Salon
   interactuable: 2
   posicion: {x: -3, y: 298.070007, z: 29.4300003}
   rotacion: {x: 0, y: .606506288, z: 0}
@@ -7947,28 +7998,28 @@ Transform:
   - {fileID: 1509196385}
   - {fileID: 1145718489}
   - {fileID: 1419588017}
-  - {fileID: 840657683}
   - {fileID: 1875840859}
+  - {fileID: 840657683}
   - {fileID: 1625410144}
-  - {fileID: 579838839}
   - {fileID: 1061290481}
+  - {fileID: 579838839}
+  - {fileID: 1965481296}
   - {fileID: 1352084214}
   - {fileID: 1282612598}
   - {fileID: 1669986893}
-  - {fileID: 1965481296}
   - {fileID: 2079867866}
   - {fileID: 1707203103}
+  - {fileID: 168509717}
   - {fileID: 506898426}
   - {fileID: 1695872251}
-  - {fileID: 168509717}
+  - {fileID: 1640095928}
   - {fileID: 573358374}
   - {fileID: 1114025703}
-  - {fileID: 1640095928}
   - {fileID: 162717669}
   - {fileID: 630852508}
+  - {fileID: 371842334}
   - {fileID: 1335281164}
   - {fileID: 1179442514}
-  - {fileID: 371842334}
   - {fileID: 1212011443}
   - {fileID: 1431478753}
   - {fileID: 1154743884}
@@ -8606,7 +8657,7 @@ Transform:
   m_Children:
   - {fileID: 1455471534}
   m_Father: {fileID: 943449258}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!95 &1061290482
 Animator:
   serializedVersion: 3
@@ -12114,7 +12165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: AmaDeLlaves
-  descripcion: Ama De Llaves
   interactuable: 18
   posicion: {x: .400000006, y: 298.799988, z: 5.86000013}
   rotacion: {x: 0, y: 51.8500214, z: 0}
@@ -12472,7 +12522,7 @@ Transform:
   m_LocalScale: {x: 61.4156799, y: 61.4156952, z: 61.4156952}
   m_Children: []
   m_Father: {fileID: 943449258}
-  m_RootOrder: 20
+  m_RootOrder: 18
 --- !u!1001 &1641127009
 Prefab:
   m_ObjectHideFlags: 0
@@ -12990,7 +13040,7 @@ Transform:
   m_Children:
   - {fileID: 943449258}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1721183099
 Prefab:
   m_ObjectHideFlags: 0
@@ -13257,7 +13307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: .85743314}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1750839822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14461,7 +14511,7 @@ Transform:
   m_LocalScale: {x: 2.97499824, y: 1, z: 2.08369136}
   m_Children: []
   m_Father: {fileID: 943449258}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!23 &1875840860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14875,7 +14925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 943449258}
-  m_RootOrder: 12
+  m_RootOrder: 9
 --- !u!108 &1965481297
 Light:
   m_ObjectHideFlags: 0

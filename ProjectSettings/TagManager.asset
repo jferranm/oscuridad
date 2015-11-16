@@ -29,6 +29,8 @@ TagManager:
   - Altar
   - Pala
   - FotosFamiliares
+  - Deseleccionado
+  - Seleccionado
   layers:
   - Default
   - TransparentFX

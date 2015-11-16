@@ -83,7 +83,7 @@ public class ControladoraJuego
 	{
 		switch (personaje) 
 		{
-			case Personaje.MarlaGibbs:
+			case Personaje.MarlaWibbs:
 			{
 				jugadorActual.DatosPersonalesJugador.Nombre = "Marla Gibbs";
 				jugadorActual.DatosPersonalesJugador.Profesion = "Periodista";
@@ -608,6 +608,20 @@ public class ControladoraJuego
 		GUIStyle miEstilo = new GUIStyle ();
 		miEstilo.fontSize = sizeFuente;
 		return miEstilo.CalcSize(new GUIContent(texto)).x;
+	}
+
+	public IEnumerator Mover2D(RectTransform objeto, Vector2 destino, float suavizado)
+	{
+		while (true)
+		{
+			suavizado += Time.deltaTime;
+			objeto.localPosition = Vector2.Lerp(objeto.localPosition, destino, suavizado);
+
+			if ((objeto.localPosition.x == destino.x) && (objeto.localPosition.y == destino.y))
+				yield break;
+
+			yield return null;
+		}
 	}
 
 	#endregion

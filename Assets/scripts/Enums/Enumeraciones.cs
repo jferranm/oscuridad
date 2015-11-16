@@ -151,7 +151,7 @@
     public enum Personaje : int
     {
         RobertDuncan,
-        MarlaGibbs,
+        MarlaWibbs,
         WarrenBedford
     }
 

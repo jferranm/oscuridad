@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 4f820a6524bf7844cb273ae2f52b987e
+timeCreated: 1447359849
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: barbucha
+    100002: Bip001
+    100004: Bip001 Head
+    100006: Bip001 L Calf
+    100008: Bip001 L Clavicle
+    100010: Bip001 L Finger0
+    100012: Bip001 L Finger01
+    100014: Bip001 L Finger02
+    100016: Bip001 L Finger1
+    100018: Bip001 L Finger11
+    100020: Bip001 L Finger12
+    100022: Bip001 L Finger2
+    100024: Bip001 L Finger21
+    100026: Bip001 L Finger22
+    100028: Bip001 L Finger3
+    100030: Bip001 L Finger31
+    100032: Bip001 L Finger32
+    100034: Bip001 L Finger4
+    100036: Bip001 L Finger41
+    100038: Bip001 L Finger42
+    100040: Bip001 L Foot
+    100042: Bip001 L Forearm
+    100044: Bip001 L Hand
+    100046: Bip001 L Thigh
+    100048: Bip001 L Toe0
+    100050: Bip001 L UpperArm
+    100052: Bip001 Neck
+    100054: Bip001 Pelvis
+    100056: Bip001 R Calf
+    100058: Bip001 R Clavicle
+    100060: Bip001 R Finger0
+    100062: Bip001 R Finger01
+    100064: Bip001 R Finger02
+    100066: Bip001 R Finger1
+    100068: Bip001 R Finger11
+    100070: Bip001 R Finger12
+    100072: Bip001 R Finger2
+    100074: Bip001 R Finger21
+    100076: Bip001 R Finger22
+    100078: Bip001 R Finger3
+    100080: Bip001 R Finger31
+    100082: Bip001 R Finger32
+    100084: Bip001 R Finger4
+    100086: Bip001 R Finger41
+    100088: Bip001 R Finger42
+    100090: Bip001 R Foot
+    100092: Bip001 R Forearm
+    100094: Bip001 R Hand
+    100096: Bip001 R Thigh
+    100098: Bip001 R Toe0
+    100100: Bip001 R UpperArm
+    100102: Bip001 Spine
+    100104: Bip001 Spine1
+    100106: Bip001 Spine2
+    100108: Bip001 Spine3
+    100110: Bone001
+    100112: Bone002
+    100114: Bone003ojolR
+    100116: Bone004
+    100118: Bone005
+    100120: BoneOJOL
+    100122: Dummy002
+    100124: Dummy003
+    100126: Dummy004
+    100128: //RootNode
+    100130: geta
+    100132: gorra
+    100134: HOMBRE
+    100136: muela
+    100138: ojo der
+    100140: OJO IZQ
+    100142: Pala
+    100144: pala_metal
+    100146: Pala_palo
+    100148: pelaz003
+    100150: pelaz004
+    100152: pelaz005
+    100154: pelaz006
+    100156: pelaz007
+    100158: pelaz008
+    100160: pelaz009
+    100162: pelaz010
+    100164: pelaz011
+    100166: pelaz012
+    100168: pelaz013
+    100170: pelaz014
+    100172: pelaz015
+    100174: pelaz016
+    100176: pelaz017
+    100178: pelaz018
+    100180: pelaz019
+    100182: pelaz020
+    100184: pelaz021
+    100186: pelaz022
+    100188: pelaz023
+    100190: pelaz024
+    100192: pelaz025
+    100194: pelaz026
+    100196: pelaz027
+    100198: pelaz028
+    100200: pelaz029
+    100202: pelaz030
+    100204: pelaz031
+    100206: pelaz032
+    100208: pelaz033
+    100210: pelaz034
+    100212: pelaz035
+    100214: pelaz036
+    100216: pelaz037
+    100218: pelaz038
+    100220: pelaz039
+    100222: pelaz040
+    100224: pelaz041
+    100226: pelaz042
+    100228: pelaz043
+    100230: pelaz044
+    100232: pelaz045
+    100234: Pelazo_
+    100236: Pelazo_001
+    100238: Pelazo_002
+    400000: barbucha
+    400002: Bip001
+    400004: Bip001 Head
+    400006: Bip001 L Calf
+    400008: Bip001 L Clavicle
+    400010: Bip001 L Finger0
+    400012: Bip001 L Finger01
+    400014: Bip001 L Finger02
+    400016: Bip001 L Finger1
+    400018: Bip001 L Finger11
+    400020: Bip001 L Finger12
+    400022: Bip001 L Finger2
+    400024: Bip001 L Finger21
+    400026: Bip001 L Finger22
+    400028: Bip001 L Finger3
+    400030: Bip001 L Finger31
+    400032: Bip001 L Finger32
+    400034: Bip001 L Finger4
+    400036: Bip001 L Finger41
+    400038: Bip001 L Finger42
+    400040: Bip001 L Foot
+    400042: Bip001 L Forearm
+    400044: Bip001 L Hand
+    400046: Bip001 L Thigh
+    400048: Bip001 L Toe0
+    400050: Bip001 L UpperArm
+    400052: Bip001 Neck
+    400054: Bip001 Pelvis
+    400056: Bip001 R Calf
+    400058: Bip001 R Clavicle
+    400060: Bip001 R Finger0
+    400062: Bip001 R Finger01
+    400064: Bip001 R Finger02
+    400066: Bip001 R Finger1
+    400068: Bip001 R Finger11
+    400070: Bip001 R Finger12
+    400072: Bip001 R Finger2
+    400074: Bip001 R Finger21
+    400076: Bip001 R Finger22
+    400078: Bip001 R Finger3
+    400080: Bip001 R Finger31
+    400082: Bip001 R Finger32
+    400084: Bip001 R Finger4
+    400086: Bip001 R Finger41
+    400088: Bip001 R Finger42
+    400090: Bip001 R Foot
+    400092: Bip001 R Forearm
+    400094: Bip001 R Hand
+    400096: Bip001 R Thigh
+    400098: Bip001 R Toe0
+    400100: Bip001 R UpperArm
+    400102: Bip001 Spine
+    400104: Bip001 Spine1
+    400106: Bip001 Spine2
+    400108: Bip001 Spine3
+    400110: Bone001
+    400112: Bone002
+    400114: Bone003ojolR
+    400116: Bone004
+    400118: Bone005
+    400120: BoneOJOL
+    400122: Dummy002
+    400124: Dummy003
+    400126: Dummy004
+    400128: //RootNode
+    400130: geta
+    400132: gorra
+    400134: HOMBRE
+    400136: muela
+    400138: ojo der
+    400140: OJO IZQ
+    400142: Pala
+    400144: pala_metal
+    400146: Pala_palo
+    400148: pelaz003
+    400150: pelaz004
+    400152: pelaz005
+    400154: pelaz006
+    400156: pelaz007
+    400158: pelaz008
+    400160: pelaz009
+    400162: pelaz010
+    400164: pelaz011
+    400166: pelaz012
+    400168: pelaz013
+    400170: pelaz014
+    400172: pelaz015
+    400174: pelaz016
+    400176: pelaz017
+    400178: pelaz018
+    400180: pelaz019
+    400182: pelaz020
+    400184: pelaz021
+    400186: pelaz022
+    400188: pelaz023
+    400190: pelaz024
+    400192: pelaz025
+    400194: pelaz026
+    400196: pelaz027
+    400198: pelaz028
+    400200: pelaz029
+    400202: pelaz030
+    400204: pelaz031
+    400206: pelaz032
+    400208: pelaz033
+    400210: pelaz034
+    400212: pelaz035
+    400214: pelaz036
+    400216: pelaz037
+    400218: pelaz038
+    400220: pelaz039
+    400222: pelaz040
+    400224: pelaz041
+    400226: pelaz042
+    400228: pelaz043
+    400230: pelaz044
+    400232: pelaz045
+    400234: Pelazo_
+    400236: Pelazo_001
+    400238: Pelazo_002
+    2300000: geta
+    2300002: gorra
+    2300004: muela
+    2300006: ojo der
+    2300008: OJO IZQ
+    2300010: pala_metal
+    2300012: Pala_palo
+    2300014: pelaz003
+    2300016: pelaz004
+    2300018: pelaz005
+    2300020: pelaz006
+    2300022: pelaz007
+    2300024: pelaz008
+    2300026: pelaz009
+    2300028: pelaz010
+    2300030: pelaz011
+    2300032: pelaz012
+    2300034: pelaz013
+    2300036: pelaz014
+    2300038: pelaz015
+    2300040: pelaz016
+    2300042: pelaz017
+    2300044: pelaz018
+    2300046: pelaz019
+    2300048: pelaz020
+    2300050: pelaz021
+    2300052: pelaz022
+    2300054: pelaz023
+    2300056: pelaz024
+    2300058: pelaz025
+    2300060: pelaz026
+    2300062: pelaz027
+    2300064: pelaz028
+    2300066: pelaz029
+    2300068: pelaz030
+    2300070: pelaz031
+    2300072: pelaz032
+    2300074: pelaz033
+    2300076: pelaz034
+    2300078: pelaz035
+    2300080: pelaz036
+    2300082: pelaz037
+    2300084: pelaz038
+    2300086: pelaz039
+    2300088: pelaz040
+    2300090: pelaz041
+    2300092: pelaz042
+    2300094: pelaz043
+    2300096: pelaz044
+    2300098: pelaz045
+    3300000: geta
+    3300002: gorra
+    3300004: muela
+    3300006: ojo der
+    3300008: OJO IZQ
+    3300010: pala_metal
+    3300012: Pala_palo
+    3300014: pelaz003
+    3300016: pelaz004
+    3300018: pelaz005
+    3300020: pelaz006
+    3300022: pelaz007
+    3300024: pelaz008
+    3300026: pelaz009
+    3300028: pelaz010
+    3300030: pelaz011
+    3300032: pelaz012
+    3300034: pelaz013
+    3300036: pelaz014
+    3300038: pelaz015
+    3300040: pelaz016
+    3300042: pelaz017
+    3300044: pelaz018
+    3300046: pelaz019
+    3300048: pelaz020
+    3300050: pelaz021
+    3300052: pelaz022
+    3300054: pelaz023
+    3300056: pelaz024
+    3300058: pelaz025
+    3300060: pelaz026
+    3300062: pelaz027
+    3300064: pelaz028
+    3300066: pelaz029
+    3300068: pelaz030
+    3300070: pelaz031
+    3300072: pelaz032
+    3300074: pelaz033
+    3300076: pelaz034
+    3300078: pelaz035
+    3300080: pelaz036
+    3300082: pelaz037
+    3300084: pelaz038
+    3300086: pelaz039
+    3300088: pelaz040
+    3300090: pelaz041
+    3300092: pelaz042
+    3300094: pelaz043
+    3300096: pelaz044
+    3300098: pelaz045
+    4300000: HOMBRE
+    4300002: barbucha
+    4300004: ojo der
+    4300006: gorra
+    4300008: pelaz003
+    4300010: pelaz004
+    4300012: pelaz005
+    4300014: pelaz006
+    4300016: pelaz007
+    4300018: pelaz008
+    4300020: pelaz009
+    4300022: pelaz010
+    4300024: pelaz011
+    4300026: pelaz012
+    4300028: pelaz013
+    4300030: pelaz014
+    4300032: pelaz015
+    4300034: pelaz016
+    4300036: pelaz017
+    4300038: pelaz018
+    4300040: pelaz019
+    4300042: pelaz020
+    4300044: pelaz021
+    4300046: pelaz022
+    4300048: pelaz023
+    4300050: pelaz024
+    4300052: pelaz025
+    4300054: pelaz026
+    4300056: pelaz027
+    4300058: pelaz028
+    4300060: pelaz029
+    4300062: pelaz030
+    4300064: pelaz031
+    4300066: pelaz032
+    4300068: pelaz033
+    4300070: pelaz034
+    4300072: pelaz035
+    4300074: pelaz036
+    4300076: pelaz037
+    4300078: pelaz038
+    4300080: pelaz039
+    4300082: pelaz040
+    4300084: pelaz041
+    4300086: pelaz042
+    4300088: pelaz043
+    4300090: pelaz044
+    4300092: pelaz045
+    4300094: muela
+    4300096: geta
+    4300098: OJO IZQ
+    4300100: pala_metal
+    4300102: Pala_palo
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: barbucha
+    13700002: HOMBRE
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

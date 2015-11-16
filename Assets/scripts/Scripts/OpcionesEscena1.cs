@@ -1,90 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 using UnityEngine.UI;
 using Oscuridad.Enumeraciones;
 
 public class OpcionesEscena1 : MonoBehaviour 
 {
-	private Vector3 posicionMarla;
-	private Vector3 posicionWarren;
-	private Vector3 posicionRobert;
-
-	public RectTransform btMarla;
-	public RectTransform btWarren;
-	public RectTransform btRobert;
 	public GameObject panelTexto;
+	public Text textoPanel;
+	private OpcionesTextoPersonaje opcionesTexto;
 
 	void Start()
 	{
-		posicionMarla = btMarla.localPosition;
-		posicionWarren = btWarren.localPosition;
-		posicionRobert = btRobert.localPosition;
+		opcionesTexto = textoPanel.GetComponent<OpcionesTextoPersonaje> ();
 	}
 
-	public void SeleccionarPersonaje(string nombre)
+	public void SeleccionarPersonaje(Button boton)
 	{
-		switch (nombre) 
+		if (boton.tag.Equals ("Deseleccionado")) 
 		{
-			case "btMarlaWibbs":
-			{
-				if(btMarla.localPosition.Equals(posicionMarla))
-				{
-					SubirPersonaje(btMarla);
-					BajarPersonaje(btWarren, posicionWarren);
-					BajarPersonaje(btRobert, posicionRobert);
-				}
-				else
-				{
-					GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.MarlaGibbs);
-					GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
-				}
+			if(GameObject.FindGameObjectsWithTag("Seleccionado").Length > 0)
+				BajarPersonaje (GameObject.FindGameObjectWithTag ("Seleccionado").GetComponent<RectTransform> ());
 
-				break;
-			}
-
-			case "btRobertDuncan":
-			{
-				if(btRobert.localPosition.Equals(posicionRobert))
-				{
-					SubirPersonaje(btRobert);
-					BajarPersonaje(btWarren, posicionWarren);
-					BajarPersonaje(btMarla, posicionMarla);
-				}
-				else
-				{
-					GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.RobertDuncan);
-					GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
-				}
-
-				break;
-			}
-
-			case "btWarrenBedford":
-			{
-				if(btWarren.localPosition.Equals(posicionWarren))
-				{
-					SubirPersonaje(btWarren);
-					BajarPersonaje(btRobert, posicionRobert);
-					BajarPersonaje(btMarla, posicionMarla);
-				}
-				else
-				{
-					GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida(Personaje.WarrenBedford);
-					GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
-				}
-
-				break;
-			}
+			SubirPersonaje (boton.GetComponent<RectTransform> ());
+			ActivarTexto(boton);
+		}
+		else 
+		{
+			GameCenter.InstanceRef.controladoraJuego.Inicializar_Partida((Personaje)Enum.Parse(typeof(Personaje), boton.name));
+			GameCenter.InstanceRef.controladoraEscenas.IrEscenaWardExterior ();
 		}
 	}
 
 	private void SubirPersonaje(RectTransform seleccionRect)
 	{
-		seleccionRect.localPosition = new Vector3(seleccionRect.localPosition.x , seleccionRect.localPosition.y + 100, seleccionRect.localPosition.z);
+		StartCoroutine(GameCenter.InstanceRef.controladoraJuego.Mover2D(seleccionRect, new Vector2(seleccionRect.localPosition.x , seleccionRect.localPosition.y + 100), 0f));
+		seleccionRect.gameObject.tag = "Seleccionado";
 	}
 
-	private void BajarPersonaje(RectTransform seleccionRect, Vector3 seleccionVector)
+	private void BajarPersonaje(RectTransform seleccionRect)
 	{
-		seleccionRect.localPosition = new Vector3(seleccionVector.x , seleccionVector.y, seleccionVector.z);
+		StartCoroutine(GameCenter.InstanceRef.controladoraJuego.Mover2D(seleccionRect, new Vector2(seleccionRect.localPosition.x , seleccionRect.localPosition.y - 100), 0f));
+		seleccionRect.gameObject.tag = "Deseleccionado";
+	}
+
+	private void ActivarTexto(Button boton)
+	{
+		panelTexto.SetActive (true);
+		opcionesTexto.Posicion_Inicial_Caja ();
+		textoPanel.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("bt" + boton.name);
 	}
 }

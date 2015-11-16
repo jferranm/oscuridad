@@ -19,8 +19,8 @@ public class OpcionesTextoPersonaje : MonoBehaviour
 	
 	void Update()
 	{
-		Debug.Log ("OffsetMin: " + rectPanel.offsetMin);
-		Debug.Log ("OffsetMax: " + rectPanel.offsetMax);
+		//Debug.Log ("OffsetMin: " + rectPanel.offsetMin);
+		//Debug.Log ("OffsetMax: " + rectPanel.offsetMax);
 		if (rectPanel.offsetMax.y < 0)
 			Posicion_Inicial_Caja ();
 

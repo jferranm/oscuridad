@@ -76,10 +76,6 @@ public class ControladoraJugador
 
 	private void JugadorEnZoomIn()
 	{
-		//Vector3 vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.PosicionNueva;
-		//Vector3 vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.RotacionNueva;
-		//float smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Smooth;
-
 		Vector3 vectorAuxiliarPosicion = GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoOpciones.posicion;
 		Vector3 vectorAuxiliarRotacion = GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoOpciones.rotacion;
 		float smoothAuxiliar = GameCenter.InstanceRef.controladoraJuego.interactuablePulsadoOpciones.suavizado;
