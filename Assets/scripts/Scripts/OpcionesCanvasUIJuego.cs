@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Oscuridad.Enumeraciones;
 
 public class OpcionesCanvasUIJuego : MonoBehaviour 
 {
@@ -10,6 +11,9 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 	public GameObject panelLateral;
 	public GameObject panelInferior;
 	public GameObject libroDiario;
+	public GameObject Mapa;
+	public GameObject MenuOpciones;
+	public GameObject fondoOscuro;
 
 	void Start()
 	{
@@ -18,10 +22,24 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 
 	void Update()
 	{
-		if (libroDiario.activeSelf) 
+		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
-			if (Input.GetKeyDown (KeyCode.Escape)) 
+			fondoOscuro.SetActive(!fondoOscuro.activeSelf);
+
+			if (libroDiario.activeSelf)
+			{
 				libroDiario.SetActive(!libroDiario.activeSelf);
+				return;
+			}
+
+			if(Mapa.activeSelf)
+			{
+				Mapa.SetActive(!Mapa.activeSelf);
+				return;
+			}
+
+			MenuOpciones.SetActive(!MenuOpciones.activeSelf);
+			GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enEspera;
 		}
 	}
 
@@ -34,5 +52,8 @@ public class OpcionesCanvasUIJuego : MonoBehaviour
 		panelLateral.SetActive (false);
 		panelInferior.SetActive (false);
 		libroDiario.SetActive (false);
+		Mapa.SetActive (false);
+		MenuOpciones.SetActive (false);
+		fondoOscuro.SetActive (false);
 	}
 }

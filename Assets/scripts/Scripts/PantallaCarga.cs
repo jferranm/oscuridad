@@ -7,19 +7,26 @@ public class PantallaCarga : MonoBehaviour
 {
 	private float fadeSpeed = 5f;
 	private Image imagenTextura;
+	private Text textoCargando;
 	private Color colorInicial = new Color();
+	private Color colorInicialTexto = new Color();
 
 	public bool comenzarFade = false;
 
 	void Awake()
 	{
-		imagenTextura = this.gameObject.GetComponent<Image> ();
+		imagenTextura = this.gameObject.GetComponentInChildren<Image> ();
+		textoCargando = this.gameObject.GetComponentInChildren<Text> ();
 		colorInicial = imagenTextura.color;
+		colorInicialTexto = textoCargando.color;
 	}
 	
 	void OnEnable()
 	{
 		imagenTextura.color = colorInicial;
+		textoCargando.color = colorInicialTexto;
+		if(GameCenter.InstanceRef != null)
+			textoCargando.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto ("Cargando");
 		comenzarFade = false;
 	}
 
@@ -40,6 +47,7 @@ public class PantallaCarga : MonoBehaviour
 			//hacemos que el color sea claro y desactivamos el objeto
 			imagenTextura.color = Color.clear;
 			comenzarFade = false;
+
 			this.gameObject.SetActive(false);
 			GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enEspera;
 		}
@@ -48,5 +56,6 @@ public class PantallaCarga : MonoBehaviour
 	void FadeToClear ()
 	{
 		imagenTextura.color = Color.Lerp(imagenTextura.color, Color.clear, fadeSpeed * Time.deltaTime);
+		textoCargando.color = Color.Lerp (textoCargando.color, Color.clear, fadeSpeed * Time.deltaTime);
 	}
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextosMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Titulo>Solo Contra La Oscuridad</Titulo>
+  <Cargando>Cargando</Cargando>
   <BtComenzar>Comenzar</BtComenzar>
   <BtContinuar>Continuar</BtContinuar>
   <BtOpciones>Opciones</BtOpciones>

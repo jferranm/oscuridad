@@ -14,14 +14,7 @@ public class ControladoraGUI
 	#region VARIABLES PUBLICAS
 	public RespuestaNPCBase nuevaRespuesta = new RespuestaNPCBase();
 
-	public GameObject imagenCargando;
-	public GameObject panelLateral;
-	public GameObject panelInferior;
-	public GameObject botonDiario;
-	public GameObject panelDirecciones;
-	public GameObject panelObjetos;
-	public GameObject panelLibro;
-
+	public OpcionesCanvasUIJuego opcionesUIJuego;
 	public Text textoLateral;
 	public TextoLateralOpciones textoLateralOpciones;
 	public Text textoInferior;
@@ -29,6 +22,7 @@ public class ControladoraGUI
 	public PanelPreguntasOpciones panelPreguntasOpciones;
 	public ListaPreguntas listaPreguntas;
 	public PanelObjetosOpciones panelObjetosOpciones;
+	public PantallaCarga imagenCargando;
 
 	#endregion
 
@@ -44,21 +38,15 @@ public class ControladoraGUI
 
 	public void Awake()
 	{
-		imagenCargando = GameObject.Find ("ImagenCargando");
-		panelLateral = GameObject.Find ("PanelLateral");
-		panelInferior = GameObject.Find ("PanelInferior");
-		botonDiario = GameObject.Find ("BotonDiario");
-		panelDirecciones = GameObject.Find ("PanelDirecciones");
-		panelObjetos = GameObject.Find ("PanelObjetos");
-		panelLibro = GameObject.Find ("Libro");
-		
-		textoLateral = panelLateral.GetComponentInChildren<Text>();
+		opcionesUIJuego = GameCenter.InstanceRef.CanvasUIJuego.GetComponent<OpcionesCanvasUIJuego> ();
+		textoLateral = opcionesUIJuego.panelLateral.GetComponentInChildren<Text>();
 		textoLateralOpciones = textoLateral.GetComponent<TextoLateralOpciones> ();
-		textoInferior = panelInferior.GetComponentInChildren<Text>();
+		textoInferior = opcionesUIJuego.panelInferior.GetComponentInChildren<Text>();
 		textoInferiorOpciones = textoInferior.GetComponent<TextoInferiorOpciones> ();
 		panelPreguntasOpciones = GameObject.Find ("PanelPreguntas").GetComponent<PanelPreguntasOpciones> ();
-		listaPreguntas = panelInferior.GetComponentInChildren<ScrollRect> ().GetComponent<ListaPreguntas> ();
-		panelObjetosOpciones = panelObjetos.GetComponent<PanelObjetosOpciones> ();
+		listaPreguntas = opcionesUIJuego.panelInferior.GetComponentInChildren<ScrollRect> ().GetComponent<ListaPreguntas> ();
+		panelObjetosOpciones = opcionesUIJuego.panelObjetos.GetComponent<PanelObjetosOpciones> ();
+		imagenCargando = opcionesUIJuego.imagenCargando.GetComponent<PantallaCarga> ();
 	}
 
 	#endregion
@@ -117,9 +105,9 @@ public class ControladoraGUI
 	{
 		//Activamos el Menu
 		Activar_Opciones_Basicas();
-		panelLateral.SetActive (true);
-		panelObjetos.SetActive (true);
-		panelDirecciones.SetActive (false);
+		opcionesUIJuego.panelLateral.SetActive (true);
+		opcionesUIJuego.panelObjetos.SetActive (true);
+		opcionesUIJuego.panelDirecciones.SetActive (false);
 
 		//Añadimos el objeto a objetos vistos del personaje
 		if(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado != null)
@@ -128,18 +116,18 @@ public class ControladoraGUI
 
 	public void Activar_Opciones_Basicas ()
 	{
-		botonDiario.SetActive (true);
-		panelInferior.SetActive (true);
-		panelDirecciones.SetActive(true);
+		opcionesUIJuego.botonDiario.SetActive (true);
+		opcionesUIJuego.panelInferior.SetActive (true);
+		opcionesUIJuego.panelDirecciones.SetActive(true);
 	}
 
 	public void DesactivarGUI()
 	{
-		panelObjetos.SetActive (false);
-		panelDirecciones.SetActive (false);
-		botonDiario.SetActive (false);
-		panelLateral.SetActive (false);
-		panelInferior.SetActive (false);
+		opcionesUIJuego.panelObjetos.SetActive (false);
+		opcionesUIJuego.panelDirecciones.SetActive (false);
+		opcionesUIJuego.botonDiario.SetActive (false);
+		opcionesUIJuego.panelLateral.SetActive (false);
+		opcionesUIJuego.panelInferior.SetActive (false);
 	}
 
 	#endregion
@@ -148,12 +136,12 @@ public class ControladoraGUI
 
 	public void Activar_Cargando()
 	{
-		imagenCargando.SetActive (true);
+		opcionesUIJuego.imagenCargando.SetActive (true);
 	}
 
 	public void Activar_Fade()
 	{
-		imagenCargando.GetComponent<PantallaCarga> ().comenzarFade = true;
+		imagenCargando.comenzarFade = true;
 	}
 
 	#endregion

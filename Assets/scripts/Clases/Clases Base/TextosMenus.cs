@@ -11,6 +11,13 @@ namespace Oscuridad.Clases
 	[System.Serializable]
 	public class TextosMenus
 	{
+		private string cargando;
+		public string Cargando
+		{
+			get { return cargando; }
+			set { cargando = value; }
+		}
+
 		private string btComenzar;
 		public string BtComenzar 
 		{
@@ -135,6 +142,7 @@ namespace Oscuridad.Clases
 		/// </summary>
 		public TextosMenus()
 		{
+			Cargando = string.Empty;
 			BtComenzar = string.Empty;
 			BtContinuar = string.Empty;
 			BtOpciones = string.Empty;
@@ -154,28 +162,30 @@ namespace Oscuridad.Clases
 
 			switch (nombreControl) 
 			{
-			case "btComenzar": 		textoReturn = BtComenzar.ToUpper();
-									break;
-			case "btContinuar": 	textoReturn = BtContinuar.ToUpper();
-									break;
-			case "btOpciones": 		textoReturn = BtOpciones.ToUpper();
-									break;
-			case "btSalir": 		textoReturn = BtSalir.ToUpper();
-									break;
-			case "btPartidaNueva": 	textoReturn = BtPartidaNueva.ToUpper();
-									break;
-			case "toggleSonido": 	textoReturn = ToggleSonido.ToUpper();
-									break;
-			case "toggleMusica": 	textoReturn = ToggleMusica.ToUpper();
-									break;
-			case "btIdioma": 		textoReturn = BtIdioma.ToUpper();
-									break;
-			case "btMarlaWibbs":    textoReturn = BtMarlaWibbs;
-									break;
-			case "btRobertDuncan":  textoReturn = BtRobertDuncan;
-									break;
-			case "btWarrenBedford": textoReturn = BtWarrenBedford;
-									break;
+				case "Cargando":		textoReturn = Cargando;
+										break;
+				case "btComenzar": 		textoReturn = BtComenzar.ToUpper();
+										break;
+				case "btContinuar": 	textoReturn = BtContinuar.ToUpper();
+										break;
+				case "btOpciones": 		textoReturn = BtOpciones.ToUpper();
+										break;
+				case "btSalir": 		textoReturn = BtSalir.ToUpper();
+										break;
+				case "btPartidaNueva": 	textoReturn = BtPartidaNueva.ToUpper();
+										break;
+				case "toggleSonido": 	textoReturn = ToggleSonido.ToUpper();
+										break;
+				case "toggleMusica": 	textoReturn = ToggleMusica.ToUpper();
+										break;
+				case "btIdioma": 		textoReturn = BtIdioma.ToUpper();
+										break;
+				case "btMarlaWibbs":    textoReturn = BtMarlaWibbs;
+										break;
+				case "btRobertDuncan":  textoReturn = BtRobertDuncan;
+										break;
+				case "btWarrenBedford": textoReturn = BtWarrenBedford;
+										break;
 			}
 			
 			return textoReturn;

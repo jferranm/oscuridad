@@ -227,15 +227,16 @@ public class Eventos : MonoBehaviour
 				GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddEscenaVisitada (GameCenter.InstanceRef.controladoraJuego.camaraActiva.Escena);
 				GameCenter.InstanceRef.controladoraJuego.Cambiar_Camara(camaraSeleccionada);
 				GameCenter.InstanceRef.controladoraJuego.configuracionJuego.UltimaCamaraVisitada = GameCenter.InstanceRef.controladoraJuego.camaraActiva.Nombre;
-				GameCenter.InstanceRef.controladoraGUI.panelDirecciones.GetComponent<PanelDireccionesOpciones>().Reiniciar_Direcciones();
+				GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.panelDirecciones.GetComponent<PanelDireccionesOpciones>().Reiniciar_Direcciones();
 				GameCenter.InstanceRef.controladoraGUI.textoInferior.GetComponent<TextoInferiorOpciones>().Reiniciar_Texto();
 			}
 		}
 	}
 
-	public void BotonOpcionesDireccion()
+	public void BotonMapa()
 	{
-		GameCenter.InstanceRef.CanvasMenuOpciones.SetActive (true);
+		GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.fondoOscuro.SetActive (true);
+		GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.Mapa.SetActive (true);
 		GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
 	}
 
@@ -271,9 +272,9 @@ public class Eventos : MonoBehaviour
 		//GameObject.FindGameObjectWithTag(GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre).SetActive(false);
 		
 		//Deshabilitamos los botones
-		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Coger");
-		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Hablar");
-		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Inspeccionar");
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Desactivar ("Coger");
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Desactivar ("Hablar");
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Desactivar ("Inspeccionar");
 
 		//Insertar objeto en el inventario del jugador
 		GameCenter.InstanceRef.controladoraJuego.jugadorActual.AddInventario ((Interactuables)Enum.Parse(typeof(Interactuables), GameCenter.InstanceRef.controladoraJuego.interactuablePulsado.Nombre));
@@ -288,7 +289,7 @@ public class Eventos : MonoBehaviour
 	private void Inspeccionar_Objeto()
 	{
 		//Deshabilitamos el boton Inspeccionar para no poder pulsar mas veces sobre el mientras se esta inspeccionando
-		GameCenter.InstanceRef.controladoraGUI.panelObjetos.GetComponent<PanelObjetosOpciones> ().Desactivar ("Inspeccionar");
+		GameCenter.InstanceRef.controladoraGUI.panelObjetosOpciones.Desactivar ("Inspeccionar");
 
 		GameCenter.InstanceRef.controladoraGUI.Lanzar_Inspeccionar();
 	}
@@ -324,7 +325,8 @@ public class Eventos : MonoBehaviour
 
 	public void BotonLibro()
 	{
-		GameCenter.InstanceRef.controladoraGUI.panelLibro.SetActive (!GameCenter.InstanceRef.controladoraGUI.panelLibro.activeSelf);
+		GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.fondoOscuro.SetActive (!GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.fondoOscuro.activeSelf);
+		GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.libroDiario.SetActive (!GameCenter.InstanceRef.controladoraGUI.opcionesUIJuego.libroDiario.activeSelf);
 	}
 
 	#endregion

@@ -34,12 +34,6 @@ public class ZoomCamara : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.Escape)) 
-		{
-			GameCenter.InstanceRef.CanvasMenuOpciones.SetActive (true);
-			GameCenter.InstanceRef.controladoraJugador.EstadoJugador = EstadosJugador.enMenus;
-		}
-
 		if (GameCenter.InstanceRef.controladoraJugador.EstadoJugador.Equals(EstadosJugador.enEspera))
 		{
 			if (Input.GetMouseButtonDown(0))

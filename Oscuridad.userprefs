@@ -1,11 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\OpcionesTextoPersonaje.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\ObjetoInteractuableSinZoom.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\OpcionesEscena1.cs" Line="18" Column="48" />
       <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Scripts\OpcionesTextoPersonaje.cs" Line="8" Column="1" />
+      <File FileName="Assets\scripts\Scripts\OpcionesCanvasUIJuego.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Scripts\PantallaCarga.cs" Line="27" Column="43" />
+      <File FileName="Assets\scripts\Enums\Enumeraciones.cs" Line="186" Column="23" />
+      <File FileName="Assets\scripts\Scripts\ZoomCamara.cs" Line="65" Column="58" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="483" Column="69" />
+      <File FileName="Assets\scripts\Scripts\ObjetoInteractuableSinZoom.cs" Line="20" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
