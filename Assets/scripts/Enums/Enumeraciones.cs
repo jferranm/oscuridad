@@ -181,16 +181,16 @@
     public enum Localizaciones
     {
         Ninguna,
+        BibliotecaArkham,
         CasaFamiliarWard,
         CementerioArkham,
         LibreriaArkham,
         UniversidadArkham,
         ArkhamAdvertiser,
-        ManicomioArkham,
+        PoliciaArkham,
         PuertoArkham,
-        MansionPawtuxet,
-        AlrededoresMansionPawtuxet,
-        EntradaSecretaMansion
+        GranjaPawtuxet,
+        GranjaPawtuxetCuevas
     }
 
 	/// <summary>
