@@ -472,7 +472,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 132857263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 184536735}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &132857263
@@ -1979,7 +1990,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 580941129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 291591106}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &580941129
@@ -2088,7 +2110,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 584667078}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1045199866}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CementerioAr
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &584667078
@@ -2244,7 +2277,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 613731560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1479721321}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &613731560
@@ -3737,7 +3781,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 864543164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1836776360}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &864543164
@@ -4698,7 +4753,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1089017926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 721397527}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1089017926
@@ -6047,7 +6113,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1450115019}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 36569642}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1450115019
@@ -6537,7 +6614,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1524081763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2024086435}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1524081763
@@ -6785,7 +6873,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1595871283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 333414722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1595871283
@@ -9442,7 +9541,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2104514348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959865093}
+        m_MethodName: Lanzar_Localizacion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2134967104}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2104514348

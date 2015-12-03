@@ -17,6 +17,7 @@ public class ControladoraJuego
 	private LanzamientoDados lanzamientoDados;
 	private List<Camera> listaCamaras;
 
+	public Localizaciones localizacionActual;
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
 	public CamaraEscenaBase camaraActiva;

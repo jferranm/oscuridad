@@ -66,16 +66,19 @@ public class ControladoraEscenas
 	
 	public void IrEscenaWardExterior()
 	{
+		GameCenter.InstanceRef.controladoraJuego.localizacionActual = Localizaciones.CasaFamiliarWard;
 		estadoActivo = new EscenaWardExterior (this);
 	}
 
 	public void IrEscenaWardInteriorPlantaBaja()
 	{
+		GameCenter.InstanceRef.controladoraJuego.localizacionActual = Localizaciones.CasaFamiliarWard;
 		estadoActivo = new EscenaWardInteriorPlantaBaja (this);
 	}
 
 	public void IrEscenaWardInteriorPlantaSuperior()
 	{
+		GameCenter.InstanceRef.controladoraJuego.localizacionActual = Localizaciones.CasaFamiliarWard;
 		estadoActivo = new EscenaWardInteriorPlantaSuperior (this);
 	}
 	
@@ -84,32 +87,58 @@ public class ControladoraEscenas
 		switch (temp) 
 		{
 			case Escenas.MenuPrincipal:
-					IrMenuPrincipal ();
-					break;
+			{
+				IrMenuPrincipal ();
+				break;
+			}
 
 			case Escenas.Escena1:
-					IrEscena1 ();
-					break;
+			{
+				IrEscena1 ();
+				break;
+			}
 
 			case Escenas.Escena2:
-					IrEscena2 ();
-					break;
+			{
+				IrEscena2 ();
+				break;
+			}
 		
 			case Escenas.Escena3:
-					IrEscena3 ();
-					break;
+			{
+				IrEscena3 ();
+				break;
+			}
 
 			case Escenas.EscenaWardExterior:
-					IrEscenaWardExterior();
-					break;
+			{
+				IrEscenaWardExterior();
+				break;
+			}
 
 			case Escenas.EscenaWardInteriorPlantaBaja:
-					IrEscenaWardInteriorPlantaBaja();
-					break;
+			{
+				IrEscenaWardInteriorPlantaBaja();
+				break;
+			}	
 
 			case Escenas.EscenaWardInteriorPlantaSuperior:
-					IrEscenaWardInteriorPlantaSuperior();
-					break;
+			{
+				IrEscenaWardInteriorPlantaSuperior();
+				break;
+			}
+		}
+	}
+
+	public void CambiarSceneSegunEnum(Localizaciones localizacion)
+	{
+		switch (localizacion) 
+		{
+			case Localizaciones.CasaFamiliarWard:
+			{
+				IrEscenaWardExterior();
+				break;
+			}
 		}
 	}
 

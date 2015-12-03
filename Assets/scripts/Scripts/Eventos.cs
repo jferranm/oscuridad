@@ -339,4 +339,15 @@ public class Eventos : MonoBehaviour
 	}
 
 	#endregion
+
+    #region PANEL MAPA
+
+    public void Lanzar_Localizacion(GameObject lupaLocalizacion)
+    {
+		Localizaciones localizacion = (Localizaciones)Enum.Parse (typeof(Localizaciones), lupaLocalizacion.name);
+		if(!localizacion.Equals(GameCenter.InstanceRef.controladoraJuego.localizacionActual))
+        	GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(localizacion);
+    }
+
+    #endregion
 }

@@ -4,7 +4,7 @@ using Oscuridad.Clases;
 
 public class ObjetoInteractuableSinZoom : MonoBehaviour 
 {
-	public Animation animation;
+	public Animation animacion;
     public AnimationClip clip;
 	public AudioClip clipSonido;
 
@@ -19,10 +19,10 @@ public class ObjetoInteractuableSinZoom : MonoBehaviour
 
 	public void Ejecutar_Animacion()
 	{
-		animation.clip = clip;
-        animation.AddClip(clip, clip.name);
+		animacion.clip = clip;
+        animacion.AddClip(clip, clip.name);
 
-        animation.Play(clip.name);
+        animacion.Play(clip.name);
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(clipSonido);
 	}
 
