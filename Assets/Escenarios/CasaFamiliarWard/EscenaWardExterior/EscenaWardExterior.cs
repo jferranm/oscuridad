@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.IO;
 using Oscuridad.Interfaces;
@@ -12,9 +13,9 @@ namespace Oscuridad.Estados
 	{
 		public EscenaWardExterior(ControladoraEscenas managerRef)
 		{
-			if(Application.loadedLevelName != Escenas.EscenaWardExterior.ToString())
+			if(SceneManager.GetActiveScene().name != Escenas.EscenaWardExterior.ToString())
 			{
-				Application.LoadLevel(Escenas.EscenaWardExterior.ToString());
+				SceneManager.LoadScene(Escenas.EscenaWardExterior.ToString());
 			}
 			
 			InicializarDatos ();

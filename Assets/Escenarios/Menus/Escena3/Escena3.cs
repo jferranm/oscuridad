@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using Oscuridad.Interfaces;
 using Oscuridad.Enumeraciones;
 using System.IO;
@@ -9,9 +10,9 @@ namespace Oscuridad.Estados
 	{
 		public Escena3(ControladoraEscenas managerRef)
 		{
-			if(Application.loadedLevelName != Escenas.Escena3.ToString())
+			if(SceneManager.GetActiveScene().name != Escenas.Escena3.ToString())
 			{
-				Application.LoadLevel(Escenas.Escena3.ToString());
+				SceneManager.LoadScene(Escenas.Escena3.ToString());
 			}
 
 			InicializarDatos ();

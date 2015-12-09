@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using System.Collections;
@@ -216,7 +217,7 @@ public class Eventos : MonoBehaviour
 			if(tipoDireccion)
 			{
 				GameCenter.InstanceRef.controladoraGUI.DesactivarGUI ();
-				GameCenter.InstanceRef.controladoraJuego.Guardar_Escena ((Escenas)Enum.Parse (typeof(Escenas), Application.loadedLevelName));
+								GameCenter.InstanceRef.controladoraJuego.Guardar_Escena ((Escenas)Enum.Parse (typeof(Escenas), SceneManager.GetActiveScene().name));
 				GameCenter.InstanceRef.controladoraJuego.GrabarConfiguracion();
 				GameCenter.InstanceRef.controladoraJuego.GrabarJugador();
 				GameCenter.InstanceRef.controladoraEscenas.CambiarSceneSegunEnum(escenaSeleccionada);

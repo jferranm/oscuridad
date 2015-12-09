@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using Oscuridad.Enumeraciones;
 using Oscuridad.Clases;
@@ -62,11 +63,6 @@ public class GameCenter : MonoBehaviour
 		CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().escena2.SetActive (false);
 	}
 	
-	void Update()
-	{
-		controladoraJugador.Update ();
-	}
-	
 	void OnLevelWasLoaded(int level)
 	{
 		controladoraEscenas.OnLevelWasLoaded(level);
@@ -109,7 +105,7 @@ public class GameCenter : MonoBehaviour
 			controladoraJuego.Cambiar_Camara (controladoraJuego.escenaActual.CamaraInicio.Nombre);
 
 		//Comenzamos BSO
-		controladoraSonidos.Lanzar_Bso (Application.loadedLevelName);
+		controladoraSonidos.Lanzar_Bso (SceneManager.GetActiveScene().name);
 
 		CanvasUIJuego.SetActive (true);
 

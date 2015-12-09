@@ -1,16 +1,15 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\Eventos.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\ControladoraJugador.cs">
     <Files>
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraEscenas.cs" Line="69" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="254" Column="1" />
-      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="348" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJugador.cs" Line="58" Column="5" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="635" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraGUI.cs" Line="56" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\Hopesend\Documents\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="254" />
-      <Breakpoint file="D:\Programacion\SVN\Oscuridad5.0\oscuridad\Assets\scripts\Scripts\Eventos.cs" line="348" />
+      <Breakpoint file="C:\Users\Hopesend\Documents\Oscuridad5.0\oscuridad\Assets\scripts\ControladoresEstado\ControladoraJuego.cs" line="254" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

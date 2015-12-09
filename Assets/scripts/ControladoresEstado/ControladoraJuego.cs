@@ -617,10 +617,29 @@ public class ControladoraJuego
 		{
 			suavizado += Time.deltaTime;
 			objeto.localPosition = Vector2.Lerp(objeto.localPosition, destino, suavizado);
-
+			
 			if ((objeto.localPosition.x == destino.x) && (objeto.localPosition.y == destino.y))
 				yield break;
+			
+			yield return null;
+		}
+	}
+	
+		public IEnumerator Mover3D(Transform objeto, Vector3 destinoPosicion, Quaternion destinoRotacion, float suavizado, EstadosJugador estadoFinal)
+	{
+		while (true)
+		{
+			float tiempo = 0f;
+			tiempo += Time.deltaTime;
+			objeto.position = Vector3.Lerp(objeto.position, destinoPosicion, (tiempo/suavizado));
+			objeto.rotation = Quaternion.Lerp(objeto.rotation, destinoRotacion, (tiempo/suavizado));
 
+			if (objeto.position.ToString().Equals (destinoPosicion.ToString())) 
+			{
+				GameCenter.InstanceRef.controladoraJugador.EstadoJugador = estadoFinal;				
+				yield break;
+			}
+			
 			yield return null;
 		}
 	}

@@ -25,10 +25,7 @@ public class ZoomCamara : MonoBehaviour
 
 	void Start() 
 	{
-		posicionInicial.x = transform.position.x;
-		posicionInicial.y = transform.position.y;
-		posicionInicial.z = transform.position.z;
-		
+		posicionInicial = transform.position;
 		rotacionInicial = transform.rotation;
 	}
 
