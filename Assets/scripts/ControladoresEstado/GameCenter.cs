@@ -16,7 +16,9 @@ public class GameCenter : MonoBehaviour
 	public ControladoraJuego controladoraJuego;
 	public GameObject CanvasUIJuego;
 	public GameObject CanvasMenuPrincipal;
-	public GameObject CanvasMenuOpciones;
+	public OpcionesCanvasMenuPrincipal MenuOpciones;
+	public GameObject MenuPersonajes;
+	
 
 	public string USERPATH;
 
@@ -116,10 +118,10 @@ public class GameCenter : MonoBehaviour
 
 	public void Salir()
 	{
-		//controladoraJuego.configuracionJuego.SonidoActivado = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleSonido.isOn;
-		//controladoraJuego.configuracionJuego.MusicaActivada = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().toggleMusica.isOn;
-		//controladoraJuego.configuracionJuego.VolumenSonido = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderSonido.value;
-		//controladoraJuego.configuracionJuego.VolumenMusica = CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ().sliderMusica.value;
+		controladoraJuego.configuracionJuego.SonidoActivado = MenuOpciones.toggleSonido.isOn;
+		controladoraJuego.configuracionJuego.MusicaActivada = MenuOpciones.toggleMusica.isOn;
+		controladoraJuego.configuracionJuego.VolumenSonido = MenuOpciones.sliderSonido.value;
+		controladoraJuego.configuracionJuego.VolumenMusica = MenuOpciones.sliderMusica.value;
 
 		controladoraJuego.GrabarConfiguracion ();
 		controladoraJuego.GrabarJugador ();

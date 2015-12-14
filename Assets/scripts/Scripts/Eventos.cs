@@ -9,10 +9,12 @@ using Oscuridad.Enumeraciones;
 public class Eventos : MonoBehaviour 
 {
 	private OpcionesCanvasMenuPrincipal opciones;
+	private OpcionesEscena1 opcionesEscena1;
 
 	void Start()
 	{
 		opciones = GameCenter.InstanceRef.CanvasMenuPrincipal.GetComponent<OpcionesCanvasMenuPrincipal> ();
+		opcionesEscena1 = GameCenter.InstanceRef.MenuPersonajes.GetComponent<OpcionesEscena1> ();
 	}
 
 	#region MENU PRINCIPAL
@@ -77,8 +79,7 @@ public class Eventos : MonoBehaviour
 
 	public void BotonPersonaje(Button boton)
 	{
-		boton.transform.parent.GetComponent<OpcionesEscena1> ().SeleccionarPersonaje (boton);
-		opciones.descripcionPersonaje.text = GameCenter.InstanceRef.controladoraJuego.textosMenusTraduccion.DevolverTexto("bt" + boton.name);
+		opcionesEscena1.SeleccionarPersonaje (boton);
 	}
 
 	public void BotonSalir()
