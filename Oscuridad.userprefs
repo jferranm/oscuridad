@@ -1,12 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ControladoresEstado\GameCenter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Scripts\OpcionesTextoPersonaje.cs">
     <Files>
-      <File FileName="Assets\scripts\Scripts\Eventos.cs" Line="83" Column="1" />
-      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="58" Column="22" />
-      <File FileName="Assets\scripts\Clases\Clases Base\TextosMenus.cs" Line="191" Column="1" />
-      <File FileName="Assets\scripts\Scripts\OpcionesEscena1.cs" Line="15" Column="70" />
-      <File FileName="Assets\scripts\ControladoresEstado\GameCenter.cs" Line="124" Column="3" />
+      <File FileName="Assets\scripts\Scripts\OpcionesEscena1.cs" Line="39" Column="1" />
+      <File FileName="Assets\scripts\ControladoresEstado\ControladoraJuego.cs" Line="20" Column="1" />
+      <File FileName="Assets\scripts\Scripts\OpcionesTextoPersonaje.cs" Line="7" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

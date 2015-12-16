@@ -18,13 +18,15 @@ public class OpcionesTextoPersonaje : MonoBehaviour
 	
 	void Update()
 	{
-		//Debug.Log ("OffsetMin: " + rectPanel.offsetMin);
-		//Debug.Log ("OffsetMax: " + rectPanel.offsetMax);
+		Debug.Log ("anchorMin: " + rectPanel.localPosition);
+		Debug.Log ("anchorMax: " + rectPanel.anchorMax);
 		if (rectPanel.offsetMax.y < 0)
 			Posicion_Inicial_Caja ();
 
-		if (rectPanel.offsetMin.y > 0)
+		if (rectPanel.offsetMin.y > 0) 
+		{
 			rectPanel.offsetMin = new Vector2 (0, 0);
+		}
 	}
 	
 	public void Posicion_Inicial_Caja()

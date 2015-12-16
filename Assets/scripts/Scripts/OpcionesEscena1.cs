@@ -34,14 +34,14 @@ public class OpcionesEscena1 : MonoBehaviour
 
 	private void SubirPersonaje(RectTransform seleccionRect)
 	{
-		StartCoroutine(GameCenter.InstanceRef.controladoraJuego.Mover2D(seleccionRect, new Vector2(seleccionRect.localPosition.x , seleccionRect.localPosition.y + 100), 0f));
-		seleccionRect.gameObject.tag = "Seleccionado";
+			StartCoroutine (GameCenter.InstanceRef.controladoraJuego.Mover2D (seleccionRect, new Vector2 (seleccionRect.localPosition.x, seleccionRect.localPosition.y + 100), 0f));
+			seleccionRect.gameObject.tag = "Seleccionado";
 	}
 
 	private void BajarPersonaje(RectTransform seleccionRect)
 	{
-		StartCoroutine(GameCenter.InstanceRef.controladoraJuego.Mover2D(seleccionRect, new Vector2(seleccionRect.localPosition.x , seleccionRect.localPosition.y - 100), 0f));
-		seleccionRect.gameObject.tag = "Deseleccionado";
+			StartCoroutine (GameCenter.InstanceRef.controladoraJuego.Mover2D (seleccionRect, new Vector2 (seleccionRect.localPosition.x, seleccionRect.localPosition.y - 100), 0f));
+			seleccionRect.gameObject.tag = "Deseleccionado";
 	}
 
 	private void ActivarTexto(Button boton)

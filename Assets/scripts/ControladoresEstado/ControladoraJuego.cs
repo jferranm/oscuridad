@@ -16,7 +16,7 @@ public class ControladoraJuego
 	private string pathIdioma;
 	private LanzamientoDados lanzamientoDados;
 	private List<Camera> listaCamaras;
-
+	
 	public Localizaciones localizacionActual;
 	public JugadorBase jugadorActual;
 	public EscenaBase escenaActual;
@@ -618,8 +618,10 @@ public class ControladoraJuego
 			suavizado += Time.deltaTime;
 			objeto.localPosition = Vector2.Lerp(objeto.localPosition, destino, suavizado);
 			
-			if ((objeto.localPosition.x == destino.x) && (objeto.localPosition.y == destino.y))
+			if ((objeto.localPosition.x == destino.x) && (objeto.localPosition.y == destino.y)) 
+			{
 				yield break;
+			}
 			
 			yield return null;
 		}
