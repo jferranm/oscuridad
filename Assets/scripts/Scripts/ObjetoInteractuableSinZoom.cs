@@ -5,7 +5,6 @@ using Oscuridad.Clases;
 public class ObjetoInteractuableSinZoom : MonoBehaviour 
 {
 	public Animation animacion;
-    public AnimationClip clip;
 	public AudioClip clipSonido;
 
 	public Vector3 posicion;
@@ -13,16 +12,17 @@ public class ObjetoInteractuableSinZoom : MonoBehaviour
 
 	void Start()
 	{
-		if(clip != null)
-			clip.legacy = true;
+		if (animacion != null) 
+		{
+			if (animacion.clip != null)
+				animacion.clip.legacy = true;
+		}
 	}
 
 	public void Ejecutar_Animacion()
 	{
-		animacion.clip = clip;
-        animacion.AddClip(clip, clip.name);
-
-        animacion.Play(clip.name);
+		if (animacion != null) 
+			animacion.Play();
 		GameCenter.InstanceRef.controladoraSonidos.Lanzar_Fx(clipSonido);
 	}
 

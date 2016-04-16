@@ -18,8 +18,6 @@ public class OpcionesTextoPersonaje : MonoBehaviour
 	
 	void Update()
 	{
-		Debug.Log ("anchorMin: " + rectPanel.localPosition);
-		Debug.Log ("anchorMax: " + rectPanel.anchorMax);
 		if (rectPanel.offsetMax.y < 0)
 			Posicion_Inicial_Caja ();
 

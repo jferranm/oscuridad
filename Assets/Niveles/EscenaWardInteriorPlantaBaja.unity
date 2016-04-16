@@ -701,8 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 0}
-  clip: {fileID: 7400000, guid: 998260224f1032245803fa8958aea6ec, type: 2}
+  animacion: {fileID: 33207870}
   clipSonido: {fileID: 8300000, guid: acfb783ec84f3f349a1a2c43b2f40aa7, type: 3}
   posicion: {x: 0, y: 0, z: 0}
   rotacion: {x: 0, y: 0, z: 0}
@@ -714,8 +713,9 @@ Animation:
   m_GameObject: {fileID: 33207867}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 998260224f1032245803fa8958aea6ec, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 998260224f1032245803fa8958aea6ec, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -3681,7 +3681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animacion: {fileID: 0}
-  clip: {fileID: 0}
   clipSonido: {fileID: 0}
   posicion: {x: 0, y: 0, z: 0}
   rotacion: {x: 0, y: 0, z: 0}
@@ -14566,8 +14565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 0}
-  clip: {fileID: 7400000, guid: 215780a3a4ab60a4c9347432e16a0740, type: 2}
+  animacion: {fileID: 1834307665}
   clipSonido: {fileID: 0}
   posicion: {x: 0.909, y: 0.278, z: 5.227}
   rotacion: {x: 0.3865714, y: 180.0254, z: 90.13622}
@@ -14579,8 +14577,9 @@ Animation:
   m_GameObject: {fileID: 1834307662}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 215780a3a4ab60a4c9347432e16a0740, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 215780a3a4ab60a4c9347432e16a0740, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

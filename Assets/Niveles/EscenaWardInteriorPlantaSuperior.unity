@@ -1891,8 +1891,9 @@ Animation:
   m_GameObject: {fileID: 164647001}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 7d784d17ffc77114ab30ecd39be28bca, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7d784d17ffc77114ab30ecd39be28bca, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -1908,8 +1909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 0}
-  clip: {fileID: 7400000, guid: 7d784d17ffc77114ab30ecd39be28bca, type: 2}
+  animacion: {fileID: 164647002}
   clipSonido: {fileID: 0}
   posicion: {x: 0, y: 0, z: 0}
   rotacion: {x: 0, y: 0, z: 0}
@@ -3747,8 +3747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 0}
-  clip: {fileID: 7400000, guid: 03257d5586ff3d0498171d5674eba7fd, type: 2}
+  animacion: {fileID: 360318476}
   clipSonido: {fileID: 0}
   posicion: {x: 0.04885478, y: -1.240692, z: -0.4920006}
   rotacion: {x: 0, y: 0, z: 358.2757}
@@ -3760,8 +3759,9 @@ Animation:
   m_GameObject: {fileID: 360318474}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 03257d5586ff3d0498171d5674eba7fd, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 03257d5586ff3d0498171d5674eba7fd, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -7268,8 +7268,9 @@ Animation:
   m_GameObject: {fileID: 630333565}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 9f4a5f5b52a200548aea3dfc236ba6ea, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f4a5f5b52a200548aea3dfc236ba6ea, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -7285,8 +7286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff3ae10f6feb434681014f36fc4c3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 0}
-  clip: {fileID: 7400000, guid: 9f4a5f5b52a200548aea3dfc236ba6ea, type: 2}
+  animacion: {fileID: 630333567}
   clipSonido: {fileID: 0}
   posicion: {x: -3119.877, y: 2925.943, z: -3623.778}
   rotacion: {x: 0.7659455, y: 0.001754761, z: 179.6388}
@@ -17827,7 +17827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animacion: {fileID: 0}
-  clip: {fileID: 7400000, guid: 2739289d4912da840b87c3c53b416f19, type: 2}
   clipSonido: {fileID: 0}
   posicion: {x: -1.495858, y: 0.4294387, z: 1.025673}
   rotacion: {x: 292.1652, y: 124.9088, z: 281.1376}
